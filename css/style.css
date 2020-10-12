@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
 :root {
-  --font-size-navbar: bold 1.3rem "Open-Sans";
+  --font-size-navbar: bold 1.3rem "Open Sans";
   --primary-color: #fff;
   --accent-color: #f4ae13;
   --accent-color-light: #ffd600;
@@ -7,6 +9,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Open Sans";
 }
 
 body {
@@ -17,23 +20,30 @@ body {
 html {
   font-size: 62.5%;
 }
-
+.body-grid {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 .grid {
   max-width: 1210px;
   display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .navbar-container {
+  position: sticky;
+  top: 0;
   width: 100%;
-  height: 7.5rem;
+  height: 7.4rem;
   display: flex;
   justify-content: center;
   background-color: #0d0d0d;
+  z-index: 3;
 }
 
 .navbar-holder {
-  max-width: 1210px;
+  max-width: 90%;
   width: 100%;
   flex: 1;
   display: flex;
@@ -47,7 +57,7 @@ html {
 }
 
 .navbar-item {
-  margin-right: 5.5rem;
+  margin-right: 4rem;
   list-style: none;
 }
 
@@ -56,6 +66,10 @@ html {
   text-transform: uppercase;
   color: var(--primary-color);
   text-decoration: none;
+}
+
+.navbar-item:last-child {
+  margin-right: 0;
 }
 
 .outline {
@@ -70,7 +84,9 @@ html {
 .full {
   background: var(--accent-color-light);
   border: var(--accent-color-light) 1px solid;
-  padding: 0.5rem 1.5rem;
+  width: 150px;
+  text-align: center;
+  padding: 0.5rem 0rem;
   margin: 0;
   margin-right: 2rem;
 }
