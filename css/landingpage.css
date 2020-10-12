@@ -2,6 +2,8 @@
 
 :root {
   --secondary-color: #838383;
+  --accent-color: #f4ae13;
+  --accent-color-dark: #f4ae13;
 }
 
 * {
@@ -20,7 +22,6 @@
 }
 
 .w-50 {
-  flex: 1;
   width: 50%;
   height: 100%;
 }
@@ -51,5 +52,22 @@
 
 .count-holder {
   display: flex;
-  background-color: #f4ae13;
+}
+
+.count {
+  padding-left: 3rem;
+  border-left: 1px var(--secondary-color) solid;
+  margin-right: 3rem;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 3.7rem;
+  color: var(--accent-color);
+}
+.number-description {
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
 }

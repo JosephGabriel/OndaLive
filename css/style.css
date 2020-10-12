@@ -33,6 +33,7 @@ html {
 
 .navbar-container {
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   width: 100%;
   height: 7.4rem;
@@ -89,4 +90,17 @@ html {
   padding: 0.5rem 0rem;
   margin: 0;
   margin-right: 2rem;
+}
+
+::-webkit-scrollbar {
+  background-color: #0d0d0d;
+}
+::-webkit-scrollbar-button {
+  background-color: #202020;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #ffd600;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #202020;
 }
