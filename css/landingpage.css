@@ -71,7 +71,7 @@
 }
 
 .spaced {
-  margin-top: 6rem;
+  margin-top: 6rem !important;
 }
 
 .count-holder {
@@ -123,9 +123,24 @@
   color: white;
   justify-self: flex-start;
 }
+.text-dark {
+  color: black;
+}
 
 .headline-title {
   font-weight: 500;
   font-size: 3rem;
   margin: 0;
+}
+
+.carousel {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  margin: 0 1rem;
+  width: 28.8rem;
+  height: 40.7rem;
+  background: #838383;
 }
