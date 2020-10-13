@@ -123,8 +123,13 @@
   color: white;
   justify-self: flex-start;
 }
+.headline-hero-dark {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  justify-self: flex-start;
+}
 .text-dark {
-  color: black;
+  color: black !important;
 }
 
 .headline-title {
@@ -143,4 +148,46 @@
   width: 28.8rem;
   height: 40.7rem;
   background: #838383;
+}
+
+.paralax {
+  color: white;
+  background-image: url(../img/banner.png);
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.paralax-text {
+  margin-right: 1rem;
+}
+.paralax-text p {
+  text-align: end;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.paralax-title {
+  margin-left: 0.5rem;
+}
+.paralax-title h6,
+.paralax-title h3 {
+  margin: 0;
+}
+
+.description-title-title {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.description-title-accent {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+..description-text {
 }
