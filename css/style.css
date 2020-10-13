@@ -28,6 +28,8 @@ html {
 .grid {
   max-width: 1210px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -99,8 +101,12 @@ html {
   background-color: #202020;
 }
 ::-webkit-scrollbar-track-piece {
-  background-color: #ffd600;
+  background-color: rgb(31, 31, 31);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #202020;
+  background-color: #ffd600;
+}
+
+.dark {
+  background-color: #0d0d0d;
 }
