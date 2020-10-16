@@ -110,3 +110,7 @@ html {
 .dark {
   background-color: #0d0d0d;
 }
+
+.w100 {
+  width: 100%;
+}
