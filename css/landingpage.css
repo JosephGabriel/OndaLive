@@ -620,10 +620,11 @@
   flex-direction: column;
 }
 .contact-box {
-  height: 8rem;
-  width: 50rem;
+  height: 20%;
+  width: 90%;
   margin-bottom: 1rem;
   display: flex;
+  justify-content: center;
 }
 
 .contact-content {
@@ -650,7 +651,8 @@
 }
 
 .icon-box {
-  width: 8rem;
+  height: 100%;
+  width: 15%;
   background-color: #1e1e1e;
   display: flex;
   justify-content: center;
@@ -715,6 +717,22 @@ button {
   display: flex;
 }
 
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-row1 {
+  width: 45%;
+  margin-bottom: 3.6rem;
+}
+
+.input-row2 {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
 #video {
   width: 100%;
   flex-direction: row;
@@ -741,6 +759,40 @@ button {
   html {
     font-size: 40%;
   }
+
+  .contact-holder,
+  .tickets,
+  .program-box,
+  .presention,
+  .patreons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .patreons-card,
+  .card-sl {
+    width: 90%;
+  }
+  .card-sl {
+    overflow-x: scroll;
+  }
+  .ask-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ask {
+    width: 100%;
+  }
+
+  .contact,
+  .contact-form {
+    width: 100%;
+  }
+
   #video {
     width: 100%;
     flex-direction: column;
