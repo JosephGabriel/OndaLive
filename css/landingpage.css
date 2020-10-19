@@ -758,11 +758,14 @@ button {
   width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  html {
-    font-size: 40%;
-  }
+.ticket-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
+@media screen and (max-width: 1000px) {
   p {
     padding: 0 !important;
   }
