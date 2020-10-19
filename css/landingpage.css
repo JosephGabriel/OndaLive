@@ -475,7 +475,7 @@
 
 .patreons-card {
   margin: 0 1rem;
-  width: 320px !important;
+  width: 300px !important;
   height: 189px;
   background: var(--secondary-color);
   margin-bottom: 3rem;
@@ -772,6 +772,10 @@ button {
 
   p {
     padding: 0 !important;
+  }
+
+  .patreons .title {
+    padding: 0 5rem;
   }
 
   .row button {
