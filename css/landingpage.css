@@ -146,6 +146,14 @@
   width: 28.8rem;
   height: 40.7rem;
   background: #838383;
+  position: relative;
+  display: flex;
+}
+
+.card-info {
+  align-self: flex-end;
+  color: #fff;
+  z-index: 1;
 }
 
 .paralax {
