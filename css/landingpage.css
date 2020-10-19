@@ -475,7 +475,7 @@
 
 .patreons-card {
   margin: 0 1rem;
-  width: 339px;
+  width: 320px !important;
   height: 189px;
   background: var(--secondary-color);
   margin-bottom: 3rem;
@@ -947,5 +947,38 @@ button {
   }
   #text-spotlight {
     width: 100%;
+  }
+
+  .ticket {
+    flex-direction: column;
+    align-items: center;
+  }
+  .program-box {
+    justify-self: center;
+    justify-content: space-between;
+    width: fit-content;
+  }
+  .day-box-holder {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .program-box-right {
+    justify-self: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .program-box {
+    justify-self: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .button-description > button {
+    margin-left: 0;
   }
 }
