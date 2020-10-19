@@ -766,6 +766,10 @@ button {
 }
 
 @media screen and (max-width: 1000px) {
+  html {
+    font-size: 40%;
+  }
+
   p {
     padding: 0 !important;
   }
