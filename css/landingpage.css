@@ -75,9 +75,8 @@
 
 .count-holder {
   display: flex;
-
   align-self: center;
-  justify-self: flex-start;
+  justify-content: flex-end;
 }
 
 .count {
@@ -479,6 +478,7 @@
   width: 339px;
   height: 189px;
   background: var(--secondary-color);
+  margin-bottom: 3rem;
 }
 
 .spaced-card {
@@ -490,11 +490,385 @@
   height: 150px;
   background: var(--secondary-color);
   margin: 0 1rem;
+  margin-bottom: 3rem;
 }
 
 .patreons-card-bronze {
   width: 180px;
   margin: 0 1rem;
+  margin-bottom: 3rem;
   height: 100px;
   background: var(--secondary-color);
+}
+
+.ask-holder {
+  margin-top: 8rem;
+}
+.ask {
+  width: 49rem;
+}
+
+.ask-box {
+  height: 5rem;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+
+.ask-box.active {
+  border-left: 0.2rem solid var(--accent-color);
+  margin-bottom: 0rem;
+}
+
+.ask-title {
+  display: flex;
+}
+
+.ask-ask {
+  width: 100%;
+  justify-content: space-between !important;
+  display: flex;
+  align-items: center;
+}
+
+.ask-details {
+  flex: 1;
+  display: flex;
+}
+
+.ask-ask-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.ask-number {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #727272;
+  margin-right: 0.2rem;
+}
+
+.ask-dropdown-icon {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+}
+
+.ask-dropdown-icon.active {
+  color: var(--accent-color);
+}
+
+.response-title {
+  color: var(--accent-color);
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0;
+}
+.response-title p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.response-text {
+  margin: 0;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.ask-response {
+  background-color: #f2f2f2;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+  border-left: 0.2rem solid var(--accent-color);
+}
+
+.image-inbox {
+  width: 200px;
+  height: 200px;
+  background-color: #202020;
+  margin-right: 1.5rem;
+}
+
+.ticket {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.tickets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0rem;
+}
+
+.contact-holder {
+  width: 100%;
+  margin-top: 6.8rem;
+  display: flex;
+}
+
+.contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-box {
+  height: 8rem;
+  width: 50rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.contact-content {
+  background-color: #141414;
+  width: 100%;
+}
+
+.contact-content h4,
+.contact-content h6 {
+  font-size: 1.4rem;
+  margin-left: 1.8rem;
+}
+
+.contact-content h4 {
+  margin: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.contact-content h6,
+.contact-content i {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+.icon-box {
+  width: 8rem;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.grid-title {
+  width: 100%;
+}
+
+.contact-social i {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  color: var(--accent-color);
+}
+
+input::placeholder {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+input,
+textarea {
+  border: 1px solid var(--secondary-color);
+  padding: 1.3rem 2.2rem;
+  background: transparent;
+}
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  border: 1px solid var(--accent-color);
+  padding: 1.3rem 2.2rem;
+  background: transparent;
+}
+
+button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0.5rem 3.3rem;
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+}
+.banner {
+  height: auto;
+}
+
+.parallax {
+  display: flex;
+  flex-direction: row;
+  padding: 8rem 0;
+}
+
+.img {
+  align-self: flex-end;
+}
+
+.section-holder {
+  width: 100%;
+  display: flex;
+}
+
+#video {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img-sh {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.img-sh img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#video-title {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 40%;
+  }
+  #video {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #video-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .counter-section {
+    flex-direction: column;
+    padding: 5rem 0;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+  }
+  .w40,
+  .w60,
+  .w50,
+  .w45 {
+    width: 90%;
+    text-align: center;
+  }
+  .count-holder {
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: 40%;
+  }
+  .head {
+    flex-direction: column;
+  }
+  .ads {
+    width: 100%;
+  }
+  .ads-ad {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+  .headline {
+    flex-direction: column;
+  }
+  .headline-hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .parallax {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paralax-text p {
+    text-align: center;
+  }
+  .rellax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headline-hero-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .description-text p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    color: var(--secondary-color);
+    margin: 0;
+    width: 100%;
+    margin-bottom: 3.8rem;
+  }
+  .section-holder {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .card-sl {
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+  .img-spotlight {
+    align-self: center;
+  }
+  .numbers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3rem;
+    border: none;
+  }
+
+  #spot-logo {
+    width: 100%;
+  }
+
+  #img {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-top: 4rem;
+  }
+
+  #img-spotlight {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 8rem;
+  }
+  #text-spotlight {
+    width: 100%;
+  }
 }

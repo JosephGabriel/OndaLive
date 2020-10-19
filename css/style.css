@@ -30,7 +30,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
 
 .navbar-container {
@@ -57,6 +57,7 @@ html {
 .navbar-list {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .navbar-item {
@@ -73,6 +74,69 @@ html {
 
 .navbar-item:last-child {
   margin-right: 0;
+}
+
+.navbar-brand {
+  object-fit: contain;
+  max-width: 39px;
+  width: 5%;
+}
+
+.navbar-dropdown {
+  margin-right: 4rem !important;
+  list-style: none !important;
+  font: bold 1.3rem "Open Sans" !important;
+  text-transform: uppercase !important;
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  background-color: transparent;
+  border: none;
+}
+.dropdown > ul > li {
+  margin: 1rem 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.dropdown > ul > li:hover a {
+  color: #f4ae13;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.dropdown ul {
+  opacity: 0;
+  display: flex;
+  background: #202020;
+  position: absolute;
+  margin-top: 0.1rem;
+  padding: 2rem;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.dropdown:hover ul {
+  opacity: 1;
+  display: flex;
+  background: #111;
+  pointer-events: all;
+  position: absolute;
+  margin-top: 0.1rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.5s ease;
 }
 
 .outline {
@@ -113,4 +177,70 @@ html {
 
 .w100 {
   width: 100%;
+}
+
+.footer {
+  background: #111;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.loader {
+  border: 16px solid #202020; /* Light grey */
+  border-top: 16px solid #ffd600; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-holder {
+  position: fixed;
+  z-index: 10;
+  background-color: #0d0d0d;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.finish {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    width: 80%;
+  }
+  .w50,
+  .w60,
+  .w40 {
+    width: 100%;
+  }
+  .navbar-list {
+    display: none;
+  }
+  .navbar-brand {
+    width: 4%;
+  }
 }
