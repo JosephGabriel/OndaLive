@@ -49,7 +49,7 @@
                 <div class="w50">
                     <div class="count-holder">
                         <div class="count">
-                            <div class="number">
+                            <div class="number" id="days">
                                 05
                             </div>
                             <div class="number-description">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="count">
-                            <div class="number">
+                            <div class="number" id="hours">
                                 14
                             </div>
                             <div class="number-description">
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="count">
-                            <div class="number">
+                            <div class="number" id="mins">
                                 27
                             </div>
                             <div class="number-description">
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div class="count">
-                            <div class="number">
+                            <div class="number" id="segs">
                                 36
                             </div>
                             <div class="number-description">
@@ -825,6 +825,38 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
+    <script>
+        function countdown() {
+            let now = new Date()
+            let eventDate = new Date(2020, 11, 25)
+
+            let currentTime = now.getTime()
+            let eventTime = eventDate.getTime()
+
+            let remTime = eventTime - currentTime
+
+            let s = Math.floor(remTime / 1000)
+            let m = Math.floor(s / 60)
+            let h = Math.floor(m / 60)
+            let d = Math.floor(h / 24)
+
+            h %= 24
+            m %= 60
+            s %= 60
+
+            h = (h < 10) ? "0" + h : h
+            m = (m < 10) ? "0" + m : m
+            s = (s < 10) ? "0" + s : s
+
+            document.getElementById("days").innerText = d
+            document.getElementById("hours").innerText = h
+            document.getElementById("mins").innerText = m
+            document.getElementById("segs").innerText = s
+
+            setTimeout(countdown, 1000)
+
+        }
+    </script>
 </body>
 
 </html>
