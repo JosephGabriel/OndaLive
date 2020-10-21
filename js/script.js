@@ -39,3 +39,26 @@ function countdown() {
 window.addEventListener("load",()=>{
         setTimeout(countdown,1000)
 })
+window.addEventListener("load",()=>{
+        const accordion = document.getElementsByClassName("ask")
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function () {
+                this.classList.toggle("active")
+            })
+        }
+       
+})
+
+window.addEventListener("load",()=>{
+const menuIcon = document.getElementById("nav-icon")
+const menu = document.getElementById("navbar-list-mobile")
+
+
+function change(param1, param2) {
+    param1.addEventListener("click", () => {
+        param2.classList.toggle("active")
+    })
+}
+
+change(menuIcon, menu)
+})

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <script src="./js/script.js"></script>
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="loader-holder" id="loader">
+        <div class="loader"></div>
+    </div>
+    <div class="navbar-container">
+        <nav class="navbar-holder">
+            <img src="./img/logo-sticky.svg" alt="Logo" class="navbar-brand">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="">Inicio</a></li>
+                <li class="dropdown">
+                    <button class="navbar-dropdown">O Evento</button>
+                    <ul>
+                        <li class="navbar-item"><a href="">Palestrantes</a></li>
+                        <li class="navbar-item"><a href="">Programação</a></li>
+                        <li class="navbar-item"><a href="">Valores</a></li>
+                        <li class="navbar-item"><a href="">Dúvidas</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item outline"><a href="">Login</a></li>
+                <li class="navbar-item outline"><a href="">Cadastrar-se</a></li>
+                <li class="navbar-item full"><a href="">Comprar</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="body-grid">
+        <div class="grid">
+            <div class="top-banner">
+                <img src="./img/banner.png">
+            </div>
+        </div>
+    </div>
+    <div class="body-grid">
+        <div class="grid">
+            <div class="register">
+                <div class="presentation">
+                    <div class="presentation-container">
+                        <hr class="hr">
+                        <h4 class="presentation-title">FORMULÁRIO</h4>
+                        <p class="presentation-subtitle">NOME DO EVENTO COMPLETO</p>
+                        <div class="event-date">
+                            <i class="fa fa-clock"></i>
+                            <p>07/10/2020 13:30 - 07/10/2020 19:00</p>
+                        </div>
+                    </div>
+                    <div class="img-middle">
+
+                    </div>
+                    <p class="presentation-text">Para todos os vendedores e representantes que estavam
+                        aguardando sua oportunidade de brilhar. Venha e cadastre-se, seu voucher
+                        para o evento ja garante sua primeira mensalidade na plataforma</p>
+                </div>
+                <div class="form" id="form">
+                    <div class=" form-title">
+                        <p class="form-subtitle">COMPLETE SEU CADASTRO PARA TER ACESSO AO NOSSO
+                            <span>EVENTO</span></p>
+                        <div class="form-form">
+                            <form>
+                                <div class="row-form">
+                                    <h4>1. Quais assuntos possui mais interesse? </h4>
+                                    <div class="ask-checkbox">
+                                        <label class="b-contain">
+                                            <label for="investimentos">Investimentos</label>
+                                            <input type="checkbox">
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-checkbox">
+                                        <label class="b-contain">
+                                            <label for="Economia">Economia</label>
+                                            <input type="checkbox">
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-checkbox">
+                                        <label class="b-contain">
+                                            <input type="checkbox" name="Política">
+                                            <label for="Política">Política</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-checkbox">
+                                        <label class="b-contain">
+                                            <input type="checkbox" name="Empreendedorismo">
+                                            <label for="Empreendedorismo">Empreendedorismo</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-checkbox">
+                                        <label class="b-contain">
+                                            <input type="checkbox" name="investimentos">
+                                            <label for="investimentos">Investimentos</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-checkbox">
+                                        <label class="b-contain">
+                                            <input type="checkbox" name="Outros">
+                                            <label for="Outros">Outros</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-text">
+                                        <input type="text" placeholder="Digite...">
+                                    </div>
+                                </div>
+                                <div class="row-form">
+                                    <h4>2. Como você classifica seu nível conhecimentos em?</h4>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-1">
+                                            <label for="opt-1">Não conheço nada</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-1">
+                                            <label for="opt-1">Conheço pouco, mas guardo meu dinheiro</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-1">
+                                            <label for="opt-1">Me interesso, porém ainda não invisto </label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-1">
+                                            <label for="opt-1">Acompanho notícias apenas</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-1">
+                                            <label for="opt-1">Acompanho notícias e invisto </label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row-form">
+                                    <h4>3. Possui interesse em investir?</h4>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-true">
+                                            <label for="opt-true">Sim</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                    <div class="ask-radio">
+                                        <label class="b-contain">
+                                            <input type="radio" name="opt-false">
+                                            <label for="opt-false">Não</label>
+                                            <div class="b-input"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row-form">
+                                    <h4>4. Qual impresa você investe? </h4>
+                                    <div class="ask-text">
+                                        <input type="text" placeholder="Digite...">
+                                    </div>
+                                </div>
+                                <div class="row-form">
+                                    <div class="row-submit-btn-password">
+                                        <button class="submit">Finalizar Cadastro</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Onda Live ©2020 Todos os direitos reservados.</p>
+    </div>
+</body>
+
+</html>

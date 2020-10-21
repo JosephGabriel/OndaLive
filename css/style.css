@@ -18,6 +18,7 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 .body-grid {
@@ -63,6 +64,18 @@ html {
 .navbar-item {
   margin-right: 4rem;
   list-style: none;
+  transition: 0.5s;
+}
+.navbar-item {
+  padding: 0.5rem 2.2rem;
+}
+.navbar-item:first-child {
+  margin: 0;
+  margin-right: 1rem;
+}
+.navbar-item:first-child:hover {
+  color: #fff;
+  background-color: #f4ae13;
 }
 
 .navbar-item a {
@@ -78,8 +91,11 @@ html {
 
 .navbar-brand {
   object-fit: contain;
-  max-width: 39px;
-  width: 5%;
+  width: 4rem;
+}
+.navbar-brand img {
+  object-fit: contain;
+  width: 4rem;
 }
 
 .navbar-dropdown {
@@ -90,17 +106,29 @@ html {
   color: var(--primary-color) !important;
   text-decoration: none !important;
   background-color: transparent;
+  transition: 0.5s;
+  padding: 0.5rem 2.2rem;
   border: none;
+}
+
+.navbar-dropdown:hover {
+  transition: 0.5s;
+  background: var(--accent-color);
+}
+.dropdown {
+  list-style: none;
 }
 .dropdown > ul > li {
   margin: 1rem 0;
   width: 100%;
   height: 100%;
   transition: 0.5s;
+  padding: 0.5rem 2rem;
 }
 
-.dropdown > ul > li:hover a {
-  color: #f4ae13;
+.dropdown > ul > li:hover {
+  color: #fff;
+  background-color: var(--accent-color);
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -180,6 +208,8 @@ html {
 }
 
 .footer {
+  position: relative;
+  bottom: 0;
   background: #111;
   height: 8rem;
   display: flex;
@@ -192,6 +222,8 @@ html {
   font-weight: 400;
   color: var(--accent-color);
   margin: 0;
+  text-align: center;
+  padding: 2rem 2rem;
 }
 
 .loader {
@@ -228,6 +260,47 @@ html {
   display: none;
 }
 
+.navbar-list-mobile {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 5rem 0;
+  height: 100%;
+  text-align: center;
+  background-color: #0d0d0d;
+  position: absolute;
+  top: 47px;
+  width: 25%;
+  align-items: center;
+  z-index: 1;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+}
+
+.navbar-list-mobile {
+  z-index: 5;
+  transition: all 0.5s;
+  transform: translateX(0%);
+}
+
+.nav-icon {
+  color: #fff;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar-list-mobile {
+    display: none;
+  }
+  .nav-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-list-mobile {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 1000px) {
   .grid {
     width: 80%;
@@ -240,7 +313,200 @@ html {
   .navbar-list {
     display: none;
   }
-  .navbar-brand {
-    width: 4%;
+}
+
+.b-contain *,
+.b-contain *::before,
+.b-contain *::after {
+  box-sizing: content-box !important;
+}
+
+.b-contain input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.b-contain span {
+  line-height: 1.54;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.b-contain {
+  display: table;
+  position: relative;
+  padding-left: 1.8rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding-left: 2.22rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: rgba(241, 245, 248, 0);
+  transition: background 250ms;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 0.125rem;
+}
+
+.b-contain input[type="radio"] ~ .b-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: rgba(241, 245, 248, 0);
+  transition: background 250ms;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 2rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.45rem;
+  top: 0.18rem;
+  width: 0.25rem;
+  height: 0.6rem;
+  margin-right: 5rem;
+  border: solid rgba(255, 255, 255, 1);
+  border-width: 0 2px 2px 0;
+  transition: background 250ms;
+  transform: rotate(45deg);
+}
+
+.b-contain input[type="radio"] ~ .b-input::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.25rem;
+  top: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 1);
+  transition: background 250ms;
+}
+
+.b-contain input:disabled ~ .b-input::after {
+  border-color: rgba(135, 149, 161, 1);
+}
+
+.b-contain input:checked ~ .b-input::after {
+  display: block;
+}
+
+.b-contain:hover input ~ .b-input,
+.b-contain input:focus ~ .b-input {
+  background: rgba(255, 188, 41, 0.04);
+}
+
+.b-contain input:focus ~ .b-input {
+  box-shadow: 0 0 0 2px rgba(198, 136, 6, 1);
+}
+
+.b-contain input:checked ~ .b-input {
+  background: rgba(244, 174, 19, 1);
+  border-color: rgba(244, 174, 19, 1);
+}
+
+.b-contain input[type="checkbox"]:disabled ~ .b-input {
+  background: rgba(241, 245, 248, 1);
+  border-color: rgba(184, 194, 204, 1);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.b-contain input[type="radio"]:disabled ~ .b-input {
+  background: rgba(241, 245, 248, 1);
+  border-color: rgba(184, 194, 204, 1);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.b-contain input[type="radio"]:disabled ~ .b-input::after {
+  background: rgba(135, 149, 161, 1);
+}
+
+.b-contain input:checked:focus ~ .b-input,
+.b-contain:hover input:not([disabled]):checked ~ .b-input {
+  background: rgba(255, 188, 41, 1);
+  border-color: rgba(244, 174, 19, 1);
+}
+
+.b-contain .b-input::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-left: -0.85rem;
+  margin-top: -0.85rem;
+  background: rgba(244, 174, 19, 1);
+  border-radius: 2rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+
+@keyframes b-ripple {
+  0% {
+    transform: scale(0);
   }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes b-ripple-duplicate {
+  0% {
+    transform: scale(0);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.b-contain input + .b-input::before {
+  animation: b-ripple 250ms ease-out;
+}
+
+.b-contain input:checked + .b-input::before {
+  animation-name: b-ripple-duplicate;
+}
+
+.b-contain .b-input::before {
+  visibility: hidden;
+}
+
+.b-contain input:focus + .b-input::before {
+  visibility: visible;
+}
+
+.b-contain:first-child .b-input::before {
+  visibility: hidden;
 }

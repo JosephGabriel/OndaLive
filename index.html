@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/rellax.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
 </head>
@@ -22,22 +20,40 @@
         <nav class="navbar-holder">
             <img src="./img/logo-sticky.svg" alt="Logo" class="navbar-brand">
             <ul class="navbar-list">
-                <li class="navbar-item"><a href="">Inicio</a></li>
+                <li class="navbar-item"><a href="#">Inicio</a></li>
                 <li class="dropdown">
                     <button class="navbar-dropdown">O Evento</button>
                     <ul>
-                        <li class="navbar-item"><a href="">Palestrantes</a></li>
-                        <li class="navbar-item"><a href="">Programação</a></li>
-                        <li class="navbar-item"><a href="">Valores</a></li>
-                        <li class="navbar-item"><a href="">Dúvidas</a></li>
+                        <li class="navbar-item"><a href="#Palestrantes">Palestrantes</a></li>
+                        <li class="navbar-item"><a href="#Programação">Programação</a></li>
+                        <li class="navbar-item"><a href="#Valores">Valores</a></li>
+                        <li class="navbar-item"><a href="#Dúvidas">Dúvidas</a></li>
                     </ul>
                 </li>
-                <li class="navbar-item outline"><a href="">Login</a></li>
-                <li class="navbar-item outline"><a href="">Cadastrar-se</a></li>
+                <li class="navbar-item outline"><a href="./login.html">Login</a></li>
+                <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
                 <li class="navbar-item full"><a href="">Comprar</a></li>
             </ul>
+            <div class="nav-icon" id="nav-icon">
+                &#9776;
+            </div>
         </nav>
     </div>
+    <ul class="navbar-list-mobile" id="navbar-list-mobile">
+        <li class="navbar-item"><a href="#">Inicio</a></li>
+        <li class="dropdown">
+            <button class="navbar-dropdown">O Evento</button>
+            <ul>
+                <li class="navbar-item-mobile"><a href="#Palestrantes">Palestrantes</a></li>
+                <li class="navbar-item-mobile"><a href="#Programação">Programação</a></li>
+                <li class="navbar-item-mobile"><a href="#Valores">Valores</a></li>
+                <li class="navbar-item-mobile"><a href="#Dúvidas">Dúvidas</a></li>
+            </ul>
+        </li>
+        <li class="navbar-item-mobile outline"><a href="./login.html">Login</a></li>
+        <li class="navbar-item-mobile outline"><a href="./cadastro.html">Cadastrar-se</a></li>
+        <li class="navbar-item-mobile full"><a href="">Comprar</a></li>
+    </ul>
     <div class="banner">
         <img src="./img/banner.png">
     </div>
@@ -122,14 +138,50 @@
             </div>
         </div>
     </div>
-    <div class="body-grid" style="margin-bottom: 5rem; overflow: hidden !important;">
-        <div class="grid">
+    <div id="Palestrantes" style="padding-bottom: 5rem;"></div>
+    <div class=" body-grid" style="padding-bottom: 5rem; overflow: hidden !important;">
+        <div class="grid animate__backInLeft">
             <div class="headline-hero">
                 <hr class="hr spaced" style="margin: 0;">
                 <h3 class="title text-dark " style="margin-top: 0;">Palestrantes</h3>
                 <h6 class="subtitle">COMO SERÁ O EVENTO</h6>
             </div>
             <div class="carousel" style="margin:9rem 0rem 4rem 0rem;">
+                <div class="card">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-info">
                         <p class="card-name">John</p>
@@ -374,7 +426,7 @@
 
         </div>
     </div>
-    <div class="body-grid dark" style="padding: 4rem 0rem;">
+    <div class="body-grid dark" id="Programação" style="padding: 4rem 0rem;">
         <div class="grid">
             <div class="presention w100">
                 <div class="center">
@@ -644,7 +696,8 @@
             </div>
         </div>
     </div>
-    <div class="body-grid">
+    <div id="Dúvidas"></div>
+    <div class="body-grid" id="Valores">
         <div class="grid">
             <div class="tickets w100">
                 <div class="w40">
@@ -656,7 +709,7 @@
                     </div>
                     <div class="ask-holder">
                         <div class="ask">
-                            <div class="ask-box active">
+                            <div class="ask-box ">
                                 <div class="ask-ask">
                                     <div class="ask-title">
                                         <div class="ask-details">
@@ -680,47 +733,74 @@
                             </div>
                         </div>
                         <div class="ask">
-                            <div class="ask-box">
+                            <div class="ask-box ">
                                 <div class="ask-ask">
                                     <div class="ask-title">
                                         <div class="ask-details">
-                                            <p class="ask-number">02.</p>
+                                            <p class="ask-number">01.</p>
                                             <p class="ask-ask-title">TITÚLO</p>
                                         </div>
                                     </div>
-                                    <div class="ask-dropdown-icon">
+                                    <div class="ask-dropdown-icon active">
                                         <i class="fas fa-arrow-circle-down"></i>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="ask">
-                            <div class="ask-box">
-                                <div class="ask-ask">
-                                    <div class="ask-title">
-                                        <div class="ask-details">
-                                            <p class="ask-number">03.</p>
-                                            <p class="ask-ask-title">TITÚLO</p>
-                                        </div>
-                                    </div>
-                                    <div class="ask-dropdown-icon">
-                                        <i class="fas fa-arrow-circle-down"></i>
-                                    </div>
+                            <div class="ask-response">
+                                <div class="response-title">
+                                    <p>Resposta</p>
+                                </div>
+                                <div class="response-text">
+                                    Lorem ipsum dollor site amet the best consectuer adipiscing
+                                    elites sed diam nonummy nibh euismod tincidunt ut laoreet
                                 </div>
                             </div>
                         </div>
                         <div class="ask">
-                            <div class="ask-box">
+                            <div class="ask-box ">
                                 <div class="ask-ask">
                                     <div class="ask-title">
                                         <div class="ask-details">
-                                            <p class="ask-number">04.</p>
+                                            <p class="ask-number">01.</p>
                                             <p class="ask-ask-title">TITÚLO</p>
                                         </div>
                                     </div>
-                                    <div class="ask-dropdown-icon">
+                                    <div class="ask-dropdown-icon active">
                                         <i class="fas fa-arrow-circle-down"></i>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="ask-response">
+                                <div class="response-title">
+                                    <p>Resposta</p>
+                                </div>
+                                <div class="response-text">
+                                    Lorem ipsum dollor site amet the best consectuer adipiscing
+                                    elites sed diam nonummy nibh euismod tincidunt ut laoreet
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ask">
+                            <div class="ask-box ">
+                                <div class="ask-ask">
+                                    <div class="ask-title">
+                                        <div class="ask-details">
+                                            <p class="ask-number">01.</p>
+                                            <p class="ask-ask-title">TITÚLO</p>
+                                        </div>
+                                    </div>
+                                    <div class="ask-dropdown-icon active">
+                                        <i class="fas fa-arrow-circle-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ask-response">
+                                <div class="response-title">
+                                    <p>Resposta</p>
+                                </div>
+                                <div class="response-text">
+                                    Lorem ipsum dollor site amet the best consectuer adipiscing
+                                    elites sed diam nonummy nibh euismod tincidunt ut laoreet
                                 </div>
                             </div>
                         </div>

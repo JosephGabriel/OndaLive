@@ -148,12 +148,47 @@
   background: #838383;
   position: relative;
   display: flex;
+  justify-content: center;
 }
 
 .card-info {
   align-self: flex-end;
   color: #fff;
+  width: 80%;
   z-index: 1;
+  transform: translateY(1.8rem);
+  transition: 0.3s;
+}
+
+.card:hover .card-info {
+  transition: 0.3s;
+  transform: translateY(0rem);
+}
+.card:hover .card-info .card-description,
+.card:hover .card-info .card-office {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.card-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-description {
+  margin: 0;
+  opacity: 0;
+  font-size: 1.6rem;
+  transition: 0.3s;
+  margin-bottom: 2rem;
+}
+
+.card-office {
+  margin: 1rem 0;
+  transition: 0.3s;
+  opacity: 0;
+  font-size: 1.8rem;
 }
 
 .paralax {
@@ -523,9 +558,11 @@
   align-items: center;
   padding: 0 2rem;
   margin-bottom: 1rem;
+  transition: all 0.5s;
 }
 
-.ask-box.active {
+.ask.active .ask-box {
+  transition: all 0.5s;
   border-left: 0.2rem solid var(--accent-color);
   margin-bottom: 0rem;
 }
@@ -585,10 +622,18 @@
 
 .ask-response {
   background-color: #f2f2f2;
+  opacity: 0;
+  height: 0;
+  border-left: 0.2rem solid var(--accent-color);
+  transition: all 0.5s;
+}
+.ask.active .ask-response {
+  height: auto;
+  transition: all 0.5s;
+  opacity: 1;
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
   padding: 2rem;
-  border-left: 0.2rem solid var(--accent-color);
 }
 
 .image-inbox {
@@ -714,6 +759,11 @@ button {
   display: flex;
   flex-direction: row;
   padding: 8rem 0;
+}
+
+#img {
+  display: flex;
+  align-items: center;
 }
 
 .img {
