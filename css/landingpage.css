@@ -140,7 +140,7 @@
   display: flex;
 }
 
-.card {
+.cards {
   width: 100%;
   margin: 0 1rem;
   width: 28.8rem;
@@ -148,10 +148,17 @@
   background: #838383;
   position: relative;
   display: flex;
+  overflow: hidden;
   justify-content: center;
 }
 
+.cards img {
+  height: 100%;
+  width: 100%;
+}
+
 .card-info {
+  position: absolute;
   align-self: flex-end;
   color: #fff;
   width: 80%;
@@ -160,12 +167,12 @@
   transition: 0.3s;
 }
 
-.card:hover .card-info {
+.cards:hover .card-info {
   transition: 0.3s;
   transform: translateY(0rem);
 }
-.card:hover .card-info .card-description,
-.card:hover .card-info .card-office {
+.cards:hover .card-info .card-description,
+.cards:hover .card-info .card-office {
   transition: 0.3s;
   opacity: 1;
 }
@@ -248,7 +255,12 @@
   display: flex;
   align-items: center;
   font-weight: 100;
+  margin-bottom: 2rem;
   font-size: 1.5rem;
+}
+.clock p,
+.marker p {
+  margin: 0;
 }
 .clock i,
 .marker i {

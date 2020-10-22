@@ -53,12 +53,8 @@ window.addEventListener("load",()=>{
 const menuIcon = document.getElementById("nav-icon")
 const menu = document.getElementById("navbar-list-mobile")
 
-
-function change(param1, param2) {
-    param1.addEventListener("click", () => {
-        param2.classList.toggle("active")
-    })
-}
-
-change(menuIcon, menu)
+menuIcon.addEventListener("click", function(){
+   menu.classList.toggle("active")
+    console.log("hh")
+})
 })
