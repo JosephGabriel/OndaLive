@@ -290,6 +290,16 @@
 .marker i {
   padding: 0.8rem 1rem;
 }
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.contact-social {
+  margin-bottom: 1rem;
+}
 
 .ads {
   height: 15rem;
