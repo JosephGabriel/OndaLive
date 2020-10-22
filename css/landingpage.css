@@ -145,7 +145,6 @@
   margin: 0 1rem;
   width: 28.8rem;
   height: 40.7rem;
-  background: #838383;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -166,7 +165,16 @@
   transform: translateY(1.8rem);
   transition: 0.3s;
 }
-
+.cards img {
+  transform: scale(1.2);
+  transform: translateX(0px);
+  transition: all 0.5s;
+  object-fit: cover;
+}
+.cards:hover img {
+  transform: translateX(10px);
+  transition: all 0.5s;
+}
 .cards:hover .card-info {
   transition: 0.3s;
   transform: translateY(0rem);
