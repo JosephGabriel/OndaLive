@@ -305,7 +305,11 @@
   height: 15rem;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
 }
 .ads p {
   margin: 0;
@@ -313,7 +317,7 @@
 }
 
 .ads-ad {
-  width: 92rem;
+  width: 100%;
   height: 8.5rem;
   background-color: #f4ae13;
 }
@@ -530,6 +534,7 @@
 
 .patreons {
   padding: 7rem 0rem;
+  padding-bottom: 0;
   text-align: center;
 }
 .gold-section > .title,
@@ -753,7 +758,8 @@
   color: var(--accent-color);
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-size: 1.5rem;
   color: var(--secondary-color);
 }
@@ -846,6 +852,10 @@ button {
   width: 100%;
 }
 
+.tickets {
+  margin: 0;
+}
+
 .ticket-holder {
   display: flex;
   flex-wrap: wrap;
@@ -853,11 +863,56 @@ button {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .number-spot {
+    font-weight: bold;
+    font-size: 4.5rem;
+  }
+  .section-holder {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #w50 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  #headline-hero {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #headline-hero .description-text p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .card-sl {
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   html {
     font-size: 40%;
   }
-
+  .row {
+    margin: 0;
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
   p {
     padding: 0 !important;
   }
@@ -1012,15 +1067,8 @@ button {
   .img-spotlight {
     align-self: center;
   }
-  .numbers {
-    flex-direction: column;
-    align-items: center;
-  }
 
   .section {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 3rem;
     border: none;
   }
 
@@ -1037,11 +1085,12 @@ button {
     margin-top: 4rem;
   }
 
-  #img-spotlight {
+  .img-spotlight {
     display: flex;
     justify-content: center;
     margin: 0;
     width: 100%;
+    height: auto;
     margin-bottom: 8rem;
   }
   #text-spotlight {
@@ -1063,6 +1112,41 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .numbers {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .contact-box {
+    height: auto;
+    width: 40rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .contact {
+    flex-wrap: wrap;
+  }
+
+  .card-sl {
+    align-items: center;
+  }
+  .dots {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .contact-box {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1079,5 +1163,9 @@ button {
 
   .button-description > button {
     margin-left: 0;
+  }
+  .section {
+    margin: 2rem;
+    padding: 0;
   }
 }

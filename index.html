@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <link rel="stylesheet" href="./css/animate.css">
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
@@ -34,7 +36,7 @@
                 </li>
                 <li class="navbar-item outline"><a href="./login.html">Login</a></li>
                 <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
-                <li class="navbar-item full"><a href="">Comprar</a></li>
+                <li class="navbar-item full"><a href="/comprar.html">Comprar</a></li>
             </ul>
             <div class="nav-icon" id="nav-icon">
                 &#9776;
@@ -55,7 +57,32 @@
             <li class="navbar-item-mobile full"><a href="">Comprar</a></li>
     </ul> -->
     <div class="banner">
-        <img src="./img/banner.png">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/banner.png">
+                </div>
+                <div class="carousel-item ">
+                    <img src="./img/banner.png">
+                </div>
+                <div class="carousel-item ">
+                    <img src="./img/banner.png">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
     <div class="body-grid">
         <div class="grid">
@@ -106,33 +133,42 @@
     </div>
     <div class="body-grid dark">
         <div class="grid" id="headline-hero">
-            <div class="headline-hero wow animate__animated animate__slideInLeft">
+            <div class="headline-hero wow animate__animated animate__slideInLeft" data-wow-duration=".92s">
                 <h3 class="title spaced">Sobre o Evento</h3>
                 <hr class="hr">
                 <h6 class="subtitle">Descrição</h6>
             </div>
             <div class="headline" style="padding-bottom: 4rem;">
-                <div class="w45 wow animate__animated animate__slideInLeft">
+                <div class="w45 wow animate__animated animate__slideInLeft" data-wow-duration="1s">
                     <h4 class="headline-title">Prepare O Seu Negócio Para Uma Nova Realidade.</h4>
-                    <p class="headline-text p-1">Ao longo dos 1 dias de imersão, você terá palestras cobrindo diversos
+                    <p class="headline-text p-1">Ao longo dos 1 dias de imersão, você terá palestras cobrindo
+                        diversos
                         tópicos relevantes para o
                         seu negócio. A imersão foi desenvolvida para que, em poucos dias, líderes em posições
-                        estratégicas se atualizem nestas técnicas e consigam promover mudanças significativas em seus
+                        estratégicas se atualizem nestas técnicas e consigam promover mudanças significativas em
+                        seus
                         negócios.</p>
                 </div>
                 <div class="w50 wow animate__animated animate__slideInRight">
-                    <p class="headline-text-light">Lorem ipsum dollor site amet the best consectuer adipiscing elites
+                    <p class="headline-text-light">Lorem ipsum dollor site amet the best consectuer adipiscing
+                        elites
                         sed diam
                         nonummy nibh euismod
-                        tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer
+                        adipiscing elit.
                     </p>
 
-                    <p class="headline-text">Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam
+                    <p class="headline-text">Lorem ipsum dollor site amet the best consectuer adipiscing elites
+                        sed diam
                         nonummy nibh
-                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam nonummy nibh
-                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam nonummy nibh
-                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam nonummy nibh
-                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam nonummy nibh
+                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam
+                        nonummy nibh
+                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam
+                        nonummy nibh
+                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam
+                        nonummy nibh
+                        euismod.Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam
+                        nonummy nibh
                         euismod.</p>
                 </div>
             </div>
@@ -148,91 +184,57 @@
             </div>
         </div>
     </div>
-
     <div class="body-grid">
         <div class="container-fluid" style="display: flex;justify-content: center;">
-            <div class="carousel swiper-container wow animate__animated animate__slideInUp"
-                style="margin-bottom: 4rem ;">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="cards">
-                                        <img src="img/Rectangle 17.png" alt="">
-                                        <div class="card-info">
-                                            <p class="card-name">John</p>
-                                            <p class="card-office">Cargo</p>
-                                            <p class="card-description">Uma descrição muito legal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="cards">
-                                        <img src="img/Rectangle 17.png" alt="">
-                                        <div class="card-info">
-                                            <p class="card-name">John</p>
-                                            <p class="card-office">Cargo</p>
-                                            <p class="card-description">Uma descrição muito legal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="cards">
-                                        <img src="img/Rectangle 17.png" alt="">
-                                        <div class="card-info">
-                                            <p class="card-name">John</p>
-                                            <p class="card-office">Cargo</p>
-                                            <p class="card-description">Uma descrição muito legal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="cards">
-                                        <img src="img/Rectangle 17.png" alt="">
-                                        <div class="card-info">
-                                            <p class="card-name">John</p>
-                                            <p class="card-office">Cargo</p>
-                                            <p class="card-description">Uma descrição muito legal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="cards">
-                                        <img src="img/Rectangle 17.png" alt="">
-                                        <div class="card-info">
-                                            <p class="card-name">John</p>
-                                            <p class="card-office">Cargo</p>
-                                            <p class="card-description">Uma descrição muito legal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="cards">
-                                        <img src="img/Rectangle 17.png" alt="">
-                                        <div class="card-info">
-                                            <p class="card-name">John</p>
-                                            <p class="card-office">Cargo</p>
-                                            <p class="card-description">Uma descrição muito legal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="carousel wow animate__animated animate__slideInUp" style="margin-bottom: 8rem ;">
+                <div class="cards">
+                    <img src="img/Rectangle 17.png" alt="">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="cards">
+                    <img src="img/Rectangle 17.png" alt="">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="img/Rectangle 17.png" alt="">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="img/Rectangle 17.png" alt="">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="img/Rectangle 17.png" alt="">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="img/Rectangle 17.png" alt="">
+                    <div class="card-info">
+                        <p class="card-name">John</p>
+                        <p class="card-office">Cargo</p>
+                        <p class="card-description">Uma descrição muito legal</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -259,7 +261,7 @@
     <div class="body-grid">
         <div class="grid">
             <div class="head" style="display: flex; padding-bottom: 6rem;">
-                <div class="headline-hero-dark wow animate__animated animate__slideInRight">
+                <div class="headline-hero-dark wow animate__animated animate__slideInLeft">
                     <hr class="hr spaced">
                     <h6 class="subtitle">PONTO ALTO DO EVENTO</h6>
                     <h3 class="title text-dark " style="margin-top: 0;">
@@ -296,8 +298,8 @@
     </div>
     <div class="body-grid dark">
         <div class="grid">
-            <div class="ads" style="overflow: hidden;">
-                <div class="content  wow animate__animated animate__fadeInUp">
+            <div class="ads w100">
+                <div class="content w100  wow animate__animated animate__fadeInUp">
                     <p>Anúncio</p>
                     <div class="ads-ad">
 
@@ -309,13 +311,13 @@
     <div class="body-grid" style="margin: 15rem 0rem;">
         <div class="grid ">
             <div class="section-holder">
-                <div class="w50" id="img-spotlight">
+                <div class="w50 wow animate__animated animate__slideInLeft" id="img-spotlight w50">
                     <div class="img-spotlight" style="background: transparent;">
                         <img src="./img/Rectangle 17.png" width="100%">
                     </div>
                 </div>
-                <div class="w50" id="text-spotlight">
-                    <div class="headline-hero">
+                <div class="w50  wow animate__animated animate__slideInRight" id="text-spotlight">
+                    <div class="headline-hero" id="headline-hero">
                         <h6 class="subtitle" style="margin-bottom: 1rem;">CONFIRA QUEM SÃO</h6>
                         <h3 class="title text-dark" style="margin-top: 0;font-size: 4.5rem;">NOSSOS
                             DESTAQUES
@@ -331,7 +333,7 @@
                                 experienced
                             </h6>
                         </div>
-                        <div class="description-text" style="width: 70%;">
+                        <div class="description-text">
                             <p style="font-size: 2.2rem !important;font-weight: 200;"> Lorem ipsum dollor
                                 site
                                 amet
@@ -372,35 +374,39 @@
         <div class="grid">
             <div class="numbers">
                 <div class="section  wow animate__animated animate__slideInLeft">
-                    <div class="number-spot">
-                        10.000
-                    </div>
-                    <div class="number-text">
-                        Vagas
-                    </div>
-                </div>
-                <div class="section wow animate__animated animate__slideInUp">
-                    <div class="number-spot">
-                        +60
-                    </div>
-                    <div class="number-text ">
-                        Vagas
-                    </div>
-                </div>
-                <div class="section wow animate__animated animate__slideInUp">
-                    <div class="number-spot ">
-                        50.000
+                    <div class="number-spot purecounter" data-purecounter-start="0" data-purecounter-decimals="3"
+                        data-purecounter-end="90.000" data-purecounter-duration="1">
+                        0
                     </div>
                     <div class="number-text">
                         Alunos
                     </div>
                 </div>
-                <div class="section wow animate__animated animate__slideInRight">
-                    <div class="number-spot ">
-                        10.000
+                <div class="section wow animate__animated animate__slideInUp">
+                    <div class="number-spot">
+                        + <span class=" purecounter" data-purecounter-start="0" data-purecounter-decimals="0"
+                            data-purecounter-end="60.000" data-purecounter-duration="1">0</span>
+                    </div>
+                    <div class="number-text">
+                        Canais
+                    </div>
+                </div>
+                <div class="section wow animate__animated animate__slideInUp">
+                    <div class="number-spot purecounter" data-purecounter-start="0" data-purecounter-decimals="3"
+                        data-purecounter-end="20.000" data-purecounter-duration="1">
+                        0
                     </div>
                     <div class="number-text">
                         Vagas
+                    </div>
+                </div>
+                <div class="section wow animate__animated animate__slideInRight">
+                    <div class="number-spot">
+                        + <span class=" purecounter" data-purecounter-start="0" data-purecounter-decimals="0"
+                            data-purecounter-end="30.000" data-purecounter-duration="1">0</span>
+                    </div>
+                    <div class="number-text">
+                        Palestrantes
                     </div>
                 </div>
             </div>
@@ -408,10 +414,16 @@
     </div>
     <div class="body-grid darks">
         <div class="grid">
-            <div class="ads" style="overflow: hidden;">
-                <div class="content  wow animate__animated animate__fadeInUp">
+            <div class="ads">
+                <div class="content wow animate__animated animate__fadeInUp" style="width: 48%;">
                     <p>Anúncio</p>
-                    <div class="ads-ad">
+                    <div class="ads-ad double">
+
+                    </div>
+                </div>
+                <div class="content  wow animate__animated animate__fadeInUp w45" style="width: 48%;">
+                    <p>Anúncio</p>
+                    <div class="ads-ad double">
 
                     </div>
                 </div>
@@ -428,13 +440,13 @@
             </div>
 
             <div class="grid" id="video">
-                <div class="w50">
+                <div class="w50 wow animate__animated animate__slideInLeft">
                     <div class="img-sh">
                         <img src="./img/banner.png">
                     </div>
                 </div>
 
-                <div class="w40" style="display: flex;">
+                <div class="w40 wow animate__animated animate__slideInRight" style="display: flex;">
                     <div class="headline-hero-dark">
                         <div class="description-title">
                             <h4 class="description-title-title">Oren Website</h4>
@@ -742,7 +754,7 @@
     <div class="body-grid" id="Valores">
         <div class="grid">
             <div class="tickets w100">
-                <div class="w40 wow animate__animated animate__slideInLeft">
+                <div class="w40 wow animate__animated animate__slideInLeft" style="align-self: baseline;">
                     <div class="center">
                         <hr class="hr spaced">
                         <h6 class="subtitle">DÚVIDAS FREQUENTES</h6>
@@ -957,22 +969,8 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
-    <script src="./js/swiper-bundle.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="js/dist/purecounter.js"></script>
     <script src="./js/wow.js"></script>
-    <script>
-        wow = new WOW(
-            {
-                boxClass: 'wow',      // default
-                animateClass: 'animate__animated', // default
-                offset: 0,          // default
-                mobile: true,       // default
-                live: true        // default
-            }
-        )
-        wow.init();
-    </script>
-    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>

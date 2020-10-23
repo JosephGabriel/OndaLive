@@ -58,3 +58,39 @@ menuIcon.addEventListener("click", function(){
     console.log("hh")
 })
 })
+window.addEventListener("load",()=>{
+    wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animate__animated', // default
+            offset: 0,          // default
+            mobile: true,       // default
+            live: true        // default
+        }
+    )
+    wow.init();
+})
+
+
+
+window.addEventListener("load",()=>{
+        let counters = document.querySelectorAll(".number-spot")
+        const speed = 200
+        counters.forEach(counter =>{
+            const updateCount = ()=>{
+                const target = +counter.getAttribute("data-target")
+                const count = +counter.innerText
+
+                const inc = Math.ceil( target / speed)
+
+                if(count < target){
+                    counter.innerText = count + inc
+                    setTimeout(updateCount,1)
+                }
+
+            }
+            updateCount()
+        })
+
+
+})

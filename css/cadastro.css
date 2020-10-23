@@ -222,7 +222,8 @@ input[type="checkbox"]:checked + label:before {
   color: var(--primary-color);
 }
 
-.policy-text span {
+.policy-text span,
+#policy-span {
   font-size: 1.5rem;
   color: var(--accent-color);
 }
