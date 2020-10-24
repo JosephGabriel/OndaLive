@@ -71,8 +71,6 @@ window.addEventListener("load",()=>{
     wow.init();
 })
 
-
-
 window.addEventListener("load",()=>{
         let counters = document.querySelectorAll(".number-spot")
         const speed = 200
@@ -80,7 +78,7 @@ window.addEventListener("load",()=>{
             const updateCount = ()=>{
                 const target = +counter.getAttribute("data-target")
                 const count = +counter.innerText
-
+                console.log("HHH")
                 const inc = Math.ceil( target / speed)
 
                 if(count < target){
@@ -92,5 +90,9 @@ window.addEventListener("load",()=>{
             updateCount()
         })
 
-
+        let parallax = document.getElementById("paral")
+        window.addEventListener("scroll", () => {
+            let offset = window.pageYOffset
+            parallax.style.backgroundPositionY = `${Math.ceil(offset * 0.25)}px`
+        })
 })

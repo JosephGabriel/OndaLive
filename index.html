@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
-    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <link rel="stylesheet" href="./css/animate.css">
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
@@ -184,7 +182,7 @@
             </div>
         </div>
     </div>
-    <div class="body-grid">
+    <div class="body-grid" style="overflow: hidden;">
         <div class="container-fluid" style="display: flex;justify-content: center;">
             <div class="carousel wow animate__animated animate__slideInUp" style="margin-bottom: 8rem ;">
                 <div class="cards">
@@ -238,10 +236,10 @@
             </div>
         </div>
     </div>
-    <div class="body-grid dark  jarallax rellax paralax wow animate__animated animate__fadeInUp"
-        style="height: 220px; overflow: hidden; background-image: url(./img/banner.png); background-position: center;background-attachment: fixed;">
+    <div class="body-grid dark  jarallax rellax paralax wow animate__animated animate__fadeInUp" id="paral"
+        style="height: 220px; overflow: hidden; background: url(./img/banner.png);background-position: center;">
 
-        <div class="grid" style="position: absolute;">
+        <div class=" grid">
             <div>
                 <div class="parallax">
                     <div class="w50 rellax paralax-text">
