@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --secondary-color: #838383;
+  --accent-color: #f4ae13;
+  --background-secondary: #1f1f1f;
+  --font-type-title: bold 4.2rem "Roboto";
+}
+
+* {
+  font-family: "Roboto";
+}
+
+.policy-text-long {
+  padding-top: 3.3rem;
+}
+
+.confirm-subtitle h6 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+.confirm-title {
+  text-align: center;
+}
+
+.confirm-title > h4 {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.confirm-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-box-data {
+  margin-bottom: 4rem;
+  width: fit-content;
+}
+.confirm-box-data:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.confirm-box {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.confirm-code {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-title {
+  display: flex;
+  align-items: center;
+}
+
+.confirm-icon {
+  font-size: 2rem;
+  color: white;
+  margin-right: 1.1rem;
+}
+
+.confirm-box-title h6 {
+  font-size: 1.3rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.confirm-box-description p {
+  font-size: 3.4rem;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hr-confirm {
+  width: 100%;
+  margin: 0;
+  height: 0;
+  margin-bottom: 2.4rem;
+  border: 1px solid var(--accent-color);
+}
+
+.confirm-box-description-data p {
+  font-size: 1.7rem;
+  margin: 0;
+  margin-top: 0.8rem;
+}
+
+.subscription-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-secondary);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subscription-icon {
+  margin-top: 1.4rem;
+  font-size: 3.8rem;
+}
+
+.subscription-title h6 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.subscription-number p {
+  font-weight: bold;
+  font-size: 3.4rem;
+  margin: 0;
+  margin-bottom: 2.6rem;
+}
+
+.subscription-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-date-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.subscription-date-text span {
+  color: var(--accent-color);
+  margin-right: 1rem;
+}
+
+.qr-code {
+  width: 70%;
+}
+
+.qr-code img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.clip {
+  width: 60%;
+  text-align: end;
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.clip i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 897px) {
+  html {
+    font-size: 40%;
+  }
+  .confirm-data {
+    flex-direction: column;
+  }
+  .confirm-box,
+  .confirm-code {
+    width: 100%;
+  }
+  .confirm-box-data {
+    margin-bottom: 5rem;
+  }
+}
