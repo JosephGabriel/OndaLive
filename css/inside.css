@@ -158,7 +158,7 @@ a {
 @media screen and (max-width: 768px) {
   .grid {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     grid-template-rows: repeat(6, auto);
     grid-template-areas:
       "banner"
