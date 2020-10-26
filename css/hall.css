@@ -463,3 +463,32 @@ a {
 .cart-title {
   text-align: center;
 }
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 40%;
+  }
+  .grid {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 2rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas:
+      "banner"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5"
+      "card-6"
+      "card-7"
+      "card-8"
+      "card-9"
+      "card-10"
+      "card-11"
+      "program";
+  }
+}

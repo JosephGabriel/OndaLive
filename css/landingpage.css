@@ -659,6 +659,7 @@
   background-color: #f2f2f2;
   opacity: 0;
   height: 0;
+  pointer-events: none;
   border-left: 0.2rem solid var(--accent-color);
   transition: all 0.5s;
 }
@@ -669,6 +670,7 @@
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
   padding: 2rem;
+  pointer-events: all;
 }
 
 .image-inbox {
