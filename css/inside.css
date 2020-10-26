@@ -112,37 +112,206 @@ a {
 
 .video {
   width: 100%;
-  background-color: rgb(189, 30, 30);
   grid-area: video;
 }
 
 .chat {
   width: 100%;
   grid-area: chat;
-  background-color: rgb(32, 184, 18);
+  height: auto;
+  background-color: rgb(255, 255, 255);
 }
 
 .program-desc {
-  background-color: rgb(13, 146, 199);
+  background-color: rgb(20, 20, 20);
+  padding: 2rem;
+  overflow-y: scroll;
+  height: auto;
   grid-area: program;
 }
 
 .files {
-  background-color: rgb(29, 37, 161);
+  background-color: rgb(255, 255, 255);
   grid-area: files;
+  padding: 2rem 3rem;
+  overflow-y: scroll;
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 .grid {
   display: grid;
   margin: 2rem;
-  height: 1000px;
+  height: auto;
+  align-items: center;
   gap: 2rem;
-  align-items: stretch;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 2fr auto 2fr;
+  grid-template-rows: repeat(4, auto);
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "video video video video video video video video chat chat chat chat"
     "banners banners banners banners banners banners banners banners banners banners banners banners"
     "program program program program program program program program files files files files";
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: flex;
+    gap: 2rem;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "banner"
+      "video"
+      "chat"
+      "banners"
+      "program"
+      "files";
+  }
+}
+
+@media screen and (min-width: 778px) {
+  .files,
+  .chat {
+    height: 100%;
+  }
+}
+
+.audio-btn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.audio-btn button {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0.7rem 3rem;
+}
+
+.speaker-img {
+  display: flex;
+}
+
+.file {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.file-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.file-desc {
+  text-align: left;
+  flex-direction: column;
+  display: flex;
+}
+
+.file-desc p {
+  margin-bottom: 0;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+}
+.file-desc h6 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.4rem;
+}
+.file-div i {
+  align-self: flex-end;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  background: var(--accent-color);
+  cursor: pointer;
+}
+hr {
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+}
+
+.chat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.chat-title {
+  display: flex;
+  justify-content: space-between;
+}
+.chat-title i {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+.chat-title h6 {
+  font-size: 1.5rem;
+}
+
+.chat-input {
+  justify-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-input input {
+  width: 75%;
+  padding: 0 1rem;
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.chat-input input::placeholder {
+  padding: 0rem;
+}
+
+.chat-messages {
+  padding: 2rem 0;
+  height: 100%;
+}
+
+.chat-image {
+  align-self: flex-start;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.chat-message {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  width: 90%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.chat-message p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.message-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.received {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+  margin-left: auto;
+  background: #757575;
+}
+
+.day-selection-input {
+  margin: 0;
+  margin-right: 1rem;
 }
