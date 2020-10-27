@@ -511,3 +511,178 @@ html {
 .b-contain:first-child .b-input::before {
   visibility: hidden;
 }
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+}
+
+.sidenav img {
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.sidenav.activeS {
+  transition: all 0.5s;
+  transform: translateX(0);
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #dbdbdb;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.modal-content {
+  background: #0d0d0d;
+  color: white;
+}
+
+.modal-body {
+  padding: 2rem 5rem;
+}
+
+.modal-title,
+.speaker-modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal-title h6,
+.speaker-modal-title h6 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0;
+  margin-right: 1rem;
+}
+.modal-title hr,
+.speaker-modal-title hr {
+  margin: 0;
+  width: 85%;
+  border: 1px solid #202020;
+}
+
+#close-button {
+  background-color: var(--accent-color);
+  position: relative;
+  right: 0;
+  padding: 0.2rem 0.5rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.desc-modal {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.desc-modal h4 {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.desc-modal span {
+  color: var(--accent-color);
+}
+
+.day-modal {
+  display: flex;
+  margin-bottom: 1.4rem;
+}
+
+.day-day-modal p {
+  font-size: 1.2rem;
+}
+
+.day-day-modal p,
+.day-date-modal p {
+  margin: 0;
+}
+
+.day-date-modal {
+  font-family: 1.2rem;
+}
+.day-date-modal .spot {
+  font-family: 1.2rem;
+  color: var(--accent-color);
+}
+
+.day-day-modal {
+  padding: 0 0.5rem;
+  margin-right: 1rem;
+  background-color: var(--accent-color);
+}
+
+.speaker-modal-modal {
+  display: flex;
+}
+.speaker-modal-modal h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.speaker-modal-modal p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
+  color: var(--accent-color);
+}
+.speaker-modal-modal img {
+  margin-right: 2rem;
+}

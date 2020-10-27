@@ -142,7 +142,6 @@
 
 .cards {
   width: 100%;
-  margin: 0 1rem;
   width: 28.8rem;
   height: 40.7rem;
   position: relative;
@@ -584,6 +583,7 @@
 }
 .ask {
   width: 49rem;
+  background: transparent;
 }
 
 .ask-box {
@@ -596,7 +596,7 @@
   transition: all 0.5s;
 }
 
-.ask.active .ask-box {
+.ask.askactive .ask-box {
   transition: all 0.5s;
   border-left: 0.2rem solid var(--accent-color);
   margin-bottom: 0rem;
@@ -611,6 +611,7 @@
   justify-content: space-between !important;
   display: flex;
   align-items: center;
+  background: transparent;
 }
 
 .ask-details {
@@ -622,11 +623,22 @@
   font-size: 1.7rem;
   font-weight: bold;
 }
+.ask.askactive .ask-ask-title {
+  font-size: 1.7rem;
+  color: var(--accent-color);
+  font-weight: bold;
+}
 
 .ask-number {
   font-size: 1.7rem;
   font-weight: bold;
   color: #727272;
+  margin-right: 0.2rem;
+}
+.ask.askactive .ask-number {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--accent-color);
   margin-right: 0.2rem;
 }
 
@@ -635,7 +647,7 @@
   color: var(--secondary-color);
 }
 
-.ask-dropdown-icon.active {
+.ask.askactive .ask-dropdown-icon {
   color: var(--accent-color);
 }
 
@@ -663,7 +675,7 @@
   border-left: 0.2rem solid var(--accent-color);
   transition: all 0.5s;
 }
-.ask.active .ask-response {
+.ask.askactive .ask-response {
   height: auto;
   transition: all 0.5s;
   opacity: 1;
@@ -671,6 +683,7 @@
   margin-bottom: 0.5rem;
   padding: 2rem;
   pointer-events: all;
+  color: #0d0d0d;
 }
 
 .image-inbox {
@@ -1170,4 +1183,27 @@ button {
     margin: 2rem;
     padding: 0;
   }
+}
+
+.glide-contorles {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+}
+
+.glide-contorles i {
+  font-size: 2rem;
+  padding: 2rem 2.2rem;
+  background-color: #00000096;
+  cursor: pointer;
+  border-radius: 5rem;
+}
+
+.glide {
+  position: relative;
+  display: flex;
+  align-items: center;
 }

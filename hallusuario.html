@@ -22,11 +22,11 @@
     </div>
     <div class="navbar-container">
         <div class="navbar-holder">
-            <div class="w50" style="display: flex; align-items: center;">
+            <div style="display: flex; align-items: center;">
                 <img src="./favicon.svg" class="navbar-brand">
                 <div class="site-map">
                     <ul class="site-map-list">
-                        <li class="site-map-item"><a href="">Voltar para o Site</a></li>
+                        <li class="site-map-item"><a href="/">Voltar para o Site</a></li>
                         <li class="site-map-item"><a href="">Titulo do Evento/Data</a></li>
                     </ul>
                 </div>
@@ -37,7 +37,15 @@
                     <li class="user-info-item">Olá, <strong>Casio</strong> <span>C</span></li>
                 </ul>
             </div>
+            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
+                &#9776;
+            </div>
         </div>
+    </div>
+    <div class="sidenav" id="sidenav" style="margin-top: 5rem;">
+        <img src="./img/logo-sticky.svg">
+        <a href="#about">Voltar para o Site</a>
+        <a href="#services">Titulo do Evento/Data</a>
     </div>
     </div>
     <div class="body-grid">
@@ -874,6 +882,28 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
+    <script>
+        var nav = document.getElementById("nav-toggle")
+        var sidenav = document.getElementById("sidenav")
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        nav.addEventListener("click", () => {
+            sidenav.classList.toggle("activeS")
+        })
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ window.addEventListener("load",()=>{
     const accordion = document.getElementsByClassName("ask")
     for (let i = 0; i < accordion.length; i++) {
         accordion[i].addEventListener("click", function () {
-            this.classList.toggle("active")
+            this.classList.toggle("askactive")
         })
     }
    
@@ -19,7 +19,6 @@ const menu = document.getElementById("navbar-list-mobile")
 
 menuIcon.addEventListener("click", function(){
 menu.classList.toggle("active")
-console.log("hh")
 })
 })
 window.addEventListener("load",()=>{
