@@ -278,7 +278,7 @@ html {
   transform: translateX(-100%);
 }
 
-.navbar-list-mobile.active {
+.navbar-list-mobile {
   z-index: 5;
   transition: all 0.5s;
   transform: translateX(0%);
@@ -515,7 +515,7 @@ html {
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: 200px;
+  width: auto;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -524,6 +524,7 @@ html {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  padding: 2rem;
   transition: all 0.5s;
   transform: translateX(-100%);
 }

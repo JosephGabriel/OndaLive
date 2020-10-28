@@ -464,6 +464,18 @@ a {
   text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-map {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 992px) {
   html {
     font-size: 40%;
@@ -491,4 +503,79 @@ a {
       "card-11"
       "program";
   }
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  color: var(--accent-color);
+}
+.dashboard i {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #4e4e4e;
+  border-radius: 4rem;
+  margin-bottom: 1rem;
+}
+.dashboard p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+#hr-hr {
+  width: 98%;
+  border: 0.5px solid rgb(136, 136, 136);
+  margin-bottom: 2rem;
+}
+
+.user-count {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin: 0 3rem;
+}
+
+.user-online,
+.user-subscription {
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+.user-online,
+.user-subscription {
+  padding: 0rem 2rem;
+  background-color: #333;
+}
+
+.user-online i,
+.user-subscription i {
+  color: var(--accent-color);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+}
+.user-online h6,
+.user-subscription h6 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+.user-online p,
+.user-subscription p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.search-bar {
+  border: 1px solid #fff;
+  width: fit-content;
+  margin: auto;
+}
+
+.search-bar input {
+  border: 0;
+}
+
+.search-bar i {
+  color: #fff;
 }

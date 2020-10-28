@@ -40,24 +40,18 @@
                 <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
                 <li class="navbar-item full"><a href="/comprar.html">Comprar</a></li>
             </ul>
-            <div class="nav-icon" id="nav-icon">
+            <div class="nav-icon" id="nav-icon" onclick="openNav()">
                 &#9776;
             </div>
         </nav>
     </div>
-    <!-- <ul class="navbar-list-mobile" id="navbar-list-mobile">
-        <h1 class="navbar-dropdown">O Evento</>
-            <ul>
-                <li class="navbar-item-mobile"><a href="#Palestrantes">Palestrantes</a></li>
-                <li class="navbar-item-mobile"><a href="#Programação">Programação</a></li>
-                <li class="navbar-item-mobile"><a href="#Valores">Valores</a></li>
-                <li class="navbar-item-mobile"><a href="#Dúvidas">Dúvidas</a></li>
-            </ul>
-            </li>
-            <li class="navbar-item-mobile outline"><a href="./login.html">Login</a></li>
-            <li class="navbar-item-mobile outline"><a href="./cadastro.html">Cadastrar-se</a></li>
-            <li class="navbar-item-mobile full"><a href="">Comprar</a></li>
-    </ul> -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
     <div class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -272,6 +266,7 @@
                     </li>
                 </ul>
             </div>
+            <div class="glide__bullets" data-guide-el="controls[nav]"></div>
             <div data-glide-el="controls" class="glide-contorles">
                 <div data-glide-dir="<"><i class="fas fa-chevron-left"></i></div>
                 <div data-glide-dir=">"><i class="fas fa-chevron-right"></i></div>
@@ -387,13 +382,25 @@
                         <div class="card-sl">
                             <div class="carrosel">
                                 <div class="img-spotlight2">
-
+                                    <img src="./img/Rectangle 17.png">
+                                    <div class="spotlight-description">
+                                        <h4>Jonathan Doe</h4>
+                                        <h6>Lorem ipsum dolor sit</h6>
+                                    </div>
                                 </div>
                                 <div class="img-spotlight2">
-
+                                    <img src="./img/Rectangle 17.png">
+                                    <div class="spotlight-description">
+                                        <h4>Jonathan Doe</h4>
+                                        <h6>Lorem ipsum dolor sit</h6>
+                                    </div>
                                 </div>
                                 <div class="img-spotlight2">
-
+                                    <img src="./img/Rectangle 17.png">
+                                    <div class="spotlight-description">
+                                        <h4>Jonathan Doe</h4>
+                                        <h6>Lorem ipsum dolor sit</h6>
+                                    </div>
                                 </div>
                             </div>
                             <br>
@@ -1262,11 +1269,28 @@
             type: 'carousel',
             autoplay: 3000,
             perView: 4,
-            gap: 10,
             focusAt: 'center',
+            breakpoints: {
+                1024: {
+                    perView: 4
+                },
+                600: {
+                    perView: 2
+                },
+                480: {
+                    perView: 2
+                },
+                320: {
+                    perView: 1
+                }
+            },
+
         })
 
         glide.mount()
+
+
+
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>

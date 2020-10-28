@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/hall.css">
     <script src="./js/script.js"></script>
-    <script src="./js/app.js"></script>
     <title>Onda Live</title>
 </head>
 
@@ -20,28 +21,1117 @@
     </div>
     <div class="navbar-container">
         <div class="navbar-holder">
-            <img src="./favicon.svg">
-            <div class="site-map">
-                <ul>
-                    <li><button><a href="">Voltar para o Site</a></button></li>
-                    <li><button><a href="">Titulo do Evento/Data</a></button></li>
-                </ul>
+            <div style="display: flex; align-items: center;">
+                <img src="./favicon.svg" class="navbar-brand">
+                <div class="site-map">
+                    <ul class="site-map-list">
+                        <li class="site-map-item"><a href="/">Voltar para o Site</a></li>
+                        <li class="site-map-item"><a href="">Titulo do Evento/Data</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="user-info">
-                <ul>
-                    <li><i class="fa fa-cart-plus"></i></li>
-                    <li>Olá, Casio <span>C</span></li>
+                <ul class="user-info-map">
+                    <li class="user-info-item cart" id="tool" style="cursor: pointer;"><i class="fas fa-tools"></i></li>
+                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
+                    <li class="user-info-item">Olá, <strong>Casio</strong> <span>C</span></li>
                 </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
+                &#9776;
+            </div>
+        </div>
+    </div>
+    <div class="sidenav" id="sidenav" style="margin-top: 7rem;">
+        <img src="./img/logo-sticky.svg">
+        <a href="#about">Voltar para o Site</a>
+        <a href="#services">Titulo do Evento/Data</a>
+    </div>
+    <div class="sidenav" id="toolbar" style="margin-top: 7rem;width: auto;">
+
+        <div class="dashboard">
+            <div>
+                <i class="fas fa-chart-line"></i>
+                <p>Dashboard</p>
+            </div>
+            <div>
+                <i class="fas fa-users"></i>
+                <p>Usuários</p>
+            </div>
+        </div>
+        <hr id="hr-hr">
+        <div class="user-count">
+            <div class="user-online">
+                <i class="fas fa-user-friends"></i>
+                <h6>780</h6>
+                <p>Online</p>
+            </div>
+            <div class="user-subscription">
+                <i class="fas fa-ticket-alt"></i>
+                <h6>1,300</h6>
+                <p>Inscrições</p>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <div class="user-adm">
+            <div class="user-title-box">
+                <div class="div-1">
+                    <h4>Usuários permitidos</h4>
+                    <p>15 usuários foram cadastrados</p>
+                </div>
+                <div class="div-2">
+                    <button>Novo Contato &nbsp; <i class="fas fa-user-plus"></i></button>
+                </div>
+            </div>
+            <div>
+                <div class="user-title-title">
+                    <p>Usuarios</p>
+                    <p>Action</p>
+                </div>
+                <div class="user-description-list">
+                    <div class="user-name-list">
+                        <h6>Brad Simons</h6>
+                        <p>email@test.com</p>
+                    </div>
+                    <div class="actions">
+                        <i class="fas fa-toggle-on"></i>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     </div>
     <div class="body-grid">
         <div class="grid">
+            <div class="banner">
+                <img src="./img/banner.png">
+            </div>
+            <div class="card-1">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-2">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-3">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-4">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/Rectangle 17.png" height="380px" style="transform: scale(1.5);">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="program">
+                <div class="presention">
+                    <div class="center" style="display: flex;align-items: center;flex-direction: column;">
+                        <hr class="hr">
+                        <h6 class="subtitle">SALA E EVENTOS</h6>
+                        <h3 class="title"
+                            style="margin-top: 0;margin-bottom: 1rem; color: white; font-size: 3rem; text-align: center;">
+                            Nossa Programação</h3>
+                    </div>
+                    <div class="day-selection">
+                        <label class="day-label" for="day-selection">Sala</label>
+                        <select name="day-selection" class="day-selection-input">
+                            <option value="">Selecione</option>
+                            <option value=""></option>
+                        </select>
 
+                        <label class="day-label" for="day-selection">Dia</label>
+                        <select name="day-selection" class="day-selection-input">
+                            <option value="">Selecione</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="day-box-holder w100">
+                    <div class="program-box wow animate__animated animate__fadeInUp">
+                        <div class="program-box-left">
+                            <div class="program-day">
+                                <h4>14</h4>
+                                <h6>agosto</h6>
+                            </div>
+                            <div class="program-room">
+                                <h4>SALA <br> ONDALIVE</h4>
+                                <p>Inicio as 22:00h</p>
+                            </div>
+                            <div class="program-description">
+                                <h4>TITULO DA PALESTRA</h4>
+                                <p>breve descrição do que vai acontecer na palestra |</p>
+                                <h6>Nomes dos palestrantes</h6>
+                            </div>
+                        </div>
+                        <div class="program-box-right">
+                            <div class="speaker-img">
+                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                            </div>
+                            <div class="button-description">
+                                <button type="button" data-toggle="modal" data-target="#modal1">+
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-box wow animate__animated animate__fadeInUp">
+                        <div class="program-box-left">
+                            <div class="program-day">
+                                <h4>14</h4>
+                                <h6>agosto</h6>
+                            </div>
+                            <div class="program-room">
+                                <h4>SALA <br> ONDALIVE</h4>
+                                <p>Inicio as 22:00h</p>
+                            </div>
+                            <div class="program-description">
+                                <h4>TITULO DA PALESTRA</h4>
+                                <p>breve descrição do que vai acontecer na palestra |</p>
+                                <h6>Nomes dos palestrantes</h6>
+                            </div>
+                        </div>
+                        <div class="program-box-right">
+                            <div class="speaker-img">
+                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                            </div>
+                            <div class="button-description">
+                                <button type="button" data-toggle="modal" data-target="#modal2">+
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-box wow animate__animated animate__fadeInUp">
+                        <div class="program-box-left">
+                            <div class="program-day">
+                                <h4>14</h4>
+                                <h6>agosto</h6>
+                            </div>
+                            <div class="program-room">
+                                <h4>SALA <br> ONDALIVE</h4>
+                                <p>Inicio as 22:00h</p>
+                            </div>
+                            <div class="program-description">
+                                <h4>TITULO DA PALESTRA</h4>
+                                <p>breve descrição do que vai acontecer na palestra |</p>
+                                <h6>Nomes dos palestrantes</h6>
+                            </div>
+                        </div>
+                        <div class="program-box-right">
+                            <div class="speaker-img">
+                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                            </div>
+                            <div class="button-description">
+                                <button type="button" data-toggle="modal" data-target="#modal3">+
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: none;">
+                                <button type="button" id="close-button" class="close " data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-title">
+                                    <h6>PALESTRA</h6>
+                                    <hr>
+                                </div>
+                                <div class="desc-modal">
+                                    <h4>TITULO DA PALESTRA</h4>
+                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                                    <div class="day-modal">
+                                        <div class="day-day-modal">
+                                            <p><strong>14</strong><br> AGO</p>
+                                        </div>
+                                        <div class="day-date-modal">
+                                            <p>Inicio as 22:00h</p>
+                                            <p class="spot">SALA ONDALIVE</p>
+                                        </div>
+                                    </div>
+                                    <div class="desc-desc-modal">
+                                        <p>breve descrição do que vai acontecer na palestra</p>
+                                    </div>
+                                </div>
+                                <div class="speaker-modal">
+                                    <div class="speaker-modal-title">
+                                        <h6>PALESTRANTE(S)</h6>
+                                        <hr>
+                                    </div>
+                                    <div class="speaker-modal-modal">
+                                        <img src="./img/Rectangle 17.png" width="70px">
+                                        <div>
+                                            <h6>NOME DO PALESTRANTE</h6>
+                                            <p>Cargo do palestrante na empresa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: none;">
+                                <button type="button" id="close-button" class="close " data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-title">
+                                    <h6>PALESTRA</h6>
+                                    <hr>
+                                </div>
+                                <div class="desc-modal">
+                                    <h4>TITULO DA PALESTRA</h4>
+                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                                    <div class="day-modal">
+                                        <div class="day-day-modal">
+                                            <p><strong>14</strong><br> AGO</p>
+                                        </div>
+                                        <div class="day-date-modal">
+                                            <p>Inicio as 22:00h</p>
+                                            <p class="spot">SALA ONDALIVE</p>
+                                        </div>
+                                    </div>
+                                    <div class="desc-desc-modal">
+                                        <p>breve descrição do que vai acontecer na palestra</p>
+                                    </div>
+                                </div>
+                                <div class="speaker-modal">
+                                    <div class="speaker-modal-title">
+                                        <h6>PALESTRANTE(S)</h6>
+                                        <hr>
+                                    </div>
+                                    <div class="speaker-modal-modal">
+                                        <img src="./img/Rectangle 17.png" width="70px">
+                                        <div>
+                                            <h6>NOME DO PALESTRANTE</h6>
+                                            <p>Cargo do palestrante na empresa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal3" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: none;">
+                                <button type="button" id="close-button" class="close " data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-title">
+                                    <h6>PALESTRA</h6>
+                                    <hr>
+                                </div>
+                                <div class="desc-modal">
+                                    <h4>TITULO DA PALESTRA</h4>
+                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                                    <div class="day-modal">
+                                        <div class="day-day-modal">
+                                            <p><strong>14</strong><br> AGO</p>
+                                        </div>
+                                        <div class="day-date-modal">
+                                            <p>Inicio as 22:00h</p>
+                                            <p class="spot">SALA ONDALIVE</p>
+                                        </div>
+                                    </div>
+                                    <div class="desc-desc-modal">
+                                        <p>breve descrição do que vai acontecer na palestra</p>
+                                    </div>
+                                </div>
+                                <div class="speaker-modal">
+                                    <div class="speaker-modal-title">
+                                        <h6>PALESTRANTE(S)</h6>
+                                        <hr>
+                                    </div>
+                                    <div class="speaker-modal-modal">
+                                        <img src="./img/Rectangle 17.png" width="70px">
+                                        <div>
+                                            <h6>NOME DO PALESTRANTE</h6>
+                                            <p>Cargo do palestrante na empresa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-5">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-6">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-7">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer w50" style="width:49.5%;" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer" style="width: 49.5%;">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-8">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer w50" style="width:49.5%;" id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer" style="width: 49.5%;">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-9">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3 " id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3 ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart-small">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-10">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3 " id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3 ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart-small">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-11">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3 " id="details-btn">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3 ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart-small">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="footer">
+        <p>Onda Live ©2020 Todos os direitos reservados.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        let tool = document.getElementById("tool")
+        let toolbar = document.getElementById("toolbar")
+        let dropdownb = document.getElementsByClassName("dropdown-btn");
+        let j;
 
+        tool.addEventListener("click", () => {
+            toolbar.classList.toggle("activeS")
+        })
+
+        for (j = 0; j < dropdownb.length; j++) {
+            dropdownb[j].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let dropdownbContent = this.nextElementSibling;
+                if (dropdownbContent.style.display === "block") {
+                    dropdownbContent.style.display = "none";
+                } else {
+                    dropdownbContent.style.display = "block";
+                }
+            });
+        }
+        let nav = document.getElementById("nav-toggle")
+        let sidenav = document.getElementById("sidenav")
+        let dropdown = document.getElementsByClassName("dropdown-btn");
+        let i;
+
+        nav.addEventListener("click", () => {
+            sidenav.classList.toggle("activeS")
+        })
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
