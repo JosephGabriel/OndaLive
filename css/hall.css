@@ -526,7 +526,7 @@ a {
 
 #hr-hr {
   width: 98%;
-  border: 0.5px solid rgb(136, 136, 136);
+  border: 0.5px solid #ffffff41;
   margin-bottom: 2rem;
 }
 
@@ -546,7 +546,7 @@ a {
 .user-online,
 .user-subscription {
   padding: 0rem 2rem;
-  background-color: #333;
+  background-color: rgb(34, 34, 34);
 }
 
 .user-online i,
@@ -567,15 +567,87 @@ a {
 }
 
 .search-bar {
-  border: 1px solid #fff;
+  border: 1px solid #ffffff7e;
   width: fit-content;
-  margin: auto;
+  margin-bottom: 2rem;
 }
 
 .search-bar input {
   border: 0;
 }
+.search-bar input:focus,
+.search-bar input:active {
+  border: 0;
+  color: #fff;
+  outline: none;
+}
 
 .search-bar i {
+  font-size: 1.4rem;
+  color: #ffffff7e;
+  transform: scaleX(-1);
+  margin: 1rem;
+}
+
+.user-adm {
+  border: #ffffff7e 1px solid;
+  display: flex;
   color: #fff;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 0;
+  margin-bottom: 10rem;
+}
+
+.user-title-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-1 {
+  margin-right: 5rem;
+}
+
+.div-2 button {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+}
+
+.user-title-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.user-title-title p {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.user-description-list {
+  border-top: 1px solid #acacac;
+  padding-top: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.user-name-list {
+  text-align: left;
+}
+
+.user-name-list h6 {
+  font-size: 1.4rem;
+}
+
+.user-name-list p {
+  font-size: 1.2rem;
+}
+
+.actions i {
+  font-size: 1.4rem;
+  padding: 0.8rem 1rem;
+  margin: 0 0rem;
+  margin-right: 0.4rem;
+  background: #838383;
 }
