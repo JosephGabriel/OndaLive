@@ -29,7 +29,7 @@
                     <ul class="site-map-list">
                         <li class="site-map-item"><a href="/">Voltar para o Site</a></li>
                         <li class="site-map-item"><a href="">Titulo do Evento/Data</a></li>
-                        <li class="site-map-item"><a href="">Trocar de Sala</a></li>
+                        <li class="site-map-item"><a href="/hallusuario.html">Trocar de Sala</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,6 +63,7 @@
                 <script src="https://player.vimeo.com/api/player.js"></script>
                 <div class="audio-btn">
                     <button>Trocar Áudio</button>
+                    <button>Jogar Quiz</button>
                 </div>
             </div>
             <div class="chat">
@@ -139,7 +140,8 @@
                                 <img src="./img/Rectangle 111.png" width="45px" height="65px">
                             </div>
                             <div class="button-description">
-                                <button>+ Detalhes</button>
+                                <button type="button" data-toggle="modal" data-target="#modal1">+
+                                    Detalhes</button>
                             </div>
                         </div>
                     </div>
@@ -165,7 +167,104 @@
                                 <img src="./img/Rectangle 111.png" width="45px" height="65px">
                             </div>
                             <div class="button-description">
-                                <button>+ Detalhes</button>
+                                <button type="button" data-toggle="modal" data-target="#modal2">+
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: none;">
+                                <button type="button" id="close-button" class="close " data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-title">
+                                    <h6>PALESTRA</h6>
+                                    <hr>
+                                </div>
+                                <div class="desc-modal">
+                                    <h4>TITULO DA PALESTRA</h4>
+                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                                    <div class="day-modal">
+                                        <div class="day-day-modal">
+                                            <p><strong>14</strong><br> AGO</p>
+                                        </div>
+                                        <div class="day-date-modal">
+                                            <p>Inicio as 22:00h</p>
+                                            <p class="spot">SALA ONDALIVE</p>
+                                        </div>
+                                    </div>
+                                    <div class="desc-desc-modal">
+                                        <p>breve descrição do que vai acontecer na palestra</p>
+                                    </div>
+                                </div>
+                                <div class="speaker-modal">
+                                    <div class="speaker-modal-title">
+                                        <h6>PALESTRANTE(S)</h6>
+                                        <hr>
+                                    </div>
+                                    <div class="speaker-modal-modal">
+                                        <img src="./img/Rectangle 17.png" width="70px">
+                                        <div>
+                                            <h6>NOME DO PALESTRANTE</h6>
+                                            <p>Cargo do palestrante na empresa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: none;">
+                                <button type="button" id="close-button" class="close " data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-title">
+                                    <h6>PALESTRA</h6>
+                                    <hr>
+                                </div>
+                                <div class="desc-modal">
+                                    <h4>TITULO DA PALESTRA</h4>
+                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                                    <div class="day-modal">
+                                        <div class="day-day-modal">
+                                            <p><strong>14</strong><br> AGO</p>
+                                        </div>
+                                        <div class="day-date-modal">
+                                            <p>Inicio as 22:00h</p>
+                                            <p class="spot">SALA ONDALIVE</p>
+                                        </div>
+                                    </div>
+                                    <div class="desc-desc-modal">
+                                        <p>breve descrição do que vai acontecer na palestra</p>
+                                    </div>
+                                </div>
+                                <div class="speaker-modal">
+                                    <div class="speaker-modal-title">
+                                        <h6>PALESTRANTE(S)</h6>
+                                        <hr>
+                                    </div>
+                                    <div class="speaker-modal-modal">
+                                        <img src="./img/Rectangle 17.png" width="70px">
+                                        <div>
+                                            <h6>NOME DO PALESTRANTE</h6>
+                                            <p>Cargo do palestrante na empresa</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -206,6 +305,8 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
         var nav = document.getElementById("nav-toggle")
         var sidenav = document.getElementById("sidenav")

@@ -189,7 +189,7 @@ a {
 .audio-btn {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .audio-btn button {
@@ -200,6 +200,7 @@ a {
   font-size: 1.2rem;
   text-transform: uppercase;
   padding: 0.7rem 3rem;
+  cursor: pointer;
 }
 
 .speaker-img {
@@ -276,6 +277,7 @@ hr {
   width: 75%;
   padding: 0 1rem;
   border: none;
+  outline-style: none;
   border-bottom: 1px solid var(--secondary-color);
 }
 .chat-input input::placeholder {
