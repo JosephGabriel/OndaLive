@@ -50,6 +50,21 @@
         <a href="#">Titulo do Evento/Data</a>
         <a href="#">Trocar de Sala</a>
     </div>
+    <div class="quiz" id="quiz">
+        <div class="icon-close">
+            <i class="fas fa-window-close" id="close-bbtn"></i>
+        </div>
+        <div class="image-quiz">
+            <img src="./img/logo-quiz.png">
+        </div>
+        <div class="quiz-quiz">
+            <h4>Nome do Quiz</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi iste architecto! Explicabo rerum
+                laboriosam quibusdam facilis, sit magni nobis. Repudiandae quas tenetur pariatur possimus expedita ipsam
+                necessitatibus nihil id?</p>
+            <button>Iniciar</button>
+        </div>
+    </div>
     <div class="body-grid">
         <div class="grid">
             <div class="banner">
@@ -308,6 +323,20 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
+
+        let playQuiz = document.getElementById("playQuiz")
+        let quiz = document.getElementById("quiz")
+        let close = document.getElementById("close-bbtn")
+
+        playQuiz.addEventListener("click", () => {
+            console.log("JJJ")
+            quiz.classList.add("activeQ")
+        })
+        close.addEventListener("click", () => {
+            console.log("JJJ")
+            quiz.classList.remove("activeQ")
+        })
+
         var nav = document.getElementById("nav-toggle")
         var sidenav = document.getElementById("sidenav")
         var dropdown = document.getElementsByClassName("dropdown-btn");
