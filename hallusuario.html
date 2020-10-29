@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" id="details-btn">
+                    <div class="button-footer" onmouseover="over(0)" onmouseout="out(0)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" id="details-btn">
+                    <div class="button-footer-small" onmouseover="over(1)" onmouseout="out(1)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" id="details-btn">
+                    <div class="button-footer-small" onmouseover="over(2)" onmouseout="out(2)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -292,7 +292,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" id="details-btn">
+                    <div class="button-footer-small" onmouseover="over(3)" onmouseout="out(3)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -603,7 +603,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" id="details-btn">
+                    <div class="button-footer" onmouseover="over(4)" onmouseout="out(4)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -673,7 +673,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" id="details-btn">
+                    <div class="button-footer" onmouseover="over(5)" onmouseout="out(5)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -743,7 +743,8 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer w50" style="width:49.5%;" id="details-btn">
+                    <div class="button-footer w50" style="width:49.5%;" id="details-btn" onmouseover="over(6)"
+                        onmouseout="out(6)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -803,7 +804,8 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer w50" style="width:49.5%;" id="details-btn">
+                    <div class="button-footer w50" style="width:49.5%;" id="details-btn" onmouseover="over(7)"
+                        onmouseout="out(7)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -863,7 +865,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn">
+                    <div class="button-footer-small-3 " id="details-btn" onmouseover="over(8)" onmouseout="out(8)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -933,7 +935,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn">
+                    <div class="button-footer-small-3 " id="details-btn" onmouseover="over(9)" onmouseout="out(9)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -1003,7 +1005,7 @@
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn">
+                    <div class="button-footer-small-3 " id="details-btn" onmouseover="over(10)" onmouseout="out(10)">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -1031,6 +1033,25 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
+
+        function over(num) {
+            var divs = document.querySelectorAll('.details');
+            for (var i = 0; i < divs.length; i++) {
+                if (num == i) {
+                    divs[i].classList.add('show');
+                }
+            }
+        }
+
+        function out(num) {
+            var divs = document.querySelectorAll('.details');
+            for (var i = 0; i < divs.length; i++) {
+                if (num == i) {
+                    divs[i].classList.remove('show');
+                }
+            }
+        }
+
         var nav = document.getElementById("nav-toggle")
         var sidenav = document.getElementById("sidenav")
         var dropdown = document.getElementsByClassName("dropdown-btn");
