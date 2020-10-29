@@ -348,7 +348,7 @@
             <div class="section-holder">
                 <div class="w50 wow animate__animated animate__slideInLeft" id="img-spotlight w50">
                     <div class="img-spotlight" style="background: transparent;">
-                        <img src="./img/Rectangle 17.png" width="100%">
+                        <img src="./img/Rectangle 17.png" width="100%" id="image-selected">
                     </div>
                 </div>
                 <div class="w50  wow animate__animated animate__slideInRight" id="text-spotlight">
@@ -379,38 +379,85 @@
                                 euismod tincidunt ut laoreet dolore magna aliquam...
                             </p>
                         </div>
-                        <div class="card-sl">
-                            <div class="carrosel">
-                                <div class="img-spotlight2">
-                                    <img src="./img/Rectangle 17.png">
-                                    <div class="spotlight-description">
-                                        <h4>Jonathan Doe</h4>
-                                        <h6>Lorem ipsum dolor sit</h6>
+                        <div id="carousel-img" class="carousel slide" data-ride="carousel"
+                            style="background: transparent;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" style="background: transparent;">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="img-spotlight2"
+                                                onclick=" changeImg('./img/stefan-stefancik-QXevDflbl8A-unsplash.jpg')">
+                                                <img src="./img/stefan-stefancik-QXevDflbl8A-unsplash.jpg">
+                                                <div class="spotlight-description">
+                                                    <h4>Jonathan Doe</h4>
+                                                    <h6>Lorem ipsum dolor sit</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="img-spotlight2"
+                                                onclick=" changeImg('./img/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg')">
+                                                <img src="./img/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg">
+                                                <div class="spotlight-description">
+                                                    <h4>Jonathan Doe</h4>
+                                                    <h6>Lorem ipsum dolor sit</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="img-spotlight2"
+                                                onclick=" changeImg('./img/jeffery-erhunse-Z9lbmEjyYjU-unsplash.jpg')">
+                                                <img src="./img/jeffery-erhunse-Z9lbmEjyYjU-unsplash.jpg">
+                                                <div class="spotlight-description">
+                                                    <h4>Jonathan Doe</h4>
+                                                    <h6>Lorem ipsum dolor sit</h6>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="img-spotlight2">
-                                    <img src="./img/Rectangle 17.png">
-                                    <div class="spotlight-description">
-                                        <h4>Jonathan Doe</h4>
-                                        <h6>Lorem ipsum dolor sit</h6>
-                                    </div>
-                                </div>
-                                <div class="img-spotlight2">
-                                    <img src="./img/Rectangle 17.png">
-                                    <div class="spotlight-description">
-                                        <h4>Jonathan Doe</h4>
-                                        <h6>Lorem ipsum dolor sit</h6>
+                                <div class="carousel-item" style="background: transparent;">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="img-spotlight2" onclick=" changeImg('./img/Pierre-Person.jpg')">
+                                                <img src="./img/Pierre-Person.jpg">
+                                                <div class="spotlight-description">
+                                                    <h4>Jonathan Doe</h4>
+                                                    <h6>Lorem ipsum dolor sit</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="img-spotlight2"
+                                                onclick=" changeImg('./img/sebastian-hemetsberger-lrPfuJsbWhQ-unsplash.jpg')">
+                                                <img src="./img/sebastian-hemetsberger-lrPfuJsbWhQ-unsplash.jpg">
+                                                <div class="spotlight-description">
+                                                    <h4>Jonathan Doe</h4>
+                                                    <h6>Lorem ipsum dolor sit</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="img-spotlight2"
+                                                onclick=" changeImg('./img/sobhan-joodi-PrXsOoAYqgg-unsplash.jpg')">
+                                                <img src="./img/sobhan-joodi-PrXsOoAYqgg-unsplash.jpg">
+                                                <div class="spotlight-description">
+                                                    <h4>Jonathan Doe</h4>
+                                                    <h6>Lorem ipsum dolor sit</h6>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <div class="dots">
-                                <div class="dot-active">
-                                    <div class="dot-inner"></div>
-                                </div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
+                            <a class="carousel-control-prev" href="#carousel-img" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-img" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1265,6 +1312,14 @@
     </div>
     <script src="./js/dist/glide.min.js"></script>
     <script>
+
+        let img = document.getElementById("image-selected")
+
+        function changeImg(imgs) {
+            img.src = imgs
+        }
+
+
         var glide = new Glide('.glide', {
             type: 'carousel',
             autoplay: 3000,
@@ -1288,8 +1343,6 @@
         })
 
         glide.mount()
-
-
 
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
