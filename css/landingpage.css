@@ -1183,7 +1183,6 @@ button {
   padding: 2.4rem;
   background-color: #00000048;
   cursor: pointer;
-  border-radius: 1rem;
   background-image: none;
   display: flex;
   justify-content: center;
@@ -1206,10 +1205,9 @@ button {
 
 .glide-contorles i {
   font-size: 2rem;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.4rem;
   background-color: #00000048;
   cursor: pointer;
-  border-radius: 1rem;
 }
 
 .glide {
