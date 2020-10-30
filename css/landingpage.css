@@ -1218,7 +1218,6 @@ button {
   justify-content: center;
   transition: all 0.5s;
   align-items: center;
-  box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.5);
 }
 
 .spotlight-description {
@@ -1267,4 +1266,8 @@ button {
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
+}
+
+.owl-item {
+  background: transparent;
 }
