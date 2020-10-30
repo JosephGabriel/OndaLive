@@ -1271,3 +1271,7 @@ button {
 .owl-item {
   background: transparent;
 }
+
+.glide__bullets button {
+  background: #9c9c9c;
+}

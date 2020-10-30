@@ -182,9 +182,9 @@
             </div>
         </div>
     </div>
-    <div class="body-grid">
+    <div class="body-grid " style="margin-bottom: 4rem;">
         <div class="glide wow animate__animated animate__fadeInUp">
-            <div class=" glide__track" data-glide-el="track" style="margin-bottom: 8rem;">
+            <div class=" glide__track" data-glide-el="track" style="margin-bottom: 5rem;">
                 <ul class="glide__slides">
                     <li class="glide__slide">
                         <div class="cards" style="background-image: url(./img/Rectangle\ 17.png);">
@@ -251,7 +251,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="glide__bullets" data-guide-el="controls[nav]"></div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
             <div data-glide-el="controls" class="glide-contorles">
                 <div data-glide-dir="<"><i class="fas fa-chevron-left"></i></div>
                 <div data-glide-dir=">"><i class="fas fa-chevron-right"></i></div>
@@ -407,6 +411,7 @@
                                     <h6>Lorem ipsum dolor sit</h6>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -1312,7 +1317,8 @@
                 nav: true,
                 autoplay: true,
                 autoplayTimeout: 5000,
-            });
+
+            })
         });
     </script>
 </body>
