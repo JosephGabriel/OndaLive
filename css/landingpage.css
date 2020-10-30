@@ -1329,3 +1329,9 @@ button {
   font-size: 2rem;
   text-decoration: none;
 }
+
+.img-sh img {
+  width: 600px;
+  height: 290px;
+  object-fit: cover;
+}
