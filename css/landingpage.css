@@ -1176,6 +1176,23 @@ button {
   }
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  padding: 2.4rem;
+  background-color: #00000048;
+  cursor: pointer;
+  border-radius: 1rem;
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.sr-only {
+  font-size: 1rem;
+}
+
 .glide-contorles {
   display: flex;
   justify-content: space-between;
@@ -1187,10 +1204,10 @@ button {
 
 .glide-contorles i {
   font-size: 2rem;
-  padding: 2rem 2.4rem;
+  padding: 1rem 1.2rem;
   background-color: #00000048;
   cursor: pointer;
-  border-radius: 5rem;
+  border-radius: 1rem;
 }
 
 .glide {
