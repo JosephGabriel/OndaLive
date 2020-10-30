@@ -1275,3 +1275,7 @@ button {
 .glide__bullets button {
   background: #9c9c9c;
 }
+
+.glide__bullets button:focus {
+  background: #616161;
+}
