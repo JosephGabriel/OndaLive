@@ -1223,10 +1223,18 @@ button {
 
 .spotlight-description {
   position: absolute;
+  width: 100%;
+  height: 100%;
   align-self: flex-end;
-  justify-self: center;
+  transition: all 0.5s;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
   margin: 0;
-  margin-bottom: 2rem;
+  background: #000000af;
 }
 
 .spotlight-description h4 {
@@ -1239,10 +1247,10 @@ button {
 
 .img-spotlight2:hover img {
   transition: all 0.5s;
-  opacity: 0;
+  opacity: 1;
 }
 .img-spotlight2:hover .spotlight-description {
-  background: #0d0d0d;
+  background: #00000000;
   width: 100%;
   height: 100%;
   align-self: flex-end;
@@ -1256,7 +1264,7 @@ button {
 }
 
 .carousel-indicators li {
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
 }
