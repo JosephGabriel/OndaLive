@@ -1254,3 +1254,9 @@ button {
   justify-content: flex-end;
   padding: 2rem;
 }
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
