@@ -145,15 +145,14 @@
   width: 28.8rem;
   height: 40.7rem;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: 102%;
+  background-position: center;
   display: flex;
   margin: auto 0.5rem;
   overflow: hidden;
   justify-content: center;
-}
-
-.cards img {
-  height: 100%;
-  width: 100%;
+  transition: all 0.5s;
 }
 
 .card-info {
@@ -165,14 +164,9 @@
   transform: translateY(1.8rem);
   transition: 0.3s;
 }
-.cards img {
-  transform: scale(1.2);
-  transform: translateX(0px);
-  transition: all 0.5s;
-  object-fit: cover;
-}
-.cards:hover img {
-  transform: translateX(10px);
+
+.cards:hover {
+  background-position-x: 10%;
   transition: all 0.5s;
 }
 .cards:hover .card-info {
@@ -1186,7 +1180,7 @@ button {
 .glide-contorles {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   position: absolute;
   width: 100%;
   color: #fff;
@@ -1194,8 +1188,8 @@ button {
 
 .glide-contorles i {
   font-size: 2rem;
-  padding: 2rem 2.2rem;
-  background-color: #00000096;
+  padding: 2rem 2.4rem;
+  background-color: #00000048;
   cursor: pointer;
   border-radius: 5rem;
 }

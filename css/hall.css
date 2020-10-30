@@ -653,3 +653,11 @@ a {
   margin-right: 0.4rem;
   background: #838383;
 }
+
+.dropdown-user {
+  display: none;
+}
+
+.drop-user {
+  position: relative;
+}
