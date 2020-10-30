@@ -1296,3 +1296,36 @@ button {
 .glide__bullets button:focus {
   background: #616161;
 }
+
+.owl-wraper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.owl-theme {
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+.owl-theme .owl-nav {
+  color: #000;
+  margin-top: 10px;
+  font-size: 4rem;
+}
+
+#arrow-top {
+  z-index: 8;
+  background: #272727;
+  padding: 1rem;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+}
+
+#arrow-top a {
+  color: var(--accent-color);
+  font-size: 2rem;
+  text-decoration: none;
+}
