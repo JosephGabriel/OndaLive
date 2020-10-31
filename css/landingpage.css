@@ -349,11 +349,17 @@
   height: 8.5rem;
   background-color: #f4ae13;
 }
+
 .img-spotlight {
   width: 80%;
   padding: 3rem;
   padding-top: 0;
 }
+.img-spotlight img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .img-spotlight2 {
   height: 24.2rem;
   width: 18.5rem;
@@ -496,7 +502,6 @@
 }
 
 .program-day > h6 {
-  text-transform: lowercase;
   font-size: 1rem;
   margin: 0;
   font-weight: 400;
@@ -1317,11 +1322,6 @@ button {
   height: 1rem;
   border-radius: 100%;
 }
-
-.owl-item {
-  background: transparent;
-}
-
 .glide__bullets button {
   background: #9c9c9c;
 }
@@ -1343,12 +1343,6 @@ button {
   color: var(--accent-color);
   font-size: 2rem;
   text-decoration: none;
-}
-
-.img-sh img {
-  width: 600px;
-  height: 290px;
-  object-fit: cover;
 }
 
 .carrosel-arrow {
