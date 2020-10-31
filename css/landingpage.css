@@ -1368,13 +1368,25 @@ button {
   object-fit: cover;
 }
 
+.mobile-text-spotlight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (max-width: 425px) {
-  .banner {
+  .banner,
+  .m9 {
     display: none;
+  }
+  .img-spotlight {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 426px) {
-  .banner-mobile {
+  .banner-mobile,
+  .mobile-text-spotlight {
     display: none;
   }
 }

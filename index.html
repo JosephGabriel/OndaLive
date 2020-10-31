@@ -49,11 +49,11 @@
         </nav>
     </div>
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#">Inicio</a>
+        <a href="#">Evento</a>
     </div>
     <div class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -392,32 +392,36 @@
         <div class="grid ">
             <div class="section-holder">
                 <div class="w50 wow animate__animated animate__fadeInLeft" data-wow-delay="300ms">
+                    <div class="mobile-text-spotlight">
+                        <h6 class="subtitle" style="margin-bottom: 1rem;">CONFIRA QUEM SÃO</h6>
+                        <h3 class="title text-dark" style="margin-top: 0;font-size: 4.5rem;">
+                            NOSSOS DESTAQUES
+                        </h3>
+                        <hr class="hr " style="margin: 0;margin-bottom: 3.8rem;">
+                    </div>
                     <div class="img-spotlight">
                         <img src="./img/Pierre-Person.jpg" id="image-selected">
                     </div>
                 </div>
                 <div class="w50  wow animate__animated animate__fadeInRight" id="text-spotlight" data-wow-delay="300ms">
                     <div class="headline-hero" id="headline-hero">
-                        <h6 class="subtitle" style="margin-bottom: 1rem;">CONFIRA QUEM SÃO</h6>
-                        <h3 class="title text-dark" style="margin-top: 0;font-size: 4.5rem;">
+                        <h6 class="subtitle m9" style="margin-bottom: 1rem;">CONFIRA QUEM SÃO</h6>
+                        <h3 class="title text-dark m9" style="margin-top: 0;font-size: 4.5rem;">
                             NOSSOS DESTAQUES
                         </h3>
-                        <hr class="hr " style="margin: 0;margin-bottom: 3.8rem;">
+                        <hr class="hr m9" style="margin: 0;margin-bottom: 3.8rem;">
                         <div class="description-title">
                             <h4 class="description-title-title  text-dark" style="font-size: 3.4rem;" id="speaker-name">
-                                Paulo
-                                Guedes
-                                da
-                                Silva
+                                Joseph
                             </h4>
                             <h6 class="description-title-accent" style="margin-bottom: 1.8rem" id="speaker-age">
-                                15 Years experienced
+                                20 Years experienced
                             </h6>
                         </div>
                         <div class="description-text">
                             <p style="font-size: 2.2rem !important;font-weight: 200;" id="speaker-text">
-                                Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam nonummy nibh
-                                euismod tincidunt ut laoreet dolore magna aliquam...
+                                Python é uma linguagem de programação de alto nível, interpretada, de script,
+                                imperativa, orientada a objetos.
                             </p>
                         </div>
                         <div class="glider" style="width: 100%;margin: auto;display: flex;align-items: center;">
@@ -446,7 +450,7 @@
                                     <li class="glide__slide">
                                         <div class="img-spotlight2"
                                             onclick=" changeImg('./img/Pierre-Person.jpg'),changeText('Joseph','20','Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos.')">
-                                            <img src="./img/Pierre-Person.jpg">
+                                            <img src=" ./img/Pierre-Person.jpg">
                                             <div class="spotlight-description">
                                                 <h4>Jonathan Doe</h4>
                                                 <h6>Lorem ipsum dolor sit</h6>
@@ -1349,9 +1353,9 @@
             let speakerAge = document.getElementById("speaker-age")
             let speakerText = document.getElementById("speaker-text")
 
-            speakerName.innerHTML = name || "Paulo J"
+            speakerName.innerHTML = name
             speakerAge.innerHTML = `${age} Years experienced`
-            speakerText.innerHTML = text || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod animi, ea incidunt sequi dolores assumenda?"
+            speakerText.innerHTML = text
         }
 
         var glide = new Glide('.glide', {
