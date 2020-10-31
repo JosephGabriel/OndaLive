@@ -631,6 +631,7 @@ html {
 .day-modal {
   display: flex;
   margin-bottom: 1.4rem;
+  align-items: center;
 }
 
 .day-day-modal p {
@@ -643,6 +644,9 @@ html {
 }
 
 .day-date-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: 1.2rem;
 }
 .day-date-modal .spot {
@@ -653,11 +657,24 @@ html {
 .day-day-modal {
   padding: 0 0.5rem;
   margin-right: 1rem;
-  background-color: var(--accent-color);
+  text-transform: lowercase;
+  color: var(--accent-color);
+  text-align: center;
+}
+.day-day-modal p strong {
+  font-size: 2.8rem;
+}
+.day-day-modal p {
+  font-size: 1rem;
 }
 
 .speaker-modal-modal {
   display: flex;
+}
+
+.speaker-modal-modal {
+  width: fit-content;
+  object-fit: cover;
 }
 .speaker-modal-modal h6 {
   font-size: 1.6rem;
@@ -674,4 +691,10 @@ html {
 }
 .speaker-modal-modal img {
   margin-right: 2rem;
+}
+
+.img-spotlight2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

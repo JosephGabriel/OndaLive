@@ -496,6 +496,7 @@
 }
 
 .program-day > h6 {
+  text-transform: lowercase;
   font-size: 1rem;
   margin: 0;
   font-weight: 400;
