@@ -1362,3 +1362,19 @@ button {
     opacity: 1;
   }
 }
+
+.banner-mobile img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 425px) {
+  .banner {
+    display: none;
+  }
+}
+@media screen and (min-width: 426px) {
+  .banner-mobile {
+    display: none;
+  }
+}
