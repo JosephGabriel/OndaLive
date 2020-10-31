@@ -1329,24 +1329,6 @@ button {
   background: #616161;
 }
 
-.owl-wraper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.owl-theme {
-  position: relative;
-  align-items: center;
-  display: flex;
-}
-
-.owl-theme .owl-nav {
-  color: #000;
-  margin-top: 10px;
-  font-size: 4rem;
-}
-
 #arrow-top {
   z-index: 8;
   background: #272727;
@@ -1366,4 +1348,9 @@ button {
   width: 600px;
   height: 290px;
   object-fit: cover;
+}
+
+.carrosel-arrow {
+  border: 2px solid #fff;
+  border-radius: 5px;
 }
