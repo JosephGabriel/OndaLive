@@ -367,24 +367,25 @@
                 <div class="w50  wow animate__animated animate__fadeInRight" id="text-spotlight" data-wow-delay="300ms">
                     <div class="headline-hero" id="headline-hero">
                         <h6 class="subtitle" style="margin-bottom: 1rem;">CONFIRA QUEM SÃO</h6>
-                        <h3 class="title text-dark" style="margin-top: 0;font-size: 4.5rem;">NOSSOS
-                            DESTAQUES
+                        <h3 class="title text-dark" style="margin-top: 0;font-size: 4.5rem;">
+                            NOSSOS DESTAQUES
                         </h3>
                         <hr class="hr " style="margin: 0;margin-bottom: 3.8rem;">
                         <div class="description-title">
-                            <h4 class="description-title-title  text-dark" style="font-size: 3.4rem;">Paulo
+                            <h4 class="description-title-title  text-dark" style="font-size: 3.4rem;" id="speaker-name">
+                                Paulo
                                 Guedes
                                 da
                                 Silva
                             </h4>
-                            <h6 class="description-title-accent" style="margin-bottom: 1.8rem">15 Years
-                                experienced
+                            <h6 class="description-title-accent" style="margin-bottom: 1.8rem" id="speaker-age">
+                                15 Years experienced
                             </h6>
                         </div>
                         <div class="description-text">
-                            <p style="font-size: 2.2rem !important;font-weight: 200;"> Lorem ipsum dollor site amet the
-                                best consectuer adipiscing elites sed diam nonummy nibh euismod tincidunt ut laoreet
-                                dolore magna aliquam...
+                            <p style="font-size: 2.2rem !important;font-weight: 200;" id="speaker-text">
+                                Lorem ipsum dollor site amet the best consectuer adipiscing elites sed diam nonummy nibh
+                                euismod tincidunt ut laoreet dolore magna aliquam...
                             </p>
                         </div>
                         <div class="glider" style="width: 100%;margin: auto;display: flex;align-items: center;">
@@ -392,7 +393,7 @@
                                 <ul class="glide__slides">
                                     <li class="glide__slide">
                                         <div class="img-spotlight2"
-                                            onclick=" changeImg('./img/sobhan-joodi-PrXsOoAYqgg-unsplash.jpg')">
+                                            onclick=" changeImg('./img/sobhan-joodi-PrXsOoAYqgg-unsplash.jpg'),changeText('Maria','23','JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.')">
                                             <img src="./img/sobhan-joodi-PrXsOoAYqgg-unsplash.jpg">
                                             <div class="spotlight-description">
                                                 <h4>Jonathan Doe</h4>
@@ -402,7 +403,7 @@
                                     </li>
                                     <li class="glide__slide">
                                         <div class="img-spotlight2"
-                                            onclick=" changeImg('./img/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg')">
+                                            onclick=" changeImg('./img/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg'),changeText('Biatriz','18')">
                                             <img src="./img/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg">
                                             <div class="spotlight-description">
                                                 <h4>Jonathan Doe</h4>
@@ -411,7 +412,8 @@
                                         </div>
                                     </li>
                                     <li class="glide__slide">
-                                        <div class="img-spotlight2" onclick=" changeImg('./img/Pierre-Person.jpg')">
+                                        <div class="img-spotlight2"
+                                            onclick=" changeImg('./img/Pierre-Person.jpg'),changeText('Joseph','20','Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos.')">
                                             <img src="./img/Pierre-Person.jpg">
                                             <div class="spotlight-description">
                                                 <h4>Jonathan Doe</h4>
@@ -1307,6 +1309,15 @@
             img.src = imgs
         }
 
+        function changeText(name, age, text) {
+            let speakerName = document.getElementById("speaker-name")
+            let speakerAge = document.getElementById("speaker-age")
+            let speakerText = document.getElementById("speaker-text")
+
+            speakerName.innerHTML = name || "Paulo J"
+            speakerAge.innerHTML = `${age} Years experienced`
+            speakerText.innerHTML = text || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod animi, ea incidunt sequi dolores assumenda?"
+        }
 
         var glide = new Glide('.glide', {
             type: 'carousel',
