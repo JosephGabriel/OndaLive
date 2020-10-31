@@ -1303,10 +1303,14 @@
     <script src="./js/dist/glide.min.js"></script>
     <script src="./js/dist/owl.carousel.min.js"></script>
     <script>
-        let img = document.getElementById("image-selected")
 
         function changeImg(imgs) {
+            let img = document.getElementById("image-selected")
+            img.classList.add("fade-in")
             img.src = imgs
+            setTimeout(() => {
+                img.classList.remove("fade-in")
+            }, 2001)
         }
 
         function changeText(name, age, text) {

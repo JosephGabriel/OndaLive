@@ -1354,3 +1354,15 @@ button {
   border: 2px solid #fff;
   border-radius: 5px;
 }
+
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
