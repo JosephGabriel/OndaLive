@@ -19,23 +19,33 @@
     </div>
     <div class="navbar-container">
         <nav class="navbar-holder">
-            <a href="/"><img src="./img/logo-sticky.svg" alt="Logo"
-                    class="navbar-brand wow animate__animated animate__slideInLeft"></a>
-            <ul class="navbar-list wow animate__animated animate__slideInRight">
-                <li class="navbar-item"><a href="/">Inicio</a></li>
+            <img src="./img/logo-sticky.svg " alt="Logo" class="navbar-brand wow animate__animated animate__fadeInLeft"
+                data-wow-delay="300ms">
+            <ul class="navbar-list wow animate__animated animate__fadeInRight" data-wow-delay="300ms"
+                style="margin: 0;">
+                <li class="navbar-item"><a style="font-size: 1.3rem;" href="/index.html">Home</a></li>
                 <li class="dropdown">
-                    <button class="navbar-dropdown">O Evento</button>
+                    <button class="navbar-dropdown"><a href="./index.html#Evento">
+                            O Evento</a></button>
                     <ul>
-                        <li class="navbar-item"><a href="/index.html#Palestrantes">Palestrantes</a></li>
-                        <li class="navbar-item"><a href="/index.html#Programação">Programação</a></li>
-                        <li class="navbar-item"><a href="/index.html#Valores">Valores</a></li>
-                        <li class="navbar-item"><a href="/index.html#Dúvidas">Dúvidas</a></li>
+                        <li class="navbar-item"><a href="./index.html#Palestrantes">Palestrantes</a></li>
+                        <li class="navbar-item"><a href="./index.html#Lançamento">Lançamento</a></li>
+                        <li class="navbar-item"><a href="./index.html#Destaques">Destaques</a></li>
+                        <li class="navbar-item"><a href="./index.html#Video">Video</a></li>
+                        <li class="navbar-item"><a href="./index.html#Programação">Programação</a></li>
+                        <li class="navbar-item"><a href="./index.html#Patrocinadores">Patrocinadores</a></li>
+                        <li class="navbar-item"><a href="./index.html#Dúvidas">Dúvidas</a></li>
+                        <li class="navbar-item"><a href="./index.html#Lotes">Lotes</a></li>
+                        <li class="navbar-item"><a href="./index.html#Contato">Contato</a></li>
                     </ul>
                 </li>
-                <li class="navbar-item outline"><a href="/login.html">Login</a></li>
-                <li class="navbar-item outline"><a href="/cadastro.html">Cadastrar-se</a></li>
-                <li class="navbar-item full"><a href="/comprar.html">Comprar</a></li>
+                <li class="navbar-item outline"><a href="./login.html">Login</a></li>
+                <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
+                <li class="navbar-item full"><a href="./hallusuario.html">Comprar</a></li>
             </ul>
+            <div class="nav-icon" id="nav-icon" onclick="openNav()">
+                &#9776;
+            </div>
         </nav>
     </div>
     <div class="body-grid">
