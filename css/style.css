@@ -69,9 +69,11 @@ html {
   transition: 0.5s;
 }
 .navbar-item {
-  padding: 0.5rem 2.2rem;
+  padding: 0rem 2.2rem;
 }
 .navbar-item:first-child {
+  font: bold 1.3rem "Open Sans";
+  padding: 0.5rem 2.2rem;
   margin: 0;
   margin-right: 1rem;
 }
@@ -81,7 +83,7 @@ html {
 }
 
 .navbar-item a {
-  font: bold 1.3rem "Open Sans";
+  font: bold 1.1rem "Open Sans";
   text-transform: uppercase;
   color: var(--primary-color);
   text-decoration: none;
@@ -113,6 +115,11 @@ html {
   border: none;
 }
 
+.navbar-dropdown a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .navbar-dropdown:hover {
   transition: 0.5s;
   background: var(--accent-color);
@@ -120,12 +127,17 @@ html {
 .dropdown {
   list-style: none;
 }
+.dropdown > ul > li:first-child {
+  padding: 0.2rem 2rem;
+  margin: 0;
+}
+
 .dropdown > ul > li {
-  margin: 1rem 0;
+  margin: 0;
   width: 100%;
   height: 100%;
   transition: 0.5s;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 2rem;
 }
 
 .dropdown > ul > li:hover {
@@ -144,7 +156,7 @@ html {
   background: #202020;
   position: absolute;
   margin-top: 0.1rem;
-  padding: 2rem;
+  padding: 0 2rem;
   pointer-events: none;
   justify-content: center;
   align-items: center;
@@ -152,6 +164,11 @@ html {
   text-align: center;
   transition: all 0.5s ease;
   opacity: 0;
+  transform: translateX(-3.6rem);
+  -webkit-transform: translateX(-3.6rem);
+  -moz-transform: translateX(-3.6rem);
+  -ms-transform: translateX(-3.6rem);
+  -o-transform: translateX(-3.6rem);
 }
 
 .dropdown:hover ul {
