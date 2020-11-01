@@ -217,8 +217,10 @@ a {
   padding: 0;
   gap: 2rem;
   display: grid;
+  width: 100%;
+  justify-content: stretch;
   align-items: stretch;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, auto);
   grid-template-rows: repeat(7, auto);
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
@@ -230,6 +232,17 @@ a {
     "card-5 card-5 card-5 card-5 card-5 card-5 card-6 card-6 card-6 card-6 card-6 card-6"
     "card-7 card-7 card-7 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
     "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11";
+}
+
+@media screen and (min-width: 1440px) {
+  .grid {
+    margin-top: 9rem;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+  }
 }
 
 .title-holder {
