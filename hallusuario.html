@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/jquery.flipster.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="./css/hall.css">
     <script src="./js/script.js"></script>
@@ -86,6 +88,20 @@
         <div class="grid">
             <div class="banner">
                 <img src="./img/banner.png">
+            </div>
+            <div class="date-event">
+                <div class="my-flipster">
+                    <ul>
+                        <li> <button>Todos</button></li>
+                        <li> <button>01/10</button></li>
+                        <li> <button>09/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                    </ul>
+                </div>
             </div>
             <div class="card-1">
                 <div class="title-holder">
@@ -1067,6 +1083,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.flipster.min.js"></script>
     <script>
 
         let menu = document.getElementById("menu-toggle")
@@ -1114,6 +1131,14 @@
                 }
             });
         }
+    </script>
+    <script>
+        $('.my-flipster').flipster({
+            style: 'flat',
+            spacing: -0.25,
+            touch: true,
+            scrollwheel: true,
+        });
     </script>
 </body>
 
