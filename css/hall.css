@@ -656,6 +656,10 @@ a {
   background: #838383;
 }
 
+#menu-toggle {
+  cursor: pointer;
+}
+
 .drop {
   display: flex;
   align-items: center;
@@ -665,8 +669,29 @@ a {
   position: absolute;
   background: #222;
   padding: 1rem;
-  margin-top: 1.7rem;
+  margin-top: 1.2rem;
   width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+  transform: translateY(-1.8rem);
+  -webkit-transform: translateY(-1.8rem);
+  -moz-transform: translateY(-1.8rem);
+  -ms-transform: translateY(-1.8rem);
+  -o-transform: translateY(-1.8rem);
+  z-index: -1;
+}
+
+.dropdown-user.active-dropdown {
+  z-index: -1;
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.5s;
+  transform: translateY(0rem);
+  -webkit-transform: translateY(0rem);
+  -moz-transform: translateY(0rem);
+  -ms-transform: translateY(0rem);
+  -o-transform: translateY(0rem);
 }
 
 .drop-user {
@@ -718,4 +743,29 @@ a {
   margin: 0;
   font-size: 1.2rem;
   margin-top: 0.5rem;
+}
+.info-user-description h6:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.exit-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  background: var(--accent-color);
+  border: none;
+  width: auto;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.info-hr {
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+button {
+  outline: none !important;
 }

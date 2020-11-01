@@ -37,9 +37,9 @@
                     <div class="drop-user">
                         <li class="user-info-item">
                             <img src="./img/100_3.jpg" width="50px" class="img-user">
-                            Olá,<strong> Cassio</strong><span><i class="fa fa-bars menu"></i></span>
+                            Olá,<strong> Cassio</strong><span><i class="fa fa-bars menu" id="menu-toggle"></i></span>
                         </li>
-                        <div class="dropdown-user">
+                        <div class="dropdown-user" id="dropdown">
                             <div class="info-user">
                                 <div class="info-user-icon">
                                     <i class="fa fa-address-card"></i>
@@ -64,6 +64,8 @@
                                     <h6>Certificados</h6>
                                 </div>
                             </div>
+                            <hr class="info-hr">
+                            <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
                         </div>
                     </div>
                     <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
@@ -1066,6 +1068,14 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
+
+        let menu = document.getElementById("menu-toggle")
+        let drop = document.getElementById("dropdown")
+
+        menu.addEventListener("click", () => {
+            console.log("Add")
+            drop.classList.toggle("active-dropdown")
+        })
 
         function over(num) {
             var divs = document.querySelectorAll('.details');

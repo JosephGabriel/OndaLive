@@ -29,7 +29,7 @@ html {
   justify-content: center;
 }
 .grid {
-  max-width: 1210px;
+  max-width: 121rem;
   display: flex;
   flex-direction: column;
   align-items: center;
