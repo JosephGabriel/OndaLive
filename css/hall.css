@@ -35,62 +35,18 @@
   margin: 0;
 }
 
-.program-box-right {
-  justify-self: center;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.program-box-left {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 .program-box {
-  justify-self: center;
+  display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
-.program-day,
+.program-day {
+  color: var(--accent-color);
+  margin-right: 2rem;
+}
+
 .program-room {
-  align-self: flex-start;
-  margin: 1rem;
-}
-.program-day,
-.program-room {
-  width: fit-content;
-  margin-left: 0;
-  margin-top: 0;
-  margin: 0;
-}
-.program-room h4 {
-  font-size: 1rem;
-}
-.program-room p {
-  margin: 0;
-}
-
-.program-description {
-  text-align: left;
-  padding-left: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.program-description h4 {
-  font-size: 1rem;
-}
-
-.program-description p {
-  font-size: 0.7rem;
-}
-.program-description h6 {
-  font-size: 0.9rem;
-}
-
-.button-description button {
-  margin: 0;
+  margin-right: 2rem;
 }
 
 .speaker-img {
