@@ -11,6 +11,16 @@
   font-family: "Roboto";
 }
 
+.date-event button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0.5rem 1.3rem;
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  margin: 0 0.3rem;
+}
+
 .presention {
   flex-direction: column;
   margin-bottom: 0rem;
@@ -27,13 +37,15 @@
 
 .program-box-right {
   justify-self: center;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
 }
+
 .program-box-left {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .program-box {
   justify-self: center;
@@ -43,16 +55,38 @@
 
 .program-day,
 .program-room {
+  align-self: flex-start;
   margin: 1rem;
 }
 .program-day,
 .program-room {
   width: fit-content;
+  margin-left: 0;
+  margin-top: 0;
+  margin: 0;
+}
+.program-room h4 {
+  font-size: 1rem;
+}
+.program-room p {
+  margin: 0;
 }
 
 .program-description {
-  text-align: center;
+  text-align: left;
+  padding-left: 1.2rem;
   margin-bottom: 2rem;
+}
+
+.program-description h4 {
+  font-size: 1rem;
+}
+
+.program-description p {
+  font-size: 0.7rem;
+}
+.program-description h6 {
+  font-size: 0.9rem;
 }
 
 .button-description button {
@@ -242,30 +276,19 @@ a {
     "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11";
 }
 
-@media screen and (min-width: 1440px) {
-  .grid {
-    margin-top: 9rem;
-    transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    -o-transform: scale(1.07);
-  }
-}
-
 .title-holder {
   background: var(--accent-color);
   color: #fff;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .date-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
   font-size: 1.4rem;
   font-weight: bold;
   background: #b9820b;
@@ -276,7 +299,8 @@ a {
 
 .title-card {
   display: flex;
-  width: 96%;
+  width: 70%;
+  justify-content: space-around;
   padding: 0;
   align-items: center;
   text-align: center;
@@ -292,7 +316,7 @@ a {
 
 .title-card-p {
   justify-self: center;
-  width: 50%;
+  width: 100%;
   position: relative;
   padding: 0.5rem 0;
   font-size: 1.5rem;
@@ -334,6 +358,7 @@ a {
   background: rgba(0, 0, 0, 0.657);
   color: #fff;
   opacity: 0;
+  justify-content: space-between;
   overflow-y: scroll;
   transition: all 0.5s;
   font-weight: bold;
@@ -352,6 +377,7 @@ a {
 
 .date-date p {
   margin: 0;
+  font-weight: 300;
   font-size: 1.2rem;
 }
 .date-date-small p {
@@ -364,10 +390,14 @@ a {
   color: var(--accent-color);
 }
 .program-description-list {
-  margin-left: 5rem;
+  width: 70%;
+  justify-self: start;
+}
+.program-description-list {
+  margin-left: 2rem;
 }
 .program-description-list p {
-  margin-left: 5rem;
+  margin-left: 2rem;
   padding-left: 3rem;
   border-left: 1px solid var(--accent-color);
   margin: 0rem;
@@ -446,6 +476,7 @@ a {
 
 .button-footer p {
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .button-cart {
