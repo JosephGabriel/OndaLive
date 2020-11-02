@@ -150,13 +150,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
-
-                        <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
-
+                        <div class="card-close">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" onmouseover="over(0)" onclick="out(0)">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -176,7 +176,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-2" style="align-self: center;">
+            <div class="card-2">
                 <div class="title-holder">
                     <div class="date-card">
                         <p>29/OUT</p>
@@ -223,10 +223,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" onmouseover="over(1)" onclick="out(1)">
+                    <div class="button-footer-small details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -236,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-3" style="align-self: center;">
+            <div class="card-3">
                 <div class="title-holder">
                     <div class="date-card">
                         <p>29/OUT</p>
@@ -283,10 +286,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" onmouseover="over(2)" onclick="out(2)">
+                    <div class="button-footer-small details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -296,65 +302,66 @@
                     </div>
                 </div>
             </div>
-            <div class="card-4" style="align-self: center;">
-                <div class="card" style="background: transparent; height: 100%;width: 100%;">
-                    <div class="title-holder">
-                        <div class="date-card">
-                            <p>29/OUT</p>
-                        </div>
-                        <div class="title-card">
-                            <span class="hour-card">15h</span>
-                            <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
-                        </div>
+            <div class="card-4">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
                     </div>
-                    <div class="body-holder">
-                        <img src="./img/card 03.jpg">
-                        <div class=" details">
-                            <div class="details-date">
-                                <div class="detail-icon">
-                                    <i class="fa fa-clock"></i>
-                                    <div class="date-date">
-                                        <p>Início</p>
-                                        <p>01 dez 2020, 15h</p>
-                                    </div>
-                                </div>
-                                <div class="detail-icon">
-                                    <i class="fa fa-clock"></i>
-                                    <div class="date-date">
-                                        <p>Término</p>
-                                        <p>01 dez 2020, 15h</p>
-                                    </div>
-                                </div>
-                                <div class="detail-icon">
-                                    <i class="fa fa-map-marker-alt"></i>
-                                    <div class="date-date">
-                                        <p> Evento online</p>
-                                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 03.jpg">
+                    <div class=" details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
                                 </div>
                             </div>
-                            <div class="program-description-list">
-                                <p class="program-description-list-title">Programação</p>
-                                <p>13H30 – ABERTURA IM</p>
-                                <p>13H40 – DELL</p>
-                                <p>14H05 – HPE</p>
-                                <p>14H30 – KEYNOTE MERCADO</p>
-                                <p>15H35 – ARUBA</p>
-                                <p>16H00 – VERTIV</p>
-                                <p>16H25 – IBM</p>
-                                <p>16H50 – CISCO</p>
-                                <p>17H15 – VMWARE</p>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
                             </div>
                         </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
-                    <div class="footer-holder">
-                        <div class="button-footer-small" onmouseover="over(3)" onclick="out(3)">
-                            <i class="fa fa-plus"></i>
-                            <p>Detalhes</p>
-                        </div>
-                        <div class="button-footer-small">
-                            <i class="fa fa-sign-in-alt"></i>
-                            <p>Entrar</p>
-                        </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
                     </div>
                 </div>
             </div>
@@ -724,6 +731,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -737,10 +745,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" onmouseover="over(4)" onclick="out(4)">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -807,10 +818,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" onmouseover="over(5)" onclick="out(5)">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -877,11 +891,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer w50" style="width:49.5%;" id="details-btn" onmouseover="over(6)"
-                        onclick="out(6)">
+                    <div class="button-footer details-button" style="width:49.5%;" id="details-btn">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -938,11 +954,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer w50" style="width:49.5%;" id="details-btn" onmouseover="over(7)"
-                        onclick="out(7)">
+                    <div class="button-footer details-button" style="width:49.5%;">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -999,10 +1017,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn" onmouseover="over(8)" onclick="out(8)">
+                    <div class="button-footer-small-3 details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -1069,10 +1090,13 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn" onmouseover="over(9)" onclick="out(9)">
+                    <div class="button-footer-small-3 details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -1139,10 +1163,232 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn" onmouseover="over(10)" onclick="out(10)">
+                    <div class="button-footer-small-3 details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3 ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart-small">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-12">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3 details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3 ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart-small">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-13">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3 details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3 ">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-cart-small">
+                        <div class="cart-title">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Adicionar</p>
+                        </div>
+                        <div class="cart-value">
+                            <p>Valor do ingresso</p>
+                            <p>R$ 1.500,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-14">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3 details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -1173,39 +1419,35 @@
     <script>
 
         let menu = document.getElementById("menu-toggle")
+        let detailsBtn = document.querySelectorAll('.details-button');
+        let divs = document.querySelectorAll('.details');
+        let closeBtn = document.querySelectorAll('.card-close')
         let drop = document.getElementById("dropdown")
+        let nav = document.getElementById("nav-toggle")
+        let sidenav = document.getElementById("sidenav")
+        let dropdown = document.getElementsByClassName("dropdown-btn");
+        let choose = true
+        let i;
+
+
+        nav.addEventListener("click", () => {
+            sidenav.classList.toggle("activeS")
+        })
 
         menu.addEventListener("click", () => {
             drop.classList.toggle("active-dropdown")
         })
 
-        let choose = true
+        for (let i = 0; i < divs.length; i++) {
 
-        function out(num) {
-            let divs = document.querySelectorAll('.details');
-            for (let i = 0; i < divs.length; i++) {
-                if (num == i) {
-                    if (choose) {
-                        divs[i].classList.add('show');
-                        choose = false
-                    }
-                    else {
-                        divs[i].classList.remove('show');
-                        choose = true
-                    }
+            detailsBtn[i].addEventListener("click", () => {
+                divs[i].classList.toggle('show');
+            })
 
-                }
-            }
+            closeBtn[i].addEventListener("click", () => {
+                divs[i].classList.remove('show');
+            })
         }
-
-        let nav = document.getElementById("nav-toggle")
-        let sidenav = document.getElementById("sidenav")
-        let dropdown = document.getElementsByClassName("dropdown-btn");
-        let i;
-
-        nav.addEventListener("click", () => {
-            sidenav.classList.toggle("activeS")
-        })
 
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {

@@ -229,7 +229,8 @@ a {
     "card-3 card-3 card-3 card-3 card-4 card-4 card-4 card-4 program program program program"
     "card-5 card-5 card-5 card-5 card-5 card-5 card-6 card-6 card-6 card-6 card-6 card-6"
     "card-7 card-7 card-7 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
-    "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11";
+    "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11"
+    "card-12 card-12 card-12 card-12 card-13 card-13 card-13 card-13 card-14 card-14 card-14 card-14";
 }
 
 .title-holder {
@@ -436,7 +437,6 @@ a {
 }
 
 .button-cart {
-  font-size: 1.4rem;
   width: 59%;
   display: flex;
   justify-content: space-around;
@@ -464,6 +464,7 @@ a {
 }
 
 .button-cart p {
+  font-size: 1.2rem;
   margin: 0;
 }
 .button-cart-small p {
@@ -472,6 +473,16 @@ a {
 
 .cart-title {
   text-align: center;
+}
+
+.card-close {
+  width: fit-content;
+  height: fit-content;
+}
+.card-close i {
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 769px) {
