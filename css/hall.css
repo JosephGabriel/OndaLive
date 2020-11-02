@@ -164,6 +164,7 @@ a {
   height: auto;
   grid-area: card-4;
 }
+
 .card-5 {
   height: auto;
   grid-area: card-5;
@@ -172,37 +173,74 @@ a {
   height: auto;
   grid-area: card-6;
 }
+
 .card-7 {
   height: auto;
   grid-area: card-7;
 }
+
 .card-8 {
   height: auto;
   grid-area: card-8;
 }
+
 .card-9 {
   height: auto;
   grid-area: card-9;
 }
+
 .card-10 {
   height: auto;
   grid-area: card-10;
 }
+
 .card-11 {
   height: auto;
   grid-area: card-11;
 }
+
 .card-12 {
   height: auto;
   grid-area: card-12;
 }
+
 .card-13 {
   height: auto;
   grid-area: card-13;
 }
+
 .card-14 {
   height: auto;
   grid-area: card-14;
+}
+.card-15 {
+  height: auto;
+  grid-area: card-15;
+}
+
+.card-16 {
+  height: auto;
+  grid-area: card-16;
+}
+
+.card-17 {
+  height: auto;
+  grid-area: card-17;
+}
+
+.card-18 {
+  height: auto;
+  grid-area: card-18;
+}
+
+.card-19 {
+  height: auto;
+  grid-area: card-19;
+}
+
+.card-20 {
+  height: auto;
+  grid-area: card-20;
 }
 
 .date-event {
@@ -230,7 +268,7 @@ a {
   justify-content: stretch;
   align-items: stretch;
   grid-template-columns: repeat(12, auto);
-  grid-template-rows: repeat(8, auto);
+  grid-template-rows: repeat(auto, auto);
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "date date date date date date date date date date date date"
@@ -242,7 +280,8 @@ a {
     "card-5 card-5 card-5 card-5 card-5 card-5 card-6 card-6 card-6 card-6 card-6 card-6"
     "card-7 card-7 card-7 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
     "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11"
-    "card-12 card-12 card-12 card-12 card-13 card-13 card-13 card-13 card-14 card-14 card-14 card-14";
+    "card-12 card-12 card-12 card-12 card-13 card-13 card-13 card-13 card-14 card-14 card-14 card-14"
+    "card-15 card-15 card-16 card-16 card-17 card-17 card-18 card-18 card-19 card-19 card-20 card-20";
 }
 
 .title-holder {
@@ -262,14 +301,29 @@ a {
   font-weight: bold;
   background: #b9820b;
 }
+
+.date-card-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #b9820b;
+}
+
 .date-card p {
+  margin: 0;
+}
+
+.date-card-small p {
   margin: 0;
 }
 
 .title-card {
   display: flex;
   width: 70%;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0;
   align-items: center;
   text-align: center;
@@ -278,6 +332,13 @@ a {
 
 .hour-card {
   font-size: 1.3rem;
+  justify-self: flex-start;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hour-card-small span {
+  font-size: 1rem;
   justify-self: flex-start;
   text-transform: uppercase;
   font-weight: bold;
@@ -293,12 +354,24 @@ a {
   font-weight: bold;
   margin: auto;
 }
+
 .title-card-p-small {
   justify-self: center;
   width: 80%;
   position: relative;
   padding: 0 0.5;
   font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: auto;
+}
+
+.title-card-p-small-2 {
+  justify-self: center;
+  width: 100%;
+  position: relative;
+  padding: 0 0.5;
+  font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: bold;
   margin: auto;
@@ -453,6 +526,21 @@ a {
   cursor: pointer;
   background: var(--accent-color);
 }
+.button-footer-small-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 49.5%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 0.8rem;
+  color: white;
+  cursor: pointer;
+  background: var(--accent-color);
+}
 
 .button-footer i {
   color: white;
@@ -498,6 +586,10 @@ a {
   margin: 0;
 }
 
+.button-cart-small-2 p {
+  font-size: 0.9rem;
+  margin: 0;
+}
 .cart-title {
   text-align: center;
 }
