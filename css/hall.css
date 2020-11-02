@@ -38,6 +38,7 @@
 .program-box {
   display: flex;
   flex-direction: column;
+  margin: 2rem 0;
 }
 
 .program-day {
@@ -51,6 +52,45 @@
 
 .speaker-img {
   display: flex;
+}
+.speaker-img img {
+  height: 50px !important;
+  width: auto;
+}
+
+.speaker-img img:first-child {
+  margin-left: 0rem;
+}
+
+.speaker-img img {
+  margin-left: 0.6rem;
+}
+.speaker-img img:last-child {
+  margin-left: 0.6rem;
+}
+
+.program-box-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-description > button {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-left: 10rem;
+  font-weight: 500;
+  align-self: flex-end;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.button-description button {
+  margin: 0;
 }
 
 body {
@@ -150,8 +190,10 @@ a {
 }
 
 .card-2 {
+  max-height: 62.4rem;
   height: auto;
   grid-area: card-2;
+  overflow: hidden;
 }
 
 .card-3 {
@@ -251,7 +293,7 @@ a {
 }
 
 .program {
-  height: 850px;
+  max-height: 90.6rem;
   overflow-y: scroll;
   padding-top: 2rem;
   grid-area: program;
@@ -273,10 +315,11 @@ a {
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "date date date date date date date date date date date date"
     "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 program program program program"
+    "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 program program program program"
     "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
     "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
-    "card-3 card-3 card-3 card-3 card-4 card-4 card-4 card-4 program program program program"
-    "card-3 card-3 card-3 card-3 card-4 card-4 card-4 card-4 program program program program"
+    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
+    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
     "card-5 card-5 card-5 card-5 card-5 card-5 card-6 card-6 card-6 card-6 card-6 card-6"
     "card-7 card-7 card-7 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
     "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11"
@@ -327,7 +370,7 @@ a {
   padding: 0;
   align-items: center;
   text-align: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .hour-card {
@@ -351,13 +394,13 @@ a {
   padding: 0.5rem 0;
   font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
   margin: auto;
 }
 
 .title-card-p-small {
   justify-self: center;
-  width: 80%;
+  width: 100%;
   position: relative;
   padding: 0 0.5;
   font-size: 1rem;
@@ -469,12 +512,16 @@ a {
   margin-right: 1rem;
 }
 
+.btn-25 {
+  width: 20.8%;
+}
+
 .button-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 20%;
+  width: 24.8%;
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -484,13 +531,16 @@ a {
   background: var(--accent-color);
 }
 
+.button-footer button p {
+  font-weight: 500;
+}
+
 .button-footer-small {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 49%;
+  width: 49.8%;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -499,6 +549,16 @@ a {
   cursor: pointer;
   background: var(--accent-color);
 }
+.duo {
+  width: 49.8% !important;
+}
+.button-footer-small i {
+  margin-right: 1rem;
+}
+.button-footer-small p {
+  margin: 0;
+}
+
 .button-footer-small-3 {
   display: flex;
   flex-direction: column;
