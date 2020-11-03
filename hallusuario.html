@@ -151,6 +151,47 @@
                             <p>17H15 – VMWARE</p>
                         </div>
                         <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
                             <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
                         </div>
                     </div>
@@ -168,7 +209,7 @@
                         <i class="fa fa-cart-plus"></i>
                         <p>ADICIONAR</p>
                     </div>
-                    <div class="button-footer" style="flex-direction: column; padding: 0.25rem;">
+                    <div class="button-footer price-buttons" style="flex-direction: column; padding: 0.25rem;">
                         <p style="font-size: 0.8rem;">Valor</p>
                         <p style="font-size: 1.4rem;font-weight: bold;">R$1.500,00</p>
                     </div>
@@ -1765,17 +1806,19 @@
     <script src="./js/jquery.flipster.min.js"></script>
     <script>
 
-        let menu = document.getElementById("menu-toggle")
         let detailsBtn = document.querySelectorAll('.details-button');
+        let priceBtn = document.querySelectorAll('.price-buttons');
         let divs = document.querySelectorAll('.details');
-        let closeBtn = document.querySelectorAll('.card-close')
-        let drop = document.getElementById("dropdown")
-        let nav = document.getElementById("nav-toggle")
-        let sidenav = document.getElementById("sidenav")
+        let divs2 = document.querySelectorAll('.details-price');
+        let menu = document.getElementById("menu-toggle");
+        let closeBtn = document.querySelectorAll('.card-close');
+        let closeBtn2 = document.querySelectorAll('.card-close2');
+        let drop = document.getElementById("dropdown");
+        let nav = document.getElementById("nav-toggle");
+        let sidenav = document.getElementById("sidenav");
         let dropdown = document.getElementsByClassName("dropdown-btn");
-        let choose = true
+        let choose = true;
         let i;
-
 
         nav.addEventListener("click", () => {
             sidenav.classList.toggle("activeS")
@@ -1789,10 +1832,23 @@
 
             detailsBtn[i].addEventListener("click", () => {
                 divs[i].classList.toggle('show');
+                divs2[i].classList.remove('show');
             })
 
             closeBtn[i].addEventListener("click", () => {
                 divs[i].classList.remove('show');
+            })
+        }
+
+        for (let i = 0; i < divs2.length; i++) {
+
+            priceBtn[i].addEventListener("click", () => {
+                divs2[i].classList.toggle('show');
+                divs[i].classList.remove('show');
+            })
+
+            closeBtn2[i].addEventListener("click", () => {
+                divs2[i].classList.remove('show');
             })
         }
 

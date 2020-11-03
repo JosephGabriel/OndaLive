@@ -293,7 +293,7 @@ a {
 }
 
 .program {
-  max-height: 90.6rem;
+  height: auto;
   overflow-y: scroll;
   padding-top: 2rem;
   grid-area: program;
@@ -434,7 +434,8 @@ a {
   object-fit: contain;
 }
 
-.details {
+.details,
+.details-price {
   display: flex;
   position: absolute;
   padding: 2rem;
@@ -443,6 +444,7 @@ a {
   background: rgba(0, 0, 0, 0.657);
   color: #fff;
   opacity: 0;
+  pointer-events: none;
   justify-content: space-between;
   overflow-y: scroll;
   transition: all 0.5s;
@@ -453,6 +455,7 @@ a {
   display: flex;
   margin-bottom: 1rem;
 }
+
 .detail-icon i {
   margin: 0.2rem;
   margin-right: 1rem;
@@ -469,18 +472,22 @@ a {
   margin: 0;
   font-size: 1rem;
 }
+
 .program-description-list-title {
   font-size: 1.4rem;
   text-transform: uppercase;
   color: var(--accent-color);
 }
+
 .program-description-list {
   width: 70%;
   justify-self: start;
 }
+
 .program-description-list {
   margin-left: 2rem;
 }
+
 .program-description-list p {
   margin-left: 2rem;
   padding-left: 3rem;
@@ -488,6 +495,7 @@ a {
   margin: 0rem;
   font-size: 1.2rem;
 }
+
 .program-description-list-small p {
   margin-left: 5rem;
   padding-left: 3rem;
@@ -496,8 +504,10 @@ a {
   font-size: 1rem;
 }
 
-.details.show {
+.details.show,
+.details-price.show {
   opacity: 1;
+  pointer-events: all;
   transition: all 0.5s;
 }
 
@@ -549,12 +559,15 @@ a {
   cursor: pointer;
   background: var(--accent-color);
 }
+
 .duo {
   width: 49.8% !important;
 }
+
 .button-footer-small i {
   margin-right: 1rem;
 }
+
 .button-footer-small p {
   margin: 0;
 }
@@ -574,6 +587,7 @@ a {
   cursor: pointer;
   background: var(--accent-color);
 }
+
 .button-footer-small-3-g {
   display: flex;
   flex-direction: column;
@@ -589,6 +603,7 @@ a {
   cursor: pointer;
   background: var(--accent-color);
 }
+
 .button-footer-small-2 {
   display: flex;
   flex-direction: column;
@@ -627,6 +642,7 @@ a {
   padding: 0.7rem 0;
   background: var(--accent-color);
 }
+
 .button-cart-small {
   font-size: 1rem;
   width: 59%;
@@ -645,6 +661,7 @@ a {
   font-size: 1.2rem;
   margin: 0;
 }
+
 .button-cart-small p {
   margin: 0;
 }
@@ -653,19 +670,23 @@ a {
   font-size: 0.9rem;
   margin: 0;
 }
+
 .cart-title {
   display: flex;
   text-align: center;
 }
+
 .cart-title i {
   margin-right: 1rem;
 }
 
-.card-close {
+.card-close,
+.card-close2 {
   width: fit-content;
   height: fit-content;
 }
-.card-close i {
+.card-close i,
+.card-close2 i {
   cursor: pointer;
   color: var(--accent-color);
   font-size: 2rem;
@@ -718,6 +739,7 @@ a {
   justify-content: space-around;
   color: var(--accent-color);
 }
+
 .dashboard i {
   font-size: 2rem;
   padding: 1rem;
@@ -725,6 +747,7 @@ a {
   border-radius: 4rem;
   margin-bottom: 1rem;
 }
+
 .dashboard p {
   font-size: 1.2rem;
   margin-bottom: 0;
@@ -751,6 +774,7 @@ a {
   margin: 0 1rem;
   margin-bottom: 2rem;
 }
+
 .user-online,
 .user-subscription {
   padding: 0rem 2rem;
@@ -763,11 +787,13 @@ a {
   padding: 1rem 2rem;
   font-size: 1.6rem;
 }
+
 .user-online h6,
 .user-subscription h6 {
   font-size: 1.4rem;
   color: #fff;
 }
+
 .user-online p,
 .user-subscription p {
   font-size: 1rem;
@@ -783,6 +809,7 @@ a {
 .search-bar input {
   border: 0;
 }
+
 .search-bar input:focus,
 .search-bar input:active {
   border: 0;
@@ -932,6 +959,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .info-user-icon i {
   color: var(--accent-color);
   font-size: 1.4rem;
@@ -945,11 +973,13 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .info-user-description h6 {
   margin: 0;
   font-size: 1.2rem;
   margin-top: 0.5rem;
 }
+
 .info-user-description h6:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -974,4 +1004,38 @@ a {
 
 button {
   outline: none !important;
+}
+
+.lotes p span {
+  font-weight: 400;
+}
+
+.lotes hr {
+  width: 95%;
+  margin: auto;
+  border: 1px solid #fff;
+  margin-left: 3rem;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.shopping-cart p {
+  font-weight: 500;
+  font-style: italic;
+}
+.shopping-cart button {
+  padding: 0;
+  padding: 0rem 2rem;
+  margin: 0;
+}
+
+.shopping-cart button i {
+  font-size: 1.4rem;
+  background: var(--accent-color);
 }
