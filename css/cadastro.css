@@ -101,6 +101,7 @@ body {
 }
 
 .img-middle {
+  display: none !important;
   width: 54.4rem;
   margin: auto;
   height: 26.9rem;

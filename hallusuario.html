@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="./css/jquery.flipster.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="./css/hall.css">
@@ -212,9 +213,9 @@
                         <i class="fa fa-cart-plus"></i>
                         <p>ADICIONAR</p>
                     </div>
-                    <div class="button-footer price-buttons" style="flex-direction: column; padding: 0.25rem;">
-                        <p style="font-size: 0.8rem;">Valor</p>
-                        <p style="font-size: 1.4rem;font-weight: bold;">R$1.500,00</p>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -332,13 +333,54 @@
                             <i class="fa fa-window-close"></i>
                         </div>
                     </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-holder">
                     <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer ">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
@@ -346,9 +388,9 @@
                         <i class="fa fa-cart-plus"></i>
                         <p>ADICIONAR</p>
                     </div>
-                    <div class="button-footer" style="flex-direction: column; padding: 0.25rem;">
-                        <p style="font-size: 0.8rem;">Valor</p>
-                        <p style="font-size: 1.4rem;font-weight: bold;">R$1.500,00</p>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -799,13 +841,54 @@
                             <i class="fa fa-window-close"></i>
                         </div>
                     </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-holder">
                     <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer ">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
@@ -813,9 +896,9 @@
                         <i class="fa fa-cart-plus"></i>
                         <p>ADICIONAR</p>
                     </div>
-                    <div class="button-footer" style="flex-direction: column; padding: 0.25rem;">
-                        <p style="font-size: 0.8rem;">Valor</p>
-                        <p style="font-size: 1.4rem;font-weight: bold;">R$1.500,00</p>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -853,6 +936,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -870,13 +954,54 @@
                             <i class="fa fa-window-close"></i>
                         </div>
                     </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-holder">
                     <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer ">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
@@ -884,9 +1009,9 @@
                         <i class="fa fa-cart-plus"></i>
                         <p>ADICIONAR</p>
                     </div>
-                    <div class="button-footer" style="flex-direction: column; padding: 0.25rem;">
-                        <p style="font-size: 0.8rem;">Valor</p>
-                        <p style="font-size: 1.4rem;font-weight: bold;">R$1.500,00</p>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -1804,6 +1929,8 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="./js/jquery.flipster.min.js"></script>
@@ -1855,6 +1982,8 @@
             })
         }
 
+        console.log(divs, divs2)
+
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
                 this.classList.toggle("active");
@@ -1866,8 +1995,13 @@
                 }
             });
         }
-    </script>
-    <script>
+
+        tippy('.price-buttons', {
+            content: "Clique para ver os lotes",
+            animation: 'scale',
+            theme: 'light',
+        });
+
         $('.my-flipster').flipster({
             style: 'flat',
             spacing: -0.25,

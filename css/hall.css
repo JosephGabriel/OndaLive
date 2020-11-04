@@ -527,6 +527,7 @@ a {
 }
 
 .button-footer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -732,6 +733,11 @@ a {
       "card-11"
       "program";
   }
+}
+
+.price-buttons {
+  flex-direction: column;
+  padding: 0.25rem;
 }
 
 .dashboard {
@@ -1006,6 +1012,13 @@ button {
   outline: none !important;
 }
 
+.lotes p {
+  font-weight: 400;
+}
+.lotes > p:first-child {
+  font-weight: 700;
+}
+
 .lotes p span {
   font-weight: 400;
 }
@@ -1013,7 +1026,7 @@ button {
 .lotes hr {
   width: 95%;
   margin: auto;
-  border: 1px solid #fff;
+  border-top: 1px solid #fff;
   margin-left: 3rem;
 }
 
@@ -1026,16 +1039,31 @@ button {
 }
 
 .shopping-cart p {
-  font-weight: 500;
+  font-weight: 400;
   font-style: italic;
 }
+
 .shopping-cart button {
   padding: 0;
-  padding: 0rem 2rem;
+  padding: 0.5rem 0.8rem;
   margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .shopping-cart button i {
   font-size: 1.4rem;
   background: var(--accent-color);
+}
+
+.value-title {
+  font-size: 0.8rem !important;
+}
+
+.value-btn {
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
 }
