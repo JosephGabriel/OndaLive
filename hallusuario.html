@@ -15,6 +15,71 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="./css/hall.css">
     <script src="./js/script.js"></script>
+    <style>
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%;
+            /* 100% Full-height */
+            width: 0;
+            /* 0 width - change this with JavaScript */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            background-color: #111;
+            /* Black*/
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            padding-top: 60px;
+            /* Place content 60px from the top */
+            transition: 0.5s;
+            /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
     <title>Onda Live</title>
 </head>
 
@@ -24,66 +89,64 @@
     </div>
     <div class="navbar-container">
         <div class="navbar-holder">
-            <div style="display: flex; align-items: center;">
+            <div>
                 <img src="./favicon.svg" class="navbar-brand">
-                <div class="site-map">
-                    <ul class="site-map-list">
-                        <li class="site-map-item"><a href="./index.html">HOME</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="room">
                 <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
             </div>
-            <div class="user-info">
-                <ul class="user-info-map">
-                    <div class="drop-user">
-                        <li class="user-info-item">
-                            <img src="./img/100_3.jpg" width="50px" class="img-user">
-                            Olá,<strong> Cassio</strong><span><i class="fa fa-bars menu" id="menu-toggle"></i></span>
-                        </li>
-                        <div class="dropdown-user" id="dropdown">
-                            <div class="info-user">
-                                <div class="info-user-icon">
-                                    <i class="fa fa-address-card"></i>
-                                </div>
-                                <div class="info-user-description">
-                                    <h6>Meus dados</h6>
+            <div style="display: flex; align-items: center;">
+                <button class="site-map-item-btn"><a href="./index.html">HOME</a></>
+                    <button class="site-map-item-btn" id="program">PROGRAMAÇÃO</button>
+                    <div class="user-info">
+                        <ul class="user-info-map">
+                            <div class="drop-user">
+                                <li class="user-info-item">
+                                    <img src="./img/100_3.jpg" width="50px" class="img-user">
+                                    Olá,<strong> Cassio</strong><span><i class="fa fa-bars menu"
+                                            id="menu-toggle"></i></span>
+                                </li>
+                                <div class="dropdown-user" id="dropdown">
+                                    <div class="info-user">
+                                        <div class="info-user-icon">
+                                            <i class="fa fa-address-card"></i>
+                                        </div>
+                                        <div class="info-user-description">
+                                            <h6>Meus dados</h6>
+                                        </div>
+                                    </div>
+                                    <div class="info-user">
+                                        <div class="info-user-icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="info-user-description">
+                                            <h6>Notificações</h6>
+                                        </div>
+                                    </div>
+                                    <div class="info-user">
+                                        <div class="info-user-icon">
+                                            <i class="fa fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="info-user-description">
+                                            <h6>Certificados</h6>
+                                        </div>
+                                    </div>
+                                    <hr class="info-hr">
+                                    <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
                                 </div>
                             </div>
-                            <div class="info-user">
-                                <div class="info-user-icon">
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                                <div class="info-user-description">
-                                    <h6>Notificações</h6>
-                                </div>
-                            </div>
-                            <div class="info-user">
-                                <div class="info-user-icon">
-                                    <i class="fa fa-graduation-cap"></i>
-                                </div>
-                                <div class="info-user-description">
-                                    <h6>Certificados</h6>
-                                </div>
-                            </div>
-                            <hr class="info-hr">
-                            <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
-                        </div>
+                            <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
+                        </ul>
                     </div>
-                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
-                </ul>
             </div>
-            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
-                &#9776;
+            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;"><i class="fa fa-bars"></i>
             </div>
         </div>
     </div>
-    <div class="sidenav" id="sidenav" style="margin-top: 5rem;">
+    <div class="sidenav" id="mySidenav2" style="margin-top: 5rem;">
         <img src="./img/logo-sticky.svg">
-        <a href="#about">Voltar para o Site</a>
+        <a href="./index.html">Voltar para o Site</a>
         <a href="#services">Titulo do Evento/Data</a>
-    </div>
     </div>
     <div class="body-grid">
         <div class="grid">
@@ -1997,6 +2060,12 @@
         let dropdown = document.getElementsByClassName("dropdown-btn");
         let choose = true;
         let i;
+
+        document.getElementById("program").addEventListener("click",
+            function () {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            })
 
         nav.addEventListener("click", () => {
             sidenav.classList.toggle("activeS")

@@ -546,6 +546,21 @@ a {
   margin: auto;
 }
 
+.site-map-item a,
+.site-map-item-btn a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.site-map-item-btn {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background: var(--button-background);
+  margin-right: 1rem;
+  font-weight: 400;
+}
+
 .details.show,
 .details-price.show {
   opacity: 1;
