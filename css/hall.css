@@ -451,6 +451,16 @@ a {
   font-weight: bold;
 }
 
+.details-vertical {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-v {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .detail-icon {
   display: flex;
   margin-bottom: 1rem;
@@ -461,6 +471,10 @@ a {
   margin-right: 1rem;
   font-size: 1.5rem;
   color: var(--accent-color);
+}
+
+.details-date-v {
+  display: flex;
 }
 
 .date-date p {
@@ -496,6 +510,27 @@ a {
   font-size: 1.2rem;
 }
 
+.program-description-list.vertical {
+  width: 100%;
+  padding-top: 2rem;
+  margin: 0;
+  margin-top: 1rem;
+  border-top: 1px solid var(--accent-color);
+}
+
+.program-description-list.vertical > .program-description-list-title {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.program-description-list.vertical p {
+  margin: 0rem;
+  padding: 0rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
 .program-description-list-small p {
   margin-left: 5rem;
   padding-left: 3rem;
@@ -504,11 +539,29 @@ a {
   font-size: 1rem;
 }
 
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+}
+
 .details.show,
 .details-price.show {
   opacity: 1;
   pointer-events: all;
   transition: all 0.5s;
+}
+
+.lote-lote {
+  margin-bottom: 1rem;
+}
+
+.program-hr {
+  width: 100% !important;
+  margin: 0;
+  margin-left: 0 !important;
+  border-top: 1px solid #fff;
 }
 
 .footer-holder {
