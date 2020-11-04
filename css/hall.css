@@ -294,11 +294,10 @@ a {
 
 .program {
   height: auto;
-  overflow-y: scroll;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
+  padding-bottom: 5rem;
   grid-area: program;
   background-color: #141414;
-  padding: 2rem;
 }
 
 .grid {
@@ -314,8 +313,8 @@ a {
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "date date date date date date date date date date date date"
-    "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 program program program program"
-    "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 program program program program"
+    "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1"
+    "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3"
     "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
     "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
     "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
@@ -1134,4 +1133,51 @@ button {
 .value-btn {
   font-size: 1.4rem !important;
   font-weight: bold !important;
+}
+
+.program-sidenav {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 55555;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.program-sidenav.sidebar-active {
+  transform: translate(0);
+  transition: all 0.5s;
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.body-grid {
+  margin: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.main-active {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
