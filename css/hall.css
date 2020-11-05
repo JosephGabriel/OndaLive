@@ -5,6 +5,7 @@
   --accent-color-dark: #f4ae13;
   --button-background: #1d1d1d;
   --font-type-title: bold 4.2rem "Roboto";
+  --margin: 1rem;
 }
 
 * {
@@ -799,11 +800,13 @@ a {
 }
 
 .card-close,
-.card-close2 {
+.card-close2,
+.card-close3 {
   width: fit-content;
   height: fit-content;
 }
 .card-close i,
+.card-close3 i,
 .card-close2 i {
   cursor: pointer;
   color: var(--accent-color);
@@ -1209,13 +1212,13 @@ button {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .site-map {
     display: none;
   }
 
   html {
-    font-size: 38%;
+    font-size: 40%;
   }
   .grid {
     width: 90%;
