@@ -1207,15 +1207,16 @@ button {
 
 .program-sidenav {
   position: fixed;
-  height: 100%;
+  right: 0;
+  height: 100vh;
   overflow-y: scroll;
   z-index: 55555;
   transition: all 0.5s;
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
