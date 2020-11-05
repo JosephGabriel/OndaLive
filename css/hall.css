@@ -332,7 +332,6 @@ a {
   justify-content: center;
   align-items: stretch;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(auto, auto);
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "date date date date date date date date date date date date"

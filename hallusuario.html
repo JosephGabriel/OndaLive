@@ -85,6 +85,9 @@
     </div>
     <div class="program-sidenav" id="program-sidenav">
         <div class="program">
+            <div class="card-close">
+                <i class="fa fa-window-close" id="sidenav-close"></i>
+            </div>
             <div class="presention">
                 <div class="center" style="display: flex;align-items: center;flex-direction: column;">
                     <hr class="hr">
@@ -2511,6 +2514,7 @@
         let drop = document.getElementById("dropdown");
         let nav = document.getElementById("nav-toggle");
         let sidenav = document.getElementById("sidenav");
+        let sidenavClose = document.getElementById("sidenav-close");
         let dropdown = document.getElementsByClassName("dropdown-btn");
         let choose = true;
         let i;
@@ -2527,6 +2531,10 @@
 
         menu.addEventListener("click", () => {
             drop.classList.toggle("active-dropdown")
+        })
+
+        sidenavClose.addEventListener("click", () => {
+            document.getElementById("program-sidenav").classList.remove("sidebar-active")
         })
 
         for (let i = 0; i < divs.length; i++) {
