@@ -829,12 +829,10 @@ a {
   }
   .grid {
     width: 90%;
-    margin: 2rem 0;
-    padding: 2rem;
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, auto);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
     grid-template-areas:
       "banner"
       "date"
@@ -842,6 +840,7 @@ a {
       "card-2"
       "card-3"
       "card-4"
+      "card-2v"
       "card-5"
       "card-6"
       "card-7"
@@ -849,7 +848,23 @@ a {
       "card-9"
       "card-10"
       "card-11"
-      "program";
+      "card-12"
+      "card-13"
+      "card-14"
+      "card-15"
+      "card-16"
+      "card-17"
+      "card-18"
+      "card-19"
+      "card-20"
+      "card-v1"
+      "card-v2"
+      "card-v3"
+      "card-v4";
+  }
+  .user-info,
+  .room {
+    display: none;
   }
 }
 
