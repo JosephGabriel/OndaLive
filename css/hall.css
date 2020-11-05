@@ -285,6 +285,30 @@ a {
   grid-area: card-20;
 }
 
+.card-2v {
+  height: auto;
+  grid-area: card-2v;
+}
+
+.card-v1 {
+  height: auto;
+  grid-area: card-v1;
+}
+
+.card-v2 {
+  height: auto;
+  grid-area: card-v2;
+}
+
+.card-v3 {
+  height: auto;
+  grid-area: card-v3;
+}
+.card-v4 {
+  height: auto;
+  grid-area: card-v4;
+}
+
 .date-event {
   grid-area: date;
 }
@@ -306,24 +330,22 @@ a {
   gap: 2rem;
   display: grid;
   width: 100%;
-  justify-content: stretch;
+  justify-content: center;
   align-items: stretch;
-  grid-template-columns: repeat(12, auto);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(auto, auto);
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "date date date date date date date date date date date date"
     "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1"
-    "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3"
-    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
-    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
-    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
-    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 program program program program"
+    "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 program program program program"
+    "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 card-2v card-2v card-2v card-2v"
     "card-5 card-5 card-5 card-5 card-5 card-5 card-6 card-6 card-6 card-6 card-6 card-6"
     "card-7 card-7 card-7 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
     "card-9 card-9 card-9 card-9 card-10 card-10 card-10 card-10 card-11 card-11 card-11 card-11"
     "card-12 card-12 card-12 card-12 card-13 card-13 card-13 card-13 card-14 card-14 card-14 card-14"
-    "card-15 card-15 card-16 card-16 card-17 card-17 card-18 card-18 card-19 card-19 card-20 card-20";
+    "card-15 card-15 card-16 card-16 card-17 card-17 card-18 card-18 card-19 card-19 card-20 card-20"
+    "card-v1 card-v1 card-v1 card-v2 card-v2 card-v2 card-v3 card-v3 card-v3 card-v4 card-v4 card-v4";
 }
 
 .title-holder {
@@ -608,9 +630,38 @@ a {
   cursor: pointer;
   background: var(--accent-color);
 }
+.button-footer.v {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 24.8%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  color: white;
+  cursor: pointer;
+  background: var(--accent-color);
+}
 
 .button-footer button p {
   font-weight: 500;
+}
+
+.button-footer.v p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.value-title .v {
+  font-size: 2rem;
+}
+
+.value-btn.v {
+  font-size: 1.2rem !important;
 }
 
 .button-footer-small {
@@ -803,6 +854,10 @@ a {
 }
 
 .price-buttons {
+  flex-direction: column;
+  padding: 0.25rem;
+}
+.button-footer.v.price-buttons {
   flex-direction: column;
   padding: 0.25rem;
 }
@@ -1180,4 +1235,13 @@ button {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
+}
+
+.speaker-modal-modal img {
+  margin-right: 2rem;
+  width: 20%;
+}
+
+.button-footer.v.price-buttons {
+  padding: 0.96rem;
 }
