@@ -828,8 +828,8 @@ a {
   .grid {
     width: 90%;
     display: grid;
+    grid-gap: 2rem;
     justify-content: center;
-    gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
     grid-template-areas:
@@ -861,6 +861,7 @@ a {
       "card-v3"
       "card-v4";
   }
+
   .user-info,
   .room {
     display: none;
