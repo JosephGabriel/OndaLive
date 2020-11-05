@@ -831,7 +831,7 @@ a {
     display: grid;
     justify-content: center;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(27px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
     grid-template-areas:
       "banner"
