@@ -190,7 +190,6 @@ a {
 }
 
 .card-2 {
-  max-height: 62.4rem;
   height: auto;
   grid-area: card-2;
   overflow: hidden;
@@ -452,7 +451,8 @@ a {
 
 .body-holder img {
   width: 100%;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
 }
 
 .details,
@@ -822,7 +822,6 @@ a {
     display: none;
   }
 }
-
 @media screen and (max-width: 992px) {
   html {
     font-size: 40%;
@@ -831,7 +830,8 @@ a {
     width: 90%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(27px, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
     grid-template-areas:
       "banner"
