@@ -810,64 +810,6 @@ a {
   font-size: 2rem;
 }
 
-@media screen and (min-width: 769px) {
-  .nav-toggle {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .site-map {
-    display: none;
-  }
-}
-@media screen and (max-width: 992px) {
-  html {
-    font-size: 40%;
-  }
-  .grid {
-    width: 90%;
-    display: grid;
-    grid-gap: 2rem;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    grid-template-rows: repeat(auto-fit, auto);
-    grid-template-areas:
-      "banner"
-      "date"
-      "card-1"
-      "card-2"
-      "card-3"
-      "card-4"
-      "card-2v"
-      "card-5"
-      "card-6"
-      "card-7"
-      "card-8"
-      "card-9"
-      "card-10"
-      "card-11"
-      "card-12"
-      "card-13"
-      "card-14"
-      "card-15"
-      "card-16"
-      "card-17"
-      "card-18"
-      "card-19"
-      "card-20"
-      "card-v1"
-      "card-v2"
-      "card-v3"
-      "card-v4";
-  }
-
-  .user-info,
-  .room {
-    display: none;
-  }
-}
-
 .price-buttons {
   flex-direction: column;
   padding: 0.25rem;
@@ -1259,4 +1201,61 @@ button {
 
 .button-footer.v.price-buttons {
   padding: 0.96rem;
+}
+
+@media screen and (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-map {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 40%;
+  }
+  .grid {
+    width: 90%;
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "banner"
+      "date"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-2v"
+      "card-5"
+      "card-6"
+      "card-7"
+      "card-8"
+      "card-9"
+      "card-10"
+      "card-11"
+      "card-12"
+      "card-13"
+      "card-14"
+      "card-15"
+      "card-16"
+      "card-17"
+      "card-18"
+      "card-19"
+      "card-20"
+      "card-v1"
+      "card-v2"
+      "card-v3"
+      "card-v4";
+  }
+
+  .user-info,
+  .room {
+    display: none;
+  }
 }
