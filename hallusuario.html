@@ -34,49 +34,65 @@
                     <button class="site-map-item-btn" id="program">PROGRAMAÇÃO</button>
                     <div class="user-info">
                         <ul class="user-info-map">
-                            <div class="drop-user">
-                                <li class="user-info-item">
-                                    <img src="./img/100_3.jpg" width="50px" class="img-user">
-                                    Olá,<strong> Cassio</strong><span><i class="fa fa-tools menu"
-                                            id="menu-toggle"></i></span>
-                                </li>
-                                <div class="dropdown-user" id="dropdown">
-                                    <div class="info-user">
-                                        <div class="info-user-icon">
-                                            <i class="fa fa-address-card"></i>
-                                        </div>
-                                        <div class="info-user-description">
-                                            <h6>Meus dados</h6>
-                                        </div>
+                            <div class="drop-user" id="img-drop">
+                                <div>
+                                    <li class="user-info-item">
+                                        <img src="./img/100_3.jpg" width="50px" class="img-user">
+                                        Olá,<strong> Cassio</strong><span><i class="fa fa-tools menu"
+                                                id="menu-toggle"></i></span>
+                                    </li>
+                                    <div class="dropdown-user-img" id="dropdown-user-img">
+                                        <form action="" method="POST">
+                                            <div class="info-user">
+                                                <div class="info-user-icon">
+                                                    <i class="fa fa-user-circle"></i>
+                                                </div>
+                                                <div class="info-user-description">
+                                                    <input type="file" name="file" id="file" class="inputfile" />
+                                                    <label for="file">Alterar foto</label>
+
+                                                </div>
+                                        </form>
                                     </div>
-                                    <div class="info-user">
-                                        <div class="info-user-icon">
-                                            <i class="fa fa-envelope"></i>
-                                        </div>
-                                        <div class="info-user-description">
-                                            <h6>Notificações</h6>
-                                        </div>
-                                    </div>
-                                    <div class="info-user">
-                                        <div class="info-user-icon">
-                                            <i class="fa fa-graduation-cap"></i>
-                                        </div>
-                                        <div class="info-user-description">
-                                            <h6>Certificados</h6>
-                                        </div>
-                                    </div>
-                                    <hr class="info-hr">
-                                    <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
                                 </div>
                             </div>
-                            <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
-                        </ul>
+                            <div class="dropdown-user" id="dropdown">
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Meus dados</h6>
+                                    </div>
+                                </div>
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Notificações</h6>
+                                    </div>
+                                </div>
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Certificados</h6>
+                                    </div>
+                                </div>
+                                <hr class="info-hr">
+                                <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+                            </div>
                     </div>
-            </div>
-            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
-                <i class="fa fa-bars"></i>
+                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
+                    </ul>
             </div>
         </div>
+        <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
     </div>
     <div class="sidenav" style="margin-top: 5rem;">
         <img src="./img/logo-sticky.svg">
@@ -2483,6 +2499,8 @@
         let closeBtn = document.querySelectorAll('.card-close');
         let closeBtn2 = document.querySelectorAll('.card-close2');
         let drop = document.getElementById("dropdown");
+        let dropImg = document.getElementById("dropdown-user-img");
+        let imgDrop = document.getElementById("img-drop");
         let nav = document.getElementById("nav-toggle");
         let sidenav = document.getElementById("sidenav");
         let sidenavClose = document.getElementById("sidenav-close");
@@ -2508,7 +2526,9 @@
             drop.classList.toggle("active-dropdown")
         })
 
-
+        imgDrop.addEventListener("click", () => {
+            dropImg.classList.toggle("active-dropdown")
+        })
 
         for (let i = 0; i < divs.length; i++) {
 

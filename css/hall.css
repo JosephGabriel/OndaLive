@@ -986,7 +986,8 @@ a {
   align-items: center;
 }
 
-.dropdown-user {
+.dropdown-user,
+.dropdown-user-img {
   position: absolute;
   background: #222;
   padding: 1rem;
@@ -1003,7 +1004,27 @@ a {
   z-index: -1;
 }
 
-.dropdown-user.active-dropdown {
+#img-drop {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+#img-drop:hover {
+  background: #4e4e4e;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.dropdown-user.active-dropdown,
+.dropdown-user-img.active-dropdown {
   z-index: -1;
   opacity: 1;
   pointer-events: all;
@@ -1204,6 +1225,33 @@ button {
 
 .button-footer.v.price-buttons {
   padding: 0.96rem;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  color: white;
+  background-color: var(--accent-color);
+  display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: var(--accent-color);
+}
+
+.inputfile + label {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 769px) {
