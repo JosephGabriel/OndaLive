@@ -2371,6 +2371,10 @@
                 document.getElementById("main").classList.toggle("main-active");
             })
 
+        document.getElementById("sidenav-close").addEventListener("click", () => {
+            document.getElementById("program-sidenav").classList.remove("sidebar-active")
+        })
+
         nav.addEventListener("click", () => {
             sidenav.classList.toggle("activeS")
         })

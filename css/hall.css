@@ -1218,7 +1218,7 @@ button {
   }
 
   html {
-    font-size: 40%;
+    font-size: 48%;
   }
   .grid {
     width: 90%;
@@ -1259,6 +1259,13 @@ button {
     display: none;
   }
 }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   html {
     font-size: 40%;
