@@ -290,8 +290,13 @@ html {
 }
 
 .nav-icon {
+  border: none;
+  cursor: pointer;
   color: #fff;
   font-size: 3rem;
+  padding: 0;
+  background-color: transparent;
+  outline: none !important;
 }
 
 @media screen and (min-width: 1000px) {
@@ -520,7 +525,7 @@ html {
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: auto;
+  width: 30rem;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -528,8 +533,7 @@ html {
   text-align: center;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 20px;
-  padding: 2rem;
+  padding-top: 8rem;
   transition: all 0.5s;
   transform: translateX(-100%);
 }
@@ -537,6 +541,18 @@ html {
 .sidenav img {
   object-fit: contain;
   margin-bottom: 2rem;
+}
+
+.close-bbtn {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-bbtn i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  cursor: pointer;
 }
 
 .sidenav.activeS {
@@ -557,20 +573,18 @@ html {
   width: 100%;
   text-align: left;
   cursor: pointer;
-  outline: none;
+  outline: none !important;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 /* On mouse-over */
 .sidenav a:hover,
 .dropdown-btn:hover {
   color: #f1f1f1;
-}
-
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
 }
 
 /* Add an active class to the active dropdown button */
@@ -584,7 +598,12 @@ html {
 .dropdown-container {
   display: none;
   background-color: #262626;
-  padding-left: 8px;
+  outline: none !important;
+}
+
+.dropdown-container ul {
+  padding: 0;
+  margin: 0;
 }
 
 /* Optional: Style the caret down icon */

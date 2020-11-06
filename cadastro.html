@@ -23,30 +23,52 @@
                 data-wow-delay="300ms">
             <ul class="navbar-list wow animate__animated animate__fadeInRight" data-wow-delay="300ms"
                 style="margin: 0;">
-                <li class="navbar-item"><a style="font-size: 1.3rem;" href="/index.html">Home</a></li>
+                <li class="navbar-item"><a style="font-size: 1.3rem;" href="#">Home</a></li>
                 <li class="dropdown">
-                    <button class="navbar-dropdown"><a href="./index.html#Evento">
+                    <button class="navbar-dropdown"><a href="#Evento">
                             O Evento</a></button>
                     <ul>
-                        <li class="navbar-item"><a href="./index.html#Palestrantes">Palestrantes</a></li>
-                        <li class="navbar-item"><a href="./index.html#Lançamento">Lançamento</a></li>
-                        <li class="navbar-item"><a href="./index.html#Destaques">Destaques</a></li>
-                        <li class="navbar-item"><a href="./index.html#Video">Video</a></li>
-                        <li class="navbar-item"><a href="./index.html#Programação">Programação</a></li>
-                        <li class="navbar-item"><a href="./index.html#Patrocinadores">Patrocinadores</a></li>
-                        <li class="navbar-item"><a href="./index.html#Dúvidas">Dúvidas</a></li>
-                        <li class="navbar-item"><a href="./index.html#Lotes">Lotes</a></li>
-                        <li class="navbar-item"><a href="./index.html#Contato">Contato</a></li>
+                        <li class="navbar-item"><a href="#Palestrantes">Palestrantes</a></li>
+                        <li class="navbar-item"><a href="#Lançamento">Lançamento</a></li>
+                        <li class="navbar-item"><a href="#Destaques">Destaques</a></li>
+                        <li class="navbar-item"><a href="#Video">Video</a></li>
+                        <li class="navbar-item"><a href="#Programação">Programação</a></li>
+                        <li class="navbar-item"><a href="#Patrocinadores">Patrocinadores</a></li>
+                        <li class="navbar-item"><a href="#Dúvidas">Dúvidas</a></li>
+                        <li class="navbar-item"><a href="#Lotes">Lotes</a></li>
+                        <li class="navbar-item"><a href="#Contato">Contato</a></li>
                     </ul>
                 </li>
                 <li class="navbar-item outline"><a href="./login.html">Login</a></li>
                 <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
                 <li class="navbar-item full"><a href="./hallusuario.html">Comprar</a></li>
             </ul>
-            <div class="nav-icon" id="nav-icon" onclick="openNav()">
-                &#9776;
-            </div>
+            <button class="nav-icon" id="nav-icon">
+                <i class="fa fa-bars"></i>
+            </button>
         </nav>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <div class="close-bbtn" id="close-btn">
+            <i class="fa fa-window-close"></i>
+        </div>
+        <a href="#">Inicio</a>
+        <button class="dropdown-btn">Evento
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <ul>
+                <li><a href="#Palestrantes">Palestrantes</a></li>
+                <li><a href="#Lançamento">Lançamento</a></li>
+                <li><a href="#Destaques">Destaques</a></li>
+                <li><a href="#Video">Video</a></li>
+                <li><a href="#Programação">Programação</a></li>
+                <li><a href="#Patrocinadores">Patrocinadores</a></li>
+                <li><a href="#Dúvidas">Dúvidas</a></li>
+                <li><a href="#Lotes">Lotes</a></li>
+                <li><a href="#Contato">Contato</a></li>
+            </ul>
+        </div>
     </div>
     <div class="body-grid">
         <div class="grid">
@@ -175,6 +197,31 @@
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
     <script src="./js/wow.js"></script>
+    <script>
+        document.getElementById("nav-icon").addEventListener("click", () => {
+            document.getElementById("mySidenav").classList.toggle("activeS")
+        })
+        document.getElementById("close-btn").addEventListener("click", () => {
+            document.getElementById("mySidenav").classList.remove("activeS")
+
+        })
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+    </script>
 </body>
 
 </html>

@@ -48,17 +48,32 @@
                 <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
                 <li class="navbar-item full"><a href="./hallusuario.html">Comprar</a></li>
             </ul>
-            <div class="nav-icon" id="nav-icon" onclick="openNav()">
-                &#9776;
-            </div>
+            <button class="nav-icon" id="nav-icon">
+                <i class="fa fa-bars"></i>
+            </button>
         </nav>
     </div>
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-            <i class="fa fa-bars"></i>
-        </a>
+        <div class="close-bbtn" id="close-btn">
+            <i class="fa fa-window-close"></i>
+        </div>
         <a href="#">Inicio</a>
-        <a href="#">Evento</a>
+        <button class="dropdown-btn">Evento
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <ul>
+                <li><a href="#Palestrantes">Palestrantes</a></li>
+                <li><a href="#Lançamento">Lançamento</a></li>
+                <li><a href="#Destaques">Destaques</a></li>
+                <li><a href="#Video">Video</a></li>
+                <li><a href="#Programação">Programação</a></li>
+                <li><a href="#Patrocinadores">Patrocinadores</a></li>
+                <li><a href="#Dúvidas">Dúvidas</a></li>
+                <li><a href="#Lotes">Lotes</a></li>
+                <li><a href="#Contato">Contato</a></li>
+            </ul>
+        </div>
     </div>
     <div class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -1354,9 +1369,9 @@
         }
 
         function changeText(name, age, text) {
-            let speakerName = document.getElementById("speaker-name")
-            let speakerAge = document.getElementById("speaker-age")
-            let speakerText = document.getElementById("speaker-text")
+            var speakerName = document.getElementById("speaker-name")
+            var speakerAge = document.getElementById("speaker-age")
+            var speakerText = document.getElementById("speaker-text")
 
             speakerName.innerHTML = name
             speakerAge.innerHTML = `${age} Years experienced`
@@ -1424,6 +1439,30 @@
         })
 
         glider.mount()
+
+        document.getElementById("nav-icon").addEventListener("click", () => {
+            document.getElementById("mySidenav").classList.toggle("activeS")
+        })
+        document.getElementById("close-btn").addEventListener("click", () => {
+            document.getElementById("mySidenav").classList.remove("activeS")
+
+        })
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
     </script>
 </body>
 
