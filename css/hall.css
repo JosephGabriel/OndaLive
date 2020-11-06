@@ -316,6 +316,16 @@ a {
   cursor: pointer;
 }
 
+.card-1g {
+  height: auto;
+  grid-area: card-1g;
+}
+
+.card-2g {
+  height: auto;
+  grid-area: card-2g;
+}
+
 .program {
   height: auto;
   padding: 2rem 1rem;
@@ -336,7 +346,9 @@ a {
   grid-template-areas:
     "banner banner banner banner banner banner banner banner banner banner banner banner"
     "date date date date date date date date date date date date"
-    "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1"
+    "card-1g card-1g card-1g card-1g card-1g card-1g card-1g card-1g card-1g card-1g card-1g card-1g"
+    "card-2g card-2g card-2g card-2g card-2g card-2g card-2g card-2g card-2g card-2g card-2g card-2g"
+    "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 program program program program"
     "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 program program program program"
     "card-2 card-2 card-2 card-2 card-4 card-4 card-4 card-4 card-2v card-2v card-2v card-2v"
     "card-5 card-5 card-5 card-5 card-5 card-5 card-6 card-6 card-6 card-6 card-6 card-6"
@@ -456,7 +468,8 @@ a {
 }
 
 .details,
-.details-price {
+.details-price,
+.details-g {
   display: flex;
   position: absolute;
   padding: 2rem;
@@ -583,6 +596,7 @@ a {
 }
 
 .details.show,
+.details-g.show,
 .details-price.show {
   opacity: 1;
   pointer-events: all;
@@ -799,12 +813,14 @@ a {
   margin-right: 1rem;
 }
 
+.card-close-g,
 .card-close,
 .card-close2,
 .card-close3 {
   width: fit-content;
   height: fit-content;
 }
+.card-close-g i,
 .card-close i,
 .card-close3 i,
 .card-close2 i {
@@ -1006,16 +1022,7 @@ a {
 
 #img-drop {
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
-
-#img-drop:hover {
-  background: #4e4e4e;
+  height: 4rem;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
