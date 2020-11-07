@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+    <link rel="stylesheet" href="./css/jquery.flipster.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="./css/hall.css">
     <script src="./js/script.js"></script>
@@ -21,34 +23,417 @@
     </div>
     <div class="navbar-container">
         <div class="navbar-holder">
+            <div style="display: flex;justify-content: center;">
+                <img src="./favicon.svg" class="navbar-brand" width="30px">
+            </div>
+            <div class="room">
+                <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
+            </div>
             <div style="display: flex; align-items: center;">
-                <img src="./favicon.svg" class="navbar-brand">
-                <div class="site-map">
-                    <ul class="site-map-list">
-                        <li class="site-map-item"><a href="/">Voltar para o Site</a></li>
-                        <li class="site-map-item"><a href="">Titulo do Evento/Data</a></li>
+                <button class="site-map-item-btn"><a href="./index.html">HOME</a></>
+                    <button class="site-map-item-btn" id="program">PROGRAMAÇÃO</button>
+                    <div class="user-info">
+                        <ul class="user-info-map">
+                            <div class="drop-user">
+                                <div>
+                                    <li class="user-info-item">
+                                        <img src="./img/100_3.jpg" class="img-user" id="img-drop">
+                                        Olá,<strong> Cassio</strong><span>
+                                            <i class="fa fa-cog menu" id="menu-toggle"></i></span>
+                                    </li>
+                                    <div class="dropdown-user-img" id="dropdown-user-img">
+                                        <form action="" method="POST">
+                                            <div class="info-user">
+                                                <div class="info-user-icon">
+                                                    <i class="fa fa-user-circle"></i>
+                                                </div>
+                                                <div class="info-user-description">
+                                                    <input type="file" name="file" id="file" class="inputfile" />
+                                                    <label for="file">Alterar foto</label>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-user" id="dropdown">
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Meus dados</h6>
+                                    </div>
+                                </div>
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Notificações</h6>
+                                    </div>
+                                </div>
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Certificados</h6>
+                                    </div>
+                                </div>
+                                <hr class="info-hr">
+                                <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+                            </div>
+                    </div>
+                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
                     </ul>
+            </div>
+        </div>
+        <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="sidenav-icon">
+            <i class="fas fa-list" id="nav-toggle-side"></i>
+        </div>
+    </div>
+    </div>
+    <div class="sidenav" id="sidenav" style="margin-top: 5rem;">
+    </div>
+    <div class="program-sidenav" id="program-sidenav">
+        <div class="program">
+            <div class="card-close3">
+                <i class="fa fa-window-close" id="sidenav-close"></i>
+            </div>
+            <div class="presention">
+                <div class="center" style="display: flex;align-items: center;flex-direction: column;">
+                    <hr class="hr">
+                    <h6 class="subtitle">SALA E EVENTOS</h6>
+                    <h3 class="title"
+                        style="margin-top: 0;margin-bottom: 1rem; color: white; font-size: 3rem; text-align: center;">
+                        Nossa Programação</h3>
+                </div>
+                <div class="day-selection">
+                    <label class="day-label" for="day-selection">Sala</label>
+                    <select name="day-selection" class="day-selection-input">
+                        <option value="">Selecione</option>
+                        <option value=""></option>
+                    </select>
+
+                    <label class="day-label" for="day-selection">Dia</label>
+                    <select name="day-selection" class="day-selection-input">
+                        <option value="">Selecione</option>
+                        <option value=""></option>
+                    </select>
                 </div>
             </div>
-            <div class="user-info">
-                <ul class="user-info-map">
-                    <li class="user-info-item cart" id="tool" style="cursor: pointer;"><i class="fas fa-tools"></i></li>
-                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
-                    <li class="user-info-item">Olá, <strong>Casio</strong> <span>C</span></li>
-                </ul>
+            <div class="day-box-holder w100">
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> Ozonioterapia</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png">
+                            <img src="./img/Rectangle 111.png">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal1">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> ONDALIVE</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png">
+                            <img src="./img/Rectangle 111.png">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal2">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> ONDALIVE</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                            <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal3">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> Ozonioterapia</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png">
+                            <img src="./img/Rectangle 111.png">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal1">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> ONDALIVE</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png">
+                            <img src="./img/Rectangle 111.png">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal2">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> ONDALIVE</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                            <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal3">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
-                &#9776;
+
+        </div>
+    </div>
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: none;">
+                    <button type="button" id="close-button" class="close " data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h6>PALESTRA</h6>
+                        <hr>
+                    </div>
+                    <div class="desc-modal">
+                        <h4>TITULO DA PALESTRA</h4>
+                        <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                        <div class="day-modal">
+                            <div class="day-day-modal">
+                                <p><strong>14</strong><br> AGO</p>
+                            </div>
+                            <div class="day-date-modal">
+                                <p> 22:00h</p>
+                                <p class="spot">SALA ONDALIVE</p>
+                            </div>
+                        </div>
+                        <div class="desc-desc-modal">
+                            <p>breve descrição do que vai acontecer na palestra</p>
+                        </div>
+                    </div>
+                    <div class="speaker-modal">
+                        <div class="speaker-modal-title">
+                            <h6>PALESTRANTE(S)</h6>
+                            <hr>
+                        </div>
+                        <div class="speaker-modal-modal">
+                            <img src="./img/Rectangle 17.png" width="70px">
+                            <div>
+                                <h6>NOME DO PALESTRANTE</h6>
+                                <p>Cargo do palestrante na empresa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="sidenav" id="sidenav" style="margin-top: 7rem;">
-        <img src="./img/logo-sticky.svg">
-        <a href="#about">Voltar para o Site</a>
-        <a href="#services">Titulo do Evento/Data</a>
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: none;">
+                    <button type="button" id="close-button" class="close " data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h6>PALESTRA</h6>
+                        <hr>
+                    </div>
+                    <div class="desc-modal">
+                        <h4>TITULO DA PALESTRA</h4>
+                        <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                        <div class="day-modal">
+                            <div class="day-day-modal">
+                                <p><strong>14</strong><br> AGO</p>
+                            </div>
+                            <div class="day-date-modal">
+                                <p> 22:00h</p>
+                                <p class="spot">SALA ONDALIVE</p>
+                            </div>
+                        </div>
+                        <div class="desc-desc-modal">
+                            <p>breve descrição do que vai acontecer na palestra</p>
+                        </div>
+                    </div>
+                    <div class="speaker-modal">
+                        <div class="speaker-modal-title">
+                            <h6>PALESTRANTE(S)</h6>
+                            <hr>
+                        </div>
+                        <div class="speaker-modal-modal">
+                            <img src="./img/Rectangle 17.png" width="70px">
+                            <div>
+                                <h6>NOME DO PALESTRANTE</h6>
+                                <p>Cargo do palestrante na empresa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: none;">
+                    <button type="button" id="close-button" class="close " data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h6>PALESTRA</h6>
+                        <hr>
+                    </div>
+                    <div class="desc-modal">
+                        <h4>TITULO DA PALESTRA</h4>
+                        <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
+                        <div class="day-modal">
+                            <div class="day-day-modal">
+                                <p><strong>14</strong><br> AGO</p>
+                            </div>
+                            <div class="day-date-modal">
+                                <p> 22:00h</p>
+                                <p class="spot">SALA ONDALIVE</p>
+                            </div>
+                        </div>
+                        <div class="desc-desc-modal">
+                            <p>breve descrição do que vai acontecer na palestra</p>
+                        </div>
+                    </div>
+                    <div class="speaker-modal">
+                        <div class="speaker-modal-title">
+                            <h6>PALESTRANTE(S)</h6>
+                            <hr>
+                        </div>
+                        <div class="speaker-modal-modal">
+                            <img src="./img/Rectangle 17.png" width="70px">
+                            <div>
+                                <h6>NOME DO PALESTRANTE</h6>
+                                <p>Cargo do palestrante na empresa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="sidenav" id="toolbar" style="margin-top: 7rem;width: auto;background: #363636;">
-
         <div class="dashboard">
             <div>
                 <i class="fas fa-chart-line"></i>
@@ -61,15 +446,15 @@
         </div>
         <hr id="hr-hr">
         <div class="user-count">
-            <div class="user-online">
-                <i class="fas fa-user-friends"></i>
-                <h6>780</h6>
-                <p>Online</p>
-            </div>
             <div class="user-subscription">
                 <i class="fas fa-ticket-alt"></i>
                 <h6>1,300</h6>
                 <p>Inscrições</p>
+            </div>
+            <div class="user-online">
+                <i class="fas fa-user-friends"></i>
+                <h6>780</h6>
+                <p>Online</p>
             </div>
         </div>
         <div class="search-bar">
@@ -150,16 +535,34 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="body-grid">
-        <div class="grid">
+
+    <div class="body-grid" id="body">
+
+        <div class="grid" id="main">
             <div class="banner">
-                <img src="./img/banner.png">
+                <img src="./img/banner descktop.jpg">
             </div>
-            <div class="card-1">
+            <div class="banner-mobile">
+                <img src="./img/banner-mobile2.jpg">
+            </div>
+            <div class="date-event">
+                <div class="my-flipster">
+                    <ul>
+                        <li> <button>Todos</button></li>
+                        <li> <button>01/10</button></li>
+                        <li> <button>09/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                        <li> <button>29/10</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-1g">
                 <div class="title-holder">
                     <div class="date-card">
-                        <p>29/OUT</p>
+                        <p>29/OUT a 29/OUT</p>
                     </div>
                     <div class="title-card">
                         <span class="hour-card">15h</span>
@@ -167,7 +570,7 @@
                     </div>
                 </div>
                 <div class="body-holder">
-                    <img src="./img/banner.png">
+                    <img src="./img/card 01.jpg">
                     <div class="details">
                         <div class="details-date">
                             <div class="detail-icon">
@@ -203,10 +606,54 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -214,15 +661,251 @@
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                    <div class="button-cart">
-                        <div class="cart-title">
-                            <i class="fa fa-cart-plus"></i>
-                            <p>Adicionar</p>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-2g">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT a 29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 01.jpg">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cart-value">
-                            <p>Valor do ingresso</p>
-                            <p>R$ 1.500,00</p>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder ">
+                    <div class="button-footer duo details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer duo">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-1">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT a 29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 01.jpg">
+                    <div class="details">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-3">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT a 29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 01.jpg">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder ">
+                    <div class="button-footer duo details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer duo">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
                     </div>
                 </div>
             </div>
@@ -237,112 +920,147 @@
                     </div>
                 </div>
                 <div class="body-holder">
-                    <img src="./img/banner.png">
-                    <div class="details">
-                        <div class="details-date">
-                            <div class="detail-icon">
-                                <i class="fa fa-clock"></i>
-                                <div class="date-date">
-                                    <p>Início</p>
-                                    <p>01 dez 2020, 15h</p>
+                    <img src="./img/card 03.jpg">
+                    <div class="details  details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="detail-icon">
-                                <i class="fa fa-clock"></i>
-                                <div class="date-date">
-                                    <p>Término</p>
-                                    <p>01 dez 2020, 15h</p>
-                                </div>
-                            </div>
-                            <div class="detail-icon">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="date-date">
-                                    <p> Evento online</p>
-                                </div>
+                            <div class="card-close">
+                                <i class="fa fa-window-close"></i>
                             </div>
                         </div>
-                        <div class="program-description-list">
+                        <div class="program-description-list vertical">
                             <p class="program-description-list-title">Programação</p>
-                            <p>13H30 – ABERTURA IM</p>
-                            <p>13H40 – DELL</p>
-                            <p>14H05 – HPE</p>
-                            <p>14H30 – KEYNOTE MERCADO</p>
-                            <p>15H35 – ARUBA</p>
-                            <p>16H00 – VERTIV</p>
-                            <p>16H25 – IBM</p>
-                            <p>16H50 – CISCO</p>
-                            <p>17H15 – VMWARE</p>
+                            <div class="vertical-list">
+                                <p>13H30 – ABERTURA IM</p>
+                                <p>13H40 – DELL</p>
+                                <p>14H05 – HPE</p>
+                                <p>14H30 – KEYNOTE MERCADO</p>
+                                <p>15H35 – ARUBA</p>
+                                <p>16H00 – VERTIV</p>
+                                <p>16H25 – IBM</p>
+                                <p>16H50 – CISCO</p>
+                                <p>17H15 – VMWARE</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="details-price details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close2">
+                                <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer-small">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                </div>
-            </div>
-            <div class="card-3">
-                <div class="title-holder">
-                    <div class="date-card">
-                        <p>29/OUT</p>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
                     </div>
-                    <div class="title-card">
-                        <span class="hour-card">15h</span>
-                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
-                    </div>
-                </div>
-                <div class="body-holder">
-                    <img src="./img/banner.png">
-                    <div class="details">
-                        <div class="details-date">
-                            <div class="detail-icon">
-                                <i class="fa fa-clock"></i>
-                                <div class="date-date">
-                                    <p>Início</p>
-                                    <p>01 dez 2020, 15h</p>
-                                </div>
-                            </div>
-                            <div class="detail-icon">
-                                <i class="fa fa-clock"></i>
-                                <div class="date-date">
-                                    <p>Término</p>
-                                    <p>01 dez 2020, 15h</p>
-                                </div>
-                            </div>
-                            <div class="detail-icon">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="date-date">
-                                    <p> Evento online</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-description-list">
-                            <p class="program-description-list-title">Programação</p>
-                            <p>13H30 – ABERTURA IM</p>
-                            <p>13H40 – DELL</p>
-                            <p>14H05 – HPE</p>
-                            <p>14H30 – KEYNOTE MERCADO</p>
-                            <p>15H35 – ARUBA</p>
-                            <p>16H00 – VERTIV</p>
-                            <p>16H25 – IBM</p>
-                            <p>16H50 – CISCO</p>
-                            <p>17H15 – VMWARE</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-holder">
-                    <div class="button-footer-small" id="details-btn">
-                        <i class="fa fa-plus"></i>
-                        <p>Detalhes</p>
-                    </div>
-                    <div class="button-footer-small">
-                        <i class="fa fa-sign-in-alt"></i>
-                        <p>Entrar</p>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -357,303 +1075,60 @@
                     </div>
                 </div>
                 <div class="body-holder">
-                    <img src="./img/Rectangle 17.png" height="380px" style="transform: scale(1.5);">
-                    <div class="details">
-                        <div class="details-date">
-                            <div class="detail-icon">
-                                <i class="fa fa-clock"></i>
-                                <div class="date-date">
-                                    <p>Início</p>
-                                    <p>01 dez 2020, 15h</p>
+                    <img src="./img/card 03.jpg">
+                    <div class="details-g  details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="detail-icon">
-                                <i class="fa fa-clock"></i>
-                                <div class="date-date">
-                                    <p>Término</p>
-                                    <p>01 dez 2020, 15h</p>
-                                </div>
-                            </div>
-                            <div class="detail-icon">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="date-date">
-                                    <p> Evento online</p>
-                                </div>
+                            <div class="card-close-g">
+                                <i class="fa fa-window-close"></i>
                             </div>
                         </div>
-                        <div class="program-description-list">
+                        <div class="program-description-list vertical">
                             <p class="program-description-list-title">Programação</p>
-                            <p>13H30 – ABERTURA IM</p>
-                            <p>13H40 – DELL</p>
-                            <p>14H05 – HPE</p>
-                            <p>14H30 – KEYNOTE MERCADO</p>
-                            <p>15H35 – ARUBA</p>
-                            <p>16H00 – VERTIV</p>
-                            <p>16H25 – IBM</p>
-                            <p>16H50 – CISCO</p>
-                            <p>17H15 – VMWARE</p>
+                            <div class="vertical-list">
+                                <p>13H30 – ABERTURA IM</p>
+                                <p>13H40 – DELL</p>
+                                <p>14H05 – HPE</p>
+                                <p>14H30 – KEYNOTE MERCADO</p>
+                                <p>15H35 – ARUBA</p>
+                                <p>16H00 – VERTIV</p>
+                                <p>16H25 – IBM</p>
+                                <p>16H50 – CISCO</p>
+                                <p>17H15 – VMWARE</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small" id="details-btn">
+                    <div class="button-footer details-button2" style="width: 49.8%;">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer-small">
+                    <div class="button-footer" style="width: 49.8%;">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
-                    </div>
-                </div>
-            </div>
-            <div class="program">
-                <div class="presention">
-                    <div class="center" style="display: flex;align-items: center;flex-direction: column;">
-                        <hr class="hr">
-                        <h6 class="subtitle">SALA E EVENTOS</h6>
-                        <h3 class="title"
-                            style="margin-top: 0;margin-bottom: 1rem; color: white; font-size: 3rem; text-align: center;">
-                            Nossa Programação</h3>
-                    </div>
-                    <div class="day-selection">
-                        <label class="day-label" for="day-selection">Sala</label>
-                        <select name="day-selection" class="day-selection-input">
-                            <option value="">Selecione</option>
-                            <option value=""></option>
-                        </select>
-
-                        <label class="day-label" for="day-selection">Dia</label>
-                        <select name="day-selection" class="day-selection-input">
-                            <option value="">Selecione</option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                </div>
-                <div class="day-box-holder w100">
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button type="button" data-toggle="modal" data-target="#modal1">+
-                                    Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button type="button" data-toggle="modal" data-target="#modal2">+
-                                    Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button type="button" data-toggle="modal" data-target="#modal3">+
-                                    Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header" style="border: none;">
-                                <button type="button" id="close-button" class="close " data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-title">
-                                    <h6>PALESTRA</h6>
-                                    <hr>
-                                </div>
-                                <div class="desc-modal">
-                                    <h4>TITULO DA PALESTRA</h4>
-                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
-                                    <div class="day-modal">
-                                        <div class="day-day-modal">
-                                            <p><strong>14</strong><br> AGO</p>
-                                        </div>
-                                        <div class="day-date-modal">
-                                            <p>Inicio as 22:00h</p>
-                                            <p class="spot">SALA ONDALIVE</p>
-                                        </div>
-                                    </div>
-                                    <div class="desc-desc-modal">
-                                        <p>breve descrição do que vai acontecer na palestra</p>
-                                    </div>
-                                </div>
-                                <div class="speaker-modal">
-                                    <div class="speaker-modal-title">
-                                        <h6>PALESTRANTE(S)</h6>
-                                        <hr>
-                                    </div>
-                                    <div class="speaker-modal-modal">
-                                        <img src="./img/Rectangle 17.png" width="70px">
-                                        <div>
-                                            <h6>NOME DO PALESTRANTE</h6>
-                                            <p>Cargo do palestrante na empresa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="modal2" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header" style="border: none;">
-                                <button type="button" id="close-button" class="close " data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-title">
-                                    <h6>PALESTRA</h6>
-                                    <hr>
-                                </div>
-                                <div class="desc-modal">
-                                    <h4>TITULO DA PALESTRA</h4>
-                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
-                                    <div class="day-modal">
-                                        <div class="day-day-modal">
-                                            <p><strong>14</strong><br> AGO</p>
-                                        </div>
-                                        <div class="day-date-modal">
-                                            <p>Inicio as 22:00h</p>
-                                            <p class="spot">SALA ONDALIVE</p>
-                                        </div>
-                                    </div>
-                                    <div class="desc-desc-modal">
-                                        <p>breve descrição do que vai acontecer na palestra</p>
-                                    </div>
-                                </div>
-                                <div class="speaker-modal">
-                                    <div class="speaker-modal-title">
-                                        <h6>PALESTRANTE(S)</h6>
-                                        <hr>
-                                    </div>
-                                    <div class="speaker-modal-modal">
-                                        <img src="./img/Rectangle 17.png" width="70px">
-                                        <div>
-                                            <h6>NOME DO PALESTRANTE</h6>
-                                            <p>Cargo do palestrante na empresa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="modal3" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header" style="border: none;">
-                                <button type="button" id="close-button" class="close " data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-title">
-                                    <h6>PALESTRA</h6>
-                                    <hr>
-                                </div>
-                                <div class="desc-modal">
-                                    <h4>TITULO DA PALESTRA</h4>
-                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
-                                    <div class="day-modal">
-                                        <div class="day-day-modal">
-                                            <p><strong>14</strong><br> AGO</p>
-                                        </div>
-                                        <div class="day-date-modal">
-                                            <p>Inicio as 22:00h</p>
-                                            <p class="spot">SALA ONDALIVE</p>
-                                        </div>
-                                    </div>
-                                    <div class="desc-desc-modal">
-                                        <p>breve descrição do que vai acontecer na palestra</p>
-                                    </div>
-                                </div>
-                                <div class="speaker-modal">
-                                    <div class="speaker-modal-title">
-                                        <h6>PALESTRANTE(S)</h6>
-                                        <hr>
-                                    </div>
-                                    <div class="speaker-modal-modal">
-                                        <img src="./img/Rectangle 17.png" width="70px">
-                                        <div>
-                                            <h6>NOME DO PALESTRANTE</h6>
-                                            <p>Cargo do palestrante na empresa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -691,6 +1166,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -704,10 +1180,54 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -715,15 +1235,13 @@
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                    <div class="button-cart">
-                        <div class="cart-title">
-                            <i class="fa fa-cart-plus"></i>
-                            <p>Adicionar</p>
-                        </div>
-                        <div class="cart-value">
-                            <p>Valor do ingresso</p>
-                            <p>R$ 1.500,00</p>
-                        </div>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -761,6 +1279,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -774,10 +1293,54 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer" id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
@@ -785,15 +1348,13 @@
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                    <div class="button-cart">
-                        <div class="cart-title">
-                            <i class="fa fa-cart-plus"></i>
-                            <p>Adicionar</p>
-                        </div>
-                        <div class="cart-value">
-                            <p>Valor do ingresso</p>
-                            <p>R$ 1.500,00</p>
-                        </div>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -809,7 +1370,7 @@
                 </div>
                 <div class="body-holder">
                     <img src="./img/banner.png">
-                    <div class="details">
+                    <div class="details-g">
                         <div class="details-date">
                             <div class="detail-icon">
                                 <i class="fa fa-clock"></i>
@@ -844,14 +1405,17 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer w50" style="width:49.5%;" id="details-btn">
+                    <div class="button-footer duo details-button2">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer" style="width: 49.5%;">
+                    <div class="button-footer duo">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
@@ -869,7 +1433,7 @@
                 </div>
                 <div class="body-holder">
                     <img src="./img/banner.png">
-                    <div class="details">
+                    <div class="details-g">
                         <div class="details-date">
                             <div class="detail-icon">
                                 <i class="fa fa-clock"></i>
@@ -904,14 +1468,17 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer w50" style="width:49.5%;" id="details-btn">
+                    <div class="button-footer duo details-button2">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer" style="width: 49.5%;">
+                    <div class="button-footer duo">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
@@ -951,6 +1518,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -964,26 +1532,68 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer-small-3 ">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                    <div class="button-cart-small">
-                        <div class="cart-title">
-                            <i class="fa fa-cart-plus"></i>
-                            <p>Adicionar</p>
-                        </div>
-                        <div class="cart-value">
-                            <p>Valor do ingresso</p>
-                            <p>R$ 1.500,00</p>
-                        </div>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -1021,6 +1631,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -1034,26 +1645,68 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer-small-3 ">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                    <div class="button-cart-small">
-                        <div class="cart-title">
-                            <i class="fa fa-cart-plus"></i>
-                            <p>Adicionar</p>
-                        </div>
-                        <div class="cart-value">
-                            <p>Valor do ingresso</p>
-                            <p>R$ 1.500,00</p>
-                        </div>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
                     </div>
                 </div>
             </div>
@@ -1091,6 +1744,7 @@
                                     <p> Evento online</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="program-description-list">
                             <p class="program-description-list-title">Programação</p>
@@ -1104,65 +1758,1201 @@
                             <p>16H50 – CISCO</p>
                             <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                    <div class="details-price">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Lotes Únicos</p>
+                            <p>Ingressos</p>
+                            <div class="lotes">
+                                <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                <p>em até 10X de R$ 165,00</p>
+                                <div class="shopping-cart">
+                                    <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                    <button><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card-close2">
+                            <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-holder">
-                    <div class="button-footer-small-3 " id="details-btn">
+                    <div class="button-footer details-button">
                         <i class="fa fa-plus"></i>
                         <p>Detalhes</p>
                     </div>
-                    <div class="button-footer-small-3 ">
+                    <div class="button-footer">
                         <i class="fa fa-sign-in-alt"></i>
                         <p>Entrar</p>
                     </div>
-                    <div class="button-cart-small">
-                        <div class="cart-title">
-                            <i class="fa fa-cart-plus"></i>
-                            <p>Adicionar</p>
+                    <div class="button-footer">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer price-buttons">
+                        <p class="value-title">Valor</p>
+                        <p class="value-btn">R$1.500,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-12">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cart-value">
-                            <p>Valor do ingresso</p>
-                            <p>R$ 1.500,00</p>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
                         </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3-g details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3-g">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-13">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3-g details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3-g">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-14">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-3-g details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-3-g">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-15">
+                <div class="title-holder">
+                    <div class="date-card-small">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <p class="title-card-p-small-2">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-2 details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-2">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-16">
+                <div class="title-holder">
+                    <div class="date-card-small">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <p class="title-card-p-small-2">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-2 details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-2">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-17">
+                <div class="title-holder">
+                    <div class="date-card-small">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <p class="title-card-p-small-2">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-2 details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-2">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-18">
+                <div class="title-holder">
+                    <div class="date-card-small">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <p class="title-card-p-small-2">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-2 details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-2">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-19">
+                <div class="title-holder">
+                    <div class="date-card-small">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <p class="title-card-p-small-2">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-2 details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-2">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-20">
+                <div class="title-holder">
+                    <div class="date-card-small">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <p class="title-card-p-small-2">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/banner.png">
+                    <div class="details-g">
+                        <div class="details-date">
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Início</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-clock"></i>
+                                <div class="date-date">
+                                    <p>Término</p>
+                                    <p>01 dez 2020, 15h</p>
+                                </div>
+                            </div>
+                            <div class="detail-icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="date-date">
+                                    <p> Evento online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-description-list">
+                            <p class="program-description-list-title">Programação</p>
+                            <p>13H30 – ABERTURA IM</p>
+                            <p>13H40 – DELL</p>
+                            <p>14H05 – HPE</p>
+                            <p>14H30 – KEYNOTE MERCADO</p>
+                            <p>15H35 – ARUBA</p>
+                            <p>16H00 – VERTIV</p>
+                            <p>16H25 – IBM</p>
+                            <p>16H50 – CISCO</p>
+                            <p>17H15 – VMWARE</p>
+                        </div>
+                        <div class="card-close-g">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer-small-2 details-button2">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer-small-2">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-v1">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 03.jpg">
+                    <div class="details  details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close">
+                                <i class="fa fa-window-close"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <p class="program-description-list-title">Programação</p>
+                            <div class="vertical-list">
+                                <p>13H30 – ABERTURA IM</p>
+                                <p>13H40 – DELL</p>
+                                <p>14H05 – HPE</p>
+                                <p>14H30 – KEYNOTE MERCADO</p>
+                                <p>15H35 – ARUBA</p>
+                                <p>16H00 – VERTIV</p>
+                                <p>16H25 – IBM</p>
+                                <p>16H50 – CISCO</p>
+                                <p>17H15 – VMWARE</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="details-price details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close2">
+                                <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer v details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer v">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-footer v">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer v price-buttons">
+                        <p class="value-title v">Valor</p>
+                        <i class="fa fa-cart-plus" style="opacity: 0;"></i>
+                        <p class="value-btn v">R$1.500,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-v2">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 03.jpg">
+                    <div class="details-g  details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close-g">
+                                <i class="fa fa-window-close"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <p class="program-description-list-title">Programação</p>
+                            <div class="vertical-list">
+                                <p>13H30 – ABERTURA IM</p>
+                                <p>13H40 – DELL</p>
+                                <p>14H05 – HPE</p>
+                                <p>14H30 – KEYNOTE MERCADO</p>
+                                <p>15H35 – ARUBA</p>
+                                <p>16H00 – VERTIV</p>
+                                <p>16H25 – IBM</p>
+                                <p>16H50 – CISCO</p>
+                                <p>17H15 – VMWARE</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer v details-button2" style="width: 49.8%;">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer v" style="width: 49.8%;">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-v3">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 03.jpg">
+                    <div class="details  details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close">
+                                <i class="fa fa-window-close"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <p class="program-description-list-title">Programação</p>
+                            <div class="vertical-list">
+                                <p>13H30 – ABERTURA IM</p>
+                                <p>13H40 – DELL</p>
+                                <p>14H05 – HPE</p>
+                                <p>14H30 – KEYNOTE MERCADO</p>
+                                <p>15H35 – ARUBA</p>
+                                <p>16H00 – VERTIV</p>
+                                <p>16H25 – IBM</p>
+                                <p>16H50 – CISCO</p>
+                                <p>17H15 – VMWARE</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="details-price details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close2">
+                                <i class="fa fa-window-close" style="justify-self: flex-end;"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                            <div class="lote-lote">
+                                <p class="program-description-list-title" style="width: auto;margin-bottom: 0rem;">Lotes
+                                    Únicos
+                                </p>
+                                <div class="lotes">
+                                    <p>Ingressos</p>
+                                    <p>SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                    <p>R$ 1.500,00 <span>(+150 taxas)</span></p>
+                                    <p>em até 10X de R$ 165,00</p>
+                                    <div class="shopping-cart">
+                                        <p>Vendas até 29/10/2020 ou até término do lote</p>
+                                        <button><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                    <hr class="program-hr">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer v details-button">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer v">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
+                    </div>
+                    <div class="button-footer v">
+                        <i class="fa fa-cart-plus"></i>
+                        <p>ADICIONAR</p>
+                    </div>
+                    <div class="button-footer v price-buttons">
+                        <p class="value-title v">Valor</p>
+                        <i class="fa fa-cart-plus" style="opacity: 0;"></i>
+                        <p class="value-btn v">R$1.500,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-v4">
+                <div class="title-holder">
+                    <div class="date-card">
+                        <p>29/OUT</p>
+                    </div>
+                    <div class="title-card">
+                        <span class="hour-card">15h</span>
+                        <p class="title-card-p-small">Sala: Circuito IM Live – Agronegócio </p>
+                    </div>
+                </div>
+                <div class="body-holder">
+                    <img src="./img/card 03.jpg">
+                    <div class="details-g  details-v">
+                        <div class="details-vertical">
+                            <div class="details-date details-date-v">
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Início</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-clock"></i>
+                                    <div class="date-date">
+                                        <p>Término</p>
+                                        <p>01 dez 2020, 15h</p>
+                                    </div>
+                                </div>
+                                <div class="detail-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <div class="date-date">
+                                        <p> Evento online</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-close-g">
+                                <i class="fa fa-window-close"></i>
+                            </div>
+                        </div>
+                        <div class="program-description-list vertical">
+                            <p class="program-description-list-title">Programação</p>
+                            <div class="vertical-list">
+                                <p>13H30 – ABERTURA IM</p>
+                                <p>13H40 – DELL</p>
+                                <p>14H05 – HPE</p>
+                                <p>14H30 – KEYNOTE MERCADO</p>
+                                <p>15H35 – ARUBA</p>
+                                <p>16H00 – VERTIV</p>
+                                <p>16H25 – IBM</p>
+                                <p>16H50 – CISCO</p>
+                                <p>17H15 – VMWARE</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-holder">
+                    <div class="button-footer v details-button2" style="width: 49.8%;">
+                        <i class="fa fa-plus"></i>
+                        <p>Detalhes</p>
+                    </div>
+                    <div class="button-footer v" style="width: 49.8%;">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p>Entrar</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
-        <p>Onda Live ©2020 Todos os direitos reservados.</p>
+        <p> ©2020 Todos os direitos reservados.</p>
     </div>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.flipster.min.js"></script>
     <script>
-        let tool = document.getElementById("tool")
-        let toolbar = document.getElementById("toolbar")
-        let dropdownb = document.getElementsByClassName("dropdown-btn");
-        let j;
 
-        tool.addEventListener("click", () => {
-            toolbar.classList.toggle("activeS")
+        let detailsBtn = document.querySelectorAll('.details-button');
+        let detailsBtn2 = document.querySelectorAll('.details-button2');
+        let priceBtn = document.querySelectorAll('.price-buttons');
+        let divs = document.querySelectorAll('.details');
+        let divs2 = document.querySelectorAll('.details-price');
+        let divsg = document.querySelectorAll('.details-g');
+        let menu = document.getElementById("menu-toggle");
+        let closeBtn = document.querySelectorAll('.card-close');
+        let closeBtn2 = document.querySelectorAll('.card-close2');
+        let closeBtnG = document.querySelectorAll('.card-close-g');
+        let drop = document.getElementById("dropdown");
+        let dropImg = document.getElementById("dropdown-user-img");
+        let imgDrop = document.getElementById("img-drop");
+        let nav = document.getElementById("nav-toggle");
+        let sidenav = document.getElementById("sidenav");
+        let sidenavClose = document.getElementById("sidenav-close");
+        let dropdown = document.getElementsByClassName("dropdown-btn");
+        let choose = true;
+        let i;
+
+        document.getElementById("nav-toggle-side").addEventListener("click", () => {
+            document.getElementById("toolbar").classList.toggle("activeS")
+
         })
 
-        for (j = 0; j < dropdownb.length; j++) {
-            dropdownb[j].addEventListener("click", function () {
-                this.classList.toggle("active");
-                let dropdownbContent = this.nextElementSibling;
-                if (dropdownbContent.style.display === "block") {
-                    dropdownbContent.style.display = "none";
-                } else {
-                    dropdownbContent.style.display = "block";
-                }
-            });
+        document.getElementById("main").addEventListener("click", () => {
+            document.getElementById("toolbar").classList.remove("activeS")
+
+        })
+
+        for (let i = 0; i < divsg.length; i++) {
+
+            detailsBtn2[i].addEventListener("click", () => {
+                divsg[i].classList.toggle('show');
+            })
+
+            closeBtnG[i].addEventListener("click", () => {
+                divsg[i].classList.remove('show');
+            })
+
         }
-        let nav = document.getElementById("nav-toggle")
-        let sidenav = document.getElementById("sidenav")
-        let dropdown = document.getElementsByClassName("dropdown-btn");
-        let i;
+
+        document.getElementById("program").addEventListener("click",
+            function () {
+                document.getElementById("program-sidenav").classList.toggle("sidebar-active")
+                dropImg.classList.remove("active-dropdown")
+                drop.classList.remove("active-dropdown")
+
+            })
+
+        document.getElementById("main").addEventListener("click", () => {
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
+            document.getElementById("dropdown").classList.remove("active-dropdown");
+            document.getElementById("dropdown-user-img").classList.remove("active-dropdown");
+        })
+
+        document.getElementById("sidenav-close").addEventListener("click", () => {
+            document.getElementById("program-sidenav").classList.remove("sidebar-active")
+        })
 
         nav.addEventListener("click", () => {
             sidenav.classList.toggle("activeS")
         })
+
+        menu.addEventListener("click", () => {
+            drop.classList.toggle("active-dropdown")
+            dropImg.classList.remove("active-dropdown")
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
+        })
+        sidenav.addEventListener("click", () => {
+            document.getElementById("nav-toggle").classList.toggle("activeS")
+
+        })
+
+        imgDrop.addEventListener("click", () => {
+            drop.classList.remove("active-dropdown")
+            dropImg.classList.toggle("active-dropdown")
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
+        })
+
+        for (let i = 0; i < divs.length; i++) {
+
+            detailsBtn[i].addEventListener("click", () => {
+                divs[i].classList.toggle('show');
+                divs2[i].classList.remove('show');
+            })
+
+            closeBtn[i].addEventListener("click", () => {
+                divs[i].classList.remove('show');
+            })
+        }
+
+        for (let i = 0; i < divs2.length; i++) {
+
+            priceBtn[i].addEventListener("click", () => {
+                divs2[i].classList.toggle('show');
+                divs[i].classList.remove('show');
+            })
+
+            closeBtn2[i].addEventListener("click", () => {
+                divs2[i].classList.remove('show');
+            })
+        }
 
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
@@ -1175,6 +2965,19 @@
                 }
             });
         }
+
+        tippy('.price-buttons', {
+            content: "Clique para ver os lotes",
+            animation: 'scale',
+            theme: 'light',
+        });
+
+        $('.my-flipster').flipster({
+            style: 'flat',
+            spacing: -0.25,
+            touch: true,
+            scrollwheel: false,
+        });
     </script>
 </body>
 

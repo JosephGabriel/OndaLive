@@ -424,7 +424,7 @@ a {
   width: 100%;
   position: relative;
   padding: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 500;
   margin: auto;
@@ -435,9 +435,10 @@ a {
   width: 100%;
   position: relative;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
+  margin-left: 0.2rem;
   margin: auto;
 }
 
@@ -670,14 +671,6 @@ a {
   font-size: 1rem;
 }
 
-.value-title .v {
-  font-size: 2rem;
-}
-
-.value-btn.v {
-  font-size: 1.2rem !important;
-}
-
 .button-footer-small {
   display: flex;
   justify-content: center;
@@ -829,15 +822,6 @@ a {
   font-size: 2rem;
 }
 
-.price-buttons {
-  flex-direction: column;
-  padding: 1.2rem;
-}
-.button-footer.v.price-buttons {
-  flex-direction: column;
-  padding: 1.18rem !important;
-}
-
 .dashboard {
   display: flex;
   justify-content: space-around;
@@ -845,11 +829,17 @@ a {
 }
 
 .dashboard i {
-  font-size: 2rem;
-  padding: 1rem;
-  background-color: #4e4e4e;
-  border-radius: 4rem;
-  margin-bottom: 1rem;
+  width: 5rem;
+  height: 5rem;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #b9820b;
+  color: #fff;
 }
 
 .dashboard p {
@@ -1169,6 +1159,7 @@ button {
 }
 
 .value-title {
+  display: none !important;
   font-size: 0.8rem;
 }
 
@@ -1233,10 +1224,6 @@ button {
 .speaker-modal-modal img {
   margin-right: 2rem;
   width: 20%;
-}
-
-.button-footer.v.price-buttons {
-  padding: 0.96rem;
 }
 
 .inputfile {
@@ -1317,11 +1304,6 @@ button {
 
   .price-buttons {
     flex-direction: column;
-    padding: 0.1rem;
-  }
-
-  .button-footer.v.price-buttons {
-    padding: 0.8rem;
   }
 
   .user-info,
@@ -1383,21 +1365,68 @@ button {
     padding: 0.1rem;
   }
 
-  .button-footer.v.price-buttons {
-    padding: 0.8rem;
-  }
-
   .user-info,
   .room {
     display: none;
   }
 }
 
-.price-buttons {
-  padding: 1rem 0;
+#body {
+  position: relative;
 }
 
-.value-title.v {
-  display: block;
-  font-size: 0.8rem !important;
+#body.activeB {
+  margin-left: 360px;
+}
+
+.sidenav-icon {
+  position: absolute;
+  left: 5px;
+  display: flex;
+  z-index: 5;
+  align-items: center;
+}
+
+.sidenav-icon i {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  align-self: center;
+  background: var(--button-background);
+  cursor: pointer;
+}
+
+.sidenav-wrapper {
+  position: relative;
+}
+
+.sidenav-wrapper.activeSS {
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+#toolbar {
+  background: #2f323b;
+  padding-left: 2rem;
+}
+
+.dashboard p {
+  color: #949ba2 !important;
+  font-size: 1.4rem;
+  margin-top: 1rem;
 }
