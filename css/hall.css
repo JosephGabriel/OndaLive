@@ -1177,6 +1177,11 @@ button {
   font-weight: bold;
 }
 
+.program-sidenav::-webkit-scrollbar,
+.program-sidenav.sidebar-active::-webkit-scrollbar {
+  opacity: 0;
+}
+
 .program-sidenav {
   position: fixed;
   right: 0;

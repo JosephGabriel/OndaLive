@@ -207,6 +207,87 @@
                         </div>
                     </div>
                 </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> Ozonioterapia</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png">
+                            <img src="./img/Rectangle 111.png">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal1">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> ONDALIVE</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png">
+                            <img src="./img/Rectangle 111.png">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal2">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-box wow animate__animated animate__fadeInUp">
+                    <div class="program-box-left">
+                        <div class="program-day">
+                            <h4>14</h4>
+                            <h6>agosto</h6>
+                        </div>
+                        <div class="program-room">
+                            <h4>SALA <br> ONDALIVE</h4>
+                            <p> 22:00h</p>
+                        </div>
+                        <div class="program-description">
+                            <h4>TITULO DA PALESTRA</h4>
+                            <p>breve descrição do que vai acontecer na palestra |</p>
+                            <h6>Nomes dos palestrantes</h6>
+                        </div>
+                    </div>
+                    <div class="program-box-right">
+                        <div class="speaker-img">
+                            <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                            <img src="./img/Rectangle 111.png" width="45px" height="65px">
+                        </div>
+                        <div class="button-description">
+                            <button type="button" data-toggle="modal" data-target="#modal3">+
+                                Detalhes</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -2683,8 +2764,6 @@
         let choose = true;
         let i;
 
-        console.log(detailsBtn2)
-
         for (let i = 0; i < divsg.length; i++) {
 
             detailsBtn2[i].addEventListener("click", () => {
@@ -2700,8 +2779,16 @@
         document.getElementById("program").addEventListener("click",
             function () {
                 document.getElementById("program-sidenav").classList.toggle("sidebar-active")
-                document.getElementById("main").classList.toggle("main-active");
+                dropImg.classList.remove("active-dropdown")
+                drop.classList.remove("active-dropdown")
+
             })
+
+        document.getElementById("main").addEventListener("click", () => {
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
+            document.getElementById("dropdown").classList.remove("active-dropdown");
+            document.getElementById("dropdown-user-img").classList.remove("active-dropdown");
+        })
 
         document.getElementById("sidenav-close").addEventListener("click", () => {
             document.getElementById("program-sidenav").classList.remove("sidebar-active")
@@ -2713,10 +2800,14 @@
 
         menu.addEventListener("click", () => {
             drop.classList.toggle("active-dropdown")
+            dropImg.classList.remove("active-dropdown")
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
         })
 
         imgDrop.addEventListener("click", () => {
+            drop.classList.remove("active-dropdown")
             dropImg.classList.toggle("active-dropdown")
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
         })
 
         for (let i = 0; i < divs.length; i++) {
