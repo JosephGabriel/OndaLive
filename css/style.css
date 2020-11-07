@@ -238,7 +238,7 @@ html {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  z-index: 99999999999;
+  z-index: 999999999999999999999999999999999999;
   animation: spin 2s linear infinite;
 }
 
