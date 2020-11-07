@@ -433,8 +433,8 @@ a {
   justify-self: center;
   width: 100%;
   position: relative;
-  padding: 0.1rem 0.5rem;
-  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
   margin: auto;
@@ -444,8 +444,8 @@ a {
   justify-self: center;
   width: 100%;
   position: relative;
-  padding: 0 0.5;
-  font-size: 0.7rem;
+  padding: 0.5rem !important;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
   margin: auto;
@@ -654,7 +654,7 @@ a {
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   color: white;
   cursor: pointer;
   background: var(--accent-color);
@@ -830,11 +830,11 @@ a {
 
 .price-buttons {
   flex-direction: column;
-  padding: 0.25rem;
+  padding: 1.2rem;
 }
 .button-footer.v.price-buttons {
   flex-direction: column;
-  padding: 0.25rem;
+  padding: 1.18rem !important;
 }
 
 .dashboard {
