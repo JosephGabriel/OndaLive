@@ -514,7 +514,7 @@ a {
 .date-date p {
   margin: 0;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .date-date-small p {
   margin: 0;
@@ -582,14 +582,14 @@ a {
 
 .site-map-item a,
 .site-map-item-btn a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
 }
 
 .site-map-item-btn {
   padding: 1rem 2rem;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background: var(--button-background);
   margin-right: 1rem;
   font-weight: 400;
@@ -1103,7 +1103,7 @@ a {
 
 .exit-btn {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   padding: 0.5rem 2rem;
   background: var(--accent-color);
   border: none;
@@ -1244,8 +1244,8 @@ button {
 }
 
 .inputfile + label {
-  font-size: 1.25em;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   color: white;
   background-color: var(--accent-color);
