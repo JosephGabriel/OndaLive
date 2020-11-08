@@ -527,17 +527,25 @@ html {
   opacity: 0;
 }
 
+@-moz-document url-prefix() {
+  /* Disable scrollbar Firefox */
+  .sidenav {
+    scrollbar-width: none;
+  }
+}
+
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
   width: 30rem;
   position: fixed;
-  z-index: 1;
+  z-index: 55;
   top: 0;
   left: 0;
   text-align: center;
   background-color: #111;
   overflow-x: hidden;
+  padding: 0 2rem;
   padding-top: 8rem;
   transition: all 0.5s;
   transform: translateX(-100%);
