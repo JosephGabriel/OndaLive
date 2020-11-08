@@ -74,7 +74,7 @@ a {
 }
 
 .user-info-map span {
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem;
   background: var(--button-background);
   color: white;
   margin-left: 0.7rem;
@@ -430,8 +430,9 @@ button {
 }
 
 .quiz {
-  height: 100%;
-  width: 300px;
+  height: 100% !important;
+  width: 43rem;
+  z-index: 1;
   background-color: #1d1d1d;
   position: fixed;
   transition: all 0.5s;
@@ -445,6 +446,8 @@ button {
 }
 
 .quiz.activeQ {
+  overflow-y: scroll;
+  width: 43rem;
   transform: translateX(0%);
   transition: all 0.5s;
 }
@@ -471,7 +474,6 @@ button {
   cursor: pointer;
 }
 .image-quiz {
-  margin-top: 2rem;
   display: flex;
   width: 100%;
   margin-bottom: 2rem;
@@ -573,6 +575,58 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.btn-grid button {
+
+.quiz-quiz h4 {
   margin: 1rem;
+}
+
+#question {
+  width: 90%;
+  margin: auto;
+  font-size: 1.4rem;
+  line-height: initial;
+}
+
+.question-img {
+  margin: 2rem 0;
+}
+
+.btn-answer {
+  padding: 0.5rem 1rem !important;
+  width: 80% !important;
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  margin-bottom: 1rem !important;
+  position: relative;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.btn-answer:hover {
+  transition: all 0.2s;
+  background: #7c0303;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.answer-letter {
+  height: 100%;
+  font-size: 1.2rem;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.answer-text {
+  border-left: 1px solid #1d1d1d;
+  width: 90%;
+  margin: auto;
+  font-size: 1.2rem;
+  text-transform: none;
+  font-weight: 400;
 }

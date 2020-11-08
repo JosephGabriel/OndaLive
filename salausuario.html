@@ -110,7 +110,7 @@
         <a href="#">Titulo do Evento/Data</a>
         <a href="#">Trocar de Sala</a>
     </div>
-    <div class="quiz" id="quiz">
+    <div class="quiz" id="quiz" style="overflow: auto;">
         <div class="icon-close">
             <i class="fas fa-window-close" id="close-bbtn"></i>
         </div>
@@ -119,23 +119,49 @@
         </div>
         <div class="quiz-quiz">
             <div>
+                <h4>Nome do Quiz</h4>
+                <div class="hide" id="timer">
+                    <h3>00:30</h3>
+                </div>
                 <div id="quiz-start" class="">
-                    <h4>Nome do Quiz</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi iste architecto! Explicabo
-                        rerum
-                        laboriosam quibusdam facilis, sit magni nobis. Repudiandae quas tenetur pariatur possimus
-                        expedita
-                        ipsam
-                        necessitatibus nihil id?</p>
+                        erum laboriosam quibusdam facilis, sit magni nobis.</p>
                     <button id="quiz-start-btn">Iniciar</button>
                 </div>
                 <div>
                     <div id="question-container" class="hide">
-                        <div id="question">Question</div>
+                        <div id="question">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla consectetur qui recusandae?
+                            Aut expedita aspernatur
+                        </div>
+                        <div class="question-img">
+                            <img src="./img/banner.jpg" width="100px">
+                        </div>
                         <div id="answer-buttons" class="btn-grid">
-
+                            <button class="btn-answer">
+                                <p class="answer-letter">A</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">B</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">C</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">D</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
                         </div>
                     </div>
+                </div>
+                <div id="question-score" class="hide">
+                    <p>Você respondeu corretamente</p>
+                    <p><span>30</span> questoẽs de <span>30</span> em <span>60</span>seg</p>
+                    <button id="quiz-ranking">Mostrar Ranking</button>
+                    <button id="quiz-btn-close">Fechar</button>
                 </div>
             </div>
         </div>

@@ -1,8 +1,10 @@
 var playQuiz = document.getElementById("playQuiz");
+var timer = document.getElementById("timer");
 var quiz = document.getElementById("quiz");
 var quizStart = document.getElementById("quiz-start");
 var quizStartBtn = document.getElementById("quiz-start-btn");
 var close = document.getElementById("close-bbtn");
+var buttons = document.getElementsByClassName("btn-answer");
 var questionElement = document.getElementById("question");
 var answerButtons = document.getElementById("answer-buttons");
 var questionContainer = document.getElementById("question-container");
@@ -25,6 +27,14 @@ var questions = [
       { text: "6", correct: false, points: 0 },
     ],
   },
+  {
+    question: "Quanto é 6 + 7",
+    answers: [
+      { text: "4", correct: true, points: 14 },
+      { text: "5", correct: false, points: 0 },
+      { text: "6", correct: false, points: 0 },
+    ],
+  },
 ];
 
 playQuiz.addEventListener("click", () => {
@@ -35,10 +45,21 @@ close.addEventListener("click", () => {
   quiz.classList.remove("activeQ");
 });
 
-quizStartBtn.addEventListener("click", startGame);
+for (var index = 0; index < buttons.length; index++) {
+  buttons[index].addEventListener("click", () => {
+    timer.classList.add("hide");
+    questionContainer.classList.add("hide");
+  });
+}
+
+// quizStartBtn.addEventListener("click", startGame);
+quizStartBtn.addEventListener("click", () => {
+  quizStart.classList.add("hide");
+  questionContainer.classList.remove("hide");
+  timer.classList.remove("hide");
+});
 
 function startGame() {
-  quizStart.classList.add("hide");
   shuffledQuestion = questions.sort(() => Math.random() - 0.5);
   currentIndexQuestion = 0;
   questionContainer.classList.remove("hide");
@@ -51,7 +72,6 @@ function setNextQuestion() {
 }
 
 function resetState() {
-  clearStatusClass(document.body);
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
