@@ -504,7 +504,8 @@ button {
   position: relative;
 }
 
-.room-dropdown ul {
+.room-dropdown ul,
+.audio-list {
   position: absolute;
   pointer-events: none;
   width: 100%;
@@ -557,4 +558,21 @@ button {
 
 #room-dropdown {
   width: 100%;
+}
+
+.audio-list li a {
+  font-size: 2rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.btn-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-grid button {
+  margin: 1rem;
 }

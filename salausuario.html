@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./css/hall.css">
     <link rel="stylesheet" href="./css/inside.css">
     <script src="./js/script.js"></script>
-    <script src="./js/app.js"></script>
     <title>Onda Live</title>
 </head>
 
@@ -119,11 +118,26 @@
             <img src="./img/logo-quiz.png">
         </div>
         <div class="quiz-quiz">
-            <h4>Nome do Quiz</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi iste architecto! Explicabo rerum
-                laboriosam quibusdam facilis, sit magni nobis. Repudiandae quas tenetur pariatur possimus expedita ipsam
-                necessitatibus nihil id?</p>
-            <button>Iniciar</button>
+            <div>
+                <div id="quiz-start" class="">
+                    <h4>Nome do Quiz</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi iste architecto! Explicabo
+                        rerum
+                        laboriosam quibusdam facilis, sit magni nobis. Repudiandae quas tenetur pariatur possimus
+                        expedita
+                        ipsam
+                        necessitatibus nihil id?</p>
+                    <button id="quiz-start-btn">Iniciar</button>
+                </div>
+                <div>
+                    <div id="question-container" class="hide">
+                        <div id="question">Question</div>
+                        <div id="answer-buttons" class="btn-grid">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="body-grid">
@@ -138,7 +152,14 @@
                         allow="autoplay; fullscreen" allowfullscreen></iframe></div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
                 <div class="audio-btn">
-                    <button>Trocar Áudio</button>
+                    <div class="room-dropdown" id="room-drop2">
+                        <button id="audio-button">Trocar Áudio</button>
+                        <ul class="audio-list">
+                            <li><a href="">Portugues</a></li>
+                            <li><a href="">Inglês</a></li>
+                            <li><a href="">Espanhol</a></li>
+                        </ul>
+                    </div>
                     <button id="playQuiz">Jogar Quiz</button>
                 </div>
             </div>
@@ -381,23 +402,11 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
+    <script src="./js/quiz.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
-
-        var playQuiz = document.getElementById("playQuiz")
-        var quiz = document.getElementById("quiz")
-        var close = document.getElementById("close-bbtn")
-
-        playQuiz.addEventListener("click", () => {
-
-            quiz.classList.add("activeQ")
-        })
-        close.addEventListener("click", () => {
-
-            quiz.classList.remove("activeQ")
-        })
-
+        var body = document.getElementById("main")
         var nav = document.getElementById("nav-toggle")
         var sidenav = document.getElementById("sidenav")
         var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -411,7 +420,6 @@
         var dropImg = document.getElementById("dropdown-user-img");
         var imgDrop = document.getElementById("img-drop");
         var menu = document.getElementById("menu-toggle");
-        var body = document.getElementById("main")
 
         imgDrop.addEventListener("click", () => {
             drop.classList.remove("active-dropdown")
@@ -435,6 +443,32 @@
         dropRoom.addEventListener("click", () => {
             dropRoom2.classList.toggle("active-dropdown")
         })
+
+        var audioBtn = document.getElementById("audio-button")
+        var dropRoom3 = document.getElementById("room-drop2")
+
+        audioBtn.addEventListener("click", () => {
+            dropRoom3.classList.toggle("active-dropdown")
+        })
+
+        function openTab(evt, cityName) {
+
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
 
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
