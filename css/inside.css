@@ -39,6 +39,11 @@ a {
   width: 100%;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+}
+
 .site-map-item {
   padding: 1rem 2rem;
   background: var(--button-background);
@@ -93,6 +98,7 @@ a {
 }
 
 .cart {
+  color: #fff;
   padding: 0.8rem;
   background: var(--button-background);
 }
@@ -146,6 +152,11 @@ a {
   text-align: center;
   width: 100%;
   height: auto;
+}
+
+.nav-toggle {
+  font-size: 4rem;
+  color: white;
 }
 
 .grid {
@@ -489,55 +500,61 @@ button {
   cursor: pointer;
 }
 
-.dropdown-room {
+.room-dropdown {
   position: relative;
 }
-.dropdown-room-list ul {
+
+.room-dropdown ul {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  opacity: 0;
+  padding: 1rem 0;
   display: flex;
+  margin-top: 1.9rem;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  background-color: #1d1d1d;
-  padding: 0;
-  width: 100%;
+  background-color: rgb(22, 22, 22);
+  transition: all 0.5s;
+  transform: translateY(-1rem);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
 }
 
-.dropdown-room {
-  position: relative;
-  margin-top: 0.1rem;
-  pointer-events: none;
-  text-align: center;
-  transition: all 0.5s ease;
-}
-
-.dropdown-room button:hover .dropdown-room-list {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.dropdown-room-list {
-  opacity: 0;
-}
-
-.dropdown-room-list li {
-  background: transparent;
+.room-dropdown ul li {
   margin-bottom: 1rem;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  text-decoration: none;
+}
+.room-dropdown ul li:last-child {
+  margin-bottom: 0rem;
 }
 
-.dropdown-room-list ul li a {
-  font-size: 1rem;
-  cursor: pointer !important;
-  text-decoration: underline;
-  padding: 0.5rem 1rem;
+.room-dropdown ul li a {
   color: #fff;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 
-#room-btn {
+.room-dropdown.active-dropdown ul {
+  transition: all 0.5s;
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0rem);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transform: translateY(0rem);
+  -moz-transform: translateY(0rem);
+  -ms-transform: translateY(0rem);
+  -o-transform: translateY(0rem);
+}
+
+#room-dropdown {
   width: 100%;
 }

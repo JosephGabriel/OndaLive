@@ -29,38 +29,16 @@
             <div class="room">
                 <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
             </div>
-            <div style="display: flex; align-items: center;">
+            <div class="menu">
                 <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
-                <div>
-                    <button class="site-map-item-btn" id="room-btn">TROCAR DE SALA</button>
-                    <div class="dropdown-user" id="dropdown">
-                        <div class="info-user">
-                            <div class="info-user-icon">
-                                <i class="fa fa-address-card"></i>
-                            </div>
-                            <div class="info-user-description">
-                                <h6>Meus dados</h6>
-                            </div>
-                        </div>
-                        <div class="info-user">
-                            <div class="info-user-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="info-user-description">
-                                <h6>Notificações</h6>
-                            </div>
-                        </div>
-                        <div class="info-user">
-                            <div class="info-user-icon">
-                                <i class="fa fa-graduation-cap"></i>
-                            </div>
-                            <div class="info-user-description">
-                                <h6>Certificados</h6>
-                            </div>
-                        </div>
-                        <hr class="info-hr">
-                        <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
-                    </div>
+                <div class="room-dropdown" id="room-drop">
+                    <button class="site-map-item-btn" id="room-dropdown">TROCAR DE SALA</button>
+                    <ul>
+                        <li><a href="">Trocar de Sala</a></li>
+                        <li><a href="">Sala 1</a></li>
+                        <li><a href="">Sala 2</a></li>
+                        <li><a href="">Sala 3</a></li>
+                    </ul>
                 </div>
                 <div class="user-info">
                     <ul class="user-info-map">
@@ -111,14 +89,18 @@
                                 </div>
                             </div>
                             <hr class="info-hr">
-                            <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+                            <button class="exit-btn">
+                                Logout &nbsp;<i class="fas fa-sign-out-alt"></i>
+                            </button>
                         </div>
+                    </ul>
                 </div>
-                <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
-                </ul>
+                <li class="user-info-item cart">
+                    <i class="fa fa-cart-plus"></i>
+                </li>
             </div>
         </div>
-        <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
+        <div class="nav-toggle" id="nav-toggle">
             <i class="fa fa-bars"></i>
         </div>
     </div>
@@ -145,7 +127,7 @@
         </div>
     </div>
     <div class="body-grid">
-        <div class="grid">
+        <div class="grid" id="main">
             <div class="banner">
                 <img src="./img/banner.png">
             </div>
@@ -403,9 +385,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
 
-        let playQuiz = document.getElementById("playQuiz")
-        let quiz = document.getElementById("quiz")
-        let close = document.getElementById("close-bbtn")
+        var playQuiz = document.getElementById("playQuiz")
+        var quiz = document.getElementById("quiz")
+        var close = document.getElementById("close-bbtn")
 
         playQuiz.addEventListener("click", () => {
 
@@ -425,6 +407,35 @@
             sidenav.classList.toggle("activeS")
         })
 
+        var drop = document.getElementById("dropdown");
+        var dropImg = document.getElementById("dropdown-user-img");
+        var imgDrop = document.getElementById("img-drop");
+        var menu = document.getElementById("menu-toggle");
+        var body = document.getElementById("main")
+
+        imgDrop.addEventListener("click", () => {
+            drop.classList.remove("active-dropdown")
+            dropImg.classList.toggle("active-dropdown")
+            document.getElementById("program-sidenav").classList.remove("sidebar-active");
+        })
+
+        menu.addEventListener("click", () => {
+            drop.classList.toggle("active-dropdown")
+            dropImg.classList.remove("active-dropdown")
+        })
+
+        main.addEventListener("click", () => {
+            drop.classList.remove("active-dropdown")
+            dropImg.classList.remove("active-dropdown")
+        })
+
+        var dropRoom = document.getElementById("room-dropdown")
+        var dropRoom2 = document.getElementById("room-drop")
+
+        dropRoom.addEventListener("click", () => {
+            dropRoom2.classList.toggle("active-dropdown")
+        })
+
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
                 this.classList.toggle("active");
@@ -436,6 +447,8 @@
                 }
             });
         }
+
+
 
     </script>
 </body>

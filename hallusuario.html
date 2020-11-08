@@ -2744,27 +2744,27 @@
     <script src="./js/jquery.flipster.min.js"></script>
     <script>
 
-        let detailsBtn = document.querySelectorAll('.details-button');
-        let detailsBtn2 = document.querySelectorAll('.details-button2');
-        let priceBtn = document.querySelectorAll('.price-buttons');
-        let divs = document.querySelectorAll('.details');
-        let divs2 = document.querySelectorAll('.details-price');
-        let divsg = document.querySelectorAll('.details-g');
-        let menu = document.getElementById("menu-toggle");
-        let closeBtn = document.querySelectorAll('.card-close');
-        let closeBtn2 = document.querySelectorAll('.card-close2');
-        let closeBtnG = document.querySelectorAll('.card-close-g');
-        let drop = document.getElementById("dropdown");
-        let dropImg = document.getElementById("dropdown-user-img");
-        let imgDrop = document.getElementById("img-drop");
-        let nav = document.getElementById("nav-toggle");
-        let sidenav = document.getElementById("sidenav");
-        let sidenavClose = document.getElementById("sidenav-close");
-        let dropdown = document.getElementsByClassName("dropdown-btn");
-        let choose = true;
-        let i;
+        var detailsBtn = document.querySelectorAll('.details-button');
+        var detailsBtn2 = document.querySelectorAll('.details-button2');
+        var priceBtn = document.querySelectorAll('.price-buttons');
+        var divs = document.querySelectorAll('.details');
+        var divs2 = document.querySelectorAll('.details-price');
+        var divsg = document.querySelectorAll('.details-g');
+        var menu = document.getElementById("menu-toggle");
+        var closeBtn = document.querySelectorAll('.card-close');
+        var closeBtn2 = document.querySelectorAll('.card-close2');
+        var closeBtnG = document.querySelectorAll('.card-close-g');
+        var drop = document.getElementById("dropdown");
+        var dropImg = document.getElementById("dropdown-user-img");
+        var imgDrop = document.getElementById("img-drop");
+        var nav = document.getElementById("nav-toggle");
+        var sidenav = document.getElementById("sidenav");
+        var sidenavClose = document.getElementById("sidenav-close");
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var choose = true;
+        var i;
 
-        for (let i = 0; i < divsg.length; i++) {
+        for (var i = 0; i < divsg.length; i++) {
 
             detailsBtn2[i].addEventListener("click", () => {
                 divsg[i].classList.toggle('show');
@@ -2814,7 +2814,7 @@
             document.getElementById("program-sidenav").classList.remove("sidebar-active");
         })
 
-        for (let i = 0; i < divs.length; i++) {
+        for (var i = 0; i < divs.length; i++) {
 
             detailsBtn[i].addEventListener("click", () => {
                 divs[i].classList.toggle('show');
@@ -2826,7 +2826,7 @@
             })
         }
 
-        for (let i = 0; i < divs2.length; i++) {
+        for (var i = 0; i < divs2.length; i++) {
 
             priceBtn[i].addEventListener("click", () => {
                 divs2[i].classList.toggle('show');
@@ -2841,7 +2841,7 @@
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
                 this.classList.toggle("active");
-                let dropdownContent = this.nextElementSibling;
+                var dropdownContent = this.nextElementSibling;
                 if (dropdownContent.style.display === "block") {
                     dropdownContent.style.display = "none";
                 } else {
