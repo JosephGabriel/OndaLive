@@ -242,6 +242,11 @@ document.getElementById("quiz-close-btn").addEventListener("click", () => {
   document.getElementById("main").classList.remove("ops");
 });
 
+document.getElementById("quiz-btn-close2").addEventListener("click", () => {
+  quiz.classList.remove("activeQ");
+  document.getElementById("main").classList.remove("ops");
+});
+
 for (var index = 0; index < buttons.length; index++) {
   buttons[index].addEventListener("click", () => {});
 }

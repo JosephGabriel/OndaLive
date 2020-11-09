@@ -647,6 +647,7 @@ button {
 #quiz-btn-close,
 #next-btn,
 #quiz-close-btn,
+#quiz-btn-close2,
 #quiz-start-btn {
   background: var(--accent-color);
   border: none;
