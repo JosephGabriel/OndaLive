@@ -238,13 +238,13 @@ close.addEventListener("click", () => {
 });
 
 document.getElementById("quiz-close-btn").addEventListener("click", () => {
-  quiz.classList.remove("activeQ");
   document.getElementById("main").classList.remove("ops");
+  quiz.classList.remove("activeQ");
 });
 
 document.getElementById("quiz-btn-close2").addEventListener("click", () => {
-  quiz.classList.remove("activeQ");
   document.getElementById("main").classList.remove("ops");
+  quiz.classList.remove("activeQ");
 });
 
 for (var index = 0; index < buttons.length; index++) {
