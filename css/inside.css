@@ -646,7 +646,8 @@ button {
 #quiz-ranking,
 #quiz-btn-close,
 #next-btn,
-#quiz-close-btn {
+#quiz-close-btn,
+#quiz-start-btn {
   background: var(--accent-color);
   border: none;
   width: 10rem;
@@ -665,8 +666,27 @@ button {
   margin-top: 0rem;
 }
 
-#quiz-close-btn {
+#quiz-close-btn,
+#quiz-start-btn {
   margin: auto;
+}
+
+#main {
+  transition: all 0.5s;
+  -webkit-filter: opacity(50%);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+#main.ops {
+  filter: opacity(50%);
+  transition: all 0.5s;
+  -webkit-filter: opacity(50%);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 #timer {

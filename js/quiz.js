@@ -179,6 +179,7 @@ function progressSvg() {
 
   progressBar.animate(0.7);
 }
+
 function progressSvg2() {
   var progressBar2 = new ProgressBar.Circle("#progress2", {
     color: "#f4ae13",
@@ -228,10 +229,17 @@ function progressSvg2() {
 
 playQuiz.addEventListener("click", () => {
   quiz.classList.toggle("activeQ");
+  document.getElementById("main").classList.toggle("ops");
 });
 
 close.addEventListener("click", () => {
+  document.getElementById("main").classList.remove("ops");
   quiz.classList.remove("activeQ");
+});
+
+document.getElementById("quiz-close-btn").addEventListener("click", () => {
+  quiz.classList.remove("activeQ");
+  document.getElementById("main").classList.remove("ops");
 });
 
 for (var index = 0; index < buttons.length; index++) {
