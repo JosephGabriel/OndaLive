@@ -8,6 +8,8 @@ var buttons = document.getElementsByClassName("btn-answer");
 var questionElement = document.getElementById("question");
 var answerButtons = document.getElementById("answer-buttons");
 var questionContainer = document.getElementById("question-container");
+var questionScrore = document.getElementById("question-score");
+var nextBtn = document.getElementById("next-btn");
 var shuffledQuestion, currentIndexQuestion;
 
 var questions = [
@@ -37,6 +39,193 @@ var questions = [
   },
 ];
 
+function stokeSvg() {
+  var width = 100,
+    height = 100,
+    timePassed = 0,
+    timeLimit = 500;
+
+  var fields = [
+    {
+      value: timeLimit,
+      size: timeLimit,
+      update: function () {
+        return (timePassed = timePassed + 1);
+      },
+    },
+  ];
+
+  var nilArc = d3.svg
+    .arc()
+    .innerRadius(width / 3 - 10)
+    .outerRadius(width / 3 - 5)
+    .startAngle(0)
+    .endAngle(2 * Math.PI);
+
+  var arc = d3.svg
+    .arc()
+    .innerRadius(width / 3 - 10)
+    .outerRadius(width / 3 - 5)
+    .startAngle(0)
+    .endAngle(function (d) {
+      return (d.value / d.size) * 2 * Math.PI;
+    });
+
+  var svg = d3
+    .select(".sidesss")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  var field = svg
+    .selectAll(".field")
+    .data(fields)
+    .enter()
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .attr("class", "field");
+
+  var back = field
+    .append("path")
+    .attr("class", "path path--background")
+    .attr("d", arc);
+
+  var path = field.append("path").attr("class", "path path--foreground");
+
+  var label = field.append("text").attr("class", "label").attr("dy", ".35em");
+
+  (function update() {
+    field.each(function (d) {
+      (d.previous = d.value), (d.value = d.update(timePassed));
+    });
+
+    path.transition().ease("elastic").duration(500).attrTween("d", arcTween);
+
+    if (timeLimit - timePassed <= 10) pulseText();
+    else
+      label.text(function (d) {
+        return d.size - d.value;
+      });
+
+    if (timePassed <= timeLimit) setTimeout(update, 1000 - (timePassed % 1000));
+    else destroyTimer();
+  })();
+
+  function pulseText() {
+    back.classed("pulse", true);
+    label.classed("pulse", true);
+
+    if (timeLimit - timePassed >= 0) {
+      label
+        .style("font-size", "2rem")
+        .attr("transform", "translate(0," + +0 + ")")
+        .text(function (d) {
+          return d.size - d.value;
+        });
+    }
+
+    label
+      .transition()
+      .ease("elastic")
+      .duration(900)
+      .style("font-size", "2rem")
+      .attr("transform", "translate(0," + -0 + ")");
+  }
+
+  function destroyTimer() {
+    label
+      .transition()
+      .ease("back")
+      .duration(700)
+      .style("opacity", "0")
+      .style("font-size", "2")
+      .attr("transform", "translate(0," + -0 + ")")
+      .each("end", function () {
+        field.selectAll("text").remove();
+      });
+
+    path.transition().ease("back").duration(700).attr("d", nilArc);
+
+    back
+      .transition()
+      .ease("back")
+      .duration(700)
+      .attr("d", nilArc)
+      .each("end", function () {
+        field.selectAll("path").remove();
+      });
+  }
+
+  function arcTween(b) {
+    var i = d3.interpolate(
+      {
+        value: b.previous,
+      },
+      b
+    );
+    return function (t) {
+      return arc(i(t));
+    };
+  }
+}
+
+function progressSvg() {
+  var progressBar = new ProgressBar.Circle("#progress", {
+    color: "#f4ae13",
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: "easeInOut",
+  });
+
+  progressBar.animate(0.7);
+}
+function progressSvg2() {
+  var progressBar2 = new ProgressBar.Circle("#progress2", {
+    color: "#f4ae13",
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: "easeInOut",
+  });
+
+  progressBar2.animate(0.8);
+
+  var progressBar3 = new ProgressBar.Circle("#progress3", {
+    color: "#f4ae13",
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: "easeInOut",
+  });
+
+  progressBar3.animate(0.5);
+
+  var progressBar4 = new ProgressBar.Circle("#progress4", {
+    color: "#f4ae13",
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: "easeInOut",
+  });
+
+  progressBar4.animate(0.4);
+
+  var progressBar5 = new ProgressBar.Circle("#progress5", {
+    color: "#f4ae13",
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: "easeInOut",
+  });
+
+  progressBar5.animate(0.7);
+
+  var progressBar6 = new ProgressBar.Circle("#progress6", {
+    color: "#f4ae13",
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: "easeInOut",
+  });
+
+  progressBar6.animate(0.3);
+}
+
 playQuiz.addEventListener("click", () => {
   quiz.classList.toggle("activeQ");
 });
@@ -46,17 +235,28 @@ close.addEventListener("click", () => {
 });
 
 for (var index = 0; index < buttons.length; index++) {
-  buttons[index].addEventListener("click", () => {
-    timer.classList.add("hide");
-    questionContainer.classList.add("hide");
-  });
+  buttons[index].addEventListener("click", () => {});
 }
+
+nextBtn.addEventListener("click", () => {
+  questionContainer.classList.add("hide");
+  questionScrore.classList.remove("hide");
+  timer.classList.add("hide");
+  progressSvg();
+});
+
+document.getElementById("quiz-ranking").addEventListener("click", () => {
+  document.getElementById("question-score").classList.add("hide");
+  document.getElementById("quiz-ranking-sc").classList.remove("hide");
+  progressSvg2();
+});
 
 // quizStartBtn.addEventListener("click", startGame);
 quizStartBtn.addEventListener("click", () => {
   quizStart.classList.add("hide");
   questionContainer.classList.remove("hide");
   timer.classList.remove("hide");
+  stokeSvg();
 });
 
 function startGame() {
