@@ -295,13 +295,11 @@
                         allow="autoplay; fullscreen" allowfullscreen></iframe></div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
                 <div class="audio-btn">
-                    <div class="room-dropdown" id="room-drop2">
-                        <button id="audio-button">Trocar Áudio</button>
-                        <ul class="audio-list">
-                            <li><a href="">Portugues</a></li>
-                            <li><a href="">Inglês</a></li>
-                            <li><a href="">Espanhol</a></li>
-                        </ul>
+                    <div class="room-audio">
+                        <button>Áudio Portgues</button>
+                        <button>English Audio</button>
+                        <button>Audio Español</button>
+
                     </div>
                     <button id="playQuiz">Jogar Quiz</button>
                 </div>
@@ -342,172 +340,33 @@
                 <img src="./img/banner.png">
             </div>
             <div class="program-desc">
-                <div class="presention w100">
-                    <div class="day-selection">
-                        <label class="day-label" for="day-selection">Sala</label>
-                        <select name="day-selection" class="day-selection-input">
-                            <option value="">Selecione</option>
-                            <option value=""></option>
-                        </select>
+                <div id="timeline-content">
+                    <h1>Timeline</h1>
 
-                        <label class="day-label" for="day-selection">Dia</label>
-                        <select name="day-selection" class="day-selection-input">
-                            <option value="">Selecione</option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                </div>
-                <div class="day-box-holder w100">
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button type="button" data-toggle="modal" data-target="#modal1">+
-                                    Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button type="button" data-toggle="modal" data-target="#modal2">+
-                                    Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header" style="border: none;">
-                                <button type="button" id="close-button" class="close " data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-title">
-                                    <h6>PALESTRA</h6>
-                                    <hr>
-                                </div>
-                                <div class="desc-modal">
-                                    <h4>TITULO DA PALESTRA</h4>
-                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
-                                    <div class="day-modal">
-                                        <div class="day-day-modal">
-                                            <p><strong>14</strong><br> AGO</p>
-                                        </div>
-                                        <div class="day-date-modal">
-                                            <p>Inicio as 22:00h</p>
-                                            <p class="spot">SALA ONDALIVE</p>
-                                        </div>
-                                    </div>
-                                    <div class="desc-desc-modal">
-                                        <p>breve descrição do que vai acontecer na palestra</p>
-                                    </div>
-                                </div>
-                                <div class="speaker-modal">
-                                    <div class="speaker-modal-title">
-                                        <h6>PALESTRANTE(S)</h6>
-                                        <hr>
-                                    </div>
-                                    <div class="speaker-modal-modal">
-                                        <img src="./img/Rectangle 17.png" width="70px">
-                                        <div>
-                                            <h6>NOME DO PALESTRANTE</h6>
-                                            <p>Cargo do palestrante na empresa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="modal2" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header" style="border: none;">
-                                <button type="button" id="close-button" class="close " data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-title">
-                                    <h6>PALESTRA</h6>
-                                    <hr>
-                                </div>
-                                <div class="desc-modal">
-                                    <h4>TITULO DA PALESTRA</h4>
-                                    <p>SALA ONDALIVE | <span>NOMES DOS PALESTRANTES</span></p>
-                                    <div class="day-modal">
-                                        <div class="day-day-modal">
-                                            <p><strong>14</strong><br> AGO</p>
-                                        </div>
-                                        <div class="day-date-modal">
-                                            <p>Inicio as 22:00h</p>
-                                            <p class="spot">SALA ONDALIVE</p>
-                                        </div>
-                                    </div>
-                                    <div class="desc-desc-modal">
-                                        <p>breve descrição do que vai acontecer na palestra</p>
-                                    </div>
-                                </div>
-                                <div class="speaker-modal">
-                                    <div class="speaker-modal-title">
-                                        <h6>PALESTRANTE(S)</h6>
-                                        <hr>
-                                    </div>
-                                    <div class="speaker-modal-modal">
-                                        <img src="./img/Rectangle 17.png" width="70px">
-                                        <div>
-                                            <h6>NOME DO PALESTRANTE</h6>
-                                            <p>Cargo do palestrante na empresa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="timeline">
+                        <li class="event" data-date="65Million B.C.">
+                            <h3>Dinosaurs Roamed the Earth</h3>
+                            <p>RAWWWWWWRRR 🐢🦂</p>
+                        </li>
+                        <li class="event" data-date="2005">
+                            <h3>Creative Component Launched</h3>
+                            <p>"We can be all things to all people!" 📣</p>
+                        </li>
+                        <li class="event" id="date" data-date="2009">
+                            <h3>Squareflair was Born</h3>
+                            <p></p>
+                            <p>"We can be all things to Squarespace users!" 📣</p>
+                        </li>
+
+                        <li class="event" data-date="November 15, 2018">
+
+                            <h3>Squareflair Today</h3>
+
+                            <p>"We design and build from scratch!" 📣
+                                <p />
+
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="files">
