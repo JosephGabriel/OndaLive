@@ -674,21 +674,13 @@ button {
 
 #main {
   transition: all 0.5s;
-  filter: opacity(100%);
-  -webkit-filter: opacity(100%);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
 }
 #main.ops {
-  filter: opacity(50%);
   transition: all 0.5s;
-  -webkit-filter: opacity(50%);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
+  filter: brightness(30%);
+  -webkit-filter: brightness(30%);
 }
 
 #timer {
