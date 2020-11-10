@@ -103,7 +103,8 @@ a {
   background: var(--button-background);
 }
 
-.banner {
+.banner,
+.banner-mobile {
   grid-area: banner;
   width: 100%;
 }
@@ -112,15 +113,15 @@ a {
   width: 100%;
 }
 
-.banner img {
+.banner img,
+.banner-mobile img {
   width: 100%;
-  height: 16rem;
   object-fit: cover;
 }
 
-.banners img {
+.banners img,
+.banners-mobile img {
   width: 100%;
-  height: 16rem;
   object-fit: cover;
 }
 
@@ -181,14 +182,17 @@ a {
     gap: 4rem;
     grid-template-rows: repeat(6, auto);
     grid-template-areas:
-      "banner"
+      "banner-mobile"
       "video"
       "chat"
-      "banners"
+      "banners-mobile"
       "program"
       "files";
   }
   .site-map {
+    display: none;
+  }
+  .menu {
     display: none;
   }
 }
@@ -203,6 +207,30 @@ a {
   .files,
   .chat {
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner,
+  .banners,
+  .m9 {
+    display: none;
+  }
+  .navbar-container {
+    padding: 1rem 3rem;
+  }
+  .img-spotlight {
+    margin-bottom: 0;
+  }
+  .audio-btn button {
+    padding: 0.7rem 2rem !important;
+  }
+}
+@media screen and (min-width: 426px) {
+  .banner-mobile,
+  .banners-mobile,
+  .mobile-text-spotlight {
+    display: none;
   }
 }
 

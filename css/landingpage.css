@@ -1389,7 +1389,7 @@ button {
 
 @media screen and (max-width: 425px) {
   .banner,
-  .m9 {
+  .banners .m9 {
     display: none;
   }
   .img-spotlight {
@@ -1398,6 +1398,7 @@ button {
 }
 @media screen and (min-width: 426px) {
   .banner-mobile,
+  .banners-mobile,
   .mobile-text-spotlight {
     display: none;
   }
