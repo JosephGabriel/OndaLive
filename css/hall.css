@@ -931,6 +931,7 @@ a {
 .user-title-box {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .div-1 {
@@ -1423,6 +1424,12 @@ button {
 #toolbar {
   background: #2f323b;
   padding-left: 2rem;
+}
+
+#toolbar .btn-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dashboard p {

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/inside.css">
     <script src="./js/script.js"></script>
-    <script src="./js/app.js"></script>
     <title>Onda Live</title>
 </head>
 
@@ -49,7 +48,7 @@
         <a href="#about">Voltar para o Site</a>
         <a href="#services">Titulo do Evento/Data</a>
     </div>
-    <div class="sidenav" id="toolbar" style="margin-top: 7rem;width: auto;background: #363636;">
+    <div class="sidenav" id="toolbar" style="margin: 7rem 0;margin-bottom: 15rem;width: auto;background: #363636;">
         <div class="dashboard tab">
             <a class="btn-tab">
                 <i class="fas fa-chart-line tablinks" onclick="openTab(event, 'dash')"></i>
@@ -71,6 +70,10 @@
                 <i class="fas fa-money-bill-alt tablinks" onclick="openTab(event, 'sorteio')"></i>
                 <p>Sorteio</p>
             </a>
+            <a class="btn-tab" href="#">
+                <i class="fas fa-user-tie tablinks" onclick="openTab(event, 'moderador')"></i>
+                <p>Moderador</p>
+            </a>
         </div>
         <hr id="hr-hr">
         <div id="dash" class="tabcontent">
@@ -91,7 +94,7 @@
                 <input type="text">
             </div>
 
-            <div class="user-adm" style="width: 100%;">
+            <div class="user-adm">
                 <div class="user-title-box">
                     <div class="div-1">
                         <h4>Usuários permitidos</h4>
@@ -101,7 +104,7 @@
                         <button>Novo Contato &nbsp; <i class="fas fa-user-plus"></i></button>
                     </div>
                 </div>
-                <div style="    width: 100%;">
+                <div style="width: 100%;">
                     <div class="user-title-title">
                         <p>Usuarios</p>
                         <p>Action</p>
@@ -389,10 +392,13 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="banner-upload-btn">
+                <button><i class="fas fa-file-import"></i> Enviar</button>
+            </div>
         </div>
         <div id="quiz" class="tabcontent">
             <img src="./img/logo-quiz.png" width="80px">
-            <table class="table table-dark">
+            <table class="table table-dark" style="margin-bottom: 10rem;">
                 <thead>
                     <tr>
                         <th scope="col"></th>
@@ -808,9 +814,41 @@
             </table>
         </div>
         <div id="sorteio" class="tabcontent">
-            <h4>Sorteio</h4>
-            <div class="sorteio">
-                <h2>Lista de Inscritos Na Sala</h2>
+            <h4>SORTEIO</h4>
+            <div class="raffle">
+                <h2>LISTA DE INSCRITOS NA SALA</h2>
+                <div class="raffle-item">
+                    <hr>
+                    <h6>Nome</h6>
+                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
+                </div>
+                <div class="raffle-item">
+                    <hr>
+                    <h6>Nome</h6>
+                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
+                </div>
+                <div class="raffle-item">
+                    <hr>
+                    <h6>Nome</h6>
+                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
+                </div>
+                <div class="raffle-item">
+                    <hr>
+                    <h6>Nome</h6>
+                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
+                </div>
+                <div class="raffle-item">
+                    <hr>
+                    <h6>Nome</h6>
+                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
+                </div>
+            </div>
+            <div class="raffle-buttons">
+                <button>SORTEAR</button>
+                <button id="fullscreen-button">
+                    <i class="fa fa-expand-arrows-alt"></i>
+                    <span>Fullscreen</span>
+                </button>
             </div>
         </div>
     </div>
