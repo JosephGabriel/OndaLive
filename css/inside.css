@@ -639,7 +639,7 @@ button {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.btn-answer:focus,
+.btn-answer:focus-within,
 .btn-answer:checked,
 #next-btn:focus {
   transition: all 0.2s;
@@ -722,7 +722,7 @@ button {
 }
 
 .next-btn-div {
-  width: 81%;
+  width: 80%;
   display: flex;
   justify-content: flex-end;
 }
