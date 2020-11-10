@@ -247,8 +247,16 @@ document.getElementById("quiz-btn-close2").addEventListener("click", () => {
   quiz.classList.remove("activeQ");
 });
 
-for (var index = 0; index < buttons.length; index++) {
-  buttons[index].addEventListener("click", () => {});
+for (let index = 0; index < buttons.length; index++) {
+  buttons[index].addEventListener("click", () => {
+    buttons[index].classList.add("active-btn");
+
+    let btnIndex = index;
+
+    if (buttons[index] != btnIndex) {
+      buttons[btnIndex].classList.remove("active-btn");
+    }
+  });
 }
 
 nextBtn.addEventListener("click", () => {

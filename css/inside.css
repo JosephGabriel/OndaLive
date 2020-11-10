@@ -138,22 +138,24 @@ a {
 }
 
 .program-desc {
-  background-color: rgb(20, 20, 20);
-  padding: 2rem;
-  overflow-y: scroll;
-  height: 35rem;
   width: 100%;
+  position: relative;
+  height: 35rem;
+  overflow-y: auto;
   grid-area: program;
+  background: #292929;
+  padding: 0.5rem 2rem;
+  z-index: 0;
 }
 
 .files {
   background-color: rgb(255, 255, 255);
   grid-area: files;
+  height: 35rem !important;
   padding: 2rem 3rem;
   overflow-y: scroll;
   text-align: center;
   width: 100%;
-  height: auto;
 }
 
 .nav-toggle {
@@ -165,7 +167,7 @@ a {
   display: grid;
   margin: 2rem;
   height: auto;
-  align-items: center;
+  align-items: stretch;
   gap: 2rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, auto);
@@ -749,9 +751,7 @@ button {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.btn-answer:focus-within,
-.btn-answer:checked,
-#next-btn:focus {
+.btn-answer.active-btn {
   transition: all 0.2s;
   background: #157c03;
   -webkit-transition: all 0.2s;
@@ -1009,12 +1009,6 @@ tr:hover {
   text-align: center;
 }
 
-.program-desc {
-  background: #292929;
-  padding: 0.5rem 2rem;
-  z-index: -1;
-}
-
 #program-title {
   width: 100%;
   margin: 1rem 0;
@@ -1034,6 +1028,9 @@ tr:hover {
 
 .time-line .image > div {
   position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   text-align: center;
   font-size: 0.8em;
 }
@@ -1045,13 +1042,14 @@ tr:hover {
   border-bottom: 2px solid #f4ae13;
   position: absolute;
   top: 2.75em;
-  left: 2.5em;
+  left: 6.5em;
   z-index: -1;
 }
 
 .time-line .image img {
   border-radius: 50%;
-  height: 5em;
+  height: 6rem;
+  margin-top: -1rem;
   z-index: 1;
   border: 2px solid #f4ae13;
 }
@@ -1064,6 +1062,8 @@ tr:hover {
   font-weight: 500;
   padding: 0.3em 0.5rem;
   margin: 0.5em 0;
+  margin-top: -0.5rem;
+  margin-right: 1rem;
   background: #393b45;
 }
 
@@ -1127,6 +1127,6 @@ tr:hover {
   border-left: 2px solid #f4ae13;
   position: absolute;
   top: 0;
-  left: -4.35em;
+  left: -5.1rem;
   z-index: -1;
 }
