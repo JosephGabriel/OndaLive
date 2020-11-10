@@ -36,7 +36,7 @@
                 <div class="room-dropdown" id="room-drop">
                     <button class="site-map-item-btn" id="room-dropdown">TROCAR DE SALA</button>
                     <ul>
-                        <li><a href="">Trocar de Sala</a></li>
+                        <li><a href="./hallusuario.html">Voltar ao Hall</a></li>
                         <li><a href="">Sala 1</a></li>
                         <li><a href="">Sala 2</a></li>
                         <li><a href="">Sala 3</a></li>
@@ -497,17 +497,20 @@
         imgDrop.addEventListener("click", () => {
             drop.classList.remove("active-dropdown")
             dropImg.classList.toggle("active-dropdown")
+            dropRoom2.classList.remove("active-dropdown")
             document.getElementById("program-sidenav").classList.remove("sidebar-active");
         })
 
         menu.addEventListener("click", () => {
             drop.classList.toggle("active-dropdown")
+            dropRoom2.classList.remove("active-dropdown")
             dropImg.classList.remove("active-dropdown")
         })
 
         main.addEventListener("click", () => {
             drop.classList.remove("active-dropdown")
             dropImg.classList.remove("active-dropdown")
+            dropRoom2.classList.remove("active-dropdown")
         })
 
         var dropRoom = document.getElementById("room-dropdown")
@@ -515,6 +518,8 @@
 
         dropRoom.addEventListener("click", () => {
             dropRoom2.classList.toggle("active-dropdown")
+            drop.classList.remove("active-dropdown")
+            dropImg.classList.remove("active-dropdown")
         })
 
 
