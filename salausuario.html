@@ -571,6 +571,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script>
 
+        let btnAnswer = document.getElementsByClassName('btn-answer')
+
+        for (let index = 0; index < btnAnswer.length; index++) {
+
+            btnAnswer[index].addEventListener("click", () => {
+
+                for (let index = 0; index < btnAnswer.length; index++) {
+                    btnAnswer[index].classList.remove("active-btn")
+
+                }
+
+                btnAnswer[index].classList.add("active-btn")
+            })
+
+        }
+
         var body = document.getElementById("main")
         var nav = document.getElementById("nav-toggle")
         var sidenav = document.getElementById("sidenav")
