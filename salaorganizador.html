@@ -48,31 +48,35 @@
         <a href="#about">Voltar para o Site</a>
         <a href="#services">Titulo do Evento/Data</a>
     </div>
-    <div class="sidenav" id="toolbar" style="margin: 7rem 0;margin-bottom: 15rem;width: auto;background: #363636;">
+    <div class="sidenav" id="toolbar" style="margin: 7rem 0;margin-bottom: 15rem;width: auto;">
         <div class="dashboard tab">
             <a class="btn-tab">
-                <i class="fas fa-chart-line tablinks" onclick="openTab(event, 'dash')"></i>
+                <i class="fas fa-tachometer-alt tablinks" onclick="openTab(event, 'dash')"></i>
                 <p>Dashboard</p>
             </a>
             <a class="btn-tab">
                 <i class="fas fa-users tablinks" onclick="openTab(event, 'user')"></i>
                 <p>Usuários</p>
             </a>
-            <a class="btn-tab" href="#">
+            <a class="btn-tab">
                 <i class="far fa-flag tablinks" onclick="openTab(event, 'ban')"></i>
                 <p>Banners</p>
             </a>
-            <a class="btn-tab" href="#">
+            <a class="btn-tab">
                 <i class="fas fa-question-circle tablinks" onclick="openTab(event, 'quiz')"></i>
                 <p>Quiz</p>
             </a>
-            <a class="btn-tab" href="#">
+            <a class="btn-tab">
                 <i class="fas fa-money-bill-alt tablinks" onclick="openTab(event, 'sorteio')"></i>
                 <p>Sorteio</p>
             </a>
-            <a class="btn-tab" href="#">
-                <i class="fas fa-user-tie tablinks" onclick="openTab(event, 'moderador')"></i>
+            <a class="btn-tab">
+                <i class="fas fa-crown tablinks" onclick="openTab(event, 'moderador')"></i>
                 <p>Moderador</p>
+            </a>
+            <a class="btn-tab">
+                <i class="fas fa-calendar-alt tablinks" onclick="openTab(event, 'progamacao')"></i>
+                <p>Progamação</p>
             </a>
         </div>
         <hr id="hr-hr">
@@ -259,7 +263,7 @@
             </div>
         </div>
         <div id="ban" class="tabcontent">
-            <table class="table table-dark">
+            <table class="table table-dark no-effect">
                 <thead>
                     <tr>
                         <th scope="col"></th>
@@ -270,18 +274,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row"><label class="b-contain" style="margin-top: -2px;">
+                    <tr class="banner-active">
+                        <th scope="row">
+                            <label class="b-contain" style="margin-top: -6px;">
                                 <label class="b-contain">
-                                    <input class="checkbox-form" type="checkbox" name="banner">
+                                    <input class="checkbox-form" type="radio" name="banner">
                                     <div class="b-input"></div>
                                 </label>
-                            </label></th>
+                            </label>
+                        </th>
                         <td>
-                            <h6>&nbsp;&nbsp; Ingram Micro</h6>
+                            <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                         </td>
                         <td>www.ingrammicro.com</td>
-                        <td><img src="./img/banner.png" height="20px"></td>
+                        <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                         <td>
                             <div class="actions">
                                 <i class="fas fa-toggle-on"></i>
@@ -290,18 +296,20 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row"><label class="b-contain" style="margin-top: -2px;">
+                    <tr class="">
+                        <th scope="row">
+                            <label class="b-contain" style="margin-top: -6px;">
                                 <label class="b-contain">
-                                    <input class="checkbox-form" type="checkbox" name="banner">
+                                    <input class="checkbox-form" type="radio" name="banner">
                                     <div class="b-input"></div>
                                 </label>
-                            </label></th>
+                            </label>
+                        </th>
                         <td>
-                            <h6>&nbsp;&nbsp; Ingram Micro</h6>
+                            <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                         </td>
                         <td>www.ingrammicro.com</td>
-                        <td><img src="./img/banner.png" height="20px"></td>
+                        <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                         <td>
                             <div class="actions">
                                 <i class="fas fa-toggle-on"></i>
@@ -310,18 +318,20 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row"><label class="b-contain" style="margin-top: -2px;">
+                    <tr class="">
+                        <th scope="row">
+                            <label class="b-contain" style="margin-top: -6px;">
                                 <label class="b-contain">
-                                    <input class="checkbox-form" type="checkbox" name="banner">
+                                    <input class="checkbox-form" type="radio" name="banner">
                                     <div class="b-input"></div>
                                 </label>
-                            </label></th>
+                            </label>
+                        </th>
                         <td>
-                            <h6>&nbsp;&nbsp; Ingram Micro</h6>
+                            <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                         </td>
                         <td>www.ingrammicro.com</td>
-                        <td><img src="./img/banner.png" height="20px"></td>
+                        <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                         <td>
                             <div class="actions">
                                 <i class="fas fa-toggle-on"></i>
@@ -330,58 +340,20 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row"><label class="b-contain" style="margin-top: -2px;">
+                    <tr class="">
+                        <th scope="row">
+                            <label class="b-contain" style="margin-top: -6px;">
                                 <label class="b-contain">
-                                    <input class="checkbox-form" type="checkbox" name="banner">
+                                    <input class="checkbox-form" type="radio" name="banner">
                                     <div class="b-input"></div>
                                 </label>
-                            </label></th>
+                            </label>
+                        </th>
                         <td>
-                            <h6>&nbsp;&nbsp; Ingram Micro</h6>
+                            <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                         </td>
                         <td>www.ingrammicro.com</td>
-                        <td><img src="./img/banner.png" height="20px"></td>
-                        <td>
-                            <div class="actions">
-                                <i class="fas fa-toggle-on"></i>
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><label class="b-contain" style="margin-top: -2px;">
-                                <label class="b-contain">
-                                    <input class="checkbox-form" type="checkbox" name="banner">
-                                    <div class="b-input"></div>
-                                </label>
-                            </label></th>
-                        <td>
-                            <h6>&nbsp;&nbsp; Ingram Micro</h6>
-                        </td>
-                        <td>www.ingrammicro.com</td>
-                        <td><img src="./img/banner.png" height="20px"></td>
-                        <td>
-                            <div class="actions">
-                                <i class="fas fa-toggle-on"></i>
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><label class="b-contain" style="margin-top: -2px;">
-                                <label class="b-contain">
-                                    <input class="checkbox-form" type="checkbox" name="banner">
-                                    <div class="b-input"></div>
-                                </label>
-                            </label></th>
-                        <td>
-                            <h6>&nbsp;&nbsp; Ingram Micro</h6>
-                        </td>
-                        <td>www.ingrammicro.com</td>
-                        <td><img src="./img/banner.png" height="20px"></td>
+                        <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                         <td>
                             <div class="actions">
                                 <i class="fas fa-toggle-on"></i>
@@ -398,7 +370,7 @@
         </div>
         <div id="quiz" class="tabcontent">
             <img src="./img/logo-quiz.png" width="80px">
-            <table class="table table-dark" style="margin-bottom: 10rem;">
+            <table class="table table-dark no-effect" style="margin-bottom: 10rem;">
                 <thead>
                     <tr>
                         <th scope="col"></th>
@@ -850,6 +822,12 @@
                     <span>Fullscreen</span>
                 </button>
             </div>
+        </div>
+        <div id="moderador" class="tabcontent">
+            <h1>Moderador</h1>
+        </div>
+        <div id="progamacao" class="tabcontent">
+            <h1>Progamação</h1>
         </div>
     </div>
     <div class="body-grid">

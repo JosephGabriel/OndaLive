@@ -831,20 +831,25 @@ a {
 .dashboard i {
   width: 5rem;
   height: 5rem;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 24px;
+  padding: 1rem 1.6rem;
+  border-radius: 3.5rem;
+  font-size: 2.4rem;
   line-height: 1.33;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #b9820b;
+  background: var(--accent-color);
   color: #fff;
+  -webkit-border-radius: 3.5rem;
+  -moz-border-radius: 3.5rem;
+  -ms-border-radius: 3.5rem;
+  -o-border-radius: 3.5rem;
 }
 
 .dashboard p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0;
+  margin-top: 1rem;
   font-weight: bold;
   color: #fff;
 }
@@ -1430,11 +1435,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.dashboard p {
-  font-size: 1.4rem;
-  margin-top: 1rem;
 }
 
 .icon-center {

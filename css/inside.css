@@ -2,7 +2,7 @@
 :root {
   --secondary-color: #838383;
   --accent-color: #f4ae13;
-  --accent-color-dark: #f4ae13;
+  --accent-color-dark: #f4ad1334;
   --button-background: #1d1d1d;
   --font-type-title: bold 4.2rem "Roboto";
 }
@@ -1002,6 +1002,19 @@ tr:hover {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
+}
+
+.no-effect tr:hover {
+  transition: all 0.5s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.banner-active {
+  background: var(--accent-color-dark);
 }
 
 #timeline-content {
