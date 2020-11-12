@@ -1040,7 +1040,7 @@ tr {
 }
 
 .line-color {
-  background: #30333b;
+  background: #30333b !important;
 }
 
 tr:hover {
