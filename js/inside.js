@@ -16,12 +16,6 @@ function openFullscreen() {
   }
 }
 
-tippy("#myButton", {
-  content: "Mostrar ranking ao final do quiz",
-  theme: "light",
-  animation: "shift-away",
-});
-
 let bannerTab = document.getElementsByClassName("banner-row");
 let swicthTab = document.querySelectorAll('input[name="radio-cats"]');
 
