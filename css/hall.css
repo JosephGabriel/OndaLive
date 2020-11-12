@@ -1427,6 +1427,9 @@ button {
 }
 
 #toolbar {
+  margin: 7rem 0;
+  margin-bottom: 15rem;
+  width: auto;
   padding-left: 2rem;
 }
 

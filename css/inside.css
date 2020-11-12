@@ -466,7 +466,7 @@ hr {
 #fullscreen-button span {
   font-size: 3rem;
 }
-
+/* 
 #sorteio.expand {
   padding: 8rem 21rem;
 }
@@ -474,6 +474,9 @@ hr {
 #sorteio.expand td {
   font-size: 2rem;
 }
+#sorteio td {
+  font-size: 2rem;
+} */
 
 html:-webkit-full-screen {
   background: #31343c !important;
@@ -630,10 +633,10 @@ button {
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
+  overflow-y: scroll;
 }
 
 .quiz.activeQ {
-  overflow-y: scroll;
   width: 50rem;
   transform: translateX(0%);
   transition: all 0.5s;

@@ -27,33 +27,98 @@
     </div>
     <div class="navbar-container">
         <div class="navbar-holder">
-            <div style="display: flex; align-items: center;">
+            <div>
                 <img src="./favicon.svg" class="navbar-brand">
-                <div class="site-map">
-                    <ul class="site-map-list">
-                        <li class="site-map-item"><a href="/">Voltar para o Site</a></li>
-                        <li class="site-map-item"><a href="">Titulo do Evento/Data</a></li>
+            </div>
+            <div class="room">
+                <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
+            </div>
+            <div class="menu">
+                <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
+                <div class="room-dropdown" id="room-drop">
+                    <button class="site-map-item-btn" id="room-dropdown">TROCAR DE SALA</button>
+                    <ul>
+                        <li><a href="./hallusuario.html">Voltar ao Hall</a></li>
+                        <li><a href="">Sala 1</a></li>
+                        <li><a href="">Sala 2</a></li>
+                        <li><a href="">Sala 3</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="user-info">
-                <ul class="user-info-map">
-                    <li class="user-info-item cart" id="tool" style="cursor: pointer;"><i class="fas fa-tools"></i></li>
-                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
-                    <li class="user-info-item">Olá, <strong>Casio</strong> <span>C</span></li>
-                </ul>
-            </div>
-            <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
-                &#9776;
+                <div class="user-info">
+                    <ul class="user-info-map">
+                        <div class="drop-user">
+                            <div>
+                                <li class="user-info-item">
+                                    <img src="./img/100_3.jpg" class="img-user" id="img-drop">
+                                    Olá,<strong> Cassio</strong><span>
+                                        <i class="fa fa-cog menu" id="menu-toggle"></i></span>
+                                </li>
+                                <div class="dropdown-user-img" id="dropdown-user-img">
+                                    <form action="" method="POST">
+                                        <div class="info-user">
+                                            <div class="info-user-icon">
+                                                <i class="fa fa-user-circle"></i>
+                                            </div>
+                                            <div class="info-user-description">
+                                                <input type="file" name="file" id="file" class="inputfile" />
+                                                <label for="file">Alterar foto</label>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-user" id="dropdown">
+                            <div class="info-user">
+                                <div class="info-user-icon">
+                                    <i class="fa fa-address-card"></i>
+                                </div>
+                                <div class="info-user-description">
+                                    <h6>Meus dados</h6>
+                                </div>
+                            </div>
+                            <div class="info-user">
+                                <div class="info-user-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="info-user-description">
+                                    <h6>Notificações</h6>
+                                </div>
+                            </div>
+                            <div class="info-user">
+                                <div class="info-user-icon">
+                                    <i class="fa fa-graduation-cap"></i>
+                                </div>
+                                <div class="info-user-description">
+                                    <h6>Certificados</h6>
+                                </div>
+                            </div>
+                            <hr class="info-hr">
+                            <button class="exit-btn">
+                                Logout &nbsp;<i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </div>
+                    </ul>
+                </div>
+                <li class="user-info-item cart">
+                    <i class="fa fa-cart-plus"></i>
+                </li>
             </div>
         </div>
+        <div class="sidenav-icon" id="tool">
+            <i class="fas fa-list" id="nav-toggle-side"></i>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
     </div>
-    <div class="sidenav" id="sidenav" style="margin-top: 7rem;">
+    </div>
+    <div class="sidenav" id="sidenav" style="margin-top: 5rem;">
         <img src="./img/logo-sticky.svg">
-        <a href="#about">Voltar para o Site</a>
-        <a href="#services">Titulo do Evento/Data</a>
+        <a href="/">Voltar para o Site</a>
+        <a href="#">Titulo do Evento/Data</a>
+        <a href="#">Trocar de Sala</a>
     </div>
-    <div class="sidenav" id="toolbar" style="margin: 7rem 0;margin-bottom: 15rem;width: auto;">
+    <div class="sidenav" id="toolbar">
         <div class="dashboard tab">
             <a class="btn-tab">
                 <i class="fas fa-tachometer-alt tablinks" onclick="openTab(event, 'dash')"></i>
@@ -68,7 +133,7 @@
                 <p>Banners</p>
             </a>
             <a class="btn-tab">
-                <i class="fas fa-question-circle tablinks" onclick="openTab(event, 'quiz')"></i>
+                <i class="fas fa-question-circle tablinks" onclick="openTab(event, 'quizTab')"></i>
                 <p>Quiz</p>
             </a>
             <a class="btn-tab">
@@ -332,8 +397,7 @@
                 </table>
             </form>
         </div>
-        <div id="quiz" class="tabcontent">
-
+        <div id="quizTab" class="tabcontent">
             <img src="./img/logo-quiz.png" width="80px">
             <form action="">
                 <table class="table table-dark no-effect" style="margin-bottom: 10rem;">
@@ -350,13 +414,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="row-quiz">
                             <td>
                                 <h6>01</h6>
                             </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-1">
+                                    <input class="toggle-input" type="radio" name="quiz" id="quiz-1">
                                     <label for="quiz-1"></label>
                                 </div>
                             </th>
@@ -383,13 +447,13 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="row-quiz">
                             <td>
                                 <h6>01</h6>
                             </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-2">
+                                    <input class="toggle-input" type="radio" name="quiz" id="quiz-2">
                                     <label for="quiz-2"></label>
                                 </div>
                             </th>
@@ -416,13 +480,13 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="row-quiz">
                             <td>
                                 <h6>01</h6>
                             </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-3">
+                                    <input class="toggle-input" type="radio" name="quiz" id="quiz-3">
                                     <label for="quiz-3"></label>
                                 </div>
                             </th>
@@ -449,13 +513,13 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="row-quiz">
                             <td>
                                 <h6>01</h6>
                             </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-4">
+                                    <input class="toggle-input" type="radio" name="quiz" id="quiz-4">
                                     <label for="quiz-4"></label>
                                 </div>
                             </th>
@@ -482,13 +546,13 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="row-quiz">
                             <td>
                                 <h6>01</h6>
                             </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-5">
+                                    <input class="toggle-input" type="radio" name="quiz" id="quiz-5">
                                     <label for="quiz-5"></label>
                                 </div>
                             </th>
@@ -515,13 +579,13 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="row-quiz">
                             <td>
                                 <h6>01</h6>
                             </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-6">
+                                    <input class="toggle-input" type="radio" name="quiz" id="quiz-6">
                                     <label for="quiz-6"></label>
                                 </div>
                             </th>
@@ -746,10 +810,152 @@
             <h1 class="tab-title">Progamação</h1>
         </div>
     </div>
-    <div class="body-grid">
+    <div class="quiz" id="quiz">
+        <div class="icon-close">
+            <i class="fas fa-window-close" id="close-bbtn"></i>
+        </div>
+        <div class="image-quiz">
+            <img src="./img/logo-quiz.png">
+        </div>
+        <div class="quiz-quiz">
+            <div>
+                <div class="hide" id="timer">
+                    <div>
+                        <h4>Nome do Quiz</h4>
+                        <p>1/30</p>
+                    </div>
+                    <div class="sidesss"></div>
+                </div>
+                <div id="quiz-start" class="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi iste architecto! Explicabo
+                        erum laboriosam quibusdam facilis, sit magni nobis.</p>
+                    <button id="quiz-start-btn">Iniciar</button>
+                </div>
+                <div>
+                    <div id="question-container" class="hide">
+                        <div id="question">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla consectetur qui recusandae?
+                            Aut expedita aspernatur
+                        </div>
+                        <div class="question-img">
+                            <img src="./img/banner.jpg" width="120px">
+                        </div>
+                        <div id="answer-buttons" class="btn-grid">
+                            <button class="btn-answer">
+                                <p class="answer-letter">A</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">B</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">C</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">D</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <button class="btn-answer">
+                                <p class="answer-letter">E</p>
+                                <p class="answer-text">Lorem ipsum dolor sit amet consectetur</p>
+                            </button>
+                            <div class="next-btn-div">
+                                <button id="next-btn">Proximo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="question-score" class="hide">
+                    <p>Você respondeu corretamente</p>
+                    <p><span>30</span> questoẽs de <span>30</span> em <span>60</span>seg</p>
+                    <div style="display: flex;flex-direction: column;">
+                        <div class="progress-div">
+                            <div class="pie"
+                                data-pie='{ "percent": 70, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
+                            </div>
+                        </div>
+                        <button id="quiz-ranking">Ranking</button>
+                        <button id="quiz-btn-close2">Fechar</button>
+                    </div>
+
+                </div>
+                <div id="quiz-ranking-sc" class="hide">
+                    <table class="table table-striped table-dark">
+                        <caption>
+                            <div class="caption-table">
+                                <p>NOME DO QUIZ</p>
+                                <span>RANKING</span>
+                            </div>
+                        </caption>
+                        <thead>
+                            <tr class="first-table-row">
+                                <th scope="col">#</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">%</th>
+                                <th scope="col">Acertos</th>
+                                <th scope="col">Tempo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="line-color">
+                                <th scope="row">1</th>
+                                <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                <td>Lorem ipsum dolor sit, amet</td>
+                                <td>
+                                    <div class="progress-div">
+                                        <div class="pie2"
+                                            data-pie='{ "percent": 50, "colorSlice": "#fff","fontColor":"#000","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>5/10</td>
+                                <td>50seg</td>
+                            </tr>
+                            <tr class="line-color">
+                                <th scope="row">1</th>
+                                <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                <td>Lorem ipsum dolor sit, amet</td>
+                                <td>
+                                    <div class="progress-div">
+                                        <div class="pie2"
+                                            data-pie='{ "percent": 80, "colorSlice": "#ff0","fontColor":"#f00","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>5/10</td>
+                                <td>50seg</td>
+                            </tr>
+                            <tr class="line-color">
+                                <th scope="row">1</th>
+                                <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                <td>Lorem ipsum dolor sit, amet</td>
+                                <td>
+                                    <div class="progress-div">
+                                        <div class="pie2"
+                                            data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>5/10</td>
+                                <td>50seg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="quiz-close-btn">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-grid" id="main">
         <div class="grid">
             <div class="banner">
-                <img src="./img/banner.png">
+                <img src="./img/COFFE3.jpg">
+            </div>
+            <div class="banner-mobile">
+                <img src="./img/COFFEE CEL.jpg">
             </div>
             <div class="video">
                 <div style="padding:56.25% 0 0 0;position:relative;"><iframe
@@ -758,7 +964,12 @@
                         allow="autoplay; fullscreen" allowfullscreen></iframe></div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
                 <div class="audio-btn">
-                    <button>Trocar Áudio</button>
+                    <div class="room-audio">
+                        <button>Áudio Portgues</button>
+                        <button>English Audio</button>
+                        <button>Audio Español</button>
+
+                    </div>
                     <button id="playQuiz">Jogar Quiz</button>
                 </div>
             </div>
@@ -795,78 +1006,168 @@
                 </div>
             </div>
             <div class="banners">
-                <img src="./img/banner.png">
+                <img src="./img/COFFE3.jpg">
+            </div>
+            <div class="banners-mobile">
+                <img src="./img/COFFEE CEL.jpg">
             </div>
             <div class="program-desc">
-                <div class="presention w100">
-                    <div class="day-selection">
-                        <label class="day-label" for="day-selection">Sala</label>
-                        <select name="day-selection" class="day-selection-input">
-                            <option value="">Selecione</option>
-                            <option value=""></option>
-                        </select>
+                <div id="program-title">
+                    <h1>Programação</h1>
+                </div>
+                <div>
+                    <div class="time-line">
+                        <div class="image">
+                            <div>
+                                <img src="http://lorempixel.com/400/400/people/1/" />
+                                <span>
+                                    22:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details-timeline">
+                            <div>
+                                <div class="title-button">
+                                    <h1>Titulo</h1>
+                                    <a href=""><button>Saiba Mais </button></a>
+                                </div>
+                                <h4>Subtitulo</h4>
+                                <p>Proin condimentum tempus ultrices. Suspendisse vestibulum suscipit erat, ac efficitur
+                                    lorem. Nullam non ex vel turpis imperdiet maximus sit amet nec odio. Donec mauris
+                                    nisl,
+                                    vestibulum id efficitur at, convallis id dui. Sed enim nisl, ultrices vitae sodales
+                                    eu,
+                                    vestibulum a mi. Morbi consectetur pulvinar </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-line">
+                        <div class="image">
+                            <div>
+                                <img src="http://lorempixel.com/400/400/people/1/" />
+                                <span>
+                                    22:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details-timeline">
+                            <div>
+                                <div class="title-button">
+                                    <h1>Titulo</h1>
+                                    <a href=""><button>Saiba Mais </button></a>
+                                </div>
+                                <h4>Subtitulo</h4>
+                                <p>Proin condimentum tempus ultrices. Suspendisse vestibulum suscipit erat, ac efficitur
+                                    lorem. Nullam non ex vel turpis imperdiet maximus sit amet nec odio. Donec mauris
+                                    nisl,
+                                    vestibulum id efficitur at, convallis id dui. Sed enim nisl, ultrices vitae sodales
+                                    eu,
+                                    vestibulum a mi. Morbi consectetur pulvinar </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-line">
+                        <div class="image">
+                            <div>
+                                <img src="http://lorempixel.com/400/400/people/1/" />
+                                <span>
+                                    22:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details-timeline">
+                            <div>
+                                <div class="title-button">
+                                    <h1>Titulo</h1>
+                                    <a href=""><button>Saiba Mais </button></a>
+                                </div>
+                                <h4>Subtitulo</h4>
+                                <p>Proin condimentum tempus ultrices. Suspendisse vestibulum suscipit erat, ac efficitur
+                                    lorem. Nullam non ex vel turpis imperdiet maximus sit amet nec odio. Donec mauris
+                                    nisl,
+                                    vestibulum id efficitur at, convallis id dui. Sed enim nisl, ultrices vitae sodales
+                                    eu,
+                                    vestibulum a mi. Morbi consectetur pulvinar </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-line">
+                        <div class="image">
+                            <div>
+                                <img src="http://lorempixel.com/400/400/people/1/" />
+                                <span>
+                                    22:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details-timeline">
+                            <div>
+                                <div class="title-button">
+                                    <h1>Titulo</h1>
+                                    <a href=""><button>Saiba Mais </button></a>
+                                </div>
+                                <h4>Subtitulo</h4>
+                                <p>Proin condimentum tempus ultrices. Suspendisse vestibulum suscipit erat, ac efficitur
+                                    lorem. Nullam non ex vel turpis imperdiet maximus sit amet nec odio. Donec mauris
+                                    nisl,
+                                    vestibulum id efficitur at, convallis id dui. Sed enim nisl, ultrices vitae sodales
+                                    eu,
+                                    vestibulum a mi. Morbi consectetur pulvinar </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-line">
+                        <div class="image">
+                            <div>
+                                <img src="http://lorempixel.com/400/400/people/1/" />
+                                <span>
+                                    22:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details-timeline">
+                            <div>
+                                <div class="title-button">
+                                    <h1>Titulo</h1>
+                                    <a href=""><button>Saiba Mais </button></a>
+                                </div>
+                                <h4>Subtitulo</h4>
+                                <p>Proin condimentum tempus ultrices. Suspendisse vestibulum suscipit erat, ac efficitur
+                                    lorem. Nullam non ex vel turpis imperdiet maximus sit amet nec odio. Donec mauris
+                                    nisl,
+                                    vestibulum id efficitur at, convallis id dui. Sed enim nisl, ultrices vitae sodales
+                                    eu,
+                                    vestibulum a mi. Morbi consectetur pulvinar </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-line">
+                        <div class="image">
+                            <div>
+                                <img src="http://lorempixel.com/400/400/people/1/" />
+                                <span>
+                                    22:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details-timeline">
+                            <div>
+                                <div class="title-button">
+                                    <h1>Titulo</h1>
+                                    <a href=""><button>Saiba Mais </button></a>
+                                </div>
+                                <h4>Subtitulo</h4>
+                                <p>Proin condimentum tempus ultrices. Suspendisse vestibulum suscipit erat, ac efficitur
+                                    lorem. Nullam non ex vel turpis imperdiet maximus sit amet nec odio. Donec mauris
+                                    nisl,
+                                    vestibulum id efficitur at, convallis id dui. Sed enim nisl, ultrices vitae sodales
+                                    eu,
+                                    vestibulum a mi. Morbi consectetur pulvinar </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <label class="day-label" for="day-selection">Dia</label>
-                        <select name="day-selection" class="day-selection-input">
-                            <option value="">Selecione</option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                </div>
-                <div class="day-box-holder w100">
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button>+ Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="program-box wow animate__animated animate__fadeInUp">
-                        <div class="program-box-left">
-                            <div class="program-day">
-                                <h4>14</h4>
-                                <h6>agosto</h6>
-                            </div>
-                            <div class="program-room">
-                                <h4>SALA <br> ONDALIVE</h4>
-                                <p>Inicio as 22:00h</p>
-                            </div>
-                            <div class="program-description">
-                                <h4>TITULO DA PALESTRA</h4>
-                                <p>breve descrição do que vai acontecer na palestra |</p>
-                                <h6>Nomes dos palestrantes</h6>
-                            </div>
-                        </div>
-                        <div class="program-box-right">
-                            <div class="speaker-img">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                                <img src="./img/Rectangle 111.png" width="45px" height="65px">
-                            </div>
-                            <div class="button-description">
-                                <button>+ Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="files">
                 <h4>Arquivos para Download</h4>
@@ -878,7 +1179,7 @@
                                 <p>Extensão</p>
                                 <p>Peso</p>
                             </div>
-                            <i class="fas fa-download"></i>
+                            <a href="./img/banner-mobile-hall.jpg" download><i class="fas fa-download"></i></a>
                         </div>
                     </div>
                     <hr>
@@ -891,12 +1192,37 @@
                                 <p>Extensão</p>
                                 <p>Peso</p>
                             </div>
-                            <i class="fas fa-download"></i>
+                            <a href="./img/banner-mobile-hall.jpg" download><i class="fas fa-download"></i></a>
                         </div>
                     </div>
                     <hr>
                 </div>
-
+                <div>
+                    <div class="file">
+                        <div class="file-div">
+                            <div class="file-desc">
+                                <h6>Nome do Arquivo</h6>
+                                <p>Extensão</p>
+                                <p>Peso</p>
+                            </div>
+                            <a href="./img/banner-mobile-hall.jpg" download><i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="file">
+                        <div class="file-div">
+                            <div class="file-desc">
+                                <h6>Nome do Arquivo</h6>
+                                <p>Extensão</p>
+                                <p>Peso</p>
+                            </div>
+                            <a href="./img/banner-mobile-hall.jpg" download><i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
             </div>
         </div>
     </div>
@@ -907,163 +1233,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-    <script>
-
-        let divFullscreen = document.getElementById("sorteio")
-        let btnFullscreen = document.getElementById("fullscreen-button")
-
-        btnFullscreen.addEventListener("click", () => {
-            divFullscreen.classList.add("expand")
-        })
-
-        var elem = document.getElementById("sorteio");
-        function openFullscreen() {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) {
-                elem.msRequestFullscreen();
-            }
-        }
-
-        function closeFullscreen() {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) { /* Safari */
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) { /* IE11 */
-                document.msExitFullscreen();
-            }
-        }
-
-        document.onkeydown = function (evt) {
-            evt = evt || window.event;
-            if (evt.keyCode == 27) {
-                divFullscreen.classList.remove("expand")
-                closeFullscreen()
-            }
-        };
-
-
-        tippy('#myButton', {
-            content: "Mostrar ranking ao final do quiz",
-            theme: 'light',
-            animation: 'shift-away',
-
-        });
-
-        let bannerTab = document.getElementsByClassName("banner-row")
-        let swicthTab = document.querySelectorAll('input[name="radio-cats"]')
-
-        for (let index = 0; index < bannerTab.length; index++) {
-
-            swicthTab[index].addEventListener("click", () => {
-
-                let switchA = !swicthTab[index].checked
-
-                swicthTab[index].checked = true
-
-                bannerTab[index].classList.add("banner-active")
-
-                for (let index = 0; index < bannerTab.length; index++) {
-                    if (switchA = !swicthTab[index].checked) {
-                        bannerTab[index].classList.remove("banner-active")
-
-                    }
-                }
-            })
-
-        }
-
-        // window.addEventListener("load", () => {
-        //     let bannerTab = document.getElementsByClassName("row-quiz")
-        //     let swicthTab = document.querySelectorAll('input[name="quiz"]')
-
-        //     for (let index = 0; index < bannerTab.length; index++) {
-
-        //         swicthTab[index].addEventListener("click", () => {
-
-        //             let switchA = !swicthTab[index].checked
-
-        //             swicthTab[index].checked = true
-
-        //             bannerTab[index].classList.add("banner-active")
-
-        //             for (let index = 0; index < bannerTab.length; index++) {
-        //                 if (switchA = !swicthTab[index].checked) {
-        //                     bannerTab[index].classList.remove("banner-active")
-
-        //                 }
-        //             }
-        //         })
-
-        //     }
-        // })
-
-        let tool = document.getElementById("tool")
-        let toolbar = document.getElementById("toolbar")
-        let dropdownb = document.getElementsByClassName("dropdown-btn");
-        let j;
-
-        tool.addEventListener("click", () => {
-            toolbar.classList.toggle("activeS")
-        })
-
-        for (j = 0; j < dropdownb.length; j++) {
-            dropdownb[j].addEventListener("click", function () {
-                this.classList.toggle("active");
-                let dropdownbContent = this.nextElementSibling;
-                if (dropdownbContent.style.display === "block") {
-                    dropdownbContent.style.display = "none";
-                } else {
-                    dropdownbContent.style.display = "block";
-                }
-            });
-        }
-        let nav = document.getElementById("nav-toggle")
-        let sidenav = document.getElementById("sidenav")
-        let dropdown = document.getElementsByClassName("dropdown-btn");
-        let i;
-
-        nav.addEventListener("click", () => {
-            sidenav.classList.toggle("activeS")
-        })
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                let dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-
-        function openTab(evt, cityName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+    <script src="./js/circularProgressBar.min.js"></script>
+    <script src="./js/quiz.js"></script>
+    <script src="./js/hall.js"></script>
+    <script src="./js/inside.js"></script>
 </body>
 
 </html>
