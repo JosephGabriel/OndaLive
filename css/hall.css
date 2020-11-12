@@ -823,6 +823,7 @@ a {
 }
 
 .dashboard {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-around;
   color: var(--accent-color);

@@ -56,11 +56,21 @@ for (let index = 0; index < rowQuiz.length; index++) {
 
 let tool = document.getElementById("tool");
 let toolbar = document.getElementById("toolbar");
+let main = document.getElementById("main");
+let closeBtnAdm = document.getElementById("close-btn-sidebar-adm");
 let dropdownb = document.getElementsByClassName("dropdown-btn");
 let j;
 
 tool.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
+});
+
+main.addEventListener("click", () => {
+  toolbar.classList.remove("activeS");
+});
+
+closeBtnAdm.addEventListener("click", () => {
+  toolbar.classList.remove("activeS");
 });
 
 for (j = 0; j < dropdownb.length; j++) {
