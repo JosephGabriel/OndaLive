@@ -129,3 +129,11 @@
   background-color: transparent !important;
   padding: 0 !important;
 }
+
+.no-margim {
+  padding: 0 !important;
+  margin-right: 1rem;
+}
+.no-margim label {
+  padding: 0 !important;
+}

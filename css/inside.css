@@ -412,9 +412,20 @@ hr {
   font-weight: bold;
 }
 
-.raffle-item h6,
+.raffle-item {
+  margin: 0rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #acacac;
+}
+
+.raffle-item h6 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
 .raffle-item p {
-  padding-left: 2rem;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .raffle-buttons {
@@ -422,7 +433,9 @@ hr {
   width: 100%;
   margin-bottom: 10rem;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  justify-content: center;
 }
 
 .raffle-buttons button {
@@ -437,17 +450,55 @@ hr {
   margin: auto;
 }
 
-.raffle-buttons button i {
+.raffle-buttons button {
   margin-right: 1rem;
+}
+.raffle-buttons button:first-of-type {
+  margin: auto;
 }
 
 #fullscreen-button {
   margin: 0;
-  justify-self: flex-end;
+  background: transparent;
+  position: absolute;
+  right: 0;
+}
+#fullscreen-button span {
+  font-size: 3rem;
+}
+
+#sorteio.expand {
+  padding: 8rem 21rem;
+}
+
+#sorteio.expand td {
+  font-size: 2rem;
+}
+
+html:-webkit-full-screen {
+  background: #31343c !important;
+}
+
+html:-ms-fullscreen {
+  background: #31343c !important;
+}
+
+html:fullscreen {
+  background: #31343c !important;
 }
 
 button {
   outline: none;
+}
+
+.table-users {
+  z-index: 1;
+  max-height: 30rem !important;
+  overflow-y: auto;
+}
+
+.table-users table {
+  height: 100%;
 }
 
 .btn-tab {

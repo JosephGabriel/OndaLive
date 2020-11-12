@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/pe-icons/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="./css/pe-icons/helper.css">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
@@ -213,8 +215,8 @@
                 <table class="table table-dark no-effect">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Número</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Link</th>
                             <th scope="col">Imagem</th>
@@ -223,6 +225,9 @@
                     </thead>
                     <tbody>
                         <tr class="banner-row">
+                            <td>
+                                01
+                            </td>
                             <th scope="row">
                                 <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-1" value="1">
@@ -230,9 +235,6 @@
                                 </div>
                             </th>
                             <td>
-                                01
-                            </td>
-                            <td>
                                 <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                             </td>
                             <td>www.ingrammicro.com</td>
@@ -249,6 +251,9 @@
                             </td>
                         </tr>
                         <tr class="banner-row">
+                            <td>
+                                02
+                            </td>
                             <th scope="row">
                                 <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-2" value="1">
@@ -256,9 +261,6 @@
                                 </div>
                             </th>
                             <td>
-                                02
-                            </td>
-                            <td>
                                 <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                             </td>
                             <td>www.ingrammicro.com</td>
@@ -275,6 +277,9 @@
                             </td>
                         </tr>
                         <tr class="banner-row">
+                            <td>
+                                03
+                            </td>
                             <th scope="row">
                                 <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-3" value="1">
@@ -282,9 +287,6 @@
                                 </div>
                             </th>
                             <td>
-                                03
-                            </td>
-                            <td>
                                 <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                             </td>
                             <td>www.ingrammicro.com</td>
@@ -301,15 +303,15 @@
                             </td>
                         </tr>
                         <tr class="banner-row">
+                            <td>
+                                04
+                            </td>
                             <th scope="row">
                                 <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-4" value="1">
                                     <label for="radio-4"></label>
                                 </div>
                             </th>
-                            <td>
-                                04
-                            </td>
                             <td>
                                 <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
                             </td>
@@ -337,10 +339,10 @@
                 <table class="table table-dark no-effect" style="margin-bottom: 10rem;">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Ranking &nbsp; <i class="fas fa-exclamation-circle" id="myButton"></i>
                             </th>
-                            <th scope="col">Numero</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Perguntas</th>
                             <th scope="col">Tempo</th>
@@ -349,9 +351,12 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>
+                                <h6>01</h6>
+                            </td>
                             <th scope="row" class="table-vt">
                                 <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-1" checked>
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-1">
                                     <label for="quiz-1"></label>
                                 </div>
                             </th>
@@ -363,7 +368,169 @@
                                 </label>
                             </td>
                             <td>
+                                <h6>Tecnologia</h6>
+                            </td>
+                            <td>30</td>
+                            <td>1 Minuto</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <h6>01</h6>
+                            </td>
+                            <th scope="row" class="table-vt">
+                                <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-2">
+                                    <label for="quiz-2"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <label class="b-contain" style="margin: auto 1.5rem;">
+                                    <input class="checkbox-form" type="checkbox" name="services">
+                                    <label class="label" for="services"></label>
+                                    <div class="b-input"></div>
+                                </label>
+                            </td>
+                            <td>
+                                <h6>Tecnologia</h6>
+                            </td>
+                            <td>30</td>
+                            <td>1 Minuto</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>01</h6>
+                            </td>
+                            <th scope="row" class="table-vt">
+                                <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-3">
+                                    <label for="quiz-3"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <label class="b-contain" style="margin: auto 1.5rem;">
+                                    <input class="checkbox-form" type="checkbox" name="services">
+                                    <label class="label" for="services"></label>
+                                    <div class="b-input"></div>
+                                </label>
+                            </td>
+                            <td>
+                                <h6>Tecnologia</h6>
+                            </td>
+                            <td>30</td>
+                            <td>1 Minuto</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>01</h6>
+                            </td>
+                            <th scope="row" class="table-vt">
+                                <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-4">
+                                    <label for="quiz-4"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <label class="b-contain" style="margin: auto 1.5rem;">
+                                    <input class="checkbox-form" type="checkbox" name="services">
+                                    <label class="label" for="services"></label>
+                                    <div class="b-input"></div>
+                                </label>
+                            </td>
+                            <td>
+                                <h6>Tecnologia</h6>
+                            </td>
+                            <td>30</td>
+                            <td>1 Minuto</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>01</h6>
+                            </td>
+                            <th scope="row" class="table-vt">
+                                <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-5">
+                                    <label for="quiz-5"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <label class="b-contain" style="margin: auto 1.5rem;">
+                                    <input class="checkbox-form" type="checkbox" name="services">
+                                    <label class="label" for="services"></label>
+                                    <div class="b-input"></div>
+                                </label>
+                            </td>
+                            <td>
+                                <h6>Tecnologia</h6>
+                            </td>
+                            <td>30</td>
+                            <td>1 Minuto</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>01</h6>
+                            </td>
+                            <th scope="row" class="table-vt">
+                                <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-6">
+                                    <label for="quiz-6"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <label class="b-contain" style="margin: auto 1.5rem;">
+                                    <input class="checkbox-form" type="checkbox" name="services">
+                                    <label class="label" for="services"></label>
+                                    <div class="b-input"></div>
+                                </label>
                             </td>
                             <td>
                                 <h6>Tecnologia</h6>
@@ -387,44 +554,193 @@
         </div>
         <div id="sorteio" class="tabcontent">
             <h1 class="tab-title">Sorteio</h1>
-            <div class="raffle">
-                <h2>LISTA DE INSCRITOS NA SALA</h2>
-                <div class="raffle-item">
-                    <hr>
-                    <h6>Nome</h6>
-                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
-                </div>
-                <div class="raffle-item">
-                    <hr>
-                    <h6>Nome</h6>
-                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
-                </div>
-                <div class="raffle-item">
-                    <hr>
-                    <h6>Nome</h6>
-                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
-                </div>
-                <div class="raffle-item">
-                    <hr>
-                    <h6>Nome</h6>
-                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
-                </div>
-                <div class="raffle-item">
-                    <hr>
-                    <h6>Nome</h6>
-                    <p>CPF/CNPJ: mostrar os 3 primeiros digitos EX: 282</p>
-                </div>
+            <div class=" table-users">
+                <table class="table table-dark no-effect">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Fulano</td>
+                            <td>EX: 282.......</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="raffle-buttons">
                 <button>SORTEAR</button>
-                <button id="fullscreen-button">
-                    <i class="fa fa-expand-arrows-alt"></i>
-                    <span>Fullscreen</span>
+                <button id="fullscreen-button" onclick="openFullscreen();">
+                    <span class=" pe-7s-expand1"></span>
                 </button>
             </div>
         </div>
         <div id="moderador" class="tabcontent">
             <h1 class="tab-title">Moderador</h1>
+            <form action="">
+                <table class="table table-dark no-effect">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="banner-row">
+                            <td>
+                                01
+                            </td>
+                            <th scope="row">
+                                <div class="checkboxes-and-radios-small no-margim">
+                                    <input class="toggle-input" type="radio" name="radio-cats" id="radio-1" value="1">
+                                    <label for="radio-1"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
+                            </td>
+                            <td>email@test.com</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="banner-row">
+                            <td>
+                                02
+                            </td>
+                            <th scope="row">
+                                <div class="checkboxes-and-radios-small no-margim">
+                                    <input class="toggle-input" type="radio" name="radio-cats" id="radio-2" value="1">
+                                    <label for="radio-2"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
+                            </td>
+                            <td>email@test.com</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="banner-row">
+                            <td>
+                                03
+                            </td>
+                            <th scope="row">
+                                <div class="checkboxes-and-radios-small no-margim">
+                                    <input class="toggle-input" type="radio" name="radio-cats" id="radio-3" value="1">
+                                    <label for="radio-3"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
+                            </td>
+                            <td>email@test.com</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="banner-row">
+                            <td>
+                                04
+                            </td>
+                            <th scope="row">
+                                <div class="checkboxes-and-radios-small no-margim">
+                                    <input class="toggle-input" type="radio" name="radio-cats" id="radio-4" value="1">
+                                    <label for="radio-4"></label>
+                                </div>
+                            </th>
+                            <td>
+                                <h6 style="margin: 0;">&nbsp;&nbsp; Ingram Micro</h6>
+                            </td>
+                            <td>email@test.com</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
         </div>
         <div id="progamacao" class="tabcontent">
             <h1 class="tab-title">Progamação</h1>
@@ -593,6 +909,43 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script>
 
+        let divFullscreen = document.getElementById("sorteio")
+        let btnFullscreen = document.getElementById("fullscreen-button")
+
+        btnFullscreen.addEventListener("click", () => {
+            divFullscreen.classList.add("expand")
+        })
+
+        var elem = document.getElementById("sorteio");
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { /* Safari */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE11 */
+                document.msExitFullscreen();
+            }
+        }
+
+        document.onkeydown = function (evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                divFullscreen.classList.remove("expand")
+                closeFullscreen()
+            }
+        };
+
+
         tippy('#myButton', {
             content: "Mostrar ranking ao final do quiz",
             theme: 'light',
@@ -622,6 +975,31 @@
             })
 
         }
+
+        // window.addEventListener("load", () => {
+        //     let bannerTab = document.getElementsByClassName("row-quiz")
+        //     let swicthTab = document.querySelectorAll('input[name="quiz"]')
+
+        //     for (let index = 0; index < bannerTab.length; index++) {
+
+        //         swicthTab[index].addEventListener("click", () => {
+
+        //             let switchA = !swicthTab[index].checked
+
+        //             swicthTab[index].checked = true
+
+        //             bannerTab[index].classList.add("banner-active")
+
+        //             for (let index = 0; index < bannerTab.length; index++) {
+        //                 if (switchA = !swicthTab[index].checked) {
+        //                     bannerTab[index].classList.remove("banner-active")
+
+        //                 }
+        //             }
+        //         })
+
+        //     }
+        // })
 
         let tool = document.getElementById("tool")
         let toolbar = document.getElementById("toolbar")
