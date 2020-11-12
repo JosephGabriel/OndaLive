@@ -170,61 +170,11 @@ function stokeSvg() {
 }
 
 function progressSvg() {
-  var progressBar = new ProgressBar.Circle("#progress", {
-    color: "#f4ae13",
-    strokeWidth: 10,
-    duration: 2000, // milliseconds
-    easing: "easeInOut",
-  });
-
-  progressBar.animate(0.7);
+  let circle = new CircularProgressBar("pie");
 }
 
 function progressSvg2() {
-  var progressBar2 = new ProgressBar.Circle("#progress2", {
-    color: "#f4ae13",
-    strokeWidth: 10,
-    duration: 2000, // milliseconds
-    easing: "easeInOut",
-  });
-
-  progressBar2.animate(0.8);
-
-  var progressBar3 = new ProgressBar.Circle("#progress3", {
-    color: "#f4ae13",
-    strokeWidth: 10,
-    duration: 2000, // milliseconds
-    easing: "easeInOut",
-  });
-
-  progressBar3.animate(0.5);
-
-  var progressBar4 = new ProgressBar.Circle("#progress4", {
-    color: "#f4ae13",
-    strokeWidth: 10,
-    duration: 2000, // milliseconds
-    easing: "easeInOut",
-  });
-
-  progressBar4.animate(0.4);
-
-  var progressBar5 = new ProgressBar.Circle("#progress5", {
-    color: "#f4ae13",
-    strokeWidth: 10,
-    duration: 2000, // milliseconds
-    easing: "easeInOut",
-  });
-
-  progressBar5.animate(0.7);
-
-  var progressBar6 = new ProgressBar.Circle("#progress6", {
-    color: "#f4ae13",
-    strokeWidth: 10,
-    duration: 2000, // milliseconds
-    easing: "easeInOut",
-  });
-
-  progressBar6.animate(0.3);
+  let circle = new CircularProgressBar("pie2");
 }
 
 playQuiz.addEventListener("click", () => {

@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --secondary-color: #838383;
-  --accent-color: #f4ae13;
+  --sidebar-background: #31343c;
+  --accent-color: #f6a821;
   --accent-color-dark: #f4ad1334;
+  --font-color: #43454d;
   --button-background: #1d1d1d;
   --font-type-title: bold 4.2rem "Roboto";
 }
@@ -462,7 +464,10 @@ button {
 
 .actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+.actions > button:last-of-type {
+  margin-left: 1rem;
 }
 
 #ban button {
@@ -508,13 +513,10 @@ button {
   border: none;
 }
 .user-description-list {
-  border-bottom: 1px solid #acacac;
   width: 100%;
   display: flex;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
   align-items: center;
-
   justify-content: space-between;
 }
 .user-description-list-new {
@@ -548,6 +550,7 @@ button {
 
 .actions i {
   font-size: 1rem;
+  margin: 0;
 }
 
 .action-title-table {
@@ -777,6 +780,9 @@ button {
   margin: 0;
   padding-right: 1rem;
 }
+.circle-chart__info text {
+  color: #f00 !important;
+}
 
 .answer-text {
   border-left: 1px solid #1d1d1d;
@@ -892,7 +898,7 @@ text .label .pulse {
 .progress-div {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .progress {
@@ -905,38 +911,17 @@ text .label .pulse {
   background-color: transparent;
 }
 
-#progress2,
-#progress3,
-#progress4,
-#progress5,
-#progress6 {
+.pie2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: fit-content;
+  height: fit-content !important;
   margin: 0;
 }
-#progress2 > .inner,
-#progress3 > .inner,
-#progress4 > .inner,
-#progress5 > .inner,
-#progress6 > .inner {
-  font-size: 0.9rem;
-  color: var(--accent-color);
-  position: absolute;
-}
-
-.progress > .inner {
-  position: absolute;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--accent-color);
-}
-
-.progress > svg {
-  height: 100%;
-  display: block;
+.pie2 > svg {
+  height: 5rem !important;
+  width: auto;
 }
 
 caption {
@@ -987,7 +972,9 @@ th {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-
+td > h6 {
+  margin: 0 !important;
+}
 tr {
   transition: all 0.5s;
   background: #24262d;
@@ -1026,6 +1013,10 @@ tr:hover {
 
 .banner-active {
   background: var(--accent-color-dark);
+}
+
+.tab-title {
+  color: var(--secondary-color);
 }
 
 #timeline-content {

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/hall.css">
     <link rel="stylesheet" href="./css/loading-bar.min.css">
     <link rel="stylesheet" href="./css/inside.css">
+    <link rel="stylesheet" href="./css/progresscircle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
         type="text/javascript"></script>
     <script src="./js/script.js"></script>
@@ -175,10 +176,8 @@
                     <p><span>30</span> questoẽs de <span>30</span> em <span>60</span>seg</p>
                     <div style="display: flex;flex-direction: column;">
                         <div class="progress-div">
-                            <div class="progress" id="progress">
-                                <div class="inner">
-                                    70%
-                                </div>
+                            <div class="pie"
+                                data-pie='{ "percent": 70, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
                             </div>
                         </div>
                         <button id="quiz-ranking">Ranking</button>
@@ -210,24 +209,9 @@
                                 <td><img class="img-table" src="./img/100_3.jpg"></td>
                                 <td>Lorem ipsum dolor sit, amet</td>
                                 <td>
-                                    <div class="progress" id="progress2">
-                                        <div class="inner">
-                                            80%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>8/10</td>
-                                <td>50seg</td>
-
-                            </tr>
-                            <tr class="line-color">
-                                <th scope="row">2</th>
-                                <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                <td>Lorem ipsum dolor sit, amet</td>
-                                <td>
-                                    <div class="progress" id="progress3">
-                                        <div class="inner">
-                                            50%
+                                    <div class="progress-div">
+                                        <div class="pie2"
+                                            data-pie='{ "percent": 50, "colorSlice": "#fff","fontColor":"#000","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
                                         </div>
                                     </div>
                                 </td>
@@ -235,45 +219,31 @@
                                 <td>50seg</td>
                             </tr>
                             <tr class="line-color">
-                                <th scope="row">3</th>
+                                <th scope="row">1</th>
                                 <td><img class="img-table" src="./img/100_3.jpg"></td>
                                 <td>Lorem ipsum dolor sit, amet</td>
                                 <td>
-                                    <div class="progress" id="progress4">
-                                        <div class="inner">
-                                            40%
+                                    <div class="progress-div">
+                                        <div class="pie2"
+                                            data-pie='{ "percent": 80, "colorSlice": "#ff0","fontColor":"#f00","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
                                         </div>
                                     </div>
                                 </td>
-                                <td>4/10</td>
+                                <td>5/10</td>
                                 <td>50seg</td>
                             </tr>
                             <tr class="line-color">
-                                <th scope="row">4</th>
+                                <th scope="row">1</th>
                                 <td><img class="img-table" src="./img/100_3.jpg"></td>
                                 <td>Lorem ipsum dolor sit, amet</td>
                                 <td>
-                                    <div class="progress" id="progress5">
-                                        <div class="inner">
-                                            70%
+                                    <div class="progress-div">
+                                        <div class="pie2"
+                                            data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#e6e6e6", "time": 5, "fontWeight": 400 }'>
                                         </div>
                                     </div>
                                 </td>
-                                <td>7/10</td>
-                                <td>50seg</td>
-                            </tr>
-                            <tr class="line-color">
-                                <th scope="row">5</th>
-                                <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                <td>Lorem ipsum dolor sit, amet</td>
-                                <td>
-                                    <div class="progress" id="progress6">
-                                        <div class="inner">
-                                            30%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>3/10</td>
+                                <td>5/10</td>
                                 <td>50seg</td>
                             </tr>
                         </tbody>
@@ -564,11 +534,11 @@
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
     <script src="./js/quiz.js"></script>
-    <script src="./js/loading-bar.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+    <script src="./js/circularProgressBar.min.js"></script>
     <script>
 
         let btnAnswer = document.getElementsByClassName('btn-answer')

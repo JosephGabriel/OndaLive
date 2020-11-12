@@ -542,10 +542,10 @@ html {
   top: 0;
   left: 0;
   text-align: center;
-  background-color: #111;
+  background-color: #31343c;
   overflow-x: hidden;
   padding: 0 2rem;
-  padding-top: 8rem;
+  padding-top: 2rem;
   transition: all 0.5s;
   transform: translateX(-100%);
 }

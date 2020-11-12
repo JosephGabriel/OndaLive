@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/buttons.css">
-    <link rel="stylesheet" href="./css/switchery.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
 </head>
@@ -82,107 +82,20 @@
         </div>
         <hr id="hr-hr">
         <div id="dash" class="tabcontent">
+            <h1 class="tab-title">Dashboard</h1>
+        </div>
+        <div id="user" class="tabcontent">
+            <h1 class="tab-title">Usúarios</h1>
             <div class="user-count">
-                <div class="user-online">
-                    <i class="fas fa-user-friends"></i>
-                    <h6>780</h6>
-                    <p>Online</p>
-                </div>
                 <div class="user-subscription">
                     <i class="fas fa-ticket-alt"></i>
                     <h6>1,300</h6>
                     <p>Inscrições</p>
                 </div>
-            </div>
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text">
-            </div>
-
-            <div class="user-adm">
-                <div class="user-title-box">
-                    <div class="div-1">
-                        <h4>Usuários permitidos</h4>
-                        <p>15 usuários foram cadastrados</p>
-                    </div>
-                    <div class="div-2">
-                        <button>Novo Contato &nbsp; <i class="fas fa-user-plus"></i></button>
-                    </div>
-                </div>
-                <div style="width: 100%;">
-                    <div class="user-title-title">
-                        <p>Usuarios</p>
-                        <p>Action</p>
-                    </div>
-                    <div class="user-description-list">
-                        <div class="user-name-list">
-                            <h6>Brad Simons</h6>
-                            <p>email@test.com</p>
-                        </div>
-                        <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="user-description-list">
-                        <div class="user-name-list">
-                            <h6>Brad Simons</h6>
-                            <p>email@test.com</p>
-                        </div>
-                        <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="user-description-list">
-                        <div class="user-name-list">
-                            <h6>Brad Simons</h6>
-                            <p>email@test.com</p>
-                        </div>
-                        <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="user-description-list">
-                        <div class="user-name-list">
-                            <h6>Brad Simons</h6>
-                            <p>email@test.com</p>
-                        </div>
-                        <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="user-description-list">
-                        <div class="user-name-list">
-                            <h6>Brad Simons</h6>
-                            <p>email@test.com</p>
-                        </div>
-                        <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="user" class="tabcontent">
-            <div class="user-count">
                 <div class="user-online">
                     <i class="fas fa-user-friends"></i>
                     <h6>880</h6>
                     <p>Online</p>
-                </div>
-                <div class="user-subscription">
-                    <i class="fas fa-ticket-alt"></i>
-                    <h6>1,300</h6>
-                    <p>Inscrições</p>
                 </div>
             </div>
             <div class="search-bar">
@@ -197,10 +110,10 @@
                         <p>15 usuários foram cadastrados</p>
                     </div>
                     <div class="div-2">
-                        <button>Novo Contato &nbsp; <i class="fas fa-user-plus"></i></button>
+                        <button>Adicionar Contato &nbsp; <i class="fas fa-user-plus"></i></button>
                     </div>
                 </div>
-                <div style="    width: 100%;">
+                <div style="width: 100%;">
                     <div class="user-title-title">
                         <p>Usuarios</p>
                         <p>Action</p>
@@ -211,9 +124,12 @@
                             <p>email@test.com</p>
                         </div>
                         <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="user-description-list">
@@ -222,9 +138,12 @@
                             <p>email@test.com</p>
                         </div>
                         <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="user-description-list">
@@ -233,9 +152,12 @@
                             <p>email@test.com</p>
                         </div>
                         <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="user-description-list">
@@ -244,9 +166,12 @@
                             <p>email@test.com</p>
                         </div>
                         <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="user-description-list">
@@ -255,15 +180,33 @@
                             <p>email@test.com</p>
                         </div>
                         <div class="actions">
-                            <i class="fas fa-toggle-on"></i>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="ban" class="tabcontent">
+            <h1 class="tab-title">Banner</h1>
             <form action="">
                 <table class="table table-dark no-effect">
                     <thead>
@@ -279,7 +222,7 @@
                     <tbody>
                         <tr class="banner-row">
                             <th scope="row">
-                                <div class="checkboxes-and-radios">
+                                <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-1" value="1">
                                     <label for="radio-1"></label>
                                 </div>
@@ -294,17 +237,18 @@
                             <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                             <td>
                                 <div class="actions">
-                                    <i class="fas fa-edit"></i>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-trash-alt"></i>
-                                        <span class="bold">Delete</span>
                                     </button>
                                 </div>
                             </td>
                         </tr>
                         <tr class="banner-row">
                             <th scope="row">
-                                <div class="checkboxes-and-radios">
+                                <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-2" value="1">
                                     <label for="radio-2"></label>
                                 </div>
@@ -319,17 +263,18 @@
                             <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                             <td>
                                 <div class="actions">
-                                    <i class="fas fa-edit"></i>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-trash-alt"></i>
-                                        <span class="bold">Delete</span>
                                     </button>
                                 </div>
                             </td>
                         </tr>
                         <tr class="banner-row">
                             <th scope="row">
-                                <div class="checkboxes-and-radios">
+                                <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-3" value="1">
                                     <label for="radio-3"></label>
                                 </div>
@@ -344,17 +289,18 @@
                             <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                             <td>
                                 <div class="actions">
-                                    <i class="fas fa-edit"></i>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-trash-alt"></i>
-                                        <span class="bold">Delete</span>
                                     </button>
                                 </div>
                             </td>
                         </tr>
                         <tr class="banner-row">
                             <th scope="row">
-                                <div class="checkboxes-and-radios">
+                                <div class="checkboxes-and-radios-small">
                                     <input class="toggle-input" type="radio" name="radio-cats" id="radio-4" value="1">
                                     <label for="radio-4"></label>
                                 </div>
@@ -369,28 +315,29 @@
                             <td><img src="./img/banner.png" height="40px" style="margin: 0;"></td>
                             <td>
                                 <div class="actions">
-                                    <i class="fas fa-edit"></i>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-trash-alt"></i>
-                                        <span class="bold">Delete</span>
                                     </button>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="banner-upload-btn">
-                    <button><i class="fas fa-file-import"></i> Enviar</button>
-                </div>
             </form>
         </div>
         <div id="quiz" class="tabcontent">
+
             <img src="./img/logo-quiz.png" width="80px">
             <form action="">
                 <table class="table table-dark no-effect" style="margin-bottom: 10rem;">
                     <thead>
                         <tr>
                             <th scope="col"></th>
+                            <th scope="col">Ranking &nbsp; <i class="fas fa-exclamation-circle" id="myButton"></i>
+                            </th>
                             <th scope="col">Numero</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Perguntas</th>
@@ -401,28 +348,34 @@
                     <tbody>
                         <tr>
                             <th scope="row" class="table-vt">
-                                <div class="checkboxes-and-radios-small">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-1">
+                                <div class="checkboxes-and-radios-small" style="padding: 0.6rem 0 0rem 4rem;">
+                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-1" checked>
                                     <label for="quiz-1"></label>
                                 </div>
-                                <div class="checkboxes-and-radios-small">
-                                    <input class="toggle-input" type="checkbox" name="quiz" id="quiz-2">
-                                    <label for="quiz-2"></label>
-                                </div>
                             </th>
+                            <td>
+                                <label class="b-contain" style="margin: auto 1.5rem;">
+                                    <input class="checkbox-form" type="checkbox" name="services">
+                                    <label class="label" for="services"></label>
+                                    <div class="b-input"></div>
+                                </label>
+                            </td>
                             <td>
                                 <h6>01</h6>
                             </td>
                             <td>
                                 <h6>Tecnologia</h6>
-                                <h6>Ranking</h6>
                             </td>
                             <td>30</td>
                             <td>1 Minuto</td>
                             <td>
                                 <div class="actions">
-                                    <i class="fas fa-edit"></i>
-                                    <i class="fas fa-trash"></i>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </button>
                                 </div>
                             </td>
                         </tr>
@@ -431,7 +384,7 @@
             </form>
         </div>
         <div id="sorteio" class="tabcontent">
-            <h4>SORTEIO</h4>
+            <h1 class="tab-title">Sorteio</h1>
             <div class="raffle">
                 <h2>LISTA DE INSCRITOS NA SALA</h2>
                 <div class="raffle-item">
@@ -469,10 +422,10 @@
             </div>
         </div>
         <div id="moderador" class="tabcontent">
-            <h1>Moderador</h1>
+            <h1 class="tab-title">Moderador</h1>
         </div>
         <div id="progamacao" class="tabcontent">
-            <h1>Progamação</h1>
+            <h1 class="tab-title">Progamação</h1>
         </div>
     </div>
     <div class="body-grid">
@@ -634,8 +587,12 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./js/switchery.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <script>
+
+        tippy('#myButton', {
+            content: "I'm a Tippy tooltip!",
+        });
 
         let bannerTab = document.getElementsByClassName("banner-row")
         let swicthTab = document.querySelectorAll('input[name="radio-cats"]')
