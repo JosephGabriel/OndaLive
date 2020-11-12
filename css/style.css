@@ -547,6 +547,7 @@ html {
   padding: 0 2rem;
   padding-top: 2rem;
   transition: all 0.5s;
+  margin-top: 5rem;
   transform: translateX(-100%);
 }
 
