@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/buttons.css">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
 </head>
@@ -587,11 +589,15 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script>
 
         tippy('#myButton', {
-            content: "I'm a Tippy tooltip!",
+            content: "Mostrar ranking ao final do quiz",
+            theme: 'light',
+            animation: 'shift-away',
+
         });
 
         let bannerTab = document.getElementsByClassName("banner-row")
