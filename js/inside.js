@@ -57,20 +57,29 @@ for (let index = 0; index < rowQuiz.length; index++) {
 let tool = document.getElementById("tool");
 let toolbar = document.getElementById("toolbar");
 let main = document.getElementById("main");
+let grid = document.getElementById("grid");
 let closeBtnAdm = document.getElementById("close-btn-sidebar-adm");
 let dropdownb = document.getElementsByClassName("dropdown-btn");
 let j;
 
 tool.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
+  main.classList.toggle("ops");
 });
 
 main.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
 });
+
+// grid.addEventListener("click", () => {
+//   toolbar.classList.remove("activeS");
+//   // main.classList.remove("ops");
+// });
 
 closeBtnAdm.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
 });
 
 for (j = 0; j < dropdownb.length; j++) {
