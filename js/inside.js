@@ -17,10 +17,10 @@ let userName = document.getElementById("user-name");
 let userDoc = document.getElementById("user-document");
 let userEmail = document.getElementById("user-email");
 let userGift = document.getElementById("user-gift");
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   sortTable.classList.add("hide");
+  sortInput.classList.add("hide");
   awaitScreen.classList.remove("hide");
   setTimeout(() => {
     awaitScreen.classList.add("hide");
