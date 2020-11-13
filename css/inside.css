@@ -104,6 +104,9 @@ a {
   padding: 0.8rem;
   background: var(--button-background);
 }
+.cart a {
+  color: #fff;
+}
 
 .banner,
 .banner-mobile {

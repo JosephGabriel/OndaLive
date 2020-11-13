@@ -144,7 +144,7 @@ a {
 }
 
 .user-info-map span {
-  padding: 0.5rem 1rem;
+  padding: 0.8rem;
   background: var(--button-background);
   color: white;
   margin-left: 0.7rem;
