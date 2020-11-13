@@ -34,7 +34,7 @@
             </div>
             <div class="menu">
                 <div class="sidenav-icon" id="tool">
-                    <i class="fas fa-users-cog" id="nav-toggle-side"></i>
+                    <i class="fas fa-users-cog"></i>
                 </div>
                 <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
                 <div class="room-dropdown" id="room-drop">
@@ -101,16 +101,15 @@
                         </div>
                     </ul>
                 </div>
-                <li class="user-info-item cart">
-                    <i class="fa fa-cart-plus"></i>
-                </li>
+                <a href="./carrinho.html" style="text-decoration: none;">
+                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
+                </a>
             </div>
         </div>
         <div class="nav-toggle" id="nav-toggle">
             <i class="fa fa-bars"></i>
         </div>
     </div>
-
     <div class="sidenav" id="sidenav">
         <img src="./img/logo-sticky.svg">
         <a href="/">Voltar para o Site</a>
@@ -1263,8 +1262,7 @@
         </div>
         <div id="sorteio" class="tabcontent">
             <h1 class="tab-title">Sorteio</h1>
-            <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input">
-            <div class=" table-users hide" id="sort-table">
+            <div class=" table-users" id="sort-table">
                 <table class="table table-dark no-effect">
                     <thead>
                         <tr>
@@ -1337,46 +1335,49 @@
                     </tbody>
                 </table>
             </div>
-            <div class="" id="sort-user">
-                <h6>Nome</h6>
-                <div class="flex">
-                    <div class="flex-item">
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-ticket-alt"></i>
+            <div class="hide" id="sort-user">
+                <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input">
+                <div class="hide" id="sort-result">
+                    <h6>Nome</h6>
+                    <div class="flex">
+                        <div class="flex-item">
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-ticket-alt"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>N. de Inscrição</h6>
+                                    <p>5597840</p>
+                                </div>
                             </div>
-                            <div class="user-sort-desc">
-                                <h6>N. de Inscrição</h6>
-                                <p>5597840</p>
-                            </div>
-                        </div>
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-address-card"></i>
-                            </div>
-                            <div class="user-sort-desc">
-                                <h6>CPF</h6>
-                                <p>282.XXX.XXX-XX</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-item">
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="user-sort-desc">
-                                <h6>Email</h6>
-                                <p>email@teste.com</p>
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-address-card"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>CPF</h6>
+                                    <p>282.XXX.XXX-XX</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-gift"></i>
+                        <div class="flex-item">
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>Email</h6>
+                                    <p>email@teste.com</p>
+                                </div>
                             </div>
-                            <div class="user-sort-desc">
-                                <h6>Brinde</h6>
-                                <p>Jackson Dinky JS32</p>
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-gift"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>Brinde</h6>
+                                    <p>Jackson Dinky JS32</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1983,26 +1984,8 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="./js/circularProgressBar.min.js"></script>
     <script src="./js/quiz.js"></script>
-    <script src="./js/hall.js"></script>
     <script src="./js/inside.js"></script>
     <script>
-
-        let users = document.getElementsByClassName("raffle-row")
-        let sortBtn = document.getElementById("sortear")
-        let sortTable = document.getElementById("sort-table")
-        let min = 0
-        let max = users.length
-        let valor = Math.trunc(Math.random() * (max - min) + min)
-        console.log(max, valor)
-
-
-        sortBtn.addEventListener("click", () => {
-
-            users[valor].classList.add("me")
-            users[valor].scrollIntoView({ behavior: "smooth" })
-
-        })
-
 
         tippy("#myButton", {
             content: "Mostrar ranking ao final do quiz",

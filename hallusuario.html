@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="./css/jquery.flipster.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/hall.css">
+    <link rel="stylesheet" href="./css/buttons.css">
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
 </head>
@@ -23,8 +25,8 @@
     </div>
     <div class="navbar-container">
         <div class="navbar-holder">
-            <div>
-                <img src="./favicon.svg" class="navbar-brand">
+            <div style="display: flex;justify-content: center;">
+                <img src="./favicon.svg" class="navbar-brand" width="30px">
             </div>
             <div class="room">
                 <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
@@ -83,18 +85,18 @@
                             <hr class="info-hr">
                             <button class="exit-btn">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
                         </div>
+                    </ul>
                 </div>
-                <li class="user-info-item cart"> <a href="./carrinho.html"><i class="fa fa-cart-plus"></i></a></li>
-                </ul>
+                <a href="./carrinho.html">
+                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
+                </a>
             </div>
         </div>
         <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
             <i class="fa fa-bars"></i>
         </div>
     </div>
-    </div>
     <div class="sidenav" id="sidenav" style="margin-top: 5rem;">
-
     </div>
     <div class="program-sidenav" id="program-sidenav">
         <div class="program">
@@ -431,8 +433,150 @@
             </div>
         </div>
     </div>
-    <div class="body-grid" id="main">
-        <div class="grid">
+    <div class="sidenav" id="toolbar">
+        <div class="icon-close">
+            <i class="fas fa-window-close" id="close-btn-sidebar-adm"></i>
+        </div>
+        <div class="dashboard tab">
+            <a class="btn-tab">
+                <i class="fas fa-tachometer-alt tablinks" onclick="openTab(event, 'dash')"></i>
+                <p>Dashboard</p>
+            </a>
+            <a class="btn-tab">
+                <i class="fas fa-users tablinks" onclick="openTab(event, 'user')"></i>
+                <p>Usuários</p>
+            </a>
+
+        </div>
+        <hr id="hr-hr">
+        <div id="dash" class="tabcontent">
+            <h1 class="tab-title">Dashboard</h1>
+        </div>
+        <div id="user" class="tabcontent">
+            <h1 class="tab-title">Usúarios</h1>
+            <div class="user-count">
+                <div class="user-subscription">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h6>1,300</h6>
+                    <p>Inscrições</p>
+                </div>
+                <div class="user-online">
+                    <i class="fas fa-user-friends"></i>
+                    <h6>880</h6>
+                    <p>Online</p>
+                </div>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text">
+            </div>
+
+            <div class="user-adm">
+                <div class="user-title-box" style="    width: 100%;">
+                    <div class="div-1">
+                        <h4>Usuários permitidos</h4>
+                        <p>15 usuários foram cadastrados</p>
+                    </div>
+                    <div class="div-2">
+                        <button>Adicionar Contato &nbsp; <i class="fas fa-user-plus"></i></button>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <div class="user-title-title">
+                        <p>Usuarios</p>
+                        <p>Action</p>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-grid" id="body">
+
+        <div class="grid" id="main">
             <div class="banner">
                 <img src="./img/banner descktop.jpg">
             </div>
@@ -2749,129 +2893,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="./js/jquery.flipster.min.js"></script>
-    <script>
-
-        let detailsBtn = document.querySelectorAll('.details-button');
-        let detailsBtn2 = document.querySelectorAll('.details-button2');
-        let priceBtn = document.querySelectorAll('.price-buttons');
-        let divs = document.querySelectorAll('.details');
-        let divs2 = document.querySelectorAll('.details-price');
-        let divsg = document.querySelectorAll('.details-g');
-        let menu = document.getElementById("menu-toggle");
-        let closeBtn = document.querySelectorAll('.card-close');
-        let closeBtn2 = document.querySelectorAll('.card-close2');
-        let closeBtnG = document.querySelectorAll('.card-close-g');
-        let drop = document.getElementById("dropdown");
-        let dropImg = document.getElementById("dropdown-user-img");
-        let imgDrop = document.getElementById("img-drop");
-        let nav = document.getElementById("nav-toggle");
-        let sidenav = document.getElementById("sidenav");
-        let sidenavClose = document.getElementById("sidenav-close");
-        let dropdown = document.getElementsByClassName("dropdown-btn");
-        let choose = true;
-        let i;
-
-        for (let i = 0; i < divsg.length; i++) {
-
-            detailsBtn2[i].addEventListener("click", () => {
-                divsg[i].classList.toggle('show');
-            })
-
-            closeBtnG[i].addEventListener("click", () => {
-                divsg[i].classList.remove('show');
-            })
-
-        }
-
-        document.getElementById("program").addEventListener("click",
-            function () {
-                document.getElementById("program-sidenav").classList.toggle("sidebar-active")
-                dropImg.classList.remove("active-dropdown")
-                drop.classList.remove("active-dropdown")
-                main.classList.toggle("ops")
-
-
-            })
-
-        document.getElementById("main").addEventListener("click", () => {
-            document.getElementById("program-sidenav").classList.remove("sidebar-active");
-            document.getElementById("dropdown").classList.remove("active-dropdown");
-            document.getElementById("dropdown-user-img").classList.remove("active-dropdown");
-        })
-
-        document.getElementById("sidenav-close").addEventListener("click", () => {
-            document.getElementById("program-sidenav").classList.remove("sidebar-active")
-        })
-
-        nav.addEventListener("click", () => {
-            sidenav.classList.toggle("activeS")
-        })
-
-        menu.addEventListener("click", () => {
-            drop.classList.toggle("active-dropdown")
-            dropImg.classList.remove("active-dropdown")
-            document.getElementById("program-sidenav").classList.remove("sidebar-active");
-        })
-        sidenav.addEventListener("click", () => {
-            document.getElementById("nav-toggle").classList.toggle("activeS")
-
-        })
-
-        imgDrop.addEventListener("click", () => {
-            drop.classList.remove("active-dropdown")
-            dropImg.classList.toggle("active-dropdown")
-            document.getElementById("program-sidenav").classList.remove("sidebar-active");
-        })
-
-        for (let i = 0; i < divs.length; i++) {
-
-            detailsBtn[i].addEventListener("click", () => {
-                divs[i].classList.toggle('show');
-                divs2[i].classList.remove('show');
-            })
-
-            closeBtn[i].addEventListener("click", () => {
-                divs[i].classList.remove('show');
-            })
-        }
-
-        for (let i = 0; i < divs2.length; i++) {
-
-            priceBtn[i].addEventListener("click", () => {
-                divs2[i].classList.toggle('show');
-                divs[i].classList.remove('show');
-            })
-
-            closeBtn2[i].addEventListener("click", () => {
-                divs2[i].classList.remove('show');
-            })
-        }
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                let dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-
-        tippy('.price-buttons', {
-            content: "Clique para ver os lotes",
-            animation: 'scale',
-            theme: 'light',
-        });
-
-        $('.my-flipster').flipster({
-            style: 'flat',
-            spacing: -0.25,
-            touch: true,
-            scrollwheel: false,
-        });
-    </script>
+    <script src="./js/hall.js"></script>
 </body>
 
 </html>

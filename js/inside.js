@@ -1,18 +1,39 @@
-let divFullscreen = document.getElementById("sorteio");
+let sortUser = document.getElementById("sort-user");
+let sortTable = document.getElementById("sort-table");
+let sortInput = document.querySelector("input[name=gift]");
+let sortBtn = document.getElementById("sorteio");
+let users = document.getElementsByClassName("raffle-row");
+let min = 0;
+let max = users.length;
+let valor = Math.trunc(Math.random() * (max - min) + min);
+
+let result = sortInput.value;
+
+console.log(result);
+
+sortBtn.addEventListener("click", () => {
+  users[valor].classList.add("me");
+  users[valor].scrollIntoView({ behavior: "smooth" });
+});
+
+sortBtn.addEventListener("click", () => {
+  sortTable.classList.add("hide");
+  sortUser.classList.remove("hide");
+});
+
 let btnFullscreen = document.getElementById("fullscreen-button");
 
 btnFullscreen.addEventListener("click", () => {
-  divFullscreen.classList.add("expand");
+  sortBtn.classList.add("expand");
 });
 
-var elem = document.getElementById("sorteio");
 function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
+  if (sortBtn.requestFullscreen) {
+    sortBtn.requestFullscreen();
+  } else if (sortBtn.webkitRequestFullscreen) {
+    sortBtn.webkitRequestFullscreen();
+  } else if (sortBtn.msRequestFullscreen) {
+    sortBtn.msRequestFullscreen();
   }
 }
 

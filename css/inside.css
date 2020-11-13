@@ -104,7 +104,8 @@ a {
   padding: 0.8rem;
   background: var(--button-background);
 }
-.cart a {
+.cart a,
+.cart i {
   color: #fff;
 }
 
@@ -1231,7 +1232,6 @@ tr:hover {
 }
 
 #sort-user {
-  margin-top: 2rem;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -1294,6 +1294,7 @@ tr:hover {
   padding-left: 1rem;
   font-size: 1.4rem;
   text-align: center;
+  margin: 2rem 0;
 }
 
 .gift-input::placeholder {

@@ -169,9 +169,13 @@ a {
 }
 
 .cart {
-  margin-left: 1.2rem;
+  color: #fff;
   padding: 0.8rem;
   background: var(--button-background);
+}
+.cart a,
+.cart i {
+  color: #fff;
 }
 
 .banner {
