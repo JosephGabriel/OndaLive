@@ -1,24 +1,29 @@
 let sortUser = document.getElementById("sort-user");
 let sortTable = document.getElementById("sort-table");
 let sortInput = document.querySelector("input[name=gift]");
-let sortBtn = document.getElementById("sorteio");
+let sortBtn = document.getElementById("sortear");
 let users = document.getElementsByClassName("raffle-row");
 let min = 0;
 let max = users.length;
 let valor = Math.trunc(Math.random() * (max - min) + min);
-
 let result = sortInput.value;
 
-console.log(result);
+console.log(users);
 
-sortBtn.addEventListener("click", () => {
-  users[valor].classList.add("me");
-  users[valor].scrollIntoView({ behavior: "smooth" });
-});
+let userId = document.getElementById("user-id");
+let userName = document.getElementById("user-name");
+let userDoc = document.getElementById("user-document");
+let userEmail = document.getElementById("user-email");
+let userGift = document.getElementById("user-gift");
 
 sortBtn.addEventListener("click", () => {
   sortTable.classList.add("hide");
   sortUser.classList.remove("hide");
+  userName.innerHTML = users[valor].children[1].innerHTML;
+  userId.innerHTML = users[valor].children[0].innerHTML;
+  userDoc.innerHTML = users[valor].children[2].innerHTML;
+  userEmail.innerHTML = users[valor].children[3].innerHTML;
+  userGift.innerHTML = sortInput.value;
 });
 
 let btnFullscreen = document.getElementById("fullscreen-button");

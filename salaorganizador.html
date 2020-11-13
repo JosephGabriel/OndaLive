@@ -1262,6 +1262,7 @@
         </div>
         <div id="sorteio" class="tabcontent">
             <h1 class="tab-title">Sorteio</h1>
+            <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input" required min="3">
             <div class=" table-users" id="sort-table">
                 <table class="table table-dark no-effect">
                     <thead>
@@ -1269,115 +1270,95 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">CPF</th>
+                            <th scope="col">Email</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="raffle-row">
                             <td>1</td>
                             <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>1223</td>
+                            <td>fulano@teste.com</td>
                         </tr>
                         <tr class="raffle-row">
                             <td>2</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>Ciclano</td>
+                            <td>5879</td>
+                            <td>ciclano@teste.com</td>
                         </tr>
                         <tr class="raffle-row">
                             <td>3</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>Deutrano</td>
+                            <td>7496</td>
+                            <td>deutrano@teste.com</td>
                         </tr>
                         <tr class="raffle-row">
                             <td>4</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>Maira</td>
+                            <td>7892</td>
+                            <td>maira@teste.com</td>
                         </tr>
                         <tr class="raffle-row">
                             <td>5</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>Hendix</td>
+                            <td>45389</td>
+                            <td>hendrix@teste.com</td>
                         </tr>
                         <tr class="raffle-row">
                             <td>6</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>Eddie Van Hallen</td>
+                            <td>15348</td>
+                            <td>vanhallen@teste.com</td>
                         </tr>
                         <tr class="raffle-row">
                             <td>7</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>8</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>9</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>10</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>11</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>12</td>
-                            <td>Fulano</td>
-                            <td>EX: 282.......</td>
+                            <td>Joseph</td>
+                            <td>3254</td>
+                            <td>joseph@teste.com</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="hide" id="sort-user">
-                <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input">
-                <div class="hide" id="sort-result">
-                    <h6>Nome</h6>
-                    <div class="flex">
-                        <div class="flex-item">
-                            <div class="user-sort-info">
-                                <div class="user-sort-icon">
-                                    <i class="fa fa-ticket-alt"></i>
-                                </div>
-                                <div class="user-sort-desc">
-                                    <h6>N. de Inscrição</h6>
-                                    <p>5597840</p>
-                                </div>
+                <div id="user-name">Nome</div>
+                <div class="flex">
+                    <div class="flex-item">
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-ticket-alt"></i>
                             </div>
-                            <div class="user-sort-info">
-                                <div class="user-sort-icon">
-                                    <i class="fa fa-address-card"></i>
-                                </div>
-                                <div class="user-sort-desc">
-                                    <h6>CPF</h6>
-                                    <p>282.XXX.XXX-XX</p>
-                                </div>
+                            <div class="user-sort-desc">
+                                <h6>N. de Inscrição</h6>
+                                <p id="user-id">5597840</p>
                             </div>
                         </div>
-                        <div class="flex-item">
-                            <div class="user-sort-info">
-                                <div class="user-sort-icon">
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                                <div class="user-sort-desc">
-                                    <h6>Email</h6>
-                                    <p>email@teste.com</p>
-                                </div>
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-address-card"></i>
                             </div>
-                            <div class="user-sort-info">
-                                <div class="user-sort-icon">
-                                    <i class="fa fa-gift"></i>
-                                </div>
-                                <div class="user-sort-desc">
-                                    <h6>Brinde</h6>
-                                    <p>Jackson Dinky JS32</p>
-                                </div>
+                            <div class="user-sort-desc">
+                                <h6>CPF</h6>
+                                <p id="user-document">282.XXX.XXX-XX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="user-sort-desc">
+                                <h6>Email</h6>
+                                <p id="user-email">email@teste.com</p>
+                            </div>
+                        </div>
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-gift"></i>
+                            </div>
+                            <div class="user-sort-desc">
+                                <h6>Brinde</h6>
+                                <p id="user-gift">Jackson Dinky JS32</p>
                             </div>
                         </div>
                     </div>
