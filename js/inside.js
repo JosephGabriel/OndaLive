@@ -10,20 +10,27 @@ let result = sortInput.value;
 
 console.log(users);
 
+let form = document.getElementById("form-sorteio");
+let awaitScreen = document.getElementById("await");
 let userId = document.getElementById("user-id");
 let userName = document.getElementById("user-name");
 let userDoc = document.getElementById("user-document");
 let userEmail = document.getElementById("user-email");
 let userGift = document.getElementById("user-gift");
 
-sortBtn.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   sortTable.classList.add("hide");
-  sortUser.classList.remove("hide");
-  userName.innerHTML = users[valor].children[1].innerHTML;
-  userId.innerHTML = users[valor].children[0].innerHTML;
-  userDoc.innerHTML = users[valor].children[2].innerHTML;
-  userEmail.innerHTML = users[valor].children[3].innerHTML;
-  userGift.innerHTML = sortInput.value;
+  awaitScreen.classList.remove("hide");
+  setTimeout(() => {
+    awaitScreen.classList.add("hide");
+    sortUser.classList.remove("hide");
+    userName.innerHTML = users[valor].children[1].innerHTML;
+    userId.innerHTML = users[valor].children[0].innerHTML;
+    userDoc.innerHTML = users[valor].children[2].innerHTML;
+    userEmail.innerHTML = users[valor].children[3].innerHTML;
+    userGift.innerHTML = sortInput.value;
+  }, 5000);
 });
 
 let btnFullscreen = document.getElementById("fullscreen-button");

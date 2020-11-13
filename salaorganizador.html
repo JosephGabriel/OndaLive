@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/progresscircle.css">
     <link rel="stylesheet" href="./css/pe-icons/pe-icon-7-stroke.css">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
@@ -1262,114 +1263,119 @@
         </div>
         <div id="sorteio" class="tabcontent">
             <h1 class="tab-title">Sorteio</h1>
-            <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input" required min="3">
-            <div class=" table-users" id="sort-table">
-                <table class="table table-dark no-effect">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">CPF</th>
-                            <th scope="col">Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="raffle-row">
-                            <td>1</td>
-                            <td>Fulano</td>
-                            <td>1223</td>
-                            <td>fulano@teste.com</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>2</td>
-                            <td>Ciclano</td>
-                            <td>5879</td>
-                            <td>ciclano@teste.com</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>3</td>
-                            <td>Deutrano</td>
-                            <td>7496</td>
-                            <td>deutrano@teste.com</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>4</td>
-                            <td>Maira</td>
-                            <td>7892</td>
-                            <td>maira@teste.com</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>5</td>
-                            <td>Hendix</td>
-                            <td>45389</td>
-                            <td>hendrix@teste.com</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>6</td>
-                            <td>Eddie Van Hallen</td>
-                            <td>15348</td>
-                            <td>vanhallen@teste.com</td>
-                        </tr>
-                        <tr class="raffle-row">
-                            <td>7</td>
-                            <td>Joseph</td>
-                            <td>3254</td>
-                            <td>joseph@teste.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="hide" id="sort-user">
-                <div id="user-name">Nome</div>
-                <div class="flex">
-                    <div class="flex-item">
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-ticket-alt"></i>
+            <form name="form" id="form-sorteio">
+                <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input" required min="3">
+                <div class=" table-users" id="sort-table">
+                    <table class="table table-dark no-effect">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">CPF</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="raffle-row">
+                                <td>1</td>
+                                <td>Fulano</td>
+                                <td>1223</td>
+                                <td>fulano@teste.com</td>
+                            </tr>
+                            <tr class="raffle-row">
+                                <td>2</td>
+                                <td>Ciclano</td>
+                                <td>5879</td>
+                                <td>ciclano@teste.com</td>
+                            </tr>
+                            <tr class="raffle-row">
+                                <td>3</td>
+                                <td>Deutrano</td>
+                                <td>7496</td>
+                                <td>deutrano@teste.com</td>
+                            </tr>
+                            <tr class="raffle-row">
+                                <td>4</td>
+                                <td>Maira</td>
+                                <td>7892</td>
+                                <td>maira@teste.com</td>
+                            </tr>
+                            <tr class="raffle-row">
+                                <td>5</td>
+                                <td>Hendix</td>
+                                <td>45389</td>
+                                <td>hendrix@teste.com</td>
+                            </tr>
+                            <tr class="raffle-row">
+                                <td>6</td>
+                                <td>Eddie Van Hallen</td>
+                                <td>15348</td>
+                                <td>vanhallen@teste.com</td>
+                            </tr>
+                            <tr class="raffle-row">
+                                <td>7</td>
+                                <td>Joseph</td>
+                                <td>3254</td>
+                                <td>joseph@teste.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="await animate__animated animate__infinite animate__pulse hide" id="await">
+                    <h1 style="color: #fff;">E o vencedor é...</h1>
+                </div>
+                <div class="hide" id="sort-user">
+                    <div id="user-name">Nome</div>
+                    <div class="flex">
+                        <div class="flex-item">
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-ticket-alt"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>N. de Inscrição</h6>
+                                    <p id="user-id">5597840</p>
+                                </div>
                             </div>
-                            <div class="user-sort-desc">
-                                <h6>N. de Inscrição</h6>
-                                <p id="user-id">5597840</p>
-                            </div>
-                        </div>
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-address-card"></i>
-                            </div>
-                            <div class="user-sort-desc">
-                                <h6>CPF</h6>
-                                <p id="user-document">282.XXX.XXX-XX</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-item">
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="user-sort-desc">
-                                <h6>Email</h6>
-                                <p id="user-email">email@teste.com</p>
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-address-card"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>CPF</h6>
+                                    <p id="user-document">282.XXX.XXX-XX</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="user-sort-info">
-                            <div class="user-sort-icon">
-                                <i class="fa fa-gift"></i>
+                        <div class="flex-item">
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>Email</h6>
+                                    <p id="user-email">email@teste.com</p>
+                                </div>
                             </div>
-                            <div class="user-sort-desc">
-                                <h6>Brinde</h6>
-                                <p id="user-gift">Jackson Dinky JS32</p>
+                            <div class="user-sort-info">
+                                <div class="user-sort-icon">
+                                    <i class="fa fa-gift"></i>
+                                </div>
+                                <div class="user-sort-desc">
+                                    <h6>Brinde</h6>
+                                    <p id="user-gift">Jackson Dinky JS32</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="raffle-buttons">
-                <button id="sortear">SORTEAR</button>
-                <button id="fullscreen-button" onclick="openFullscreen();">
-                    <span class=" pe-7s-expand1"></span>
-                </button>
-            </div>
+                <div class="raffle-buttons">
+                    <button id="sortear" type="submit">SORTEAR</button>
+                    <button id="fullscreen-button" onclick="openFullscreen();">
+                        <span class=" pe-7s-expand1"></span>
+                    </button>
+                </div>
+            </form>
         </div>
         <div id="moderador" class="tabcontent">
             <h1 class="tab-title">Moderador</h1>
