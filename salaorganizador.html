@@ -33,6 +33,9 @@
                 <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
             </div>
             <div class="menu">
+                <div class="sidenav-icon" id="tool">
+                    <i class="fas fa-users-cog" id="nav-toggle-side"></i>
+                </div>
                 <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
                 <div class="room-dropdown" id="room-drop">
                     <button class="site-map-item-btn" id="room-dropdown">TROCAR DE SALA</button>
@@ -102,9 +105,6 @@
                     <i class="fa fa-cart-plus"></i>
                 </li>
             </div>
-        </div>
-        <div class="sidenav-icon" id="tool">
-            <i class="fas fa-list" id="nav-toggle-side"></i>
         </div>
         <div class="nav-toggle" id="nav-toggle">
             <i class="fa fa-bars"></i>
@@ -1263,7 +1263,8 @@
         </div>
         <div id="sorteio" class="tabcontent">
             <h1 class="tab-title">Sorteio</h1>
-            <div class=" table-users">
+            <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input">
+            <div class=" table-users hide" id="sort-table">
                 <table class="table table-dark no-effect">
                     <thead>
                         <tr>
@@ -1335,6 +1336,51 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="" id="sort-user">
+                <h6>Nome</h6>
+                <div class="flex">
+                    <div class="flex-item">
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-ticket-alt"></i>
+                            </div>
+                            <div class="user-sort-desc">
+                                <h6>N. de Inscrição</h6>
+                                <p>5597840</p>
+                            </div>
+                        </div>
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-address-card"></i>
+                            </div>
+                            <div class="user-sort-desc">
+                                <h6>CPF</h6>
+                                <p>282.XXX.XXX-XX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="user-sort-desc">
+                                <h6>Email</h6>
+                                <p>email@teste.com</p>
+                            </div>
+                        </div>
+                        <div class="user-sort-info">
+                            <div class="user-sort-icon">
+                                <i class="fa fa-gift"></i>
+                            </div>
+                            <div class="user-sort-desc">
+                                <h6>Brinde</h6>
+                                <p>Jackson Dinky JS32</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="raffle-buttons">
                 <button id="sortear">SORTEAR</button>
@@ -1943,6 +1989,7 @@
 
         let users = document.getElementsByClassName("raffle-row")
         let sortBtn = document.getElementById("sortear")
+        let sortTable = document.getElementById("sort-table")
         let min = 0
         let max = users.length
         let valor = Math.trunc(Math.random() * (max - min) + min)
@@ -1950,6 +1997,7 @@
 
 
         sortBtn.addEventListener("click", () => {
+
             users[valor].classList.add("me")
             users[valor].scrollIntoView({ behavior: "smooth" })
 

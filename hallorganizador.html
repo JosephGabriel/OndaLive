@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="./css/jquery.flipster.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/hall.css">
+    <link rel="stylesheet" href="./css/buttons.css">
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
 </head>
@@ -30,6 +32,9 @@
                 <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
             </div>
             <div style="display: flex; align-items: center;">
+                <div class="sidenav-icon">
+                    <i class="fas fa-users-cog" id="nav-toggle-side"></i>
+                </div>
                 <button class="site-map-item-btn"><a href="./index.html">HOME</a></>
                     <button class="site-map-item-btn" id="program">PROGRAMAÇÃO</button>
                     <div class="user-info">
@@ -90,9 +95,6 @@
         </div>
         <div class="nav-toggle" id="nav-toggle" style="font-size: 4rem;color: white;">
             <i class="fa fa-bars"></i>
-        </div>
-        <div class="sidenav-icon">
-            <i class="fas fa-list" id="nav-toggle-side"></i>
         </div>
     </div>
     </div>
@@ -433,109 +435,147 @@
             </div>
         </div>
     </div>
-    <div class="sidenav" id="toolbar" style="margin-top: 7rem;width: auto;background: #363636;">
-        <div class="dashboard">
-            <div class="icon-center">
-                <i class="fas fa-chart-line"></i>
+    <div class="sidenav" id="toolbar">
+        <div class="icon-close">
+            <i class="fas fa-window-close" id="close-btn-sidebar-adm"></i>
+        </div>
+        <div class="dashboard tab">
+            <a class="btn-tab">
+                <i class="fas fa-tachometer-alt tablinks" onclick="openTab(event, 'dash')"></i>
                 <p>Dashboard</p>
-            </div>
-            <div class="icon-center">
-                <i class="fas fa-users"></i>
+            </a>
+            <a class="btn-tab">
+                <i class="fas fa-users tablinks" onclick="openTab(event, 'user')"></i>
                 <p>Usuários</p>
-            </div>
+            </a>
+
         </div>
         <hr id="hr-hr">
-        <div class="user-count">
-            <div class="user-subscription">
-                <i class="fas fa-ticket-alt"></i>
-                <h6>1,300</h6>
-                <p>Inscrições</p>
-            </div>
-            <div class="user-online">
-                <i class="fas fa-user-friends"></i>
-                <h6>780</h6>
-                <p>Online</p>
-            </div>
+        <div id="dash" class="tabcontent">
+            <h1 class="tab-title">Dashboard</h1>
         </div>
-        <div class="search-bar">
-            <i class="fas fa-search"></i>
-            <input type="text">
-        </div>
+        <div id="user" class="tabcontent">
+            <h1 class="tab-title">Usúarios</h1>
+            <div class="user-count">
+                <div class="user-subscription">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h6>1,300</h6>
+                    <p>Inscrições</p>
+                </div>
+                <div class="user-online">
+                    <i class="fas fa-user-friends"></i>
+                    <h6>880</h6>
+                    <p>Online</p>
+                </div>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text">
+            </div>
 
-        <div class="user-adm">
-            <div class="user-title-box">
-                <div class="div-1">
-                    <h4>Usuários permitidos</h4>
-                    <p>15 usuários foram cadastrados</p>
-                </div>
-                <div class="div-2">
-                    <button>Novo Contato &nbsp; <i class="fas fa-user-plus"></i></button>
-                </div>
-            </div>
-            <div>
-                <div class="user-title-title">
-                    <p>Usuarios</p>
-                    <p>Action</p>
-                </div>
-                <div class="user-description-list">
-                    <div class="user-name-list">
-                        <h6>Brad Simons</h6>
-                        <p>email@test.com</p>
+            <div class="user-adm">
+                <div class="user-title-box" style="    width: 100%;">
+                    <div class="div-1">
+                        <h4>Usuários permitidos</h4>
+                        <p>15 usuários foram cadastrados</p>
                     </div>
-                    <div class="actions">
-                        <i class="fas fa-toggle-on"></i>
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash"></i>
+                    <div class="div-2">
+                        <button>Adicionar Contato &nbsp; <i class="fas fa-user-plus"></i></button>
                     </div>
                 </div>
-                <div class="user-description-list">
-                    <div class="user-name-list">
-                        <h6>Brad Simons</h6>
-                        <p>email@test.com</p>
+                <div style="width: 100%;">
+                    <div class="user-title-title">
+                        <p>Usuarios</p>
+                        <p>Action</p>
                     </div>
-                    <div class="actions">
-                        <i class="fas fa-toggle-on"></i>
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash"></i>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="user-description-list">
-                    <div class="user-name-list">
-                        <h6>Brad Simons</h6>
-                        <p>email@test.com</p>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <i class="fas fa-toggle-on"></i>
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash"></i>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="user-description-list">
-                    <div class="user-name-list">
-                        <h6>Brad Simons</h6>
-                        <p>email@test.com</p>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <i class="fas fa-toggle-on"></i>
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash"></i>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="user-description-list">
-                    <div class="user-name-list">
-                        <h6>Brad Simons</h6>
-                        <p>email@test.com</p>
-                    </div>
-                    <div class="actions">
-                        <i class="fas fa-toggle-on"></i>
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash"></i>
+                    <div class="user-description-list">
+                        <div class="user-name-list">
+                            <h6>Brad Simons</h6>
+                            <p>email@test.com</p>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="body-grid" id="body">
 
         <div class="grid" id="main">
@@ -546,6 +586,13 @@
                 <img src="./img/banner-mobile2.jpg">
             </div>
             <div class="date-event">
+                <div class="my-flipster" style="margin-bottom: 0.3rem;">
+                    <ul>
+                        <li> <button>Todos</button></li>
+                        <li> <button>Salas</button></li>
+                        <li> <button>Expositores</button></li>
+                    </ul>
+                </div>
                 <div class="my-flipster">
                     <ul>
                         <li> <button>Todos</button></li>
@@ -2850,6 +2897,23 @@
     <script src="./js/jquery.flipster.min.js"></script>
     <script>
 
+        function openTab(evt, cityName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
         let detailsBtn = document.querySelectorAll('.details-button');
         let detailsBtn2 = document.querySelectorAll('.details-button2');
         let priceBtn = document.querySelectorAll('.price-buttons');
@@ -2864,6 +2928,7 @@
         let dropImg = document.getElementById("dropdown-user-img");
         let imgDrop = document.getElementById("img-drop");
         let nav = document.getElementById("nav-toggle");
+        let main = document.getElementById("main");
         let sidenav = document.getElementById("sidenav");
         let sidenavClose = document.getElementById("sidenav-close");
         let dropdown = document.getElementsByClassName("dropdown-btn");
@@ -2872,11 +2937,13 @@
 
         document.getElementById("nav-toggle-side").addEventListener("click", () => {
             document.getElementById("toolbar").classList.toggle("activeS")
+            main.classList.toggle("ops")
 
         })
 
         document.getElementById("main").addEventListener("click", () => {
             document.getElementById("toolbar").classList.remove("activeS")
+            main.classList.remove("ops")
 
         })
 
@@ -2897,6 +2964,8 @@
                 document.getElementById("program-sidenav").classList.toggle("sidebar-active")
                 dropImg.classList.remove("active-dropdown")
                 drop.classList.remove("active-dropdown")
+                main.classList.toggle("ops")
+
 
             })
 
@@ -2912,6 +2981,7 @@
 
         nav.addEventListener("click", () => {
             sidenav.classList.toggle("activeS")
+
         })
 
         menu.addEventListener("click", () => {

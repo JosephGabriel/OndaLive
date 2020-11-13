@@ -1226,3 +1226,76 @@ tr:hover {
 .me {
   background-color: var(--accent-color-dark);
 }
+
+#sort-user {
+  margin-top: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sort-user > h6 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-sort-info {
+  background-color: var(--font-color);
+  padding: 0.5rem 1rem;
+  display: flex;
+  width: 49%;
+  margin: 0.5rem 0;
+}
+
+.user-sort-icon {
+  margin-right: 2rem;
+}
+
+.user-sort-icon i {
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+.user-sort-desc {
+  text-align: left;
+}
+
+.user-sort-desc h6 {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.user-sort-desc p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.gift-input {
+  color: #fff;
+  border: 1px solid rgb(156, 156, 156);
+  padding: 1rem 2rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.gift-input::placeholder {
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0;
+}
