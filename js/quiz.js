@@ -173,9 +173,12 @@ function progressSvg() {
   let circle = new CircularProgressBar("pie");
 }
 
-function progressSvg2() {
-  let circle = new CircularProgressBar("pie2");
-}
+let circle = new CircularProgressBar("pie2");
+let circle2 = new CircularProgressBar("pie3");
+let circle3 = new CircularProgressBar("pie4");
+let circle4 = new CircularProgressBar("pie5");
+let circle5 = new CircularProgressBar("pie6");
+let circle6 = new CircularProgressBar("pie7");
 
 playQuiz.addEventListener("click", () => {
   quiz.classList.toggle("activeQ");
@@ -219,7 +222,6 @@ nextBtn.addEventListener("click", () => {
 document.getElementById("quiz-ranking").addEventListener("click", () => {
   document.getElementById("question-score").classList.add("hide");
   document.getElementById("quiz-ranking-sc").classList.remove("hide");
-  progressSvg2();
 });
 
 // quizStartBtn.addEventListener("click", startGame);

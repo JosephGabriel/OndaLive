@@ -965,7 +965,12 @@ text .label .pulse {
   background-color: transparent;
 }
 
-.pie2 {
+.pie2,
+.pie3,
+.pie4,
+.pie5,
+.pie6,
+.pie7 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -973,9 +978,24 @@ text .label .pulse {
   height: fit-content !important;
   margin: 0;
 }
-.pie2 > svg {
+.pie2 > svg,
+.pie3 > svg,
+.pie4 > svg,
+.pie5 > svg,
+.pie6 > svg,
+.pie7 > svg {
   height: 5rem !important;
   width: auto;
+}
+
+.pie2-percent-undefined,
+.pie3-percent-undefined,
+.pie4-percent-undefined,
+.pie5-percent-undefined,
+.pie6-percent-undefined,
+.pie7-percent-undefined {
+  font-size: 2.4rem;
+  font-weight: bolder;
 }
 
 caption {
@@ -1041,6 +1061,9 @@ tr {
 
 .line-color {
   background: #30333b !important;
+}
+.line-color2 {
+  background: #393d45 !important;
 }
 
 tr:hover {
@@ -1193,9 +1216,13 @@ tr:hover {
   content: "";
   width: 0;
   height: 100%;
-  border-left: 2px solid #f4ae13;
+  border-left: 2px solid var(--accent-color);
   position: absolute;
   top: 0;
   left: -5.1rem;
   z-index: -1;
+}
+
+.me {
+  background-color: var(--accent-color-dark);
 }
