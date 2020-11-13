@@ -3,9 +3,7 @@ let sortTable = document.getElementById("sort-table");
 let sortInput = document.querySelector("input[name=gift]");
 let sortBtn = document.getElementById("sortear");
 let users = document.getElementsByClassName("raffle-row");
-let min = 0;
-let max = users.length;
-let valor = Math.trunc(Math.random() * (max - min) + min);
+
 let result = sortInput.value;
 
 console.log(users);
@@ -19,6 +17,9 @@ let userEmail = document.getElementById("user-email");
 let userGift = document.getElementById("user-gift");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  let min = 0;
+  let max = users.length;
+  let valor = Math.trunc(Math.random() * (max - min) + min);
   sortTable.classList.add("hide");
   sortInput.classList.add("hide");
   awaitScreen.classList.remove("hide");
