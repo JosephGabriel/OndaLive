@@ -187,6 +187,18 @@ function openTab(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+let btnAnswer = document.getElementsByClassName("btn-answer");
+
+for (let index = 0; index < btnAnswer.length; index++) {
+  btnAnswer[index].addEventListener("click", () => {
+    for (let index = 0; index < btnAnswer.length; index++) {
+      btnAnswer[index].classList.remove("active-btn");
+    }
+
+    btnAnswer[index].classList.add("active-btn");
+  });
+}
+
 let detailsBtn = document.querySelectorAll(".details-button");
 let detailsBtn2 = document.querySelectorAll(".details-button2");
 let priceBtn = document.querySelectorAll(".price-buttons");
