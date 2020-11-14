@@ -4,8 +4,6 @@ let sortInput = document.querySelector("input[name=gift]");
 let sortBtn = document.getElementById("sortear");
 let users = document.getElementsByClassName("raffle-row");
 
-let result = sortInput.value;
-
 let form = document.getElementById("form-sorteio");
 let sortBtns = document.getElementById("raffle-buttons");
 let sortBtnsNew = document.getElementById("raffle-buttons-new");
@@ -18,90 +16,6 @@ let userDoc = document.getElementById("user-document");
 let userEmail = document.getElementById("user-email");
 let userGift = document.getElementById("user-gift");
 let roomDropdown = document.getElementById("room-dropdown");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let min = 0;
-  let max = users.length;
-  let valor = Math.trunc(Math.random() * (max - min) + min);
-
-  sortTable.classList.add("hide");
-  sortInput.classList.add("hide");
-  awaitScreen.classList.remove("hide");
-  sortTitle.classList.add("hide");
-  sortBtns.classList.add("hide");
-
-  setTimeout(() => {
-    awaitScreen.classList.add("hide");
-    sortUser.classList.remove("hide");
-    userName.innerHTML = users[valor].children[1].innerHTML;
-    userId.innerHTML = users[valor].children[0].innerHTML;
-    userDoc.innerHTML = users[valor].children[2].innerHTML;
-    userEmail.innerHTML = users[valor].children[3].innerHTML;
-    userGift.innerHTML = sortInput.value;
-    sortBtnsNew.classList.remove("hide");
-  }, 5000);
-});
-
-console.log(sortBtns);
-
-sortBtnNew.addEventListener("click", () => {
-  sortTable.classList.remove("hide");
-  sortInput.classList.remove("hide");
-  awaitScreen.classList.add("hide");
-  sortTitle.classList.remove("hide");
-  sortBtns.classList.remove("hide");
-  sortUser.classList.add("hide");
-  sortBtnsNew.classList.add("hide");
-});
-
-// let sortTab = document.getElementById("sort-tab");
-// sortTab.addEventListener("click", () => {
-//   sortTable.classList.remove("hide");
-//   sortInput.classList.remove("hide");
-//   sortTitle.classList.remove("hide");
-//   sortBtns.classList.remove("hide");
-//   sortUser.classList.add("hide");
-//   awaitScreen.classList.add("hide");
-//   sortBtnsNew.classList.add("hide");
-// });
-
-let btnFullscreen = document.getElementById("fullscreen-button");
-
-btnFullscreen.addEventListener("click", () => {
-  sortBtn.classList.add("expand");
-});
-
-let full = document.getElementById("sorteio");
-let full2 = document.getElementById("quizTab");
-let tabbleQuiz = document.getElementById("table-quiz");
-
-let chooseFull = true;
-
-function toggle() {
-  if (chooseFull) {
-    chooseFull = false;
-    openFullscreen();
-  } else {
-    chooseFull = true;
-    closeFullscreen();
-  }
-}
-
-function toggleRanking() {
-  if (chooseFull) {
-    chooseFull = false;
-    openFullscreen2();
-  } else {
-    chooseFull = true;
-    closeFullscreen();
-  }
-}
-
-document.addEventListener("fullscreenchange", () => {
-  tabbleQuiz.classList.toggle("hide");
-  // document.getElementById("img-quiz").classList.toggle("hide");
-});
 
 let rankingRow2 = document.getElementsByClassName("tb-ranking");
 let rankingRowBtn = document.getElementsByClassName("ranking-btn");
@@ -182,37 +96,10 @@ for (let index = 0; index < rowQuiz.length; index++) {
   });
 }
 
-let tool = document.getElementById("tool");
-let toolbar = document.getElementById("toolbar");
 let main = document.getElementById("main");
 let grid = document.getElementById("grid");
-let closeBtnAdm = document.getElementById("close-btn-sidebar-adm");
 let dropdownb = document.getElementsByClassName("dropdown-btn");
 let j;
-
-tool.addEventListener("click", () => {
-  toolbar.classList.toggle("activeS");
-  main.classList.toggle("ops");
-  dropImg.classList.remove("active-dropdown");
-  drop.classList.remove("active-dropdown");
-  imgDrop.classList.remove("active-dropdown");
-  dropRoom.classList.remove("active-dropdown");
-});
-
-main.addEventListener("click", () => {
-  toolbar.classList.remove("activeS");
-  // main.classList.remove("ops");
-});
-
-// grid.addEventListener("click", () => {
-//   toolbar.classList.remove("activeS");
-//   // main.classList.remove("ops");
-// });
-
-closeBtnAdm.addEventListener("click", () => {
-  toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
-});
 
 for (j = 0; j < dropdownb.length; j++) {
   dropdownb[j].addEventListener("click", function () {
@@ -295,10 +182,10 @@ let choose = true;
 let dropRoom = document.getElementById("room-drop");
 let i;
 
-// document.getElementById("main").addEventListener("click", () => {
-//   document.getElementById("toolbar").classList.remove("activeS");
-//   main.classList.remove("ops");
-// });
+document.getElementById("main").addEventListener("click", () => {
+  document.getElementById("toolbar").classList.remove("activeS");
+  main.classList.remove("ops");
+});
 
 for (let i = 0; i < divsg.length; i++) {
   detailsBtn2[i].addEventListener("click", () => {
@@ -365,8 +252,6 @@ imgDrop.addEventListener("click", () => {
   dropRoom.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
   dropImg.classList.toggle("active-dropdown");
-  toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
 });
 
 menu.addEventListener("click", () => {
@@ -374,13 +259,9 @@ menu.addEventListener("click", () => {
   dropImg.classList.remove("active-dropdown");
   roomDropdown.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
-  toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
 });
 
 roomDropdown.addEventListener("click", () => {
-  main.classList.remove("ops");
-  toolbar.classList.remove("activeS");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
