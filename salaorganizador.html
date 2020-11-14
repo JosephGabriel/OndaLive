@@ -138,7 +138,7 @@
                 <i class="fas fa-question-circle tablinks" onclick="openTab(event, 'quizTab')"></i>
                 <p>Quiz</p>
             </a>
-            <a class="btn-tab">
+            <a class="btn-tab" id="sort-tab">
                 <i class="fas fa-money-bill-alt tablinks" onclick="openTab(event, 'sorteio')"></i>
                 <p>Sorteio</p>
             </a>
@@ -404,7 +404,7 @@
         <div id="quizTab" class="tabcontent">
             <img src="./img/logo-quiz.png" width="80px">
             <form action="" style="margin-bottom: 10rem;">
-                <table class="table table-dark no-effect">
+                <table class="table table-dark no-effect" id="table-quiz">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -625,7 +625,7 @@
                 </table>
                 <div>
                     <div class="ranking-row hide">
-                        <table class="table table-striped table-dark">
+                        <table class="table table-striped table-dark tb-ranking">
                             <caption>
                                 <div class="caption-table">
                                     <p>NOME DO QUIZ</p>
@@ -729,9 +729,354 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="raffle-buttons" id="raffle-buttons">
+                            <button class="ranking-btn" type="button">Mostrar Ranking</button>
+                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                                <span class=" pe-7s-expand1"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ranking-row hide">
+                        <table class="table table-striped table-dark tb-ranking">
+                            <caption>
+                                <div class="caption-table">
+                                    <p>NOME DO QUIZ</p>
+                                    <span>RANKING</span>
+                                </div>
+                            </caption>
+                            <thead>
+                                <tr class="first-table-row">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">Acertos</th>
+                                    <th scope="col">Tempo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="line-color">
+                                    <th scope="row">1</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie2"
+                                                data-pie='{ "percent": 100, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color2">
+                                    <th scope="row">2</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie3"
+                                                data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>5/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color">
+                                    <th scope="row">3</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie4"
+                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>6/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color2">
+                                    <th scope="row">4</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie5"
+                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>3/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color">
+                                    <th scope="row">5</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie6"
+                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>6/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="me">
+                                    <th scope="row">Você</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie7"
+                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>3/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="raffle-buttons" id="raffle-buttons">
+                            <button class="ranking-btn" type="button">Mostrar Ranking</button>
+                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                                <span class=" pe-7s-expand1"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ranking-row hide">
+                        <table class="table table-striped table-dark tb-ranking">
+                            <caption>
+                                <div class="caption-table">
+                                    <p>NOME DO QUIZ</p>
+                                    <span>RANKING</span>
+                                </div>
+                            </caption>
+                            <thead>
+                                <tr class="first-table-row">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">Acertos</th>
+                                    <th scope="col">Tempo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="line-color">
+                                    <th scope="row">1</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie2"
+                                                data-pie='{ "percent": 100, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color2">
+                                    <th scope="row">2</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie3"
+                                                data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>5/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color">
+                                    <th scope="row">3</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie4"
+                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>6/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color2">
+                                    <th scope="row">4</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie5"
+                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>3/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color">
+                                    <th scope="row">5</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie6"
+                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>6/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="me">
+                                    <th scope="row">Você</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie7"
+                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>3/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="raffle-buttons" id="raffle-buttons">
+                            <button class="ranking-btn" type="button">Mostrar Ranking</button>
+                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                                <span class=" pe-7s-expand1"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ranking-row hide">
+                        <table class="table table-striped table-dark tb-ranking">
+                            <caption>
+                                <div class="caption-table">
+                                    <p>NOME DO QUIZ</p>
+                                    <span>RANKING</span>
+                                </div>
+                            </caption>
+                            <thead>
+                                <tr class="first-table-row">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">Acertos</th>
+                                    <th scope="col">Tempo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="line-color">
+                                    <th scope="row">1</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie2"
+                                                data-pie='{ "percent": 100, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color2">
+                                    <th scope="row">2</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie3"
+                                                data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>5/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color">
+                                    <th scope="row">3</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie4"
+                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>6/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color2">
+                                    <th scope="row">4</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie5"
+                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>3/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="line-color">
+                                    <th scope="row">5</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie6"
+                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>6/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                                <tr class="me">
+                                    <th scope="row">Você</th>
+                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
+                                    <td>Lorem ipsum dolor sit, amet</td>
+                                    <td>
+                                        <div class="progress-div">
+                                            <div class="pie7"
+                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>3/10</td>
+                                    <td>50seg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="raffle-buttons" id="raffle-buttons">
+                            <button class="ranking-btn" type="button">Mostrar Ranking</button>
+                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                                <span class=" pe-7s-expand1"></span>
+                            </button>
+                        </div>
                     </div>
                     <div class="ranking-row hide">
-                        <table class="table table-striped table-dark">
+                        <table class="table table-striped table-dark tb-ranking">
                             <caption>
                                 <div class="caption-table">
                                     <p>NOME DO QUIZ</p>
@@ -835,9 +1180,15 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="raffle-buttons" id="raffle-buttons">
+                            <button class="ranking-btn" type="button">Mostrar Ranking</button>
+                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                                <span class=" pe-7s-expand1"></span>
+                            </button>
+                        </div>
                     </div>
                     <div class="ranking-row hide">
-                        <table class="table table-striped table-dark">
+                        <table class="table table-striped table-dark tb-ranking">
                             <caption>
                                 <div class="caption-table">
                                     <p>NOME DO QUIZ</p>
@@ -941,324 +1292,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="ranking-row hide">
-                        <table class="table table-striped table-dark">
-                            <caption>
-                                <div class="caption-table">
-                                    <p>NOME DO QUIZ</p>
-                                    <span>RANKING</span>
-                                </div>
-                            </caption>
-                            <thead>
-                                <tr class="first-table-row">
-                                    <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">%</th>
-                                    <th scope="col">Acertos</th>
-                                    <th scope="col">Tempo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="line-color">
-                                    <th scope="row">1</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie2"
-                                                data-pie='{ "percent": 100, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>10/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color2">
-                                    <th scope="row">2</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie3"
-                                                data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>5/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color">
-                                    <th scope="row">3</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie4"
-                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>6/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color2">
-                                    <th scope="row">4</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie5"
-                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>3/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color">
-                                    <th scope="row">5</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie6"
-                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>6/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="me">
-                                    <th scope="row">Você</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie7"
-                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>3/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="ranking-row hide">
-                        <table class="table table-striped table-dark">
-                            <caption>
-                                <div class="caption-table">
-                                    <p>NOME DO QUIZ</p>
-                                    <span>RANKING</span>
-                                </div>
-                            </caption>
-                            <thead>
-                                <tr class="first-table-row">
-                                    <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">%</th>
-                                    <th scope="col">Acertos</th>
-                                    <th scope="col">Tempo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="line-color">
-                                    <th scope="row">1</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie2"
-                                                data-pie='{ "percent": 100, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>10/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color2">
-                                    <th scope="row">2</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie3"
-                                                data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>5/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color">
-                                    <th scope="row">3</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie4"
-                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>6/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color2">
-                                    <th scope="row">4</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie5"
-                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>3/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color">
-                                    <th scope="row">5</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie6"
-                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>6/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="me">
-                                    <th scope="row">Você</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie7"
-                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>3/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="ranking-row hide">
-                        <table class="table table-striped table-dark">
-                            <caption>
-                                <div class="caption-table">
-                                    <p>NOME DO QUIZ</p>
-                                    <span>RANKING</span>
-                                </div>
-                            </caption>
-                            <thead>
-                                <tr class="first-table-row">
-                                    <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">%</th>
-                                    <th scope="col">Acertos</th>
-                                    <th scope="col">Tempo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="line-color">
-                                    <th scope="row">1</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie2"
-                                                data-pie='{ "percent": 100, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>10/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color2">
-                                    <th scope="row">2</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie3"
-                                                data-pie='{ "percent": 50, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>5/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color">
-                                    <th scope="row">3</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie4"
-                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>6/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color2">
-                                    <th scope="row">4</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie5"
-                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>3/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="line-color">
-                                    <th scope="row">5</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie6"
-                                                data-pie='{ "percent": 60, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>6/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                                <tr class="me">
-                                    <th scope="row">Você</th>
-                                    <td><img class="img-table" src="./img/100_3.jpg"></td>
-                                    <td>Lorem ipsum dolor sit, amet</td>
-                                    <td>
-                                        <div class="progress-div">
-                                            <div class="pie7"
-                                                data-pie='{ "percent": 30, "colorSlice": "var(--accent-color)","fontColor":"var(--accent-color)","colorCircle": "#aaa", "time": 5, "fontWeight": 400 }'>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>3/10</td>
-                                    <td>50seg</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="raffle-buttons" id="raffle-buttons">
+                            <button class="ranking-btn" type="button">Mostrar Ranking</button>
+                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                                <span class=" pe-7s-expand1"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>

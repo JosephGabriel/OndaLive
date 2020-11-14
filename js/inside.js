@@ -30,7 +30,6 @@ form.addEventListener("submit", (e) => {
   awaitScreen.classList.remove("hide");
   sortTitle.classList.add("hide");
   sortBtns.classList.add("hide");
-
   setTimeout(() => {
     awaitScreen.classList.add("hide");
     sortUser.classList.remove("hide");
@@ -53,6 +52,17 @@ sortBtnNew.addEventListener("click", () => {
   sortBtnsNew.classList.add("hide");
 });
 
+// let sortTab = document.getElementById("sort-tab");
+// sortTab.addEventListener("click", () => {
+//   sortTable.classList.remove("hide");
+//   sortInput.classList.remove("hide");
+//   sortTitle.classList.remove("hide");
+//   sortBtns.classList.remove("hide");
+//   sortUser.classList.add("hide");
+//   awaitScreen.classList.add("hide");
+//   sortBtnsNew.classList.add("hide");
+// });
+
 let btnFullscreen = document.getElementById("fullscreen-button");
 
 btnFullscreen.addEventListener("click", () => {
@@ -60,6 +70,8 @@ btnFullscreen.addEventListener("click", () => {
 });
 
 let full = document.getElementById("sorteio");
+let full2 = document.getElementById("quizTab");
+let tabbleQuiz = document.getElementById("table-quiz");
 
 let chooseFull = true;
 
@@ -73,6 +85,29 @@ function toggle() {
   }
 }
 
+function toggleRanking() {
+  if (chooseFull) {
+    chooseFull = false;
+    openFullscreen2();
+  } else {
+    chooseFull = true;
+    closeFullscreen();
+  }
+}
+
+document.addEventListener("fullscreenchange", () => {
+  tabbleQuiz.classList.toggle("hide");
+});
+
+let rankingRow2 = document.getElementsByClassName("tb-ranking");
+let rankingRowBtn = document.getElementsByClassName("ranking-btn");
+
+for (let index = 0; index < rankingRow2.length; index++) {
+  rankingRowBtn[index].addEventListener("click", () => {
+    rankingRow2[index].classList.toggle("hide");
+  });
+}
+
 function openFullscreen() {
   if (full.requestFullscreen) {
     full.requestFullscreen();
@@ -80,6 +115,16 @@ function openFullscreen() {
     full.webkitRequestFullscreen();
   } else if (full.msRequestFullscreen) {
     full.msRequestFullscreen();
+  }
+}
+
+function openFullscreen2() {
+  if (full2.requestFullscreen) {
+    full2.requestFullscreen();
+  } else if (full2.webkitRequestFullscreen) {
+    full2.webkitRequestFullscreen();
+  } else if (full2.msRequestFullscreen) {
+    full2.msRequestFullscreen();
   }
 }
 
