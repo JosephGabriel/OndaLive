@@ -193,6 +193,10 @@ let j;
 tool.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
   main.classList.toggle("ops");
+  dropImg.classList.remove("active-dropdown");
+  drop.classList.remove("active-dropdown");
+  imgDrop.classList.remove("active-dropdown");
+  dropRoom.classList.remove("active-dropdown");
 });
 
 main.addEventListener("click", () => {
@@ -361,6 +365,8 @@ imgDrop.addEventListener("click", () => {
   dropRoom.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
   dropImg.classList.toggle("active-dropdown");
+  toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
 });
 
 menu.addEventListener("click", () => {
@@ -368,9 +374,13 @@ menu.addEventListener("click", () => {
   dropImg.classList.remove("active-dropdown");
   roomDropdown.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
+  toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
 });
 
 roomDropdown.addEventListener("click", () => {
+  main.classList.remove("ops");
+  toolbar.classList.remove("activeS");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
