@@ -49,10 +49,38 @@
             </div>
         </nav>
     </div>
+    <div id="mySidenav" class="sidenav">
+        <div class="close-bbtn" id="close-btn">
+            <i class="fa fa-window-close"></i>
+        </div>
+        <a href="./index.html">INICIO</a>
+        <button class="dropdown-btn">
+            EVENTO<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <ul>
+                <li><a href="#Palestrantes">PALESTRANTES</a></li>
+                <li><a href="#Lançamento">LANÇAMENTO</a></li>
+                <li><a href="#Destaques">DESTAQUES</a></li>
+                <li><a href="#Video">VIDEO</a></li>
+                <li><a href="#Programação">PROGRAMAÇÃO</a></li>
+                <li><a href="#Patrocinadores">PATROCINADORES</a></li>
+                <li><a href="#Dúvidas">DÚVIDAS</a></li>
+                <li><a href="#Lotes">LOTES</a></li>
+                <li><a href="#Contato">CONTATO</a></li>
+            </ul>
+        </div>
+        <a href="./login.html" class="sidenav-item-outline">LOGIN</a>
+        <a href="./cadastro.html" class="sidenav-item-outline">CADASTRE-SE</a>
+        <a href="./hallusuario.html" class="sidenav-item-full">COMPRAR</a>
+    </div>
     <div class="body-grid">
         <div class="grid">
             <div class="top-banner wow animate__animated animate__fadeInUp">
-                <img src="./img/banner.png">
+                <img src="./img/banner descktop.jpg">
+            </div>
+            <div class="top-banner-mobile wow animate__animated animate__fadeInUp">
+                <img src="./img/banner-mobile-f.jpg">
             </div>
         </div>
     </div>
@@ -194,6 +222,31 @@
     <div class="footer">
         <p>Onda Live ©2020 Todos os direitos reservados.</p>
     </div>
+    <script>
+        document.getElementById("nav-icon").addEventListener("click", () => {
+            document.getElementById("mySidenav").classList.toggle("activeS")
+        })
+        document.getElementById("close-btn").addEventListener("click", () => {
+            document.getElementById("mySidenav").classList.remove("activeS")
+
+        })
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+    </script>
 </body>
 
 </html>

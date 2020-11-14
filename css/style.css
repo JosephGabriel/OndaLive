@@ -71,11 +71,12 @@ html {
 }
 .navbar-item {
   padding: 0rem 2.2rem;
+  margin: 1rem 0;
 }
 .navbar-item:first-child {
   font: bold 1.3rem "Open Sans";
+  margin: 1rem 0;
   padding: 0.5rem 2.2rem;
-  margin: 0;
   margin-right: 1rem;
 }
 .navbar-item:first-child:hover {
@@ -189,11 +190,31 @@ html {
 
 .outline {
   border: var(--accent-color) 1px solid;
-  width: 150px;
+  width: 15rem;
   text-align: center;
   padding: 0.5rem 0rem;
   margin: 0;
   margin-right: 2rem;
+}
+
+.sidenav-item-outline {
+  border: var(--accent-color) 1px solid !important;
+  width: 98% !important;
+  text-align: center;
+  padding: 0.6rem 0.8rem 0.6rem 1rem !important;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.sidenav-item-full {
+  border: var(--accent-color) 1px solid !important;
+  background: var(--accent-color) !important;
+  width: 98% !important;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.6rem 0.8rem 0.6rem 1rem !important;
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .full {
@@ -547,7 +568,7 @@ html {
   background-color: #31343c;
   overflow-x: hidden;
   padding: 0 2rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
   transition: all 0.5s;
   margin-top: 6rem;
   transform: translateX(-100%);
@@ -556,6 +577,9 @@ html {
 .sidenav img {
   object-fit: contain;
   margin-bottom: 2rem;
+}
+.sidenav ul li {
+  list-style: none;
 }
 
 .close-bbtn {

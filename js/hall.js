@@ -79,6 +79,7 @@ menu.addEventListener("click", () => {
   dropImg.classList.remove("active-dropdown");
   document.getElementById("program-sidenav").classList.remove("sidebar-active");
 });
+
 sidenav.addEventListener("click", () => {
   document.getElementById("nav-toggle").classList.toggle("activeS");
 });
