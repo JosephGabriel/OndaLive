@@ -4,13 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hall.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="./css/carrinho.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-        type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/inside.css">
     <title>Carrinho</title>
 </head>
 
 <body>
+    <div class="navbar-container">
+        <div class="navbar-holder">
+            <div>
+                <img src="./favicon.svg" class="navbar-brand">
+            </div>
+            <div class="room">
+                <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
+            </div>
+            <div class="menu">
+                <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
+                <div class="room-dropdown" id="room-drop">
+                    <button class="site-map-item-btn" id="room-dropdown">TROCAR DE SALA</button>
+                    <ul>
+                        <li><a href="./hallusuario.html">Voltar ao Hall</a></li>
+                        <li><a href="">Sala 1</a></li>
+                        <li><a href="">Sala 2</a></li>
+                        <li><a href="">Sala 3</a></li>
+                    </ul>
+                </div>
+                <div class="user-info">
+                    <ul class="user-info-map">
+                        <div class="drop-user">
+                            <div>
+                                <li class="user-info-item">
+                                    <img src="./img/100_3.jpg" class="img-user" id="img-drop">
+                                    Olá,<strong> Cassio</strong><span>
+                                        <i class="fa fa-cog menu" id="menu-toggle"></i></span>
+                                </li>
+                                <div class="dropdown-user-img" id="dropdown-user-img">
+                                    <form action="" method="POST">
+                                        <div class="info-user">
+                                            <div class="info-user-icon">
+                                                <i class="fa fa-user-circle"></i>
+                                            </div>
+                                            <div class="info-user-description">
+                                                <input type="file" name="file" id="file" class="inputfile" />
+                                                <label for="file">Alterar foto</label>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-user" id="dropdown">
+                            <div class="info-user">
+                                <div class="info-user-icon">
+                                    <i class="fa fa-address-card"></i>
+                                </div>
+                                <div class="info-user-description">
+                                    <h6>Meus dados</h6>
+                                </div>
+                            </div>
+                            <div class="info-user">
+                                <div class="info-user-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="info-user-description">
+                                    <h6>Notificações</h6>
+                                </div>
+                            </div>
+                            <div class="info-user">
+                                <div class="info-user-icon">
+                                    <i class="fa fa-graduation-cap"></i>
+                                </div>
+                                <div class="info-user-description">
+                                    <h6>Certificados</h6>
+                                </div>
+                            </div>
+                            <hr class="info-hr">
+                            <button class="exit-btn">
+                                Logout &nbsp;<i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </div>
+                    </ul>
+                </div>
+                <a href="./carrinho.html" style="text-decoration: none;">
+                    <li class="user-info-item cart"><i class="fa fa-cart-plus"></i></li>
+                </a>
+            </div>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
     <div class="wrap cf">
 
         <div class="heading cf">
@@ -177,6 +263,7 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="./js/carrinho.js"></script>
 </body>
 
