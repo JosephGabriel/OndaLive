@@ -1046,6 +1046,7 @@ caption {
 
 td,
 th {
+  font-size: 1.3rem;
   height: -moz-fit-content !important;
   width: -moz-fit-content !important;
   height: fit-content !important;
