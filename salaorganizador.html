@@ -1262,10 +1262,10 @@
             </form>
         </div>
         <div id="sorteio" class="tabcontent">
-            <h1 class="tab-title">Sorteio</h1>
+            <h1 class="tab-title" id="sort-title">Sorteio</h1>
             <form name="form" id="form-sorteio" method="POST">
                 <input type="text" placeholder="Nome do Brinde" name="gift" class="gift-input" id="gift-input" required
-                    min="3">
+                    min="3" autocomplete="off">
                 <div class=" table-users" id="sort-table">
                     <table class="table table-dark no-effect">
                         <thead>
@@ -1323,9 +1323,9 @@
                     </table>
                 </div>
                 <div class="await animate__animated animate__infinite animate__pulse hide" id="await">
-                    <h1 style="color: #fff;">E o vencedor é...</h1>
+                    <h1 style="color: #fff;">O vencedor é...</h1>
                 </div>
-                <div class="hide" id="sort-user">
+                <div class="hide animate__animated animate__fadeInUp" id="sort-user">
                     <div id="user-name">Nome</div>
                     <div class="flex">
                         <div class="flex-item">
@@ -1370,9 +1370,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="raffle-buttons">
+                <div class="raffle-buttons" id="raffle-buttons">
                     <button id="sortear" type="submit">SORTEAR</button>
-                    <button id="fullscreen-button" onclick="openFullscreen();">
+                    <button id="fullscreen-button" type="button" onclick="openFullscreen();">
+                        <span class=" pe-7s-expand1"></span>
+                    </button>
+                </div>
+                <div class="raffle-buttons hide animate__animated animate__fadeInUp animate__delay-1s"
+                    id="raffle-buttons-new">
+                    <button id="sortear-new" type="button">NOVO SORTEIO</button>
+                    <button id="fullscreen-button" type="button" onclick="openFullscreen();">
                         <span class=" pe-7s-expand1"></span>
                     </button>
                 </div>

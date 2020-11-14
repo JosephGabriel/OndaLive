@@ -9,20 +9,29 @@ let result = sortInput.value;
 console.log(users);
 
 let form = document.getElementById("form-sorteio");
+let sortBtns = document.getElementById("raffle-buttons");
+let sortBtnsNew = document.getElementById("raffle-buttons-new");
+let sortBtnNew = document.getElementById("sortear-new");
+let sortTitle = document.getElementById("sort-title");
 let awaitScreen = document.getElementById("await");
 let userId = document.getElementById("user-id");
 let userName = document.getElementById("user-name");
 let userDoc = document.getElementById("user-document");
 let userEmail = document.getElementById("user-email");
 let userGift = document.getElementById("user-gift");
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let min = 0;
   let max = users.length;
   let valor = Math.trunc(Math.random() * (max - min) + min);
+
   sortTable.classList.add("hide");
   sortInput.classList.add("hide");
   awaitScreen.classList.remove("hide");
+  sortTitle.classList.add("hide");
+  sortBtns.classList.add("hide");
+
   setTimeout(() => {
     awaitScreen.classList.add("hide");
     sortUser.classList.remove("hide");
@@ -31,7 +40,18 @@ form.addEventListener("submit", (e) => {
     userDoc.innerHTML = users[valor].children[2].innerHTML;
     userEmail.innerHTML = users[valor].children[3].innerHTML;
     userGift.innerHTML = sortInput.value;
+    sortBtnsNew.classList.remove("hide");
   }, 5000);
+});
+
+sortBtnNew.addEventListener("click", () => {
+  sortTable.classList.remove("hide");
+  sortInput.classList.remove("hide");
+  sortUser.classList.add("hide");
+  awaitScreen.classList.add("hide");
+  sortTitle.classList.remove("hide");
+  sortBtns.classList.remove("hide");
+  sortBtnsNew.classList.add("hide");
 });
 
 let btnFullscreen = document.getElementById("fullscreen-button");
