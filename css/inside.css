@@ -1323,7 +1323,7 @@ td:hover {
 
 :fullscreen {
   background-color: #31343c;
-  padding: 2rem 5rem;
+  padding: 5rem 5rem;
   display: flex;
   overflow-y: auto;
   flex-direction: column;
@@ -1342,7 +1342,7 @@ html.fullscreen {
 
 :-webkit-full-screen {
   background-color: #31343c;
-  padding: 2rem 5rem;
+  padding: 5rem 5rem;
   display: flex;
   overflow-y: auto;
   flex-direction: column;
@@ -1353,11 +1353,20 @@ html.fullscreen {
 #sorteio {
   width: 100%;
 }
+#sorteio:-webkit-full-screen {
+  background-color: #31343c;
+  padding: 20rem 5rem;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* IE11 */
 :-ms-fullscreen {
   background-color: #31343c;
-  padding: 2rem 5rem;
+  padding: 5rem 5rem;
   display: flex;
   overflow-y: auto;
   flex-direction: column;
