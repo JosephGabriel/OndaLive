@@ -307,6 +307,7 @@ for (let i = 0; i < divsg.length; i++) {
 }
 
 document.getElementById("main").addEventListener("click", () => {
+  dropRoom.classList.remove("active-dropdown");
   document.getElementById("dropdown").classList.remove("active-dropdown");
   document
     .getElementById("dropdown-user-img")

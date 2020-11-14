@@ -698,7 +698,6 @@ button {
   align-self: center;
   padding: 0.5rem 4rem;
   width: fit-content;
-  width: -moz-fit-content !important;
   cursor: pointer;
 }
 
