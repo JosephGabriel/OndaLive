@@ -1313,12 +1313,6 @@ tr:hover {
   margin: 0;
 }
 
-.fullscreen {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-}
-
 :fullscreen {
   background-color: #31343c;
   padding: 10rem;
@@ -1329,6 +1323,14 @@ tr:hover {
 }
 
 html:fullscreen {
+  font-size: 105% !important;
+}
+
+html:-ms-fullscreen {
+  font-size: 105% !important;
+}
+
+html:-webkit-full-screen {
   font-size: 105% !important;
 }
 
@@ -1346,7 +1348,7 @@ html:fullscreen {
   align-items: center;
 }
 
-#sorteio{
+#sorteio {
   width: 100%;
 }
 
