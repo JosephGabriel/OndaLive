@@ -30,6 +30,7 @@ form.addEventListener("submit", (e) => {
   awaitScreen.classList.remove("hide");
   sortTitle.classList.add("hide");
   sortBtns.classList.add("hide");
+
   setTimeout(() => {
     awaitScreen.classList.add("hide");
     sortUser.classList.remove("hide");
@@ -42,13 +43,15 @@ form.addEventListener("submit", (e) => {
   }, 5000);
 });
 
+console.log(sortBtns);
+
 sortBtnNew.addEventListener("click", () => {
   sortTable.classList.remove("hide");
   sortInput.classList.remove("hide");
-  sortUser.classList.add("hide");
   awaitScreen.classList.add("hide");
   sortTitle.classList.remove("hide");
   sortBtns.classList.remove("hide");
+  sortUser.classList.add("hide");
   sortBtnsNew.classList.add("hide");
 });
 
