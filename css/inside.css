@@ -1234,12 +1234,13 @@ tr:hover {
 #sort-user {
   color: #fff;
   display: flex;
+  margin-top: 9rem;
   flex-direction: column;
   align-items: center;
 }
 #user-name {
   color: #fff;
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: left;
   margin-bottom: 1rem;
 }
@@ -1250,13 +1251,23 @@ tr:hover {
   flex-direction: column;
 }
 
+.await {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.await h1 {
+  font-size: 2rem !important;
+  margin-top: 2rem !important;
+}
+
 .flex-item {
   display: flex;
   justify-content: space-between;
 }
 
 .user-sort-info {
-  background-color: var(--font-color);
+  background-color: #24262b;
   padding: 0.5rem 1rem;
   display: flex;
   width: 49%;
@@ -1278,18 +1289,18 @@ tr:hover {
 
 .user-sort-desc h6 {
   font-weight: bolder;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 .user-sort-desc p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 
 .gift-input {
   color: #fff;
   border: 1px solid rgb(156, 156, 156);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   text-align: center;
   margin: 2rem 0;
 }
@@ -1300,4 +1311,51 @@ tr:hover {
   text-align: center;
   padding: 0;
   margin: 0;
+}
+
+.fullscreen {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+:fullscreen {
+  background-color: #31343c;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html:fullscreen {
+  font-size: 105% !important;
+}
+
+.table-users table {
+  font-size: 1.4rem;
+  height: 100%;
+}
+
+:-webkit-full-screen {
+  background-color: #31343c;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sorteio{
+  width: 100%;
+}
+
+/* IE11 */
+:-ms-fullscreen {
+  background-color: #31343c;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

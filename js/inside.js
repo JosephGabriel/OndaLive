@@ -60,13 +60,15 @@ btnFullscreen.addEventListener("click", () => {
   sortBtn.classList.add("expand");
 });
 
+let full = document.getElementById("sorteio");
+
 function openFullscreen() {
-  if (sortBtn.requestFullscreen) {
-    sortBtn.requestFullscreen();
-  } else if (sortBtn.webkitRequestFullscreen) {
-    sortBtn.webkitRequestFullscreen();
-  } else if (sortBtn.msRequestFullscreen) {
-    sortBtn.msRequestFullscreen();
+  if (full.requestFullscreen) {
+    full.requestFullscreen();
+  } else if (full.webkitRequestFullscreen) {
+    full.webkitRequestFullscreen();
+  } else if (full.msRequestFullscreen) {
+    full.msRequestFullscreen();
   }
 }
 
