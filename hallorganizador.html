@@ -2972,6 +2972,7 @@
             document.getElementById("program-sidenav").classList.remove("sidebar-active");
             document.getElementById("dropdown").classList.remove("active-dropdown");
             document.getElementById("dropdown-user-img").classList.remove("active-dropdown");
+            main.classList.remove("ops")
         })
 
         document.getElementById("sidenav-close").addEventListener("click", () => {
@@ -2989,7 +2990,6 @@
         })
         sidenav.addEventListener("click", () => {
             document.getElementById("nav-toggle").classList.toggle("activeS")
-
         })
 
         imgDrop.addEventListener("click", () => {

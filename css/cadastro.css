@@ -108,11 +108,12 @@ body {
 
 .presentation-text {
   font-size: 1.5rem;
-  padding: 10rem;
-  margin: 0;
+  /* padding: 10rem; */
+  width: 80%;
+  /* margin: 0; */
   font-weight: 400;
   justify-self: center;
-  text-align: center;
+  text-align: left;
 }
 .form-ss {
   margin-bottom: 12rem;
@@ -170,11 +171,13 @@ textarea:focus {
 }
 
 .input-row1 {
+  color: #fff;
   width: 49%;
   margin-bottom: 1rem;
 }
 
 .input-row2 {
+  color: #fff;
   width: 100%;
   margin-bottom: 1rem;
 }
