@@ -912,13 +912,16 @@ a {
 }
 
 .search-bar {
+  display: flex;
   border: 1px solid #ffffff7e;
-  width: fit-content;
+  width: 21.5rem;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
 .search-bar input {
   border: 0;
+  color: #fff;
 }
 
 .search-bar input:focus,
