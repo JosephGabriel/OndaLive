@@ -97,6 +97,7 @@ function toggleRanking() {
 
 document.addEventListener("fullscreenchange", () => {
   tabbleQuiz.classList.toggle("hide");
+  // document.getElementById("img-quiz").classList.toggle("hide");
 });
 
 let rankingRow2 = document.getElementsByClassName("tb-ranking");

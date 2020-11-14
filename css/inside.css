@@ -1043,6 +1043,7 @@ caption {
   -ms-border-radius: 5rem;
   -o-border-radius: 5rem;
 }
+
 td,
 th {
   height: -moz-fit-content !important;
@@ -1056,9 +1057,11 @@ th {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
+
 td > h6 {
   margin: 0 !important;
 }
+
 tr {
   transition: all 0.5s;
   background: #24262d;
@@ -1076,7 +1079,7 @@ tr {
   background: #393d45 !important;
 }
 
-tr:hover {
+td:hover {
   transition: all 0.5s;
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
@@ -1089,7 +1092,7 @@ tr:hover {
   -o-transition: all 0.5s;
 }
 
-.no-effect tr:hover {
+.no-effect td:hover {
   transition: all 0.5s;
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -1320,22 +1323,15 @@ tr:hover {
 
 :fullscreen {
   background-color: #31343c;
-  padding: 20rem 10rem;
+  padding: 2rem 5rem;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-html:fullscreen {
-  font-size: 105% !important;
-}
-
-html:-ms-fullscreen {
-  font-size: 105% !important;
-}
-
-html:-webkit-full-screen {
+html.fullscreen {
   font-size: 105% !important;
 }
 
@@ -1346,12 +1342,12 @@ html:-webkit-full-screen {
 
 :-webkit-full-screen {
   background-color: #31343c;
-  padding: 20rem 10rem;
+  padding: 2rem 5rem;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
 }
 
 #sorteio {
@@ -1361,8 +1357,9 @@ html:-webkit-full-screen {
 /* IE11 */
 :-ms-fullscreen {
   background-color: #31343c;
-  padding: 20rem 10rem;
+  padding: 2rem 5rem;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
