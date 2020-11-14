@@ -587,13 +587,11 @@ button {
   justify-content: space-evenly;
 }
 
-.user-name-list {
-  margin-right: 4rem;
-}
 .user-name-list:first-of-type {
   margin-top: -2px;
   margin-right: 0rem;
   width: fit-content;
+  width: -moz-fit-content !important;
 }
 .user-name-list h6,
 .user-name-list p,
@@ -656,6 +654,7 @@ button {
   width: 100%;
   display: flex;
   height: fit-content;
+  height: -moz-fit-content !important;
   position: relative;
   right: 0;
   justify-content: flex-end;
@@ -670,6 +669,8 @@ button {
   display: flex;
   width: fit-content;
   height: fit-content;
+  height: -moz-fit-content !important;
+  width: -moz-fit-content !important;
   margin: 0 auto;
   margin-bottom: 0rem;
 }
@@ -697,6 +698,7 @@ button {
   align-self: center;
   padding: 0.5rem 4rem;
   width: fit-content;
+  width: -moz-fit-content !important;
   cursor: pointer;
 }
 
@@ -913,6 +915,7 @@ button {
 
 .sidesss {
   width: fit-content;
+  width: -moz-fit-content !important;
 }
 
 .path--background {
@@ -979,6 +982,8 @@ text .label .pulse {
   justify-content: center;
   width: fit-content;
   height: fit-content !important;
+  height: -moz-fit-content !important;
+  width: -moz-fit-content !important;
   margin: 0;
 }
 .pie2 > svg,
@@ -1040,6 +1045,8 @@ caption {
 }
 td,
 th {
+  height: -moz-fit-content !important;
+  width: -moz-fit-content !important;
   height: fit-content !important;
   width: fit-content;
   transition: all 0.5s;
@@ -1233,7 +1240,6 @@ tr:hover {
 #sort-user {
   color: #fff;
   display: flex;
-  margin-top: 9rem;
   flex-direction: column;
   align-items: center;
 }
@@ -1314,7 +1320,7 @@ tr:hover {
 
 :fullscreen {
   background-color: #31343c;
-  padding: 10rem;
+  padding: 20rem 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1340,7 +1346,7 @@ html:-webkit-full-screen {
 
 :-webkit-full-screen {
   background-color: #31343c;
-  padding: 10rem;
+  padding: 20rem 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1354,7 +1360,7 @@ html:-webkit-full-screen {
 /* IE11 */
 :-ms-fullscreen {
   background-color: #31343c;
-  padding: 10rem;
+  padding: 20rem 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

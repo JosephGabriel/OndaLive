@@ -1177,6 +1177,7 @@ button {
     justify-self: center;
     justify-content: space-between;
     width: fit-content;
+    width: -moz-fit-content !important;
   }
   .day-box-holder {
     justify-content: space-around;

@@ -298,6 +298,7 @@ a {
 
 .row-submit-btn {
   width: fit-content;
+  width: -moz-fit-content !important;
   height: 100%;
   margin: 0;
   margin: 1rem 0;

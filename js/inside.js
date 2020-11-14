@@ -6,8 +6,6 @@ let users = document.getElementsByClassName("raffle-row");
 
 let result = sortInput.value;
 
-console.log(users);
-
 let form = document.getElementById("form-sorteio");
 let sortBtns = document.getElementById("raffle-buttons");
 let sortBtnsNew = document.getElementById("raffle-buttons-new");
@@ -63,6 +61,18 @@ btnFullscreen.addEventListener("click", () => {
 
 let full = document.getElementById("sorteio");
 
+let chooseFull = true;
+
+function toggle() {
+  if (chooseFull) {
+    chooseFull = false;
+    openFullscreen();
+  } else {
+    chooseFull = true;
+    closeFullscreen();
+  }
+}
+
 function openFullscreen() {
   if (full.requestFullscreen) {
     full.requestFullscreen();
@@ -70,6 +80,18 @@ function openFullscreen() {
     full.webkitRequestFullscreen();
   } else if (full.msRequestFullscreen) {
     full.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen();
   }
 }
 

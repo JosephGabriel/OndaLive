@@ -752,6 +752,7 @@ html {
 
 .speaker-modal-modal {
   width: fit-content;
+  width: -moz-fit-content !important;
   object-fit: cover;
 }
 .speaker-modal-modal h6 {

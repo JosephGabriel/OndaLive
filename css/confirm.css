@@ -37,6 +37,7 @@
 
 .confirm-box-data {
   margin-bottom: 4rem;
+  width: -moz-fit-content !important;
   width: fit-content;
 }
 .confirm-box-data:last-of-type {

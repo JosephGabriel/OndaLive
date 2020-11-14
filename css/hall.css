@@ -566,6 +566,7 @@ a {
 
 .program-description-list.vertical > .program-description-list-title {
   width: fit-content;
+  width: -moz-fit-content !important;
   margin: auto;
   margin-bottom: 1rem;
 }
@@ -589,6 +590,7 @@ a {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  width: -moz-fit-content !important;
   margin: auto;
 }
 
@@ -823,6 +825,8 @@ a {
 .card-close3 {
   width: fit-content;
   height: fit-content;
+  height: -moz-fit-content !important;
+  width: -moz-fit-content !important;
 }
 .card-close-g i,
 .card-close i,
@@ -1446,7 +1450,6 @@ button {
   margin: 7rem 0;
   margin-bottom: 15rem;
   width: 56.4rem;
-  padding-left: 2rem;
 }
 
 #toolbar .btn-tab {
