@@ -1362,6 +1362,24 @@ html.fullscreen {
   justify-content: center;
   align-items: center;
 }
+#sorteio:fullscreen {
+  background-color: #31343c;
+  padding: 20rem 5rem;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sorteio:-ms-fullscreen {
+  background-color: #31343c;
+  padding: 20rem 5rem;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* IE11 */
 :-ms-fullscreen {
