@@ -99,8 +99,61 @@
             <i class="fa fa-bars"></i>
         </div>
     </div>
-    <div class="sidenav" id="sidenav" style="margin-top: 5rem;">
+    <div class="sidenav side-center" id="sidenav">
+        <div class="close-bbtn" id="close-btn">
+            <i class="fa fa-window-close"></i>
+        </div>
 
+        <button class="dropdown-btn" id="dropdown-btn-mobile">
+            <div>
+                <img src="./img/100_3.jpg" class="img-user" id="img-drop">
+                Olá,<strong> Cassio</strong>
+                <span><i class="fa fa-cog menu" id="menu-toggle"></i></span>
+            </div>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container" style="padding: 1rem;">
+
+            <div>
+                <form action="" method="POST">
+                    <div class="info-user">
+                        <div class="info-user-icon">
+                            <i class="fa fa-user-circle"></i>
+                        </div>
+                        <div class="info-user-description">
+                            <input type="file" name="file" id="file" class="inputfile" />
+                            <label for="file">Alterar foto</label>
+                        </div>
+                </form>
+            </div>
+            <div class="info-user">
+                <div class="info-user-icon">
+                    <i class="fa fa-address-card"></i>
+                </div>
+                <div class="info-user-description">
+                    <h6>Meus dados</h6>
+                </div>
+            </div>
+            <div class="info-user">
+                <div class="info-user-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="info-user-description">
+                    <h6>Notificações</h6>
+                </div>
+            </div>
+            <div class="info-user">
+                <div class="info-user-icon">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <div class="info-user-description">
+                    <h6>Certificados</h6>
+                </div>
+            </div>
+
+        </div>
+        <button class="exit-btn-mobile">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+    </div>
     </div>
     <div class="program-sidenav" id="program-sidenav">
         <div class="program">
@@ -2934,6 +2987,7 @@
         let sidenav = document.getElementById("sidenav");
         let sidenavClose = document.getElementById("sidenav-close");
         let dropdown = document.getElementsByClassName("dropdown-btn");
+        let navToggle = document.getElementById("close-btn");
         let choose = true;
         let i;
 
@@ -2948,6 +3002,10 @@
             main.classList.remove("ops")
 
         })
+
+        navToggle.addEventListener("click", () => {
+            sidenav.classList.remove("activeS");
+        });
 
         for (let i = 0; i < divsg.length; i++) {
 
