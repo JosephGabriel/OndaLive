@@ -4,95 +4,6 @@
   font-family: "Roboto";
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
 html {
   line-height: 1;
 }
@@ -155,7 +66,6 @@ body {
   color: #ffff;
   background: #31343c;
   -webkit-font-smoothing: antialiased;
-  font-family: roboto;
 }
 
 img {
@@ -203,20 +113,23 @@ img {
 }
 
 .heading {
+  width: 100%;
   padding: 1em 0;
   border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  align-items: center;
 }
 .heading h1 {
-  font-family: roboto;
-  font-size: 2em;
+  font-size: 4rem;
   float: left;
+  width: 82%;
 }
 .heading a.continue:link,
 .heading a.continue:visited {
   text-decoration: none;
   font-family: roboto;
   letter-spacing: -0.015em;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   padding: 1em;
   color: #fff;
   background: #f6a821;
@@ -224,6 +137,9 @@ img {
   border-radius: 0px;
   float: right;
   text-align: right;
+  position: relative;
+  right: 0;
+  justify-self: flex-end;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   -ms-transition: all 0.25s linear;
@@ -270,6 +186,11 @@ img {
 .cart {
   padding: 1em 0;
 }
+
+.cart .cartWrap {
+  padding: 0;
+}
+
 .cart .items {
   display: block;
   width: 100%;
@@ -278,6 +199,7 @@ img {
   padding: 1.5em;
   border-bottom: 1px solid #838383;
 }
+
 .cart .items.even {
   background: #24262d;
 }
@@ -294,6 +216,13 @@ img {
   color: #777;
   margin-bottom: 0.5em;
 }
+
+.cart a,
+.cart i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
 .cart .items .cartSection h3 {
   font-size: 1em;
   font-family: roboto;
@@ -303,8 +232,8 @@ img {
 }
 .cart .items .cartSection p {
   display: inline-block;
-  font-size: 0.85em;
   color: #ffff;
+  margin: 0.6rem 0;
   font-family: roboto;
 }
 .cart .items .cartSection p .quantity {
@@ -334,16 +263,18 @@ img {
   font-size: 1.25em;
 }
 .cart .items .cartSection input.qty {
-  width: 2em;
+  width: 2rem;
   text-align: center;
-  font-size: 1em;
-  padding: 0.25em;
-  margin: 1em 0.5em 0 0;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  /* margin: 1em 0.5em 0 0;*/
+  margin-right: 1rem;
 }
 .cart .items .cartSection .itemImg {
-  width: 8em;
   display: inline;
   padding-right: 1em;
+  height: 43%;
+  width: auto;
 }
 
 .special {
@@ -371,7 +302,7 @@ a.remove {
   font-weight: bold;
   background: #f6a821;
   padding: 0.5em;
-  font-size: 0.75em;
+  font-size: 1.6rem;
   display: inline-block;
   border-radius: 0%;
   line-height: 0.6;
@@ -526,7 +457,6 @@ a.remove:hover {
   .cart .items .cartSection.qtyWrap:before {
     content: "QTY";
     display: block;
-    font-family: roboto;
     padding: 0.25em;
     font-size: 0.75em;
   }
@@ -547,4 +477,9 @@ a.remove:hover {
     width: 100%;
     text-align: center;
   }
+}
+
+.program-description-list-title {
+  font-size: 1.4rem !important;
+  margin: 0;
 }
