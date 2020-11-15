@@ -2977,6 +2977,7 @@
 
         document.getElementById("sidenav-close").addEventListener("click", () => {
             document.getElementById("program-sidenav").classList.remove("sidebar-active")
+            main.classList.remove("ops")
         })
 
         nav.addEventListener("click", () => {
@@ -2988,8 +2989,14 @@
             dropImg.classList.remove("active-dropdown")
             document.getElementById("program-sidenav").classList.remove("sidebar-active");
         })
+
         sidenav.addEventListener("click", () => {
             document.getElementById("nav-toggle").classList.toggle("activeS")
+        })
+
+        document.getElementById("close-btn-sidebar-adm").addEventListener("click", () => {
+            document.getElementById("toolbar").classList.remove("activeS")
+            main.classList.remove("ops")
         })
 
         imgDrop.addEventListener("click", () => {

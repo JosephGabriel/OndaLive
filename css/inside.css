@@ -882,21 +882,11 @@ button {
 
 #main {
   transition: all 0.2s;
-  filter: brightness(100%);
-  -webkit-filter: brightness(100%);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
+  opacity: 1;
 }
 #main.ops {
   transition: all 0.2s;
-  filter: brightness(20%);
-  -webkit-filter: brightness(20%);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
+  opacity: 0.2;
 }
 
 #timer {

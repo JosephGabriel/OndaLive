@@ -570,9 +570,13 @@ html {
   overflow-x: hidden;
   padding: 0 2rem;
   padding-top: 3rem;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
   margin-top: 6rem;
   transform: translateX(-100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 .sidenav img {
@@ -596,8 +600,13 @@ html {
 }
 
 .sidenav.activeS {
-  transition: all 0.5s;
+  transition: 0.5s;
   transform: translateX(0);
+
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 /* Style the sidenav links and the dropdown button */
