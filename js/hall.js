@@ -1,3 +1,10 @@
+let navToggle = document.getElementById("close-btn");
+let sidenav = document.getElementById("sidenav");
+
+navToggle.addEventListener("click", () => {
+  sidenav.classList.remove("activeS");
+});
+
 function openTab(evt, cityName) {
   var i, tabcontent, tablinks;
 
@@ -30,7 +37,6 @@ let dropImg = document.getElementById("dropdown-user-img");
 let imgDrop = document.getElementById("img-drop");
 let nav = document.getElementById("nav-toggle");
 let main = document.getElementById("main");
-let sidenav = document.getElementById("sidenav");
 let sidenavClose = document.getElementById("sidenav-close");
 let dropdown = document.getElementsByClassName("dropdown-btn");
 let choose = true;
