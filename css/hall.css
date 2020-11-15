@@ -1127,6 +1127,18 @@ a {
   outline: none;
   cursor: pointer;
 }
+.exit-btn-mobile {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background: var(--accent-color);
+  border: none;
+  margin-top: 1rem;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
 
 .info-hr {
   width: 100%;

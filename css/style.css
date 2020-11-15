@@ -577,6 +577,32 @@ html {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  color: #fff;
+}
+
+.side-center {
+  /* display: flex;
+  margin-top: 5rem;
+  padding-top: 5rem;
+  flex */
+}
+
+#dropdown-btn-mobile {
+  background-color: #262626;
+  display: flex !important;
+  justify-content: space-between !important;
+  padding: 0 !important;
+  margin-top: 2rem !important;
+  align-items: center !important;
+}
+
+#dropdown-btn-mobile #img-drop {
+  margin: 0;
+  margin: 1rem;
+}
+
+.drop-list {
+  padding: 1rem;
 }
 
 .sidenav img {
