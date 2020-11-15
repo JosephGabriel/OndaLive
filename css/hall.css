@@ -1345,7 +1345,7 @@ button {
 
 @media screen and (max-width: 425px) {
   html {
-    font-size: 40%;
+    font-size: 50%;
   }
   .grid {
     width: 90%;
@@ -1387,7 +1387,6 @@ button {
 
   .price-buttons {
     flex-direction: column;
-    padding: 0.1rem;
   }
 
   .user-info,
