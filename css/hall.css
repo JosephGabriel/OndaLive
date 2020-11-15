@@ -1295,6 +1295,12 @@ button {
     padding: 1rem 0;
     font-size: 1.2rem;
   }
+  #nav-list {
+    width: 100%;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
   .site-map {
     display: none;
   }
