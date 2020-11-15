@@ -550,7 +550,7 @@ a {
 
 .program-description-list p {
   margin-left: 2rem;
-  padding-left: 3rem;
+  padding-left: 3rem !important;
   border-left: 1px solid var(--accent-color);
   margin: 0rem;
   font-size: 1.2rem;
@@ -1176,10 +1176,12 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .shopping-cart button i {
   font-size: 1.4rem;
+  cursor: pointer;
   background: var(--accent-color);
 }
 
@@ -1345,7 +1347,7 @@ button {
 
 @media screen and (max-width: 425px) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
   .grid {
     width: 90%;
@@ -1393,6 +1395,25 @@ button {
   .room {
     display: none;
   }
+  #toolbar,
+  .program {
+    width: 100% !important;
+  }
+  .cart {
+    display: none;
+  }
+  #nav-list {
+    width: 100%;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
+}
+
+#nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #body {

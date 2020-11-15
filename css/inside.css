@@ -881,12 +881,20 @@ button {
 }
 
 #main {
-  transition: all 0.2s;
+  transition: all 0.5s;
   opacity: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 #main.ops {
-  transition: all 0.2s;
+  transition: all 0.5s;
   opacity: 0.2;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 #timer {
@@ -900,6 +908,11 @@ button {
   width: 80%;
   display: flex;
   justify-content: flex-end;
+}
+
+#nav-list {
+  display: flex;
+  justify-content: center;
 }
 
 .sidesss {
