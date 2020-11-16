@@ -369,6 +369,10 @@ imgDrop.addEventListener("click", () => {
   main.classList.remove("ops");
 });
 
+nav.addEventListener("click", () => {
+  sidenav.classList.toggle("activeS");
+});
+
 menu.addEventListener("click", () => {
   drop.classList.toggle("active-dropdown");
   dropImg.classList.remove("active-dropdown");
