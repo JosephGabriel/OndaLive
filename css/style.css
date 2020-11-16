@@ -340,7 +340,7 @@ html {
 }
 @media screen and (max-width: 1000px) {
   .grid {
-    width: 80%;
+    width: 90% !important;
   }
   .w50,
   .w60,

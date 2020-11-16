@@ -838,6 +838,7 @@ a {
 }
 
 .dashboard {
+  overflow-x: auto;
   margin-top: 2rem;
   display: flex;
   justify-content: space-around;
@@ -881,12 +882,12 @@ a {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 2rem;
-  margin: 0 0rem;
+  margin: 0 3rem;
 }
 
 .user-online,
 .user-subscription {
-  margin: 0 0rem;
+  margin: 0 1rem;
   margin-bottom: 2rem;
 }
 
