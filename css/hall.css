@@ -1364,6 +1364,21 @@ button {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .info-user-description h6 {
+    font-size: 2.2rem;
+  }
+  .info-user-icon i {
+    font-size: 3rem;
+  }
+  .inputfile + label {
+    font-size: 2.2rem;
+  }
+  .exit-btn-mobile {
+    font-size: 2.2rem;
+  }
+}
+
 @media screen and (max-width: 425px) {
   html {
     font-size: 40%;

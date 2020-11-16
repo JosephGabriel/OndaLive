@@ -348,6 +348,7 @@ a {
   .form-ss,
   .presentation {
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .presentation-text {
