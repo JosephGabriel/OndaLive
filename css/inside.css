@@ -99,12 +99,15 @@ a {
   margin-left: 1.2rem;
 }
 
-.cart {
+.cart,
+.cart2 {
   color: #fff;
   padding: 0.8rem;
   background: var(--button-background);
 }
 .cart a,
+.cart2 a,
+.cart2 i,
 .cart i {
   color: #fff;
 }
