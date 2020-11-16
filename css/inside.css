@@ -200,15 +200,20 @@ a {
       "program"
       "files";
   }
-  .site-map {
+  /* .site-map {
     display: none;
-  }
-  .menu {
-    display: none;
+  }*/
+
+  #navlist {
+    display: flex !important;
+    width: 100%;
   }
 }
+#navlist {
+  display: none;
+}
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 993px) {
   .nav-toggle {
     display: none;
   }

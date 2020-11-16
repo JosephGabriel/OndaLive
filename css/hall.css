@@ -881,12 +881,12 @@ a {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 2rem;
-  margin: 0 3rem;
+  margin: 0 0rem;
 }
 
 .user-online,
 .user-subscription {
-  margin: 0 1rem;
+  margin: 0 0rem;
   margin-bottom: 2rem;
 }
 
@@ -1296,7 +1296,7 @@ button {
   display: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 993px) {
   .nav-toggle {
     display: none;
   }
