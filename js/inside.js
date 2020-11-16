@@ -183,21 +183,13 @@ for (let index = 0; index < rowQuiz.length; index++) {
 }
 
 let tool = document.getElementById("tool");
+let tool2 = document.getElementById("tool2");
 let toolbar = document.getElementById("toolbar");
 let main = document.getElementById("main");
 let grid = document.getElementById("grid");
 let closeBtnAdm = document.getElementById("close-btn-sidebar-adm");
 let dropdownb = document.getElementsByClassName("dropdown-btn");
 let j;
-
-tool.addEventListener("click", () => {
-  toolbar.classList.toggle("activeS");
-  main.classList.toggle("ops");
-  dropImg.classList.remove("active-dropdown");
-  drop.classList.remove("active-dropdown");
-  imgDrop.classList.remove("active-dropdown");
-  dropRoom.classList.remove("active-dropdown");
-});
 
 main.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
@@ -389,4 +381,21 @@ roomDropdown.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
   dropRoom.classList.toggle("active-dropdown");
+});
+
+tool.addEventListener("click", () => {
+  toolbar.classList.toggle("activeS");
+  main.classList.toggle("ops");
+  dropImg.classList.remove("active-dropdown");
+  drop.classList.remove("active-dropdown");
+  imgDrop.classList.remove("active-dropdown");
+  dropRoom.classList.remove("active-dropdown");
+});
+tool2.addEventListener("click", () => {
+  toolbar.classList.toggle("activeS");
+  main.classList.toggle("ops");
+  dropImg.classList.remove("active-dropdown");
+  drop.classList.remove("active-dropdown");
+  imgDrop.classList.remove("active-dropdown");
+  dropRoom.classList.remove("active-dropdown");
 });
