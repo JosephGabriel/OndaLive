@@ -281,7 +281,7 @@ let dropImg = document.getElementById("dropdown-user-img");
 let imgDrop = document.getElementById("img-drop");
 let nav = document.getElementById("nav-toggle");
 let sidenav = document.getElementById("sidenav");
-let sidenavClose = document.getElementById("sidenav-close");
+let sidenavClose = document.getElementById("close-btn");
 let dropdown = document.getElementsByClassName("dropdown-btn");
 let choose = true;
 let dropRoom = document.getElementById("room-drop");
@@ -316,6 +316,10 @@ nav.addEventListener("click", () => {
 
 sidenav.addEventListener("click", () => {
   document.getElementById("nav-toggle").classList.toggle("activeS");
+});
+
+sidenavClose.addEventListener("click", () => {
+  sidenav.classList.remove("activeS");
 });
 
 for (let i = 0; i < divs.length; i++) {

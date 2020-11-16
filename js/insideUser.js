@@ -256,6 +256,10 @@ nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
 });
 
+sidenavClose.addEventListener("click", () => {
+  sidenav.classList.remove("activeS");
+});
+
 sidenav.addEventListener("click", () => {
   document.getElementById("nav-toggle").classList.toggle("activeS");
 });
