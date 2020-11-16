@@ -3010,7 +3010,7 @@
         document.getElementById("nav-toggle-side").addEventListener("click", () => {
             document.getElementById("toolbar").classList.toggle("activeS")
             main.classList.toggle("ops")
-
+            sidenav.classList.remove("activeS")
         })
 
         document.getElementById("main").addEventListener("click", () => {
@@ -3021,6 +3021,8 @@
 
         navToggle.addEventListener("click", () => {
             sidenav.classList.remove("activeS");
+            main.classList.remove("ops")
+
         });
 
         for (let i = 0; i < divsg.length; i++) {
@@ -3057,6 +3059,7 @@
 
         nav.addEventListener("click", () => {
             sidenav.classList.toggle("activeS")
+            document.getElementById("toolbar").classList.remove("activeS")
         })
 
         menu.addEventListener("click", () => {

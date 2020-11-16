@@ -312,6 +312,7 @@ document.getElementById("main").addEventListener("click", () => {
 
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
+  tool.classList.remove("activeS");
 });
 
 sidenav.addEventListener("click", () => {
@@ -320,41 +321,8 @@ sidenav.addEventListener("click", () => {
 
 sidenavClose.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
+  main.classList.remove("ops");
 });
-
-for (let i = 0; i < divs.length; i++) {
-  detailsBtn[i].addEventListener("click", () => {
-    divs[i].classList.toggle("show");
-    divs2[i].classList.remove("show");
-  });
-
-  closeBtn[i].addEventListener("click", () => {
-    divs[i].classList.remove("show");
-  });
-}
-
-for (let i = 0; i < divs2.length; i++) {
-  priceBtn[i].addEventListener("click", () => {
-    divs2[i].classList.toggle("show");
-    divs[i].classList.remove("show");
-  });
-
-  closeBtn2[i].addEventListener("click", () => {
-    divs2[i].classList.remove("show");
-  });
-}
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
 
 imgDrop.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
@@ -367,6 +335,8 @@ imgDrop.addEventListener("click", () => {
 
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
+  toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
 });
 
 menu.addEventListener("click", () => {
@@ -398,6 +368,7 @@ tool.addEventListener("click", () => {
 tool2.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
   main.classList.toggle("ops");
+  sidenav.classList.remove("activeS");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
