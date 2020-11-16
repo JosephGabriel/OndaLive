@@ -353,11 +353,11 @@ html {
 }
 @media screen and (max-width: 1000px) {
   .navbar-container {
-    height: 8.5rem;
+    height: 9.5rem;
   }
   .sidenav {
     width: 80% !important;
-    padding-top: 5rem !important;
+    padding-top: 6rem !important;
   }
   .sidenav a,
   .dropdown-btn {
@@ -367,8 +367,24 @@ html {
 
   .sidenav-item-full,
   .sidenav-item-outline {
-    margin-top: 3rem;
+    color: #fff;
+    /* margin-top: 3rem; */
   }
+
+  .btn-nav {
+    margin-top: 0;
+    width: 30% !important;
+  }
+
+  .center-btn {
+    display: flex;
+  }
+}
+.center-btn {
+  /* display: none; */
+  width: 100%;
+  align-items: center;
+  height: 100%;
 }
 
 .b-contain *,
