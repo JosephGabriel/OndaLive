@@ -5,6 +5,7 @@
   --primary-color: #fff;
   --accent-color: #f4ae13;
   --accent-color-light: #ffd600;
+  --logo-color: #333;
 }
 
 * {
@@ -860,4 +861,20 @@ html {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+#logoSvg {
+  width: 12%;
+}
+
+.logoOnda {
+  fill: var(--logo-color);
+}
+
+.logoLetra {
+  fill: var(--logo-color);
+}
+
+.footer p {
+  color: var(--logo-color);
 }
