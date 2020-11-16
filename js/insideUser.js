@@ -197,6 +197,11 @@ for (let i = 0; i < divsg.length; i++) {
   });
 }
 
+let navToggle = document.getElementById("close-btn");
+navToggle.addEventListener("click", () => {
+  sidenav.classList.remove("activeS");
+});
+
 document.getElementById("main").addEventListener("click", () => {
   dropRoom.classList.remove("active-dropdown");
   document.getElementById("dropdown").classList.remove("active-dropdown");
@@ -246,6 +251,14 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+
+nav.addEventListener("click", () => {
+  sidenav.classList.toggle("activeS");
+});
+
+sidenav.addEventListener("click", () => {
+  document.getElementById("nav-toggle").classList.toggle("activeS");
+});
 
 imgDrop.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
