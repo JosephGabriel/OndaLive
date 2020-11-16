@@ -699,7 +699,7 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   align-self: center;
-  padding: 0.5rem 4rem;
+  padding: 1rem 4rem !important;
   width: fit-content;
   cursor: pointer;
 }

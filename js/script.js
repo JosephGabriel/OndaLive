@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   loader.classList.add("finish");
 });
 
-let sidenav = document.getElementById("mySidenav");
+// let sidenav = document.getElementById("mySidenav");
 // let body = document.getElementById("main");
 
 // body.addEventListener("click", () => {
