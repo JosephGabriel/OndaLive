@@ -74,6 +74,7 @@
         <a href="./cadastro.html" class="sidenav-item-outline">CADASTRE-SE</a>
         <a href="./hallusuario.html" class="sidenav-item-full">COMPRAR</a>
     </div>
+   <div id="main">
     <div class="body-grid">
         <div class="grid">
             <div class="top-banner wow animate__animated animate__fadeInUp">
@@ -129,6 +130,7 @@
             </div>
         </div>
     </div>
+   </div>
     <div class="footer wow animate__animated animate__slideInUp">
         <svg id="logoSvg" viewBox="0 0 962.51 242">
             <path class="logoOnda"
@@ -150,6 +152,14 @@
         <p>©2020 Todos os direitos reservados.</p>
     </div>
     <script>
+
+        let menu = document.getElementById("mySidenav")
+        let body = document.getElementById("main")
+        
+        main.addEventListener("click",()=>{
+            menu.classList.remove("activeS")
+        })
+
         document.getElementById("nav-icon").addEventListener("click", () => {
             document.getElementById("mySidenav").classList.toggle("activeS")
         })

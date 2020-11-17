@@ -73,59 +73,61 @@
         <a href="./cadastro.html" class="sidenav-item-outline">CADASTRE-SE</a>
         <a href="./hallusuario.html" class="sidenav-item-full">COMPRAR</a>
     </div>
-    <div class="body-grid">
-        <div class="grid">
-            <div class="top-banner wow animate__animated animate__fadeInUp">
-                <img src="./img/banner descktop.jpg">
-            </div>
-            <div class="top-banner-mobile wow animate__animated animate__fadeInUp">
-                <img src="./img/banner-mobile-f.jpg">
+    <div id="main">
+        <div class="body-grid">
+            <div class="grid">
+                <div class="top-banner wow animate__animated animate__fadeInUp">
+                    <img src="./img/banner descktop.jpg">
+                </div>
+                <div class="top-banner-mobile wow animate__animated animate__fadeInUp">
+                    <img src="./img/banner-mobile-f.jpg">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="body-grid">
-        <div class="grid">
-            <div class="register">
-                <div class="presentation wow animate__animated animate__fadeInUp">
-                    <div class="presentation-container">
-                        <hr class="hr">
-                        <h4 class="presentation-title">Recupar senha</h4>
-                        <p class="presentation-subtitle">NOME DO EVENTO COMPLETO</p>
-                        <div class="event-date">
-                            <i class="fa fa-clock"></i>
-                            <p>07/10/2020 13:30 - 07/10/2020 19:00</p>
+        <div class="body-grid">
+            <div class="grid">
+                <div class="register">
+                    <div class="presentation wow animate__animated animate__fadeInUp">
+                        <div class="presentation-container">
+                            <hr class="hr">
+                            <h4 class="presentation-title">Recupar senha</h4>
+                            <p class="presentation-subtitle">NOME DO EVENTO COMPLETO</p>
+                            <div class="event-date">
+                                <i class="fa fa-clock"></i>
+                                <p>07/10/2020 13:30 - 07/10/2020 19:00</p>
+                            </div>
                         </div>
+                        <div class="img-middle">
+    
+                        </div>
+                        <br><br><br>
                     </div>
-                    <div class="img-middle">
-
-                    </div>
-                    <br><br><br>
-                </div>
-
-                <div class="form-ss wow animate__animated animate__fadeInUp">
-                    <div class="form">
-                        <div class="form-title">
-                            <p class="form-subtitle">Informe o seu <span>e-mail</span> no campo abaixo:
-                            </p>
-                            <div class="form-form">
-                                <form style="height: auto;">
-                                    <div class="row">
-                                        <input type="email" placeholder="Email" class="input-row2" name="email">
-                                    </div>
-                                    <div class="row">
-                                        <div class="row-submit-btn-password">
-                                            <button class="submit">Recuperar senha</button>
+    
+                    <div class="form-ss wow animate__animated animate__fadeInUp">
+                        <div class="form">
+                            <div class="form-title">
+                                <p class="form-subtitle">Informe o seu <span>e-mail</span> no campo abaixo:
+                                </p>
+                                <div class="form-form">
+                                    <form style="height: auto;">
+                                        <div class="row">
+                                            <input type="email" placeholder="Email" class="input-row2" name="email">
                                         </div>
-                                    </div>
-                                    <div class="row-link">
-                                        <div class="text-p">
-                                            <p class="policy-text">Não Possui Cadastro? <a
-                                                    href="./cadastro.html"><span>Clique
-                                                        Aqui</span></a>
-                                            </p>
+                                        <div class="row">
+                                            <div class="row-submit-btn-password">
+                                                <button class="submit">Recuperar senha</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                        <div class="row-link">
+                                            <div class="text-p">
+                                                <p class="policy-text">Não Possui Cadastro? <a
+                                                        href="./cadastro.html"><span>Clique
+                                                            Aqui</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -154,6 +156,14 @@
         <p>©2020 Todos os direitos reservados.</p>
     </div>
     <script>
+
+        let menu = document.getElementById("mySidenav")
+        let body = document.getElementById("main")
+        
+        main.addEventListener("click",()=>{
+            menu.classList.remove("activeS")
+        })
+
         document.getElementById("nav-icon").addEventListener("click", () => {
             document.getElementById("mySidenav").classList.toggle("activeS")
         })

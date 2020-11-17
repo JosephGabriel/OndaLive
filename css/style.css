@@ -407,7 +407,7 @@ html {
     margin-bottom: 6rem;
   }
   
-  .close-bbtn i {
+  .close-bbtn i,#close-btn-sidebar-adm {
     transform: scale(1.5);
   }
 
