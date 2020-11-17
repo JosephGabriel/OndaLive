@@ -408,6 +408,11 @@ html {
     background: #0d0d0d !important;
   }
 
+  .footer-fixed {
+    position: fixed;
+    bottom: 0;
+  }
+
   .animate__animated {
     animation: none !important;
   }
