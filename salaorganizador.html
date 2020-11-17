@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/progresscircle.css">
     <link rel="stylesheet" href="./css/pe-icons/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
     <script src="./js/script.js"></script>
     <title>Onda Live</title>
 </head>
@@ -63,7 +61,7 @@
                                                 <i class="fa fa-user-circle"></i>
                                             </div>
                                             <div class="info-user-description">
-                                                <input type="file" name="file" id="file" class="inputfile" />
+                                                <input type="file" name="file" class="inputfile" />
                                                 <label for="file">Alterar foto</label>
                                             </div>
                                     </form>
@@ -112,7 +110,7 @@
                         <i class="fas fa-users-cog"></i>
                     </div>
                     <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
-                        <button class="site-map-item-btn" id="room-dropdown-mobile">TROCAR DE SALA</button>
+                    <button class="site-map-item-btn" id="room-dropdown-mobile">TROCAR DE SALA</button>
                     <div class="user-info">
                         <ul class="user-info-map">
                             <div class="drop-user">
@@ -129,7 +127,7 @@
                                                     <i class="fa fa-user-circle"></i>
                                                 </div>
                                                 <div class="info-user-description">
-                                                    <input type="file" name="file" id="file" class="inputfile" />
+                                                    <input type="file" name="file" class="inputfile" />
                                                     <label for="file">Alterar foto</label>
                                                 </div>
                                         </form>
@@ -198,7 +196,7 @@
                             <i class="fa fa-user-circle"></i>
                         </div>
                         <div class="info-user-description">
-                            <input type="file" name="file" id="file" class="inputfile" />
+                            <input type="file" name="file" class="inputfile" />
                             <label for="file">Alterar foto</label>
                         </div>
                 </form>
@@ -881,7 +879,7 @@
                         </table>
                         <div class="raffle-buttons">
                             <button class="ranking-btn" type="button">Mostrar Ranking</button>
-                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                            <button class="fullscreen-button" type="button" onclick="toggleRanking();">
                                 <span class=" pe-7s-expand1"></span>
                             </button>
                         </div>
@@ -994,7 +992,7 @@
                         </table>
                         <div class="raffle-buttons">
                             <button class="ranking-btn" type="button">Mostrar Ranking</button>
-                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                            <button class="fullscreen-button" type="button" onclick="toggleRanking();">
                                 <span class=" pe-7s-expand1"></span>
                             </button>
                         </div>
@@ -1107,7 +1105,7 @@
                         </table>
                         <div class="raffle-buttons">
                             <button class="ranking-btn" type="button">Mostrar Ranking</button>
-                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                            <button class="fullscreen-button" type="button" onclick="toggleRanking();">
                                 <span class=" pe-7s-expand1"></span>
                             </button>
                         </div>
@@ -1220,7 +1218,7 @@
                         </table>
                         <div class="raffle-buttons">
                             <button class="ranking-btn" type="button">Mostrar Ranking</button>
-                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                            <button class="fullscreen-button" type="button" onclick="toggleRanking();">
                                 <span class=" pe-7s-expand1"></span>
                             </button>
                         </div>
@@ -1332,7 +1330,7 @@
                         </table>
                         <div class="raffle-buttons">
                             <button class="ranking-btn" type="button">Mostrar Ranking</button>
-                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                            <button class="fullscreen-button" type="button" onclick="toggleRanking();">
                                 <span class=" pe-7s-expand1"></span>
                             </button>
                         </div>
@@ -1444,7 +1442,7 @@
                         </table>
                         <div class="raffle-buttons">
                             <button class="ranking-btn" type="button">Mostrar Ranking</button>
-                            <button id="fullscreen-button" type="button" onclick="toggleRanking();">
+                            <button class="fullscreen-button" type="button" onclick="toggleRanking();">
                                 <span class=" pe-7s-expand1"></span>
                             </button>
                         </div>
@@ -1564,14 +1562,14 @@
                 </div>
                 <div class="raffle-buttons" id="raffle-buttons">
                     <button id="sortear" type="submit">SORTEAR</button>
-                    <button id="fullscreen-button" type="button" onclick="toggle();">
+                    <button class="fullscreen-button" type="button" onclick="toggle();">
                         <span class=" pe-7s-expand1"></span>
                     </button>
                 </div>
                 <div class="raffle-buttons hide animate__animated animate__fadeInUp animate__delay-1s"
                     id="raffle-buttons-new">
                     <button id="sortear-new" type="button">NOVO SORTEIO</button>
-                    <button id="fullscreen-button" type="button" onclick="toggle();">
+                    <button class="fullscreen-button" type="button" onclick="toggle();">
                         <span class=" pe-7s-expand1"></span>
                     </button>
                 </div>
@@ -1899,7 +1897,7 @@
                 <div style="padding:56.25% 0 0 0;position:relative;"><iframe
                         src="https://player.vimeo.com/video/471128176"
                         style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
-                        allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                        allow="autoplay; fullscreen"></iframe></div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
                 <div class="audio-btn">
                     <div class="room-audio">
@@ -2117,44 +2115,6 @@
     <script src="./js/circularProgressBar.min.js"></script>
     <script src="./js/quiz.js"></script>
     <script src="./js/inside.js"></script>
-    <script>
-
-
-    let menu5 = document.getElementById("sidenav")
-    let body = document.getElementById("main")
-
-    body.addEventListener("click",()=>{
-        menu5.classList.remove("activeS")
-    })
-    
-
-        tippy("#myButton", {
-            content: "Mostrar ranking ao final do quiz",
-            theme: "light",
-            animation: "scale",
-        });
-
-        let rankingRow = document.getElementsByClassName("ranking-row")
-        let quizRow = document.getElementsByClassName("row-quiz")
-        let quizRowRanking = document.querySelectorAll("input[name=quiz-row-ranking")
-
-        for (let index = 0; index < quizRow.length; index++) {
-
-            quizRowRanking[index].addEventListener("click", () => {
-
-                for (let index = 0; index < quizRow.length; index++) {
-                    rankingRow[index].classList.add("hide")
-                }
-
-
-                rankingRow[index].classList.remove("hide")
-                rankingRow[index].scrollIntoView({ behavior: "smooth" })
-
-
-            })
-        }
-
-    </script>
 </body>
 
 </html>

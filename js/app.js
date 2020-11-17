@@ -28,7 +28,6 @@ window.addEventListener("load", () => {
     const updateCount = () => {
       const target = +counter.getAttribute("data-target");
       const count = +counter.innerText;
-      console.log("HHH");
       const inc = Math.ceil(target / speed);
 
       if (count < target) {
@@ -105,7 +104,7 @@ window.addEventListener("load", () => {
     const updateCount = () => {
       const target = +counter.getAttribute("data-target");
       const count = +counter.innerText;
-      console.log("HHH");
+      
       const inc = Math.ceil(target / speed);
 
       if (count < target) {

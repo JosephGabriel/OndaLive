@@ -172,6 +172,7 @@ a {
 }
 
 .grid {
+  width: 90%;
   display: grid;
   margin: 2rem;
   height: auto;

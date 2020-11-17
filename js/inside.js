@@ -3,9 +3,7 @@ let sortTable = document.getElementById("sort-table");
 let sortInput = document.querySelector("input[name=gift]");
 let sortBtn = document.getElementById("sortear");
 let users = document.getElementsByClassName("raffle-row");
-
 let result = sortInput.value;
-
 let form = document.getElementById("form-sorteio");
 let sortBtns = document.getElementById("raffle-buttons");
 let sortBtnsNew = document.getElementById("raffle-buttons-new");
@@ -43,8 +41,6 @@ form.addEventListener("submit", (e) => {
   }, 5000);
 });
 
-console.log(sortBtns);
-
 sortBtnNew.addEventListener("click", () => {
   sortTable.classList.remove("hide");
   sortInput.classList.remove("hide");
@@ -55,22 +51,13 @@ sortBtnNew.addEventListener("click", () => {
   sortBtnsNew.classList.add("hide");
 });
 
-// let sortTab = document.getElementById("sort-tab");
-// sortTab.addEventListener("click", () => {
-//   sortTable.classList.remove("hide");
-//   sortInput.classList.remove("hide");
-//   sortTitle.classList.remove("hide");
-//   sortBtns.classList.remove("hide");
-//   sortUser.classList.add("hide");
-//   awaitScreen.classList.add("hide");
-//   sortBtnsNew.classList.add("hide");
-// });
+let btnFullscreen = document.getElementsByClassName("fullscreen-button");
 
-let btnFullscreen = document.getElementById("fullscreen-button");
-
-btnFullscreen.addEventListener("click", () => {
-  sortBtn.classList.add("expand");
-});
+for (let index = 0; index < btnFullscreen.length; index++) {
+  btnFullscreen[index].addEventListener("click", () => {
+    sortBtn.classList.add("expand");
+  });
+}
 
 let full = document.getElementById("sorteio");
 let full2 = document.getElementById("quizTab");
@@ -100,7 +87,6 @@ function toggleRanking() {
 
 document.addEventListener("fullscreenchange", () => {
   tabbleQuiz.classList.toggle("hide");
-  // document.getElementById("img-quiz").classList.toggle("hide");
 });
 
 let rankingRow2 = document.getElementsByClassName("tb-ranking");
@@ -182,80 +168,34 @@ for (let index = 0; index < rowQuiz.length; index++) {
   });
 }
 
-let hallNav = document.getElementById("sidenav-program")
-let closeHall = document.getElementById("close-btn2")
-let roomBtnMobile = document.getElementById("room-dropdown-mobile")
-let main7 = document.getElementById("main")
+let hallNav = document.getElementById("sidenav-program");
+let closeHall = document.getElementById("close-btn2");
+let roomBtnMobile = document.getElementById("room-dropdown-mobile");
+let main = document.getElementById("main");
 
-        roomBtnMobile.addEventListener("click",()=>{
-            hallNav.classList.toggle("activeS")
+roomBtnMobile.addEventListener("click", () => {
+  hallNav.classList.toggle("activeS");
   sidenav.classList.remove("activeS");
   toolbar.classList.remove("activeS");
   main.classList.remove("ops");
-        })
+});
 
-        main7.addEventListener("click",()=>{
-            hallNav.classList.remove("activeS")
-        })
-
-        closeHall.addEventListener("click",()=>{
-            hallNav.classList.remove("activeS")
-        })
+closeHall.addEventListener("click", () => {
+  hallNav.classList.remove("activeS");
+});
 
 let tool = document.getElementById("tool");
 let tool2 = document.getElementById("tool2");
 let toolbar = document.getElementById("toolbar");
-let main = document.getElementById("main");
 let grid = document.getElementById("grid");
 let closeBtnAdm = document.getElementById("close-btn-sidebar-adm");
 let dropdownb = document.getElementsByClassName("dropdown-btn");
 let j;
 
-main.addEventListener("click", () => {
-  toolbar.classList.remove("activeS");
-  // main.classList.remove("ops");
-});
-
-// grid.addEventListener("click", () => {
-//   toolbar.classList.remove("activeS");
-//   // main.classList.remove("ops");
-// });
-
 closeBtnAdm.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
   main.classList.remove("ops");
 });
-
-// for (j = 0; j < dropdownb.length; j++) {
-//   dropdownb[j].addEventListener("click", function () {
-//     this.classList.toggle("active");
-//     let dropdownbContent = this.nextElementSibling;
-//     if (dropdownbContent.style.display === "block") {
-//       dropdownbContent.style.display = "none";
-//     } else {
-//       dropdownbContent.style.display = "block";
-//     }
-//   });
-//}
-let nav2 = document.getElementById("nav-toggle");
-let sidenav2 = document.getElementById("sidenav");
-let dropdown2 = document.getElementsByClassName("dropdown-btn");
-
-nav2.addEventListener("click", () => {
-  sidenav2.classList.toggle("activeS");
-});
-
-for (let i = 0; i < dropdown2.length; i++) {
-  dropdown2[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
 
 function openTab(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -286,16 +226,7 @@ for (let index = 0; index < btnAnswer.length; index++) {
   });
 }
 
-let detailsBtn = document.querySelectorAll(".details-button");
-let detailsBtn2 = document.querySelectorAll(".details-button2");
-let priceBtn = document.querySelectorAll(".price-buttons");
-let divs = document.querySelectorAll(".details");
-let divs2 = document.querySelectorAll(".details-price");
-let divsg = document.querySelectorAll(".details-g");
 let menu = document.getElementById("menu-toggle");
-let closeBtn = document.querySelectorAll(".card-close");
-let closeBtn2 = document.querySelectorAll(".card-close2");
-let closeBtnG = document.querySelectorAll(".card-close-g");
 let drop = document.getElementById("dropdown");
 let dropImg = document.getElementById("dropdown-user-img");
 let imgDrop = document.getElementById("img-drop");
@@ -303,41 +234,23 @@ let nav = document.getElementById("nav-toggle");
 let sidenav = document.getElementById("sidenav");
 let sidenavClose = document.getElementById("close-btn");
 let dropdown = document.getElementsByClassName("dropdown-btn");
-let choose = true;
 let dropRoom = document.getElementById("room-drop");
-let i;
 
-// document.getElementById("main").addEventListener("click", () => {
-//   document.getElementById("toolbar").classList.remove("activeS");
-//   main.classList.remove("ops");
-// });
-
-for (let i = 0; i < divsg.length; i++) {
-  detailsBtn2[i].addEventListener("click", () => {
-    divsg[i].classList.toggle("show");
-  });
-
-  closeBtnG[i].addEventListener("click", () => {
-    divsg[i].classList.remove("show");
-  });
-}
-
-document.getElementById("main").addEventListener("click", () => {
+main.addEventListener("click", () => {
   dropRoom.classList.remove("active-dropdown");
-  document.getElementById("dropdown").classList.remove("active-dropdown");
-  document
-    .getElementById("dropdown-user-img")
-    .classList.remove("active-dropdown");
+  drop.classList.remove("active-dropdown");
+  imgDrop.classList.remove("active-dropdown");
+  toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
+  hallNav.classList.remove("activeS");
+  sidenav.classList.remove("activeS");
 });
 
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
-  tool.classList.remove("activeS");
+  toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
   hallNav.classList.remove("activeS");
-});
-
-sidenav.addEventListener("click", () => {
-  document.getElementById("nav-toggle").classList.toggle("activeS");
 });
 
 sidenavClose.addEventListener("click", () => {
@@ -350,12 +263,6 @@ imgDrop.addEventListener("click", () => {
   dropRoom.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
   dropImg.classList.toggle("active-dropdown");
-  toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
-});
-
-nav.addEventListener("click", () => {
-  sidenav.classList.toggle("activeS");
   toolbar.classList.remove("activeS");
   main.classList.remove("ops");
 });
@@ -396,4 +303,10 @@ tool2.addEventListener("click", () => {
   imgDrop.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
   hallNav.classList.remove("activeS");
+});
+
+tippy("#myButton", {
+  content: "Mostrar ranking ao final do quiz",
+  theme: "light",
+  animation: "scale",
 });
