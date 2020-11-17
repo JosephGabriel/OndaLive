@@ -70,10 +70,15 @@
   margin-left: 0.6rem;
 }
 
-.program-box-right {
+.program-box-right,
+.program-box-left {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.modal {
+  z-index: 5555555555;
 }
 
 .button-description > button {
@@ -338,8 +343,8 @@ a {
 
 .program {
   height: auto;
-  padding: 2rem 1rem;
-  padding-bottom: 5rem;
+  padding: 3rem;
+  padding-bottom: 10rem;
   grid-area: program;
   background-color: #141414;
 }
@@ -349,7 +354,7 @@ a {
   padding: 0;
   gap: 2rem;
   display: grid;
-  width: 100%;
+  width: 90%;
   justify-content: center;
   align-items: stretch;
   grid-template-columns: repeat(12, 1fr);
@@ -1210,13 +1215,13 @@ button {
 
 .program-sidenav::-webkit-scrollbar,
 .program-sidenav.sidebar-active::-webkit-scrollbar {
-  opacity: 0;
+  width: 0px;
 }
 
 .program-sidenav {
   position: fixed;
   right: 0;
-  height: 100vh;
+  height: 100%;
   overflow-y: scroll;
   z-index: 55555;
   transition: all 0.5s;

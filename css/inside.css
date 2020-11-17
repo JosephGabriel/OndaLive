@@ -896,7 +896,11 @@ button {
 }
 
 #main {
+  position: absolute;
   transition: all 0.5s;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
   opacity: 1;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -905,7 +909,7 @@ button {
 }
 #main.ops {
   transition: all 0.5s;
-  opacity: 0.2;
+  background-color: #000000ce;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
