@@ -73,7 +73,7 @@
         <a href="./cadastro.html" class="sidenav-item-outline">CADASTRE-SE</a>
         <a href="./hallusuario.html" class="sidenav-item-full">COMPRAR</a>
     </div>
-    <div id="main">
+    <div id="main" class="footer-padding">
         <div class="body-grid">
             <div class="grid">
                 <div class="top-banner wow animate__animated animate__fadeInUp">
@@ -98,11 +98,11 @@
                             </div>
                         </div>
                         <div class="img-middle">
-    
+
                         </div>
                         <br><br><br>
                     </div>
-    
+
                     <div class="form-ss wow animate__animated animate__fadeInUp">
                         <div class="form">
                             <div class="form-title">
@@ -135,7 +135,7 @@
             </div>
         </div>
     </div>
-    <div class="footer wow animate__animated animate__slideInUp">
+    <div class="footer footer-fixed wow animate__animated animate__slideInUp">
         <svg id="logoSvg" viewBox="0 0 962.51 242">
             <path class="logoOnda"
                 d="M97.32,57.17v-.34A48.66,48.66,0,0,0,0,56.83v.34a48.66,48.66,0,0,0,97.32,0ZM39.41,57V57a9.25,9.25,0,0,1,18.5,0V57a9.25,9.25,0,0,1-18.5,0ZM176.64,68V57.34a8.77,8.77,0,0,0-8.77-8.77,8.76,8.76,0,0,0-8.77,8.77V169.47a57.33,57.33,0,0,1-114.66,0v-26.3a24.29,24.29,0,0,1,48.58,0v26.3a8.77,8.77,0,0,0,15,6.2,8.87,8.87,0,0,0,2.57-6.2V57.34a57.33,57.33,0,1,1,114.65,0V92.45a24.29,24.29,0,0,1-48.57,0V68ZM284.76,217.7A24.28,24.28,0,0,1,260.49,242h-26.3a57.14,57.14,0,0,1-40-16.31l-.49-.48c-.17-.16-.32-.33-.48-.5a57.08,57.08,0,0,1-16.32-40v-26.3a24.29,24.29,0,0,1,48.58,0v26.3a8.71,8.71,0,0,0,8.73,8.74h26.3a24.26,24.26,0,0,1,24.27,24.27Z" />
@@ -159,8 +159,8 @@
 
         let menu = document.getElementById("mySidenav")
         let body = document.getElementById("main")
-        
-        main.addEventListener("click",()=>{
+
+        main.addEventListener("click", () => {
             menu.classList.remove("activeS")
         })
 

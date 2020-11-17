@@ -397,6 +397,10 @@ html {
     text-decoration: none;
   }
 
+  .footer-padding {
+    padding-bottom: 8rem;
+  }
+
   .center-btn {
     display: flex;
   }

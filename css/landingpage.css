@@ -1269,13 +1269,21 @@ button {
   font-size: 1rem;
 }
 
+.glider {
+  position: relative;
+}
+
 .glide-contorles {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem !important;
   position: absolute;
-  width: 100%;
+  width: 80%;
   color: #fff;
+}
+
+.glide__arrow--right {
+  right: 2rem;
 }
 
 .glide-contorles i {
