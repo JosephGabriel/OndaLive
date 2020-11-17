@@ -182,6 +182,26 @@ for (let index = 0; index < rowQuiz.length; index++) {
   });
 }
 
+let hallNav = document.getElementById("sidenav-program")
+let closeHall = document.getElementById("close-btn2")
+let roomBtnMobile = document.getElementById("room-dropdown-mobile")
+let main7 = document.getElementById("main")
+
+        roomBtnMobile.addEventListener("click",()=>{
+            hallNav.classList.toggle("activeS")
+  sidenav.classList.remove("activeS");
+  toolbar.classList.remove("activeS");
+  main.classList.remove("ops");
+        })
+
+        main7.addEventListener("click",()=>{
+            hallNav.classList.remove("activeS")
+        })
+
+        closeHall.addEventListener("click",()=>{
+            hallNav.classList.remove("activeS")
+        })
+
 let tool = document.getElementById("tool");
 let tool2 = document.getElementById("tool2");
 let toolbar = document.getElementById("toolbar");
@@ -313,6 +333,7 @@ document.getElementById("main").addEventListener("click", () => {
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
   tool.classList.remove("activeS");
+  hallNav.classList.remove("activeS");
 });
 
 sidenav.addEventListener("click", () => {
@@ -365,6 +386,7 @@ tool.addEventListener("click", () => {
   imgDrop.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
 });
+
 tool2.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
   main.classList.toggle("ops");
@@ -373,4 +395,5 @@ tool2.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
+  hallNav.classList.remove("activeS");
 });

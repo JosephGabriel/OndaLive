@@ -183,7 +183,24 @@ let dropRoom = document.getElementById("room-drop");
 let i;
 let menu8 = document.getElementById("sidenav")
   
+let hallNav = document.getElementById("sidenav-program")
+let closeHall = document.getElementById("close-btn2")
+let roomBtnMobile = document.getElementById("room-dropdown-mobile")
+let main7 = document.getElementById("main")
 
+        roomBtnMobile.addEventListener("click",()=>{
+            hallNav.classList.toggle("activeS")
+  sidenav.classList.remove("activeS");
+
+        })
+
+        main7.addEventListener("click",()=>{
+            hallNav.classList.remove("activeS")
+        })
+
+        closeHall.addEventListener("click",()=>{
+            hallNav.classList.remove("activeS")
+        })
    
 
 document.getElementById("main").addEventListener("click", () => {
@@ -204,6 +221,7 @@ for (let i = 0; i < divsg.length; i++) {
 let navToggle = document.getElementById("close-btn");
 navToggle.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
+
 });
 
 document.getElementById("main").addEventListener("click", () => {
@@ -215,6 +233,7 @@ document.getElementById("main").addEventListener("click", () => {
 });
 
 nav.addEventListener("click", () => {
+  hallNav.classList.remove("activeS");
   sidenav.classList.toggle("activeS");
 });
 
@@ -265,7 +284,7 @@ sidenavClose.addEventListener("click", () => {
 });
 
 sidenav.addEventListener("click", () => {
-  document.getElementById("nav-toggle").classList.toggle("activeS");
+  document.getElementById("nav-toggle").classList.toggle("activeS"); 
 });
 
 imgDrop.addEventListener("click", () => {
@@ -280,6 +299,9 @@ menu.addEventListener("click", () => {
   dropImg.classList.remove("active-dropdown");
   roomDropdown.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
+  hallNav.classList.remove("activeS");
+
+  
 });
 
 roomDropdown.addEventListener("click", () => {

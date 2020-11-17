@@ -372,9 +372,13 @@ html {
     width: 80% !important;
     padding-top: 6rem !important;
   }
-  .sidenav a,
+  .sidenav > a,
   .dropdown-btn {
     font-size: 2.2rem !important;
+    text-align: center !important;
+  }
+  
+  .dropdown-container > a{
     text-align: center !important;
   }
 
@@ -957,4 +961,13 @@ html {
 
 .footer p {
   color: var(--logo-color);
+}
+
+#sidenav-program{
+  padding-bottom: 11rem;
+  background: #0d0d0d;
+}
+
+.banner-row img{
+height: 3rem;
 }
