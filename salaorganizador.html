@@ -196,9 +196,8 @@
                 <img src="./img/100_3.jpg" class="img-user" id="img-drop">
                 Olá,<strong> Cassio</strong>
             </div>
-            <i class="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-container" style="padding: 1rem;">
+        <div class="dropdown-container" style="padding: 1rem; display: block;">
 
             <div>
                 <form action="" method="POST">
@@ -2098,6 +2097,15 @@
     <script src="./js/quiz.js"></script>
     <script src="./js/inside.js"></script>
     <script>
+
+
+    let menu5 = document.getElementById("sidenav")
+    let body = document.getElementById("main")
+
+    body.addEventListener("click",()=>{
+        menu5.classList.remove("activeS")
+    })
+    
 
         tippy("#myButton", {
             content: "Mostrar ranking ao final do quiz",

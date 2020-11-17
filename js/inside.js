@@ -206,17 +206,17 @@ closeBtnAdm.addEventListener("click", () => {
   main.classList.remove("ops");
 });
 
-for (j = 0; j < dropdownb.length; j++) {
-  dropdownb[j].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let dropdownbContent = this.nextElementSibling;
-    if (dropdownbContent.style.display === "block") {
-      dropdownbContent.style.display = "none";
-    } else {
-      dropdownbContent.style.display = "block";
-    }
-  });
-}
+// for (j = 0; j < dropdownb.length; j++) {
+//   dropdownb[j].addEventListener("click", function () {
+//     this.classList.toggle("active");
+//     let dropdownbContent = this.nextElementSibling;
+//     if (dropdownbContent.style.display === "block") {
+//       dropdownbContent.style.display = "none";
+//     } else {
+//       dropdownbContent.style.display = "block";
+//     }
+//   });
+//}
 let nav2 = document.getElementById("nav-toggle");
 let sidenav2 = document.getElementById("sidenav");
 let dropdown2 = document.getElementsByClassName("dropdown-btn");

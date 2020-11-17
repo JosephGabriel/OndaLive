@@ -101,17 +101,17 @@ let grid = document.getElementById("grid");
 let dropdownb = document.getElementsByClassName("dropdown-btn");
 let j;
 
-for (j = 0; j < dropdownb.length; j++) {
-  dropdownb[j].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let dropdownbContent = this.nextElementSibling;
-    if (dropdownbContent.style.display === "block") {
-      dropdownbContent.style.display = "none";
-    } else {
-      dropdownbContent.style.display = "block";
-    }
-  });
-}
+// for (j = 0; j < dropdownb.length; j++) {
+//   dropdownb[j].addEventListener("click", function () {
+//     this.classList.toggle("active");
+//     let dropdownbContent = this.nextElementSibling;
+//     if (dropdownbContent.style.display === "block") {
+//       dropdownbContent.style.display = "none";
+//     } else {
+//       dropdownbContent.style.display = "block";
+//     }
+//   });
+// }
 let nav2 = document.getElementById("nav-toggle");
 let sidenav2 = document.getElementById("sidenav");
 let dropdown2 = document.getElementsByClassName("dropdown-btn");
@@ -176,14 +176,18 @@ let dropImg = document.getElementById("dropdown-user-img");
 let imgDrop = document.getElementById("img-drop");
 let nav = document.getElementById("nav-toggle");
 let sidenav = document.getElementById("sidenav");
-let sidenavClose = document.getElementById("sidenav-close");
+let sidenavClose = document.getElementById("close-btn");
 let dropdown = document.getElementsByClassName("dropdown-btn");
 let choose = true;
 let dropRoom = document.getElementById("room-drop");
 let i;
+let menu8 = document.getElementById("sidenav")
+  
+
+   
 
 document.getElementById("main").addEventListener("click", () => {
-  document.getElementById("toolbar").classList.remove("activeS");
+  menu8.classList.remove("activeS")
   main.classList.remove("ops");
 });
 
