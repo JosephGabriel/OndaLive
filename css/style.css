@@ -30,7 +30,7 @@ html {
   justify-content: center;
 }
 .grid {
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,7 +340,7 @@ html {
 }
 @media screen and (max-width: 1000px) {
   .grid {
-    width: 90% !important;
+    width: 94% !important;
   }
   .w50,
   .w60,
@@ -350,6 +350,8 @@ html {
   .navbar-list {
     display: none;
   }
+ 
+
 }
 @media screen and (min-width: 426px) {
   .center-btn {
@@ -357,6 +359,12 @@ html {
   }
 }
 @media screen and (max-width: 1000px) {
+
+  #box-confirm{
+    width: 100% !important;
+    padding: 2.2rem;
+  }
+
   .navbar-container {
     height: 9.5rem;
   }
@@ -379,12 +387,44 @@ html {
   .btn-nav {
     margin-top: 0;
     width: 30% !important;
+    text-decoration: none;
   }
 
   .center-btn {
     display: flex;
   }
+
+  #mySidenav,#sidenav{
+    height: 120% !important;
+    background: #0d0d0d !important;
+  }
+
+  .animate__animated{
+    animation: none !important;
+  }
+  
+  .close-bbtn {
+    margin-bottom: 6rem;
+  }
+  
+  .close-bbtn i {
+    transform: scale(1.5);
+  }
+
+  .info-user{
+    margin: 2.5rem 0 !important;
+  }
+
+  .info-user i{
+   font-size: 2.8rem;
+  }
+
 }
+
+.ask-text input{
+  color: #fff;
+}
+
 .center-btn {
   /* display: none; */
   width: 100%;

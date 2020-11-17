@@ -109,7 +109,6 @@
                 <img src="./img/100_3.jpg" class="img-user" id="img-drop">
                 Olá,<strong> Cassio</strong>
             </div>
-            <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" style="padding: 1rem;">
 
@@ -2967,6 +2966,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="./js/jquery.flipster.min.js"></script>
     <script>
+
+
+    let menu5 = document.getElementById("sidenav")
+    let body = document.getElementById("main")
+
+    body.addEventListener("click",()=>{
+        menu5.classList.remove("activeS")
+    })
 
         function openTab(evt, cityName) {
             var i, tabcontent, tablinks;

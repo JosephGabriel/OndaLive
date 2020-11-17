@@ -424,3 +424,22 @@ a {
     display: block;
   }
 }
+
+.button-login{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.button-login a{
+  color: #fff;
+}
+
+.button-login button{
+  cursor: pointer !important;
+  border: none;
+  background: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
