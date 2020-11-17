@@ -1231,7 +1231,7 @@ button {
 
 @media screen and (max-width: 425px) {
   html {
-    font-size: 40%;
+    font-size: 45%;
   }
   .program-box-right {
     justify-self: center;
@@ -1278,12 +1278,8 @@ button {
   justify-content: space-between;
   padding: 1rem !important;
   position: absolute;
-  width: 80%;
+  width: 100%;
   color: #fff;
-}
-
-.glide__arrow--right {
-  right: 2rem;
 }
 
 .glide-contorles i {
