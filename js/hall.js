@@ -19,7 +19,9 @@ let sidenavClose = document.getElementById("sidenav-close");
 let dropdown = document.getElementsByClassName("dropdown-btn");
 let navToggle = document.getElementById("close-btn");
 let navToggleSide = document.getElementById("nav-toggle-side");
+let navToggleSide2 = document.getElementById("nav-toggle-side2");
 let programBtn = document.getElementById("program");
+let programBtn2 = document.getElementById("program");
 let closeBtnSideNavAdm = document.getElementById("close-btn-sidebar-adm");
 let programSideNav = document.getElementById("program-sidenav");
 let toolbar = document.getElementById("toolbar");
@@ -27,6 +29,13 @@ let choose = true;
 let i;
 
 navToggleSide.addEventListener("click", () => {
+  programSideNav.classList.remove("sidebar-active");
+  toolbar.classList.toggle("activeS");
+  layer.classList.toggle("ops");
+  sidenav.classList.remove("activeS");
+});
+
+navToggleSide2.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
   toolbar.classList.toggle("activeS");
   layer.classList.toggle("ops");
@@ -45,6 +54,16 @@ navToggle.addEventListener("click", () => {
 });
 
 programBtn.addEventListener("click", function () {
+  programSideNav.classList.toggle("sidebar-active");
+  dropImg.classList.remove("active-dropdown");
+  drop.classList.remove("active-dropdown");
+  drop.classList.remove("active-dropdown");
+  sidenav.classList.remove("activeS");
+  layer.classList.toggle("ops");
+  toolbar.classList.remove("activeS");
+});
+
+programBtn2.addEventListener("click", function () {
   programSideNav.classList.toggle("sidebar-active");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
