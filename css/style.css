@@ -417,10 +417,6 @@ html {
     bottom: 0;
   }
 
-  .animate__animated {
-    animation: none !important;
-  }
-
   .close-bbtn {
     margin-bottom: 6rem;
   }

@@ -895,10 +895,11 @@ button {
   margin: auto;
 }
 
-/* #main2 {
-  position: absolute;
+#layer {
+  position: fixed;
   transition: all 0.5s;
   z-index: 1;
+  pointer-events: none;
   height: 100%;
   width: 100%;
   opacity: 1;
@@ -907,14 +908,15 @@ button {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-#main2.ops {
+#layer.ops {
+  pointer-events: all;
   transition: all 0.5s;
   background-color: #000000ce;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
-} */
+}
 
 #timer {
   display: flex;

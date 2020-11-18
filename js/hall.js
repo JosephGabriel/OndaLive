@@ -13,6 +13,7 @@ let dropImg = document.getElementById("dropdown-user-img");
 let imgDrop = document.getElementById("img-drop");
 let nav = document.getElementById("nav-toggle");
 let main = document.getElementById("main");
+let layer = document.getElementById("layer");
 let sidenav = document.getElementById("sidenav");
 let sidenavClose = document.getElementById("sidenav-close");
 let dropdown = document.getElementsByClassName("dropdown-btn");
@@ -28,19 +29,19 @@ let i;
 navToggleSide.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
   toolbar.classList.toggle("activeS");
-  main.classList.toggle("ops");
+  layer.classList.toggle("ops");
   sidenav.classList.remove("activeS");
 });
 
 main.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
   sidenav.classList.remove("activeS");
 });
 
 navToggle.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 programBtn.addEventListener("click", function () {
@@ -49,7 +50,7 @@ programBtn.addEventListener("click", function () {
   drop.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   sidenav.classList.remove("activeS");
-  main.classList.toggle("ops");
+  layer.classList.toggle("ops");
   toolbar.classList.remove("activeS");
 });
 
@@ -57,23 +58,23 @@ main.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
   drop.classList.remove("active-dropdown");
   dropImg.classList.remove("active-dropdown");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 sidenavClose.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
   toolbar.classList.remove("activeS");
   programSideNav.classList.remove("sidebar-active");
 });
 
 menu.addEventListener("click", () => {
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
   drop.classList.toggle("active-dropdown");
   dropImg.classList.remove("active-dropdown");
   programSideNav.classList.remove("sidebar-active");
@@ -81,17 +82,19 @@ menu.addEventListener("click", () => {
 
 sidenav.addEventListener("click", () => {
   document.getElementById("nav-toggle").classList.toggle("activeS");
+  layer.classList.remove("ops");
 });
 
 closeBtnSideNavAdm.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 imgDrop.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
   dropImg.classList.toggle("active-dropdown");
   programSideNav.classList.remove("sidebar-active");
+  layer.classList.remove("ops");
 });
 
 for (let i = 0; i < divs.length; i++) {
