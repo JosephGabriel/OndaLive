@@ -310,3 +310,18 @@ tippy("#myButton", {
   theme: "light",
   animation: "scale",
 });
+
+let rankingRow = document.getElementsByClassName("ranking-row");
+let quizRow = document.getElementsByClassName("row-quiz");
+let quizRowRanking = document.querySelectorAll("input[name=quiz-row-ranking");
+
+for (let index = 0; index < quizRow.length; index++) {
+  quizRowRanking[index].addEventListener("click", () => {
+    for (let index = 0; index < quizRow.length; index++) {
+      rankingRow[index].classList.add("hide");
+    }
+
+    rankingRow[index].classList.remove("hide");
+    rankingRow[index].scrollIntoView({ behavior: "smooth" });
+  });
+}
