@@ -851,13 +851,21 @@ a {
   color: var(--accent-color);
 }
 
+.dashboard2 {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 2rem;
+  color: var(--accent-color);
+}
+
 .dashboard-inner {
   width: max-content;
   display: flex;
   justify-content: space-around;
 }
 
-.dashboard i {
+.dashboard i,
+.dashboard2 i {
   width: 5rem;
   height: 5rem;
   padding: 1rem 1.6rem;
@@ -875,7 +883,8 @@ a {
   -o-border-radius: 3.5rem;
 }
 
-.dashboard p {
+.dashboard p,
+.dashboard2 p {
   font-size: 1rem;
   margin-bottom: 0;
   margin-top: 1rem;

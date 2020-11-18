@@ -535,7 +535,6 @@ button {
 }
 .tabcontent {
   display: none;
-  overflow-x: auto;
 }
 
 .actions {
@@ -1418,5 +1417,3 @@ html.fullscreen {
   justify-content: center;
   align-items: center;
 }
-
-
