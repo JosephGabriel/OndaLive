@@ -94,16 +94,6 @@ imgDrop.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
 });
 
-for (let i = 0; i < divsg.length; i++) {
-  detailsBtn2[i].addEventListener("click", () => {
-    divsg[i].classList.toggle("show");
-  });
-
-  closeBtnG[i].addEventListener("click", () => {
-    divsg[i].classList.remove("show");
-  });
-}
-
 for (let i = 0; i < divs.length; i++) {
   detailsBtn[i].addEventListener("click", () => {
     divs[i].classList.toggle("show");
@@ -123,6 +113,16 @@ for (let i = 0; i < divs2.length; i++) {
 
   closeBtn2[i].addEventListener("click", () => {
     divs2[i].classList.remove("show");
+  });
+}
+
+for (let i = 0; i < divsg.length; i++) {
+  detailsBtn2[i].addEventListener("click", () => {
+    divsg[i].classList.toggle("show");
+  });
+
+  closeBtnG[i].addEventListener("click", () => {
+    divsg[i].classList.remove("show");
   });
 }
 

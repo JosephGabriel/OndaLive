@@ -895,7 +895,7 @@ button {
   margin: auto;
 }
 
-#main {
+/* #main2 {
   position: absolute;
   transition: all 0.5s;
   z-index: 1;
@@ -907,14 +907,14 @@ button {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-#main.ops {
+#main2.ops {
   transition: all 0.5s;
   background-color: #000000ce;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
-}
+} */
 
 #timer {
   display: flex;
