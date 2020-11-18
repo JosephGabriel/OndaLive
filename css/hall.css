@@ -1309,6 +1309,10 @@ button {
   cursor: pointer;
 }
 
+.hall-list {
+  font-size: 2.2rem !important;
+}
+
 .value-title {
   display: none;
 }
