@@ -125,7 +125,6 @@ img {
 .heading a.continue:link,
 .heading a.continue:visited {
   text-decoration: none;
-  font-family: roboto;
   letter-spacing: -0.015em;
   font-size: 1.1rem;
   padding: 1em;
@@ -133,10 +132,6 @@ img {
   background: #f6a821;
   font-weight: bold;
   border-radius: 0px;
-  float: right;
-  text-align: right;
-  position: relative;
-  right: 0;
   justify-self: flex-end;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
@@ -319,7 +314,7 @@ a.remove:hover {
 
 .promoCode {
   float: left;
-  width: 35%;
+  width: 75%;
   padding: 2%;
 }
 .promoCode label {
@@ -435,20 +430,55 @@ a.remove:hover {
   justify-content: space-between;
 }
 
-.subfooter .subtotal {
-  width: 100%;
-}
-
-.subfooter .promoCode {
-  width: min-content;
-}
-
 .subfooter .subtotal ul {
   padding: 0;
+}
+
+.date-event {
+  font-size: 1.2rem;
+}
+
+.prod-mobile {
+  display: none;
 }
 
 @media screen and (max-width: 425px) {
   html {
     font-size: 45%;
+  }
+  .heading h1 {
+    font-size: 2.4rem;
+  }
+
+  .prod-mobile {
+    display: block;
+  }
+
+  .heading a.continue:link,
+  .heading a.continue:visited {
+    width: 63%;
+  }
+  .cart3 .items .cartSection.prodTotal p {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  .stockStatus,
+  .date-event {
+    display: block !important;
+  }
+  .subtotal ul {
+    width: fit-content;
+    width: -moz-fit-content;
+  }
+  .subfooter .subtotal {
+    width: 100%;
+  }
+  .subtotal .totalRow .value,
+  .subtotal .totalRow .label {
+    padding: 0;
+  }
+  .subtotal .totalRow .value {
+    margin-left: 1rem;
   }
 }
