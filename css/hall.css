@@ -1287,6 +1287,11 @@ button {
   z-index: -1;
 }
 
+.mobile-navbar,
+.mobile-navbar i {
+  font-size: 1.8rem;
+}
+
 .inputfile + label {
   font-size: 1.2rem;
   font-weight: 500;
