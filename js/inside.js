@@ -239,7 +239,7 @@ let dropRoom = document.getElementById("room-drop");
 main.addEventListener("click", () => {
   dropRoom.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
-  imgDrop.classList.remove("active-dropdown");
+  dropImg.classList.remove("active-dropdown");
   toolbar.classList.remove("activeS");
   main.classList.remove("ops");
   hallNav.classList.remove("activeS");

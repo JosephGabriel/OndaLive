@@ -1459,6 +1459,10 @@ button {
       "card-v4";
   }
 
+  #quiz {
+    width: 100%;
+  }
+
   .price-buttons {
     flex-direction: column;
   }
