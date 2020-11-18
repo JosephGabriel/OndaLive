@@ -434,6 +434,10 @@ a.remove:hover {
   padding: 0;
 }
 
+.subfooter .subtotal {
+  padding: 1rem;
+}
+
 .date-event {
   font-size: 1.2rem;
 }
@@ -480,5 +484,11 @@ a.remove:hover {
   }
   .subtotal .totalRow .value {
     margin-left: 1rem;
+  }
+  .subfooter .subtotal {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
   }
 }
