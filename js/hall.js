@@ -42,11 +42,7 @@ navToggleSide2.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
 });
 
-main.addEventListener("click", () => {
-  toolbar.classList.remove("activeS");
-  layer.classList.remove("ops");
-  sidenav.classList.remove("activeS");
-});
+main.addEventListener("click", () => {});
 
 navToggle.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
@@ -74,10 +70,14 @@ programBtn2.addEventListener("click", function () {
 });
 
 main.addEventListener("click", () => {
-  programSideNav.classList.remove("sidebar-active");
   drop.classList.remove("active-dropdown");
+  console.log("ssdcf");
   dropImg.classList.remove("active-dropdown");
   layer.classList.remove("ops");
+  toolbar.classList.remove("activeS");
+  layer.classList.remove("ops");
+  sidenav.classList.remove("activeS");
+  programSideNav.classList.remove("sidebar-active");
 });
 
 sidenavClose.addEventListener("click", () => {
