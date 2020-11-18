@@ -438,6 +438,10 @@ a.remove:hover {
   padding: 1rem;
 }
 
+.subfooter .promoCode {
+  width: 30%;
+}
+
 .date-event {
   font-size: 1.2rem;
 }
@@ -475,7 +479,8 @@ a.remove:hover {
     width: fit-content;
     width: -moz-fit-content;
   }
-  .subfooter .subtotal {
+  .subfooter .subtotal,
+  .subfooter .promoCode {
     width: 100%;
   }
   .subtotal .totalRow .value,

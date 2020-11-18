@@ -1408,10 +1408,8 @@ button {
 
 @media screen and (max-width: 425px) {
   .menu {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
   }
 
   .sidenav-icon i {
