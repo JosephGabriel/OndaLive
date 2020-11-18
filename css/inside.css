@@ -454,7 +454,7 @@ hr {
   display: flex;
   align-items: center;
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .raffle-buttons button {
