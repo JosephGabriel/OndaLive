@@ -264,34 +264,36 @@
             <i class="fas fa-window-close" id="close-btn-sidebar-adm"></i>
         </div>
         <div class="dashboard tab">
-            <a class="btn-tab">
-                <i class="fas fa-tachometer-alt tablinks" onclick="openTab(event, 'dash')"></i>
-                <p>Dashboard</p>
-            </a>
-            <a class="btn-tab">
-                <i class="fas fa-users tablinks" onclick="openTab(event, 'user')"></i>
-                <p>Usuários</p>
-            </a>
-            <a class="btn-tab">
-                <i class="far fa-flag tablinks" onclick="openTab(event, 'ban')"></i>
-                <p>Banners</p>
-            </a>
-            <a class="btn-tab">
-                <i class="fas fa-question-circle tablinks" onclick="openTab(event, 'quizTab')"></i>
-                <p>Quiz</p>
-            </a>
-            <a class="btn-tab" id="sort-tab">
-                <i class="fas fa-money-bill-alt tablinks" onclick="openTab(event, 'sorteio')"></i>
-                <p>Sorteio</p>
-            </a>
-            <a class="btn-tab">
-                <i class="fas fa-crown tablinks" onclick="openTab(event, 'moderador')"></i>
-                <p>Moderador</p>
-            </a>
-            <a class="btn-tab">
-                <i class="fas fa-calendar-alt tablinks" onclick="openTab(event, 'progamacao')"></i>
-                <p>Progamação</p>
-            </a>
+            <div class="dashboard-inner">
+                <a class="btn-tab">
+                    <i class="fas fa-tachometer-alt tablinks" onclick="openTab(event, 'dash')"></i>
+                    <p>Dashboard</p>
+                </a>
+                <a class="btn-tab">
+                    <i class="fas fa-users tablinks" onclick="openTab(event, 'user')"></i>
+                    <p>Usuários</p>
+                </a>
+                <a class="btn-tab">
+                    <i class="far fa-flag tablinks" onclick="openTab(event, 'ban')"></i>
+                    <p>Banners</p>
+                </a>
+                <a class="btn-tab">
+                    <i class="fas fa-question-circle tablinks" onclick="openTab(event, 'quizTab')"></i>
+                    <p>Quiz</p>
+                </a>
+                <a class="btn-tab" id="sort-tab">
+                    <i class="fas fa-money-bill-alt tablinks" onclick="openTab(event, 'sorteio')"></i>
+                    <p>Sorteio</p>
+                </a>
+                <a class="btn-tab">
+                    <i class="fas fa-crown tablinks" onclick="openTab(event, 'moderador')"></i>
+                    <p>Moderador</p>
+                </a>
+                <a class="btn-tab">
+                    <i class="fas fa-calendar-alt tablinks" onclick="openTab(event, 'progamacao')"></i>
+                    <p>Progamação</p>
+                </a>
+            </div>
         </div>
         <hr id="hr-hr">
         <div id="dash" class="tabcontent">
@@ -2116,6 +2118,75 @@
     <script src="./js/circularProgressBar.min.js"></script>
     <script src="./js/quiz.js"></script>
     <script src="./js/inside.js"></script>
+    <script>
+
+
+        let bannerTab = document.getElementsByClassName("banner-row")
+        let swicthTab = document.querySelectorAll('input[name="radio-cats"]')
+
+        for (let index = 0; index < bannerTab.length;) {
+
+            swicthTab[index].addEventListener("click", () => {
+
+                let switchA = !swicthTab[index].checked
+
+                swicthTab[index].checked = true
+
+                bannerTab[index].classList.add("banner-active")
+
+                for (let index = 0; index < bannerTab.length; index++) {
+                    if (switchA = !swicthTab[index].checked) {
+                        bannerTab[index].classList.remove("banner-active")
+
+                    }
+                }
+            })
+
+        }
+
+        let tool = document.getElementById("tool")
+        let toolbar = document.getElementById("toolbar")
+        let dropdownb = document.getElementsByClassName("dropdown-btn");
+        let j;
+
+        tool.addEventListener("click", () => {
+            toolbar.classList.toggle("activeS")
+        })
+
+        for (j = 0; j < dropdownb.length;) {
+            dropdownb[j].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let dropdownbContent = this.nextElementSibling;
+                if (dropdownbContent.style.display === "block") {
+                    dropdownbContent.style.display = "none";
+                } else {
+                    dropdownbContent.style.display = "block";
+                }
+            });
+        }
+        let nav = document.getElementById("nav-toggle")
+        let sidenav = document.getElementById("sidenav")
+        let dropdown = document.getElementsByClassName("dropdown-btn");
+        let i;
+
+        nav.addEventListener("click", () => {
+            sidenav.classList.toggle("activeS")
+        })
+
+        for (i = 0; i < dropdown.length;) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
 </body>
 
 </html>

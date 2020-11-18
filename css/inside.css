@@ -476,13 +476,15 @@ hr {
   margin: auto;
 }
 
-#fullscreen-button {
+#fullscreen-button,
+.fullscreen-button {
   margin: 0;
-  background: transparent;
+  background: transparent !important;
   position: absolute;
   right: 0;
 }
-#fullscreen-button span {
+#fullscreen-button span,
+.fullscreen-button span {
   font-size: 3rem;
 }
 /* 
@@ -533,6 +535,7 @@ button {
 }
 .tabcontent {
   display: none;
+  overflow-x: auto;
 }
 
 .actions {
@@ -1415,3 +1418,5 @@ html.fullscreen {
   justify-content: center;
   align-items: center;
 }
+
+
