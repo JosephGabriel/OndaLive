@@ -248,12 +248,6 @@ html {
   align-items: center;
 }
 
-.footer-fixed {
-  position: fixed !important;
-  bottom: 0;
-  margin: 0;
-}
-
 .footer p {
   font-size: 1.8rem;
   font-weight: 400;
@@ -321,6 +315,12 @@ html {
   transform: translateX(0%);
 }
 
+.footer-fixed {
+  position: relative;
+  bottom: 0;
+  margin: 0;
+}
+
 .nav-icon {
   border: none;
   cursor: pointer;
@@ -342,6 +342,11 @@ html {
 @media screen and (max-width: 768px) {
   .navbar-list-mobile {
     width: 50%;
+  }
+  .footer-fixed {
+    position: fixed !important;
+    bottom: 0;
+    margin: 0;
   }
 }
 @media screen and (max-width: 1000px) {

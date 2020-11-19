@@ -15,9 +15,11 @@
     <script src="./js/script.js"></script>
     <script src="./js/app.js"></script>
     <style>
-        .animate__animated {
-            animation: none !important;
-            -webkit-animation: none !important;
+        @media screen and (max-width:425px) {
+            .animate__animated {
+                animation: none !important;
+                -webkit-animation: none !important;
+            }
         }
     </style>
     <title>Onda Live</title>
@@ -51,7 +53,7 @@
                 </li>
                 <li class="navbar-item outline"><a href="./login.html">Login</a></li>
                 <li class="navbar-item outline"><a href="./cadastro.html">Cadastrar-se</a></li>
-                <li class="navbar-item full"><a href="./hallusuario.html">Comprar</a></li>
+                <li class="navbar-item full"><a href="./hallorganizador.html">Comprar</a></li>
             </ul>
             <button class="nav-icon" id="nav-icon">
                 <i class="fa fa-bars"></i>
