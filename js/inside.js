@@ -232,6 +232,7 @@ let dropImg = document.getElementById("dropdown-user-img");
 let imgDrop = document.getElementById("img-drop");
 let nav = document.getElementById("nav-toggle");
 let sidenav = document.getElementById("sidenav");
+let layer = document.getElementById("layer");
 let sidenavClose = document.getElementById("close-btn");
 let dropdown = document.getElementsByClassName("dropdown-btn");
 let dropRoom = document.getElementById("room-drop");
@@ -241,7 +242,7 @@ main.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
   dropImg.classList.remove("active-dropdown");
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
   hallNav.classList.remove("activeS");
   sidenav.classList.remove("activeS");
 });
@@ -249,13 +250,13 @@ main.addEventListener("click", () => {
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
   hallNav.classList.remove("activeS");
 });
 
 sidenavClose.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 imgDrop.addEventListener("click", () => {
@@ -264,7 +265,7 @@ imgDrop.addEventListener("click", () => {
   imgDrop.classList.remove("active-dropdown");
   dropImg.classList.toggle("active-dropdown");
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 menu.addEventListener("click", () => {
@@ -273,11 +274,11 @@ menu.addEventListener("click", () => {
   roomDropdown.classList.remove("active-dropdown");
   dropRoom.classList.remove("active-dropdown");
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 roomDropdown.addEventListener("click", () => {
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
   toolbar.classList.remove("activeS");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
@@ -287,7 +288,7 @@ roomDropdown.addEventListener("click", () => {
 
 tool.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
-  main.classList.toggle("ops");
+  layer.classList.toggle("ops");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
@@ -296,7 +297,7 @@ tool.addEventListener("click", () => {
 
 tool2.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
-  main.classList.toggle("ops");
+  layer.classList.toggle("ops");
   sidenav.classList.remove("activeS");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");

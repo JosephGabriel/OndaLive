@@ -1,4 +1,5 @@
 var playQuiz = document.getElementById("playQuiz");
+var layer2 = document.getElementById("layer");
 var timer = document.getElementById("timer");
 var quiz = document.getElementById("quiz");
 var quizStart = document.getElementById("quiz-start");
@@ -180,24 +181,25 @@ let circle4 = new CircularProgressBar("pie5");
 let circle5 = new CircularProgressBar("pie6");
 let circle6 = new CircularProgressBar("pie7");
 
-playQuiz.addEventListener("click", () => {
-  quiz.classList.toggle("activeQ");
-  document.getElementById("main").classList.toggle("ops");
-});
-
 close.addEventListener("click", () => {
-  document.getElementById("main").classList.remove("ops");
+  layer2.classList.remove("ops");
   quiz.classList.remove("activeQ");
 });
 
 document.getElementById("quiz-close-btn").addEventListener("click", () => {
-  document.getElementById("main").classList.remove("ops");
+  layer2.classList.remove("ops");
   quiz.classList.remove("activeQ");
 });
 
 document.getElementById("quiz-btn-close2").addEventListener("click", () => {
-  document.getElementById("main").classList.remove("ops");
+  layer2.classList.remove("ops");
   quiz.classList.remove("activeQ");
+});
+
+playQuiz.addEventListener("click", () => {
+  quiz.classList.toggle("activeQ");
+  layer2.classList.toggle("ops");
+  console.log(layer2);
 });
 
 for (let index = 0; index < buttons.length; index++) {
