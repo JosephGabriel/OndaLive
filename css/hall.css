@@ -681,10 +681,12 @@ a {
 }
 
 .button-footer button p {
+  color: white;
   font-weight: 500;
 }
 
 .button-footer.v p {
+  color: white;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -713,6 +715,7 @@ a {
 }
 
 .button-footer-small p {
+  color: white;
   margin: 0;
 }
 
@@ -1569,4 +1572,14 @@ button {
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
   }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
 }
