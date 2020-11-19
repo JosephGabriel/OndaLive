@@ -193,7 +193,7 @@ html {
   border: var(--accent-color) 1px solid;
   width: 15rem;
   text-align: center;
-  padding: 0.5rem 0rem;
+  padding: 0.3rem 0rem;
   margin: 0;
   margin-right: 2rem;
   color: #fff !important;
@@ -228,7 +228,7 @@ html {
   border: var(--accent-color-light) 1px solid;
   width: 150px;
   text-align: center;
-  padding: 0.5rem 0rem;
+  padding: 0.3rem 0rem;
   margin: 0;
   margin-right: 2rem;
   color: #fff !important;
