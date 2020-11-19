@@ -881,6 +881,7 @@ button {
 }
 
 .input-row1 {
+  font-size: 2rem;
   color: #fff;
   width: 45%;
   margin-bottom: 3.6rem;
@@ -888,6 +889,7 @@ button {
 
 .input-row2 {
   width: 100%;
+  font-size: 2.2rem;
   color: #fff;
   margin-bottom: 3rem;
 }

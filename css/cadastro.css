@@ -173,11 +173,13 @@ textarea:focus {
 
 .input-row1 {
   color: #fff;
+  font-size: 2rem;
   width: 49%;
   margin-bottom: 1rem;
 }
 
 .input-row2 {
+  font-size: 2rem;
   color: #fff;
   width: 100%;
   margin-bottom: 1rem;
@@ -425,17 +427,17 @@ a {
   }
 }
 
-.button-login{
+.button-login {
   text-align: center;
   width: 100%;
   margin-bottom: 2rem;
 }
 
-.button-login a{
+.button-login a {
   color: #fff;
 }
 
-.button-login button{
+.button-login button {
   cursor: pointer !important;
   border: none;
   background: var(--accent-color);
