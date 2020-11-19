@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/hall.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="./css/landingpage.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/hall.css">
     <link rel="stylesheet" href="./css/inside.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="./css/carrinho.css">
     <title>Carrinho</title>
 </head>
@@ -23,7 +23,8 @@
             <div class="room">
                 <h6 class="room-title">29/10 a 31/11 Sala: Circuito IM Live – Agronegócio</h6>
             </div>
-            <div class="menu">
+            <div class="menu" id="desktop-menu">
+
                 <button class="site-map-item-btn"><a href="./index.html">HOME</a></button>
                 <div class="room-dropdown" id="room-drop">
                     <button class="site-map-item-btn" id="room-dropdown">TROCAR DE SALA</button>
@@ -50,7 +51,7 @@
                                                 <i class="fa fa-user-circle"></i>
                                             </div>
                                             <div class="info-user-description">
-                                                <input type="file" name="file" id="file" class="inputfile" />
+                                                <input type="file" name="file" class="inputfile" />
                                                 <label for="file">Alterar foto</label>
                                             </div>
                                     </form>
@@ -89,212 +90,371 @@
                         </div>
                     </ul>
                 </div>
+
+            </div>
+            <div id="navlist">
+                <div class="menu">
+                    <button class="site-map-item-btn mobile-navbar p-3">
+                        <a href="./index.html"><i class="fa fa-home"></i>
+                            <p class="m-0">Home</p>
+                        </a>
+                    </button>
+
+                    <button class="site-map-item-btn mobile-navbar p-3" id="room-dropdown-mobile">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <p class="m-0">Salas</p>
+                    </button>
+
+                    <div class="user-info">
+                        <ul class="user-info-map">
+                            <div class="drop-user">
+                                <div>
+                                    <li class="user-info-item">
+                                        <img src="./img/100_3.jpg" class="img-user" id="img-drop">
+                                        Olá,<strong> Cassio</strong><span>
+                                            <i class="fa fa-cog menu" id="menu-toggle"></i></span>
+                                    </li>
+                                    <div class="dropdown-user-img" id="dropdown-user-img">
+                                        <form action="" method="POST">
+                                            <div class="info-user">
+                                                <div class="info-user-icon">
+                                                    <i class="fa fa-user-circle"></i>
+                                                </div>
+                                                <div class="info-user-description">
+                                                    <input type="file" name="file" class="inputfile" />
+                                                    <label for="file">Alterar foto</label>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-user" id="dropdown">
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Meus dados</h6>
+                                    </div>
+                                </div>
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Notificações</h6>
+                                    </div>
+                                </div>
+                                <div class="info-user">
+                                    <div class="info-user-icon">
+                                        <i class="fa fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="info-user-description">
+                                        <h6>Certificados</h6>
+                                    </div>
+                                </div>
+                                <hr class="info-hr">
+                                <button class="exit-btn">
+                                    Logout &nbsp;<i class="fas fa-sign-out-alt"></i>
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </div>
         <div class="nav-toggle" id="nav-toggle">
             <i class="fa fa-bars"></i>
         </div>
     </div>
-    <div class="body-grid">
-        <div class="grid" style="margin: 0;">
-            <div class="top-banner wow animate__animated animate__fadeInUp">
-                <img src="./img/banner descktop.jpg">
+    <div class="sidenav side-center" id="sidenav">
+        <div class="close-bbtn" id="close-btn">
+            <i class="fa fa-window-close"></i>
+        </div>
+
+        <button class="dropdown-btn" id="dropdown-btn-mobile">
+            <div>
+                <img src="./img/100_3.jpg" class="img-user" id="img-drop">
+                Olá,<strong> Cassio</strong>
             </div>
-            <div class="top-banner-mobile wow animate__animated animate__fadeInUp">
-                <img src="./img/banner-mobile-f.jpg">
+        </button>
+        <div class="dropdown-container" style="padding: 1rem; display: block;">
+
+            <div>
+                <form action="" method="POST">
+                    <div class="info-user">
+                        <div class="info-user-icon">
+                            <i class="fa fa-user-circle"></i>
+                        </div>
+                        <div class="info-user-description">
+                            <input type="file" name="file" class="inputfile" />
+                            <label for="file">Alterar foto</label>
+                        </div>
+                </form>
+            </div>
+            <div class="info-user">
+                <div class="info-user-icon">
+                    <i class="fa fa-address-card"></i>
+                </div>
+                <div class="info-user-description">
+                    <h6>Meus dados</h6>
+                </div>
+            </div>
+            <div class="info-user">
+                <div class="info-user-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="info-user-description">
+                    <h6>Notificações</h6>
+                </div>
+            </div>
+            <div class="info-user">
+                <div class="info-user-icon">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <div class="info-user-description">
+                    <h6>Certificados</h6>
+                </div>
+            </div>
+
+        </div>
+        <button class="exit-btn-mobile">Logout &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+    </div>
+    </div>
+    <div class="sidenav side-center " id="sidenav-program">
+        <div class="close-bbtn" id="close-btn2">
+            <i class="fa fa-window-close"></i>
+        </div>
+
+        <button class="dropdown-btn" id="dropdown-btn-mobile">
+            <div class="pt-5 pl-5 pb-0">
+                Trocar de Sala
+            </div>
+        </button>
+        <div class="dropdown-container py-2 px-5" style="display: block;">
+            <div class="info-user">
+                <a href="" class="p-0 hall-list">Voltar ao hall</a>
+            </div>
+            <div class="info-user">
+                <a href="" class="p-0 hall-list">Sala 1</a>
+            </div>
+            <div class="info-user">
+                <a href="" class="p-0 hall-list">Sala 2</a>
+            </div>
+            <div class="info-user">
+                <a href="" class="p-0 hall-list">Sala 3</a>
+            </div>
+            <div class="info-user">
+                <a href="" class="p-0 hall-list">Sala 4</a>
             </div>
         </div>
     </div>
-    <div class="wrap cf" id="main">
-
-        <div class="heading cf">
-            <h1>MEU CARRINHO</h1>
-            <a href="#" class="continue">
-                <span>CONTINUAR COMPRANDO</span>
-            </a>
-        </div>
-        <div class="cart3">
-            <!--    <ul class="tableHead">
-            <li class="prodHeader">Product</li>
-            <li>Quantity</li>
-            <li>Total</li>
-            <li>Remove</li>
-          </ul>-->
-            <ul class="cartWrap">
-                <li class="items odd">
-
-                    <div class="infoWrap">
-                        <div class="cartSection" style="display: flex;">
-
-                            <div>
-                                <img src="./img/card 03.jpg" alt="" class="itemImg" />
-                            </div>
-
-                            <div>
-                                <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
-                                <div class="lotes">
-                                    <p>EVENTO INGRAM</p>
-                                    <br>
-                                    <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
-                                    <br>
-                                    <p style="font-size: 1.4rem;">Lote Único</p>
-                                    <br>
-                                    <p>01 dez 2020 18:00</p>
-                                    <p class="date-event">19 dez 2020 18:00</p>
-                                </div>
-
-                                <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
-
-                                <p class="stockStatus">DISPONÍVEL</p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="prodTotal cartSection">
-                            <p>R$1500.00</p>
-                        </div>
-                        <div class="cartSection removeWrap">
-                            <a href="#" class="remove">x</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="items even">
-
-                    <div class="infoWrap">
-                        <div class="cartSection" style="display: flex;">
-
-                            <div>
-                                <img src="./img/card 03.jpg" alt="" class="itemImg" />
-                            </div>
-
-                            <div>
-                                <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
-                                <div class="lotes">
-                                    <p>EVENTO INGRAM</p>
-                                    <br>
-                                    <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
-                                    <br>
-                                    <p style="font-size: 1.4rem;">Lote Único</p>
-                                    <br>
-                                    <p>01 dez 2020 18:00</p>
-                                    <p class="date-event">19 dez 2020 18:00</p>
-                                </div>
-
-                                <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
-
-                                <p class="stockStatus">DISPONÍVEL</p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="prodTotal cartSection">
-                            <p>R$1500.00</p>
-                        </div>
-                        <div class="cartSection removeWrap">
-                            <a href="#" class="remove">x</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="items odd">
-                    <div class="infoWrap">
-                        <div class="cartSection" style="display: flex;">
-
-                            <div>
-                                <img src="./img/card 03.jpg" alt="" class="itemImg" />
-                            </div>
-
-                            <div>
-                                <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
-                                <div class="lotes">
-                                    <p>EVENTO INGRAM</p>
-                                    <br>
-                                    <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
-                                    <br>
-                                    <p style="font-size: 1.4rem;">Lote Único</p>
-                                    <br>
-                                    <p>01 dez 2020 18:00</p>
-                                    <p class="date-event">19 dez 2020 18:00</p>
-                                </div>
-
-                                <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
-
-                                <p class="stockStatus">DISPONÍVEL</p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="prodTotal cartSection">
-                            <p>R$1500.00</p>
-                        </div>
-                        <div class="cartSection removeWrap">
-                            <a href="#" class="remove">x</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="items even">
-                    <div class="infoWrap">
-                        <div class="cartSection" style="display: flex;">
-
-                            <div>
-                                <img src="./img/card 03.jpg" alt="" class="itemImg" />
-                            </div>
-
-                            <div>
-                                <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
-                                <div class="lotes">
-                                    <p>EVENTO INGRAM</p>
-                                    <br>
-                                    <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
-                                    <br>
-                                    <p style="font-size: 1.4rem;">Lote Único</p>
-                                    <br>
-                                    <p>01 dez 2020 18:00</p>
-                                    <p class="date-event">19 dez 2020 18:00</p>
-                                </div>
-
-                                <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
-
-                                <p class="stockStatus">DISPONÍVEL</p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="prodTotal cartSection">
-                            <p>R$1500.00</p>
-                        </div>
-                        <div class="cartSection removeWrap">
-                            <a href="#" class="remove">x</a>
-                        </div>
-                    </div>
-                    <div class="special">
-                        <div class="specialContent">Informação extra</div>
-                    </div>
-                </li>
-
-
-                <!--<li class="items even">Item 2</li>-->
-
-            </ul>
+    </div>
+    <div id="main">
+        <div class="body-grid">
+            <div class="grid" style="margin: 0;">
+                <div class="top-banner wow animate__animated animate__fadeInUp">
+                    <img src="./img/banner descktop.jpg">
+                </div>
+                <div class="top-banner-mobile wow animate__animated animate__fadeInUp">
+                    <img src="./img/banner-mobile-f.jpg">
+                </div>
+            </div>
         </div>
 
-        <div class="subfooter">
-            <div class="promoCode">
-                <label for="promo">CÓDIGO PROMOCIONAL</label>
-                <input type="text" name="promo" />
-                <a href="#" class="btn"></a></div>
+        <div class="wrap cf">
 
-            <div class="subtotal cf">
-                <ul>
-                    <li class="totalRow"><span class="label">Subtotal</span><span class="value">R$35.00</span></li>
+            <div class="heading cf">
+                <h1>MEU CARRINHO</h1>
+                <a href="./hallorganizador.html" class="continue">
+                    <span>CONTINUAR COMPRANDO</span>
+                </a>
+            </div>
+            <div class="cart3">
+                <!--    <ul class="tableHead">
+                <li class="prodHeader">Product</li>
+                <li>Quantity</li>
+                <li>Total</li>
+                <li>Remove</li>
+              </ul>-->
+                <ul class="cartWrap">
+                    <li class="items odd">
 
-                    <li class="totalRow"><span class="label">Taxa</span><span class="value">R$4.00</span></li>
-                    <li class="totalRow final"><span class="label">Total</span><span class="value">R$44.00</span></li>
-                    <li class="totalRow"><a href="#" class="btn continue">COMPRAR</a></li>
+                        <div class="infoWrap">
+                            <div class="cartSection" style="display: flex;">
+
+                                <div>
+                                    <img src="./img/card 03.jpg" alt="" class="itemImg" />
+                                </div>
+
+                                <div>
+                                    <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
+                                    <div class="lotes">
+                                        <p>EVENTO INGRAM</p>
+                                        <br>
+                                        <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                        <br>
+                                        <p style="font-size: 1.4rem;">Lote Único</p>
+                                        <br>
+                                        <p>01 dez 2020 18:00</p>
+                                        <p class="date-event">19 dez 2020 18:00</p>
+                                    </div>
+
+                                    <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
+
+                                    <p class="stockStatus">DISPONÍVEL</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="prodTotal cartSection">
+                                <p>R$1500.00</p>
+                            </div>
+                            <div class="cartSection removeWrap">
+                                <a href="#" class="remove">x</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items even">
+
+                        <div class="infoWrap">
+                            <div class="cartSection" style="display: flex;">
+
+                                <div>
+                                    <img src="./img/card 03.jpg" alt="" class="itemImg" />
+                                </div>
+
+                                <div>
+                                    <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
+                                    <div class="lotes">
+                                        <p>EVENTO INGRAM</p>
+                                        <br>
+                                        <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                        <br>
+                                        <p style="font-size: 1.4rem;">Lote Único</p>
+                                        <br>
+                                        <p>01 dez 2020 18:00</p>
+                                        <p class="date-event">19 dez 2020 18:00</p>
+                                    </div>
+
+                                    <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
+
+                                    <p class="stockStatus">DISPONÍVEL</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="prodTotal cartSection">
+                                <p>R$1500.00</p>
+                            </div>
+                            <div class="cartSection removeWrap">
+                                <a href="#" class="remove">x</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items odd">
+                        <div class="infoWrap">
+                            <div class="cartSection" style="display: flex;">
+
+                                <div>
+                                    <img src="./img/card 03.jpg" alt="" class="itemImg" />
+                                </div>
+
+                                <div>
+                                    <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
+                                    <div class="lotes">
+                                        <p>EVENTO INGRAM</p>
+                                        <br>
+                                        <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                        <br>
+                                        <p style="font-size: 1.4rem;">Lote Único</p>
+                                        <br>
+                                        <p>01 dez 2020 18:00</p>
+                                        <p class="date-event">19 dez 2020 18:00</p>
+                                    </div>
+
+                                    <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
+
+                                    <p class="stockStatus">DISPONÍVEL</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="prodTotal cartSection">
+                                <p>R$1500.00</p>
+                            </div>
+                            <div class="cartSection removeWrap">
+                                <a href="#" class="remove">x</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items even">
+                        <div class="infoWrap">
+                            <div class="cartSection" style="display: flex;">
+
+                                <div>
+                                    <img src="./img/card 03.jpg" alt="" class="itemImg" />
+                                </div>
+
+                                <div>
+                                    <p style="font-size: 1.4rem;">Ingresso Evento Online</p>
+                                    <div class="lotes">
+                                        <p>EVENTO INGRAM</p>
+                                        <br>
+                                        <p style="font-weight: bold;">SALA CIRCUITO IM LIVE - AGRONEGÓCIO</p>
+                                        <br>
+                                        <p style="font-size: 1.4rem;">Lote Único</p>
+                                        <br>
+                                        <p>01 dez 2020 18:00</p>
+                                        <p class="date-event">19 dez 2020 18:00</p>
+                                    </div>
+
+                                    <p> <input type="text" class="qty" placeholder="3" /> x $R5.00</p>
+
+                                    <p class="stockStatus">DISPONÍVEL</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="prodTotal cartSection">
+                                <p>R$1500.00</p>
+                            </div>
+                            <div class="cartSection removeWrap">
+                                <a href="#" class="remove">x</a>
+                            </div>
+                        </div>
+                        <div class="special">
+                            <div class="specialContent">Informação extra</div>
+                        </div>
+                    </li>
+
+
+                    <!--<li class="items even">Item 2</li>-->
+
                 </ul>
+            </div>
+
+            <div class="subfooter">
+                <div class="promoCode">
+                    <label for="promo">CÓDIGO PROMOCIONAL</label>
+                    <input type="text" name="promo" />
+                    <a href="#" class="btn"></a></div>
+
+                <div class="subtotal cf">
+                    <ul>
+                        <li class="totalRow"><span class="label">Subtotal</span><span class="value">R$35.00</span></li>
+
+                        <li class="totalRow"><span class="label">Taxa</span><span class="value">R$4.00</span></li>
+                        <li class="totalRow final"><span class="label">Total</span><span class="value">R$44.00</span>
+                        </li>
+                        <li class="totalRow"><a href="#" class="btn continue">COMPRAR</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

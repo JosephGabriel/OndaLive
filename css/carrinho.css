@@ -497,3 +497,7 @@ a.remove:hover {
     justify-content: flex-end;
   }
 }
+
+.m-0 {
+  margin: 0 !important;
+}
