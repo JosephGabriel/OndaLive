@@ -194,7 +194,7 @@ let j;
 
 closeBtnAdm.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
-  main.classList.remove("ops");
+  layer.classList.remove("ops");
 });
 
 function openTab(evt, cityName) {
