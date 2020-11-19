@@ -901,7 +901,8 @@ button {
   margin: auto;
 }
 
-#layer {
+#layer,
+#layer2 {
   position: fixed;
   transition: all 0.5s;
   z-index: 1;
@@ -914,7 +915,8 @@ button {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-#layer.ops {
+#layer.ops,
+#layer2.ops {
   transition: all 0.5s;
   background-color: #000000ce;
   -webkit-transition: all 0.5s;

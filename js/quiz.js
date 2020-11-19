@@ -1,5 +1,5 @@
 var playQuiz = document.getElementById("playQuiz");
-var layer2 = document.getElementById("layer");
+var layer3 = document.getElementById("layer2");
 var timer = document.getElementById("timer");
 var quiz = document.getElementById("quiz");
 var quizStart = document.getElementById("quiz-start");
@@ -198,7 +198,7 @@ document.getElementById("quiz-btn-close2").addEventListener("click", () => {
 
 playQuiz.addEventListener("click", () => {
   quiz.classList.toggle("activeQ");
-  layer2.classList.toggle("ops");
+  layer3.classList.toggle("ops");
   console.log(layer2);
 });
 

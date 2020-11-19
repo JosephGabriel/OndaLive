@@ -32,6 +32,7 @@ navToggleSide.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
   toolbar.classList.toggle("activeS");
   layer.classList.toggle("ops");
+  layer2.classList.remove("ops");
   sidenav.classList.remove("activeS");
 });
 
@@ -39,6 +40,7 @@ navToggleSide2.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
   toolbar.classList.toggle("activeS");
   layer.classList.toggle("ops");
+  layer2.classList.remove("ops");
   sidenav.classList.remove("activeS");
 });
 
@@ -47,6 +49,7 @@ main.addEventListener("click", () => {});
 navToggle.addEventListener("click", () => {
   sidenav.classList.remove("activeS");
   layer.classList.remove("ops");
+  layer2.classList.remove("ops");
 });
 
 programBtn.addEventListener("click", function () {
@@ -55,7 +58,8 @@ programBtn.addEventListener("click", function () {
   drop.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   sidenav.classList.remove("activeS");
-  layer.classList.toggle("ops");
+  layer.classList.remove("ops");
+  layer2.classList.toggle("ops");
   toolbar.classList.remove("activeS");
 });
 
@@ -65,17 +69,18 @@ programBtn2.addEventListener("click", function () {
   drop.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   sidenav.classList.remove("activeS");
-  layer.classList.toggle("ops");
+  layer.classList.remove("ops");
+  layer2.classList.toggle("ops");
   toolbar.classList.remove("activeS");
 });
 
 main.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
-  console.log("ssdcf");
   dropImg.classList.remove("active-dropdown");
   layer.classList.remove("ops");
   toolbar.classList.remove("activeS");
   layer.classList.remove("ops");
+  layer2.classList.remove("ops");
   sidenav.classList.remove("activeS");
   programSideNav.classList.remove("sidebar-active");
 });
@@ -83,17 +88,20 @@ main.addEventListener("click", () => {
 sidenavClose.addEventListener("click", () => {
   programSideNav.classList.remove("sidebar-active");
   layer.classList.remove("ops");
+  layer2.classList.remove("ops");
 });
 
 nav.addEventListener("click", () => {
   sidenav.classList.toggle("activeS");
   layer.classList.remove("ops");
+  layer2.classList.toggle("ops");
   toolbar.classList.remove("activeS");
   programSideNav.classList.remove("sidebar-active");
 });
 
 menu.addEventListener("click", () => {
   layer.classList.remove("ops");
+  layer2.classList.remove("ops");
   drop.classList.toggle("active-dropdown");
   dropImg.classList.remove("active-dropdown");
   programSideNav.classList.remove("sidebar-active");
@@ -102,17 +110,20 @@ menu.addEventListener("click", () => {
 sidenav.addEventListener("click", () => {
   document.getElementById("nav-toggle").classList.toggle("activeS");
   layer.classList.remove("ops");
+  layer2.classList.remove("ops");
 });
 
 closeBtnSideNavAdm.addEventListener("click", () => {
   toolbar.classList.remove("activeS");
   layer.classList.remove("ops");
+  layer2.classList.remove("ops");
 });
 
 imgDrop.addEventListener("click", () => {
   drop.classList.remove("active-dropdown");
   dropImg.classList.toggle("active-dropdown");
   programSideNav.classList.remove("sidebar-active");
+  layer2.classList.remove("ops");
   layer.classList.remove("ops");
 });
 

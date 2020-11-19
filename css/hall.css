@@ -1409,6 +1409,12 @@ button {
   }
 }
 
+@media screen and (min-width: 426px) and (max-width: 992px) {
+  #toolbar {
+    width: auto !important;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .menu {
     display: flex;
@@ -1546,7 +1552,7 @@ button {
 #toolbar {
   margin: 7rem 0;
   margin-bottom: 15rem;
-  width: 56.4rem;
+  width: 58.4rem;
 }
 
 #toolbar .btn-tab {

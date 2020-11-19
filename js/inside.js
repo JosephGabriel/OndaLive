@@ -288,7 +288,9 @@ roomDropdown.addEventListener("click", () => {
 
 tool.addEventListener("click", () => {
   toolbar.classList.toggle("activeS");
+  layer2.classList.remove("ops");
   layer.classList.toggle("ops");
+  quiz.classList.remove("activeQ");
   dropImg.classList.remove("active-dropdown");
   drop.classList.remove("active-dropdown");
   imgDrop.classList.remove("active-dropdown");
